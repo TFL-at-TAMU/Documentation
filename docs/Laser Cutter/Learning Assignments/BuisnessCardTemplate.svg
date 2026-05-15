@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="3.25in"
+   height="2in"
+   viewBox="0 0 82.549998 50.8"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="BuisnessCardTemplate.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="in"
+     inkscape:zoom="2.8756734"
+     inkscape:cx="161.17964"
+     inkscape:cy="95.803647"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:3.63314px;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke-width:0.302762"
+       x="0"
+       y="4.7275038"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         style="font-size:6.40644px;stroke-width:0.302762"
+         x="0"
+         y="4.7275038">FirstName LastName</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.23333px;stroke-width:0.302762"
+         x="0"
+         y="10.752959"
+         id="tspan4"></tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.23333px;stroke-width:0.302762"
+         x="0"
+         y="16.044622"
+         id="tspan6">Texas A&amp;M Univ.                  May 2027 </tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.23333px;stroke-width:0.302762"
+         x="0"
+         y="21.336285"
+         id="tspan5">B.S. Mechanical Engineering        4.00 </tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.302762"
+         x="0"
+         y="26.080376"
+         id="tspan3" /><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.302762"
+         x="0"
+         y="30.621799"
+         id="tspan7">YourEmail@something.com</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.302762"
+         x="0"
+         y="35.163223"
+         id="tspan9">123-456-7890</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.302762"
+         x="0"
+         y="39.704651"
+         id="tspan8">Linkedin.Com/in/Link-Here</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.302762"
+         x="0"
+         y="44.246075"
+         id="tspan10">Github.com/Name/Repo</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.302762"
+         x="0"
+         y="48.787498"
+         id="tspan11" /></text>
+  </g>
+</svg>

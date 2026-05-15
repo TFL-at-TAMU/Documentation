@@ -1,0 +1,24 @@
+# API_Cloud Integration Diagram
+
+```mermaid
+graph TD
+    Cloud["Cloud"] --> VPS["Virtual Private Server/s<br>(VPS)<br>Serving Data Visualization<br>Platform for IOT Projects"]
+    Cloud --> TAMU["TAMU Network"]
+    
+    VPS -.-> VPN1{"VPN<br>Connections"}
+    VPN1 -.-> VPN2{"VPN<br>Endpoints"}
+    
+    TAMU --> Unifi["Unifi Express 7"]
+    
+    Unifi --> Student["TamuFabLab_STUDENT<br>(WiFi, HIDDEN)<br>10.10.1.0/24<br>IOT VLAN"]
+    Unifi --> Machines["TamuFabLab_MACHINES<br>(WiFi, HIDDEN)<br>10.10.2.0/24<br>MACHINE VLAN"]
+    
+    Machines --> Workstations["Machines and Lab<br>Workstations are connected<br>on this network."]
+    
+    Student --> Projects["All Student IOT Projects<br>(Publishing Data to<br>Project-Specific API<br>Endpoints on the Servers)"]
+    Student --> Servers["Servers<br>(Storing Data and Serving<br>Cloud Endpoints)"]
+    
+    Projects --> Servers
+    
+    Servers -.-> VPN2
+```
