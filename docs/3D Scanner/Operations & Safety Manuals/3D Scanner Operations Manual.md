@@ -6,7 +6,6 @@
 ## What This Machine Is Not For
 
 * Real-time LiDAR/infrared scanning (for example, on an autonomous robot)
-* Geometry or tolerances smaller than 0.1mm
 * Laser pointer
 
 ## What You Need Before You Start
@@ -16,7 +15,9 @@
 * The object you’re scanning is not black, reflective, or transparent. If it is, refer to Section 8.
 * You have an [adequately-powered](https://wiki.creality.com/en/3d-scanner/tutorials/general/performance) laptop or other computer next to the scanning area. Also be aware of the amount of disk space left on your computer. These files get decently large.
 
-## Machine Overview![](../../assets/images/3d_scanner_operation_fa6423e291.png)
+## Machine Overview
+
+![Diagram of the Creality Raptor Pro](../../assets/images/3d_scanner_operation_fa6423e291.png)
 
 1. 3D Scanning Camera: The cameras used to capture geometric data
 2. Color Camera: The cameras used to capture color textures to map to the scanned model
@@ -31,15 +32,15 @@
 
 ## Basic Operating Workflow
 
-> [!Note]
-> For additional reference, please refer to the Raptor Pro’s [user manual](https://wiki.creality.com/en/3d-scanner/raptorpro/manual).
+> [!NOTE]
+> For additional reference, please refer to the Raptor Pro’s [user manual](https://wiki.creality.com/en/3d-scanner/raptorpro/manual). (It's actually pretty good)
 
-> [!Caution]
-> When handling the scanner, take extreme care. Avoid smudging the glass. If you do, please clean it off with the included microfiber rag.
+> [!CAUTION]
+> When handling the scanner, take extreme care. Avoid smudging the glass. If you do, please clean it off with the included microfiber cloth.
 
 ### Start-Up
 
-1. Slide the American wall plug adapter into the DC power supply.
+1. Slide the *American* wall plug adapter into the DC power supply.
 2. Insert the USB Type-C port into the Type-C Data Interface (7) and hand-tighten the screws.
 3. Connect the female and male ends of the DC power supply cable together.
 4. Plug the USB Type-A data cable into a USB 3.0 port on your computer.
@@ -70,24 +71,19 @@ After using this machine, you must:
 * Ensure the lens is clean
 * Place all items from the box as you found it. If something seems wrong, please ask Fab Lab staff. If there’s not many marker stickers left in the kit, let the lab assistant know.
 
-## Stop Conditions
-
-Stop immediately and notify Fab Lab staff if:
-
-* You drop, hit, or otherwise damage the 3D scanner
-* You are unsure how to proceed
-
-> [!Caution]
-> Do not attempt to troubleshoot major issues yourself.
-
 ## Common Issues & What To Do
 
-* Issue: CrealityScan crashes, freezes, or your scanner loses connection  
-  * Action: Unless something looks seriously wrong, it happens. Close CrealityScan, unplug and replug the scanner, and start CrealityScan again.
-* Issue: Problems keeping the scanner from losing track  
-  * Action: Change your tracking mode to a more effective method. Use the “🛈” tooltips to help decide. If you’re still having issues, consider adding more markers and possibly switching to marker-based tracking. Otherwise, ensure you aren’t trying to scan a black, reflective, or transparent item. If so, you may need to apply a coat of scanning spray to the item.
-* Issue: Object being scanned has black, transparent, or reflective features.  
-  * Action: Take your object to the sink, thoroughly shake the scanning spray to mix it, and apply a coat of spray to the scanning surface. Don’t over-apply—only once it completely evaporates will you suddenly see the effect of the scanning spray. The spray is simply a mixture of isopropanol and talcum powder.
+> [!CAUTION]
+> Do **not** attempt to troubleshoot major issues yourself.
+
+- **The scanner crashes, freezes, or loses connection.**
+   *Unless something looks seriously wrong, don't worry — it happens. Close CrealityScan, unplug and replug the scanner, then relaunch.*
+
+- **The scanner keeps losing track.**
+   *Switch to a more effective tracking mode — use the "ⓘ" tooltips to help decide. If issues persist, try adding more markers or switching to marker-based tracking. Also check that the object isn't black, reflective, or transparent; if it is, scanning spray may be needed.*
+
+- **The object has black, reflective, or transparent surfaces.**
+   *Bring the object to the sink, shake the spray well, and apply a light coat. Don't over-apply — the effect only becomes visible once it fully evaporates. The spray is simply a mixture of isopropanol and talcum powder.*
 
 ## Post-Processing
 
@@ -96,11 +92,11 @@ Depending on your use case, post-processing may be the bulk of your work. For sp
 * [MeshLab](https://www.meshlab.net/) (Free and Open Source)
 * [Blender](https://www.blender.org/) (Free and Open Source)
 * [CloudCompare](https://www.cloudcompare.org/) (Free and Open Source)
-* [Autodesk Meshmixer](<https://meshmixer.org/>) (Free, Proprietary) (⚠️ Depreciated since 2023) (Linked website is unofficial)
+* [Autodesk Meshmixer](<https://meshmixer.org/>) (Free, Proprietary) (⚠️ Depreciated since 2023) (Linked website is **unofficial**)
 
 Luckily, CrealityScan provides some decent post-processing tools directly in the application. To get started, after finishing your scan(s), return to the project’s main page.
 
-![](../../assets/images/3d_scanner_operation_7094e72915.png)
+![CrealityScan project main page](../../assets/images/3d_scanner_operation_7094e72915.png)
 
 Use the editing toolbar to remove excess data points. [Shift] [LMB] selects, while [CTRL] [LMB] deselects.
 
@@ -113,14 +109,8 @@ Tip for removing most excess data:
 5. Click the “Delete Selection” tool.
 6. Click “Save Edit”.
 
-![](../../assets/images/3d_scanner_operation_4c8658d219.png)
+![Process for easy removal of most excess data](../../assets/images/3d_scanner_operation_4c8658d219.png)
 
 To process the scanned data into a mesh, use the “Fusion” tool. Once processed, again ensure there’s no excess geometry. You can now remove the reusable markers from your object.
 
 To perform advanced post-processing on an object, switch to the “Mesh Processing” tab.
-
-## External Resources
-
-For more detailed information, refer to:
-
-* The Raptor Pro’s [user manual](https://wiki.creality.com/en/3d-scanner/raptorpro/manual) (Creality Wiki)
