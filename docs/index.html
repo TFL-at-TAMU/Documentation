@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Fab Lab Documentation</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Documentation and manuals for The Fab Lab">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  
+  <!-- Docsify Core CSS Theme -->
+  <!-- Using docsify-themeable Simple Dark theme -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
+  
+  <!-- Sidebar Collapse Plugin CSS -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
+  
+  <style>
+    /* Prevent the edit button from overlapping with sidebar content on mobile */
+    .edit-on-github { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <!-- Docsify will inject its UI into this element -->
+  <div id="app">Loading...</div>
+
+  <script>
+    // Docsify Configuration Object
+    // This is where all the settings for the website are defined.
+    // Future Maintainers: Check https://docsify.js.org/#/configuration for more options.
+    window.$docsify = {
+      // The main title that appears at the top of the sidebar
+      name: 'The Fab Lab',
+      
+      // Provides a GitHub corner link on the top right
+      repo: 'TFL-at-TAMU/Documentation',
+
+      // Configuration for the homepage. 
+      // Since our main overview doc is named "The Fab Lab README.md", we set it here.
+      homepage: 'The Fab Lab README.md',
+
+      // Tells Docsify to load the navigation structure from the _sidebar.md file
+      loadSidebar: true,
+      
+      // Automatically add a header to pages based on the directory/file name if none is present
+      autoHeader: true,
+
+      // Determines how deep the sidebar should auto-generate sub-links based on markdown headers (h1, h2, etc.)
+      subMaxLevel: 2,
+
+      // Dictates the default collapse level for the sidebar (0 means top-level folders are collapsed)
+      sidebarDisplayLevel: 0,
+
+      // Configuration for the built-in search plugin
+      search: {
+        paths: 'auto',              // Automatically index all files
+        placeholder: 'Search documentation...',
+        noData: 'No results found.',
+        depth: 3                    // How deep to parse headings for search content
+      }
+    }
+  </script>
+
+  <!-- Docsify Core JavaScript engine -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  
+  <!-- docsify-themeable script -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
+
+  <!-- Search Plugin: Allows users to search through all Markdown files across the site -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+
+  <!-- Copy to Clipboard Plugin: Adds a convenient 'Copy' button directly on code blocks -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+
+  <!-- Sidebar Collapse Plugin: Allows users to collapse/expand nested directories in the sidebar -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+
+  <!-- Edit on GitHub Plugin: Adds a button to directly edit the current page on GitHub via the web UI -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
+  <script>
+    // Initialize the Edit on GitHub plugin and push it into the active Docsify plugins list.
+    // The link is pointed to the /docs/ folder on the 'main' branch so edits go right to the source.
+    window.$docsify.plugins = [
+      EditOnGithubPlugin.create(
+        'https://github.com/TFL-at-TAMU/Documentation/edit/main/docs/',
+        null,
+        '✏️ Edit this page on GitHub'
+      )
+    ].concat(window.$docsify.plugins || []);
+  </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+name: Generate Docsify Sidebar
+
+# This workflow runs automatically whenever a Markdown file is added, modified, or deleted in the 'docs/' directory.
+# It ensures that staff do not need to manually run scripts or update navigation after making edits.
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/**/*.md'
+      - 'scripts/generate_sidebar.py'
+
+permissions:
+  contents: write # Needed to give GitHub Actions permission to push the generated _sidebar.md back to the repository
+
+jobs:
+  update-sidebar:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # Step 1: Check out the repository code
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # Step 2: Set up a Python environment to run our script
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # Step 3: Run the python script to parse folders and build _sidebar.md
+      - name: Run generate_sidebar.py
+        run: python scripts/generate_sidebar.py
+
+      # Step 4: Commit and push the updated _sidebar.md if it changed
+      # 'stefanzweifel/git-auto-commit-action' automatically handles checking for diffs
+      # If nothing changed in the sidebar, this safely skips pushing anything.
+      - name: Commit Updated Sidebar
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Automated: Update Docsify _sidebar.md navigation [skip ci]"
+          file_pattern: docs/_sidebar.md
+          commit_user_name: github-actions[bot]
+          commit_user_email: github-actions[bot]@users.noreply.github.com
