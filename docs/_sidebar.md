@@ -5,7 +5,6 @@
     - [3D Scanner Assignment](3D%20Scanner/Learning%20Assignments/3D%20Scanner%20Assignment.md)
   - **Operations & Safety Manuals**
     - [3D Scanner Operations Manual](3D%20Scanner/Operations%20%26%20Safety%20Manuals/3D%20Scanner%20Operations%20Manual.md)
-    - [3D Scanner Safety Manual](3D%20Scanner/Operations%20%26%20Safety%20Manuals/3D%20Scanner%20Safety%20Manual.md)
 - **CNC Mill**
   - **Learning Assignment**
     - **2D Relief Coin**
