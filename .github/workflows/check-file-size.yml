@@ -1,0 +1,31 @@
+name: Check file sizes
+
+# Fails if any committed file exceeds Cloudflare Pages' 25 MiB per-file limit.
+# Runs on pull requests (so it can be required before merging) and on pushes to main.
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  check-file-size:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fail if any file exceeds 25 MiB
+        run: |
+          LIMIT=$((25 * 1024 * 1024))   # 25 MiB = 26214400 bytes (Cloudflare Pages hard limit)
+          mapfile -t BIG < <(find . -type f -not -path './.git/*' -size +"${LIMIT}"c -printf '%s\t%p\n')
+          if [ "${#BIG[@]}" -gt 0 ]; then
+            echo "::error::The following file(s) exceed the 25 MiB Cloudflare Pages per-file limit and must be removed or hosted elsewhere:"
+            for line in "${BIG[@]}"; do
+              size=${line%%$'\t'*}
+              path=${line#*$'\t'}
+              awk -v s="$size" -v p="$path" 'BEGIN { printf "  %.1f MiB  %s\n", s/1048576, p }'
+            done
+            exit 1
+          fi
+          echo "OK: all files are within the 25 MiB limit."
