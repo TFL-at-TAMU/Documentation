@@ -1,3 +1,4 @@
 # Lattice Benchy Fcc
 
-<model-viewer src="Lattice_Benchy_FCC.stl" auto-rotate camera-controls style="width: 100%; height: 500px; background-color: #2F333D;"></model-viewer>
+> [!NOTE]
+> The 3D model file (Lattice_Benchy_FCC.stl) was too large to host on this site (it exceeds the 25 MiB per-file limit), so the interactive viewer and download have been removed. Please contact a staff member to obtain the STL file.
