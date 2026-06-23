@@ -24,6 +24,9 @@ Goal: 3D Print a Bot with rafts and supports
 
 Download the STL file with the name “Lattice_Benchy_FCC.stl” and open it in the [preform program](<https://www.google.com/url?q=https://formlabs.com/software/preform/&sa=D&source=editors&ust=1776804198796094&usg=AOvVaw2mqsDCUHKc67tluxcK8N1V>). First, use the size section on the left, and in the first part, use the scale option and scale it to 0.5.
 
+> [!NOTE]
+> The Lattice_Benchy_FCC.stl file was too large to host on this site (it exceeds the 25 MiB per-file limit) and is no longer available here. Please contact a staff member to obtain the STL file.
+
 ![](../../../assets/images/formlabs_3_printer_a_20a3a503d7.png)
 
 Then, we are going to delve into the support and orientation of the piece. Go to the side panel and select the support option.
