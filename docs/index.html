@@ -15,12 +15,68 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
   
   <style>
+    /* ---- Gruvbox (dark) color scheme, layered on docsify-themeable's simple-dark theme ----
+       Implemented entirely with docsify-themeable CSS variables, so we keep that theme's
+       layout/behavior and just recolor it. Palette: https://github.com/morhetz/gruvbox */
+    :root {
+      /* Gruvbox dark palette */
+      --gruvbox-bg0-hard: #1d2021;
+      --gruvbox-bg0:      #282828;
+      --gruvbox-bg1:      #3c3836;
+      --gruvbox-bg2:      #504945;
+      --gruvbox-fg0:      #fbf1c7;
+      --gruvbox-fg1:      #ebdbb2;
+      --gruvbox-fg4:      #a89984;
+      --gruvbox-yellow:   #fabd2f;
+      --gruvbox-orange:   #fe8019;
+      --gruvbox-aqua:     #8ec07c;
+      --gruvbox-red:      #fb4934;
+
+      /* Accent + base surfaces */
+      --theme-color:            var(--gruvbox-yellow);
+      --base-background-color:  var(--gruvbox-bg0);
+      --base-color:             var(--gruvbox-fg1);
+      --mono-hue: 40;
+
+      /* Headings */
+      --heading-color: var(--gruvbox-fg0);
+
+      /* Links */
+      --link-color:        var(--gruvbox-yellow);
+      --link-color--hover: var(--gruvbox-orange);
+
+      /* Sidebar */
+      --sidebar-background:                 var(--gruvbox-bg0-hard);
+      --sidebar-name-color:                 var(--gruvbox-yellow);
+      --sidebar-nav-link-color:             var(--gruvbox-fg1);
+      --sidebar-nav-link-color--active:     var(--gruvbox-yellow);
+      --sidebar-nav-link-border-color--active: var(--gruvbox-yellow);
+
+      /* Search box */
+      --search-input-background-color: var(--gruvbox-bg1);
+      --search-input-color:            var(--gruvbox-fg1);
+      --search-result-heading-color:   var(--gruvbox-yellow);
+      --search-result-item-color:      var(--gruvbox-fg1);
+
+      /* Code: inline + fenced blocks */
+      --code-inline-background: var(--gruvbox-bg1);
+      --code-inline-color:      var(--gruvbox-orange);
+      --code-theme-background:  var(--gruvbox-bg0-hard);
+
+      /* Blockquotes / borders / selection */
+      --blockquote-border-color: var(--gruvbox-aqua);
+      --border-color:            var(--gruvbox-bg2);
+    }
+
+    /* Guarantee the page background even where the theme doesn't read a variable. */
+    body { background-color: var(--gruvbox-bg0); }
+
     /* "Edit this page on GitHub" link. Rendered as a footer at the bottom of each page
        so it stays clear of the GitHub corner in the top-right (they overlapped on mobile). */
     .edit-on-github {
       margin-top: 3rem;
       padding-top: 1rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      border-top: 1px solid var(--gruvbox-bg2);
       font-size: 0.9em;
       opacity: 0.85;
     }
