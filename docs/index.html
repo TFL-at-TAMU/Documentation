@@ -15,8 +15,15 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
   
   <style>
-    /* Prevent the edit button from overlapping with sidebar content on mobile */
-    .edit-on-github { margin-top: 20px; }
+    /* "Edit this page on GitHub" link. Rendered as a footer at the bottom of each page
+       so it stays clear of the GitHub corner in the top-right (they overlapped on mobile). */
+    .edit-on-github {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      font-size: 0.9em;
+      opacity: 0.85;
+    }
   </style>
 </head>
 <body>
@@ -78,17 +85,22 @@
   <!-- Flexible Alerts Plugin: Renders > [!NOTE] and > [!CAUTION] markdown blockquotes correctly -->
   <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
 
-  <!-- Edit on GitHub Plugin: Adds a button to directly edit the current page on GitHub via the web UI -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
+  <!-- Edit on GitHub: a small custom Docsify plugin that appends an "Edit this page on GitHub"
+       link to the BOTTOM of each page. The docsify-edit-on-github plugin placed it at the top,
+       where it overlapped the GitHub corner on mobile. The link targets the matching file under
+       /docs/ on the 'main' branch so edits go straight to the source. -->
   <script>
-    // Initialize the Edit on GitHub plugin and push it into the active Docsify plugins list.
-    // The link is pointed to the /docs/ folder on the 'main' branch so edits go right to the source.
     window.$docsify.plugins = [
-      EditOnGithubPlugin.create(
-        'https://github.com/TFL-at-TAMU/Documentation/edit/main/docs/',
-        null,
-        '✏️ Edit this page on GitHub'
-      )
+      function (hook, vm) {
+        hook.afterEach(function (html, next) {
+          var editUrl = 'https://github.com/TFL-at-TAMU/Documentation/edit/main/docs/' + vm.route.file;
+          var button =
+            '<div class="edit-on-github">' +
+            '<a href="' + editUrl + '" target="_blank" rel="noopener noreferrer">✏️ Edit this page on GitHub</a>' +
+            '</div>';
+          next(html + button);
+        });
+      }
     ].concat(window.$docsify.plugins || []);
   </script>
 </body>
