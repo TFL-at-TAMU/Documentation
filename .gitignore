@@ -1,0 +1,3 @@
+# Personal, machine-specific Claude Code settings (permission allowlists, etc.).
+# The shared .claude/launch.json (local preview server config) IS tracked.
+.claude/settings.local.json
