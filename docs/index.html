@@ -6,81 +6,141 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Documentation and manuals for The Fab Lab">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  
+
+  <!-- Set the light/dark theme BEFORE first paint to avoid a flash. Order of precedence:
+       saved preference (localStorage) -> the visitor's OS/browser setting -> light. -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+
   <!-- Web fonts: Inter for readable body text, Space Grotesk for the "The Fab Lab" title -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap">
 
   <!-- Docsify Core CSS Theme -->
-  <!-- Using docsify-themeable Simple Dark theme -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
+  <!-- docsify-themeable "simple" (light) base. Both light AND dark Gruvbox palettes are layered
+       on top via [data-theme] in the <style> block below, so this single base serves both modes. -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
   
   <!-- Sidebar Collapse Plugin CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
   
   <style>
-    /* ---- Gruvbox (dark) color scheme, layered on docsify-themeable's simple-dark theme ----
-       Implemented entirely with docsify-themeable CSS variables, so we keep that theme's
-       layout/behavior and just recolor it. Palette: https://github.com/morhetz/gruvbox */
+    /* ===== Gruvbox theme: light + dark, switched via [data-theme] on <html> =====
+       Built on docsify-themeable's "simple" (light) base. Raw palette hex values are defined
+       once in :root; each mode then maps docsify-themeable's semantic variables to the light or
+       dark set. The dark block also inverts themeable's internal "mono" scale so derived surfaces
+       (borders, code/table/blockquote backgrounds) come out dark too.
+       Palette: https://github.com/morhetz/gruvbox */
     :root {
-      /* Gruvbox dark palette */
-      --gruvbox-bg0-hard: #1d2021;
-      --gruvbox-bg0:      #282828;
-      --gruvbox-bg1:      #3c3836;
-      --gruvbox-bg2:      #504945;
-      --gruvbox-fg0:      #fbf1c7;
-      --gruvbox-fg1:      #ebdbb2;
-      --gruvbox-fg4:      #a89984;
-      --gruvbox-yellow:   #fabd2f;
-      --gruvbox-orange:   #fe8019;
-      --gruvbox-aqua:     #8ec07c;
-      --gruvbox-red:      #fb4934;
+      /* Gruvbox DARK constants */
+      --gb-d-bg0-hard: #1d2021;
+      --gb-d-bg0:      #282828;
+      --gb-d-bg1:      #3c3836;
+      --gb-d-bg2:      #504945;
+      --gb-d-fg0:      #fbf1c7;
+      --gb-d-fg1:      #ebdbb2;
+      --gb-d-fg4:      #a89984;
+      --gb-d-yellow:   #fabd2f;
+      --gb-d-orange:   #fe8019;
+      --gb-d-aqua:     #8ec07c;
 
-      /* Accent + base surfaces */
-      --theme-color:            var(--gruvbox-yellow);
-      --base-background-color:  var(--gruvbox-bg0);
-      --base-color:             var(--gruvbox-fg1);
-      --mono-hue: 40;
+      /* Gruvbox LIGHT constants (accents use the darker "faded" variants for contrast on cream) */
+      --gb-l-bg0-hard: #f9f5d7;
+      --gb-l-bg0:      #fbf1c7;
+      --gb-l-bg1:      #ebdbb2;
+      --gb-l-bg2:      #d5c4a1;
+      --gb-l-fg0:      #282828;
+      --gb-l-fg1:      #3c3836;
+      --gb-l-fg4:      #7c6f64;
+      --gb-l-yellow:   #b57614;
+      --gb-l-orange:   #af3a03;
+      --gb-l-aqua:     #427b58;
 
-      /* Typography: Inter at a larger size and looser line-height for readability */
+      /* Typography (mode-independent): Inter body, looser line-height for readability */
       --base-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       --base-font-size:   17px;
       --base-line-height: 1.7;
       --heading-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-
-      /* Headings */
-      --heading-color: var(--gruvbox-fg0);
-
-      /* Links */
-      --link-color:        var(--gruvbox-yellow);
-      --link-color--hover: var(--gruvbox-orange);
-
-      /* Sidebar */
-      --sidebar-background:                 var(--gruvbox-bg0-hard);
-      --sidebar-name-color:                 var(--gruvbox-yellow);
-      --sidebar-nav-link-color:             var(--gruvbox-fg1);
-      --sidebar-nav-link-color--active:     var(--gruvbox-yellow);
-      --sidebar-nav-link-border-color--active: var(--gruvbox-yellow);
-
-      /* Search box */
-      --search-input-background-color: var(--gruvbox-bg1);
-      --search-input-color:            var(--gruvbox-fg1);
-      --search-result-heading-color:   var(--gruvbox-yellow);
-      --search-result-item-color:      var(--gruvbox-fg1);
-
-      /* Code: inline + fenced blocks */
-      --code-inline-background: var(--gruvbox-bg1);
-      --code-inline-color:      var(--gruvbox-orange);
-      --code-theme-background:  var(--gruvbox-bg0-hard);
-
-      /* Blockquotes / borders / selection */
-      --blockquote-border-color: var(--gruvbox-aqua);
-      --border-color:            var(--gruvbox-bg2);
     }
 
-    /* Guarantee the page background even where the theme doesn't read a variable. */
-    body { background-color: var(--gruvbox-bg0); }
+    /* ---------- LIGHT mode ---------- */
+    :root[data-theme="light"] {
+      --theme-color:           var(--gb-l-yellow);
+      --base-background-color: var(--gb-l-bg0);
+      --base-color:            var(--gb-l-fg1);
+      --heading-color:         var(--gb-l-fg0);
+      --link-color:            var(--gb-l-yellow);
+      --link-color--hover:     var(--gb-l-orange);
+
+      --sidebar-background:                    var(--gb-l-bg0-hard);
+      --sidebar-name-color:                    var(--gb-l-yellow);
+      --sidebar-nav-link-color:                var(--gb-l-fg1);
+      --sidebar-nav-link-color--active:        var(--gb-l-yellow);
+      --sidebar-nav-link-border-color--active: var(--gb-l-yellow);
+
+      --search-input-background-color: var(--gb-l-bg1);
+      --search-input-color:            var(--gb-l-fg1);
+      --search-result-heading-color:   var(--gb-l-yellow);
+      --search-result-item-color:      var(--gb-l-fg1);
+
+      --code-inline-background: var(--gb-l-bg1);
+      --code-inline-color:      var(--gb-l-orange);
+      --code-theme-background:  var(--gb-l-bg1);
+
+      --blockquote-border-color: var(--gb-l-aqua);
+      --border-color:            var(--gb-l-bg2);
+    }
+
+    /* ---------- DARK mode ---------- */
+    :root[data-theme="dark"] {
+      --theme-color:           var(--gb-d-yellow);
+      --base-background-color: var(--gb-d-bg0);
+      --base-color:            var(--gb-d-fg1);
+      --heading-color:         var(--gb-d-fg0);
+      --link-color:            var(--gb-d-yellow);
+      --link-color--hover:     var(--gb-d-orange);
+
+      --sidebar-background:                    var(--gb-d-bg0-hard);
+      --sidebar-name-color:                    var(--gb-d-yellow);
+      --sidebar-nav-link-color:                var(--gb-d-fg1);
+      --sidebar-nav-link-color--active:        var(--gb-d-yellow);
+      --sidebar-nav-link-border-color--active: var(--gb-d-yellow);
+
+      --search-input-background-color: var(--gb-d-bg1);
+      --search-input-color:            var(--gb-d-fg1);
+      --search-result-heading-color:   var(--gb-d-yellow);
+      --search-result-item-color:      var(--gb-d-fg1);
+
+      --code-inline-background: var(--gb-d-bg1);
+      --code-inline-color:      var(--gb-d-orange);
+      --code-theme-background:  var(--gb-d-bg0-hard);
+
+      --blockquote-border-color: var(--gb-d-aqua);
+      --border-color:            var(--gb-d-bg2);
+
+      /* Invert themeable's internal "mono" scale so derived surfaces are dark too.
+         (Tints = surface backgrounds, shades = text — flipped for a dark background.) */
+      --mono-shade3: var(--gb-d-fg0);
+      --mono-shade2: var(--gb-d-fg1);
+      --mono-shade1: var(--gb-d-fg4);
+      --mono-base:   #928374;
+      --mono-tint1:  var(--gb-d-bg2);
+      --mono-tint2:  var(--gb-d-bg1);
+      --mono-tint3:  var(--gb-d-bg0);
+    }
+
+    /* Keep the page background in sync with the active mode. */
+    body { background-color: var(--base-background-color); }
 
     /* Stylized "The Fab Lab" wordmark in the sidebar header. */
     .sidebar .app-name .app-name-link,
@@ -91,15 +151,34 @@
       line-height: 1.15;
       letter-spacing: 0.04em;
       text-transform: uppercase;
-      color: var(--gruvbox-yellow);
+      color: var(--theme-color);
     }
+
+    /* Light/dark toggle button (injected into the sidebar header by a small plugin below). */
+    .theme-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      padding: 0;
+      margin: 0.4rem 0 0.25rem auto;   /* auto left margin right-aligns it in the sidebar */
+      background: transparent;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      color: var(--sidebar-nav-link-color);
+      cursor: pointer;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .theme-toggle:hover { color: var(--theme-color); border-color: var(--theme-color); }
+    .theme-toggle svg { width: 1.1rem; height: 1.1rem; }
 
     /* "Edit this page on GitHub" link. Rendered as a footer at the bottom of each page
        so it stays clear of the GitHub corner in the top-right (they overlapped on mobile). */
     .edit-on-github {
       margin-top: 3rem;
       padding-top: 1rem;
-      border-top: 1px solid var(--gruvbox-bg2);
+      border-top: 1px solid var(--border-color);
       font-size: 0.9em;
       opacity: 0.85;
     }
@@ -169,18 +248,55 @@
        where it overlapped the GitHub corner on mobile. The link targets the matching file under
        /docs/ on the 'main' branch so edits go straight to the source. -->
   <script>
-    window.$docsify.plugins = [
-      function (hook, vm) {
-        hook.afterEach(function (html, next) {
-          var editUrl = 'https://github.com/TFL-at-TAMU/Documentation/edit/main/docs/' + vm.route.file;
-          var button =
-            '<div class="edit-on-github">' +
-            '<a href="' + editUrl + '" target="_blank" rel="noopener noreferrer">✏️ Edit this page on GitHub</a>' +
-            '</div>';
-          next(html + button);
-        });
+    // Light/dark toggle: injects a button into the sidebar header that flips the
+    // [data-theme] attribute set by the no-FOUC script in <head>, and persists the choice.
+    function themeTogglePlugin(hook) {
+      var SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
+      var MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+      function current() { return document.documentElement.getAttribute('data-theme') || 'light'; }
+      function paint(btn) {
+        var dark = current() === 'dark';
+        btn.innerHTML = dark ? SUN : MOON;   // show the icon for the mode you'd switch TO
+        btn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+        btn.setAttribute('title', dark ? 'Switch to light mode' : 'Switch to dark mode');
       }
-    ].concat(window.$docsify.plugins || []);
+      hook.doneEach(function () {
+        var nameEl = document.querySelector('.sidebar .app-name');
+        if (!nameEl) return;
+        var existing = document.querySelector('.theme-toggle');
+        if (existing) { paint(existing); return; }
+        var btn = document.createElement('button');
+        btn.className = 'theme-toggle';
+        btn.type = 'button';
+        paint(btn);
+        btn.addEventListener('click', function () {
+          // Persist the choice, then reload. docsify-themeable bakes some colors at render
+          // time, so an in-place attribute flip doesn't fully repaint the content; a reload
+          // re-renders cleanly, and the no-FOUC script in <head> applies the saved theme
+          // before first paint so there's no flash.
+          var next = current() === 'dark' ? 'light' : 'dark';
+          try { localStorage.setItem('theme', next); } catch (e) {}
+          document.documentElement.setAttribute('data-theme', next);
+          window.location.reload();
+        });
+        nameEl.parentNode.insertBefore(btn, nameEl.nextSibling);
+      });
+    }
+
+    // Edit on GitHub: appends an "Edit this page on GitHub" link to the BOTTOM of each page,
+    // targeting the matching file under /docs/ on the 'main' branch.
+    function editOnGithubPlugin(hook, vm) {
+      hook.afterEach(function (html, next) {
+        var editUrl = 'https://github.com/TFL-at-TAMU/Documentation/edit/main/docs/' + vm.route.file;
+        var button =
+          '<div class="edit-on-github">' +
+          '<a href="' + editUrl + '" target="_blank" rel="noopener noreferrer">✏️ Edit this page on GitHub</a>' +
+          '</div>';
+        next(html + button);
+      });
+    }
+
+    window.$docsify.plugins = [themeTogglePlugin, editOnGithubPlugin].concat(window.$docsify.plugins || []);
   </script>
 </body>
 </html>
