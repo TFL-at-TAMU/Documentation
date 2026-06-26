@@ -194,9 +194,13 @@
       right: 0;
       z-index: 10;
     }
-    /* Semi-transparent so page text shows through; full opacity on hover. */
-    .github-corner svg { opacity: 0.35; transition: opacity 0.2s ease; }
-    .github-corner:hover svg { opacity: 1; }
+    /* Solid ribbon background (full opacity); only the octocat is translucent.
+       The cat is the .octo-arm / .octo-body paths; fading just those keeps the ribbon solid.
+       Full opacity on hover so it still reads as a clickable link. */
+    .github-corner .octo-arm,
+    .github-corner .octo-body { opacity: 0.5; transition: opacity 0.2s ease; }
+    .github-corner:hover .octo-arm,
+    .github-corner:hover .octo-body { opacity: 1; }
 
     /* Shift docsify's fixed sidebar and (statically-positioned) content below the bar. */
     .sidebar { top: var(--topbar-h); }
