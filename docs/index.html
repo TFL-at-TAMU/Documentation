@@ -194,13 +194,8 @@
       right: 0;
       z-index: 10;
     }
-    /* Solid ribbon background (full opacity); only the octocat is translucent.
-       The cat is the .octo-arm / .octo-body paths; fading just those keeps the ribbon solid.
-       Full opacity on hover so it still reads as a clickable link. */
-    .github-corner .octo-arm,
-    .github-corner .octo-body { opacity: 0.5; transition: opacity 0.2s ease; }
-    .github-corner:hover .octo-arm,
-    .github-corner:hover .octo-body { opacity: 1; }
+    /* The octocat is rendered as a true cutout — a hole punched in the solid ribbon — by
+       githubCutoutPlugin below, so the page content shows through the cat shape. */
 
     /* Shift docsify's fixed sidebar and (statically-positioned) content below the bar. */
     .sidebar { top: var(--topbar-h); }
@@ -378,6 +373,44 @@
       });
     }
 
+    // GitHub corner cutout: punch the octocat out of the solid ribbon so the page content
+    // shows through the cat-shaped hole. Builds an SVG <mask> (white = keep, black = cut) from
+    // the octocat paths, applies it to the triangle, then hides the original filled cat paths.
+    function githubCutoutPlugin(hook) {
+      function apply() {
+        var svg = document.querySelector('.github-corner svg');
+        if (!svg || svg.dataset.cutout) return;
+        var triangle = svg.querySelector('path:not(.octo-arm):not(.octo-body)');
+        var arm = svg.querySelector('.octo-arm');
+        var body = svg.querySelector('.octo-body');
+        if (!triangle || !arm || !body) return;
+        var NS = 'http://www.w3.org/2000/svg';
+        var vb = (svg.getAttribute('viewBox') || '0 0 250 250').split(/\s+/);
+        var mask = document.createElementNS(NS, 'mask');
+        mask.setAttribute('id', 'gh-octocat-cutout');
+        mask.setAttribute('maskUnits', 'userSpaceOnUse');
+        var rect = document.createElementNS(NS, 'rect');
+        rect.setAttribute('x', vb[0]); rect.setAttribute('y', vb[1]);
+        rect.setAttribute('width', vb[2]); rect.setAttribute('height', vb[3]);
+        rect.setAttribute('fill', 'white');                 // keep the whole ribbon...
+        mask.appendChild(rect);
+        [arm, body].forEach(function (p) {
+          var c = p.cloneNode(true);
+          c.removeAttribute('class');
+          c.setAttribute('fill', 'black');                  // ...except the cat shape (cut out)
+          c.style.display = '';
+          mask.appendChild(c);
+        });
+        svg.insertBefore(mask, svg.firstChild);
+        triangle.setAttribute('mask', 'url(#gh-octocat-cutout)');
+        arm.style.display = 'none';                         // hide the original filled cat paths
+        body.style.display = 'none';
+        svg.dataset.cutout = '1';
+      }
+      hook.ready(apply);
+      hook.doneEach(apply);
+    }
+
     // Edit on GitHub: appends an "Edit this page on GitHub" link to the BOTTOM of each page,
     // targeting the matching file under /docs/ on the 'main' branch.
     function editOnGithubPlugin(hook, vm) {
@@ -391,7 +424,7 @@
       });
     }
 
-    window.$docsify.plugins = [topbarPlugin, editOnGithubPlugin].concat(window.$docsify.plugins || []);
+    window.$docsify.plugins = [topbarPlugin, githubCutoutPlugin, editOnGithubPlugin].concat(window.$docsify.plugins || []);
   </script>
 </body>
 </html>
