@@ -179,16 +179,21 @@
       white-space: nowrap;
     }
     .topbar-nav a:hover { color: var(--theme-color); opacity: 1; }
-    /* Right-aligned cluster (search + toggle). Right padding clears the GitHub corner ribbon. */
+    /* Right-aligned cluster (search + toggle). */
     .topbar-actions {
       margin-left: auto;
       display: flex;
       align-items: center;
       gap: 0.75rem;
-      padding-right: 3.5rem;
     }
-    /* Keep the GitHub corner visible on top of the bar. */
-    .github-corner { z-index: 30; }
+    /* GitHub corner: pinned to the viewport's top-right, tucked just under the top bar
+       (z-index below the bar so the two never overlap). */
+    .github-corner {
+      position: fixed;
+      top: var(--topbar-h);
+      right: 0;
+      z-index: 10;
+    }
 
     /* Shift docsify's fixed sidebar and (statically-positioned) content below the bar. */
     .sidebar { top: var(--topbar-h); }
@@ -227,16 +232,16 @@
     .theme-toggle:hover { color: var(--theme-color); border-color: var(--theme-color); }
     .theme-toggle svg { width: 1.1rem; height: 1.1rem; }
 
-    /* Mobile: the bar scrolls away with the page (not pinned). The hamburger (left) handles
-       nav, so hide the wordmark + nav links and let search fill the width; right padding keeps
-       the toggle clear of the GitHub corner. */
+    /* Mobile: the bar stays pinned (persistent). The hamburger (left) handles nav, so hide the
+       wordmark + nav links and let search fill the width. */
     @media (max-width: 768px) {
-      .topbar { position: absolute; gap: 0.5rem; padding: 0 0.75rem 0 3rem; }
+      .topbar { gap: 0.5rem; padding: 0 0.75rem 0 3rem; }
       .topbar-brand, .topbar-nav { display: none; }
-      .topbar-actions { margin-left: 0; flex: 1; gap: 0.5rem; padding-right: 4rem; }
+      .topbar-actions { margin-left: 0; flex: 1; gap: 0.5rem; }
       .topbar .search { flex: 1; }
       .topbar .search input { width: 100%; }
-      .sidebar { top: 0; }
+      /* Keep docsify's hamburger above the bar (it sits in the reserved left padding). */
+      .sidebar-toggle { z-index: 25; }
     }
 
     /* "Edit this page on GitHub" link. Rendered as a footer at the bottom of each page
