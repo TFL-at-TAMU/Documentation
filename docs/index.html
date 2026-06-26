@@ -194,6 +194,9 @@
       right: 0;
       z-index: 10;
     }
+    /* Semi-transparent so page text shows through; full opacity on hover. */
+    .github-corner svg { opacity: 0.35; transition: opacity 0.2s ease; }
+    .github-corner:hover svg { opacity: 1; }
 
     /* Shift docsify's fixed sidebar and (statically-positioned) content below the bar. */
     .sidebar { top: var(--topbar-h); }
