@@ -1,5 +1,3 @@
-- [Home](The%20Fab%20Lab%20README.md)
-
 - **3D Scanner**
   - [Learning Assignment](3D%20Scanner/Learning%20Assignment.md)
   - [Operations Manual](3D%20Scanner/Operations%20Manual.md)
@@ -35,7 +33,6 @@
       - [Raise3D E2 Printer Staff Service Manual](FDM%20Printers/Dual%20Head%20FDM%20Printer/Operations%20%26%20Safety%20Manual/Raise3D%20E2%20Printer%20Staff%20Service%20Manual.md)
       - [RaiseTouch E2 User Manual](FDM%20Printers/Dual%20Head%20FDM%20Printer/Operations%20%26%20Safety%20Manual/RaiseTouch%20E2%20User%20Manual.md)
     - [Slicing in Ideamaker](FDM%20Printers/Dual%20Head%20FDM%20Printer/Slicing%20in%20Ideamaker.md)
-- [Fab Lab Safety & Emergency Manual](Fab%20Lab%20Safety%20%26%20Emergency%20Manual.md)
 - **IT**
   - **Computer Systems Administration**
     - **Flowcharts**
