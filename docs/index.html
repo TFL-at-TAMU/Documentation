@@ -402,9 +402,17 @@
 
           // Our own mobile nav: the hamburger toggles body.nav-open (the sidebar slides via CSS).
           // A tap-catcher overlay lets you close the drawer by tapping outside it.
+          // Insert the overlay as a SIBLING of the sidebar (not on <body>) so their z-indexes are
+          // compared in the same stacking context — otherwise iOS Safari traps the sidebar's
+          // z-index inside the content wrapper and the overlay dims the sidebar too.
           var overlay = document.createElement('div');
           overlay.className = 'nav-overlay';
-          document.body.appendChild(overlay);
+          var sbEl = document.querySelector('.sidebar');
+          if (sbEl && sbEl.parentNode) {
+            sbEl.parentNode.insertBefore(overlay, sbEl);
+          } else {
+            document.body.appendChild(overlay);
+          }
           var navToggle = bar.querySelector('.nav-toggle');
           navToggle.addEventListener('click', function () {
             var open = document.body.classList.toggle('nav-open');
