@@ -32,7 +32,9 @@
     ".topbar-brand { font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 700; font-size: 1.25rem; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; white-space: nowrap; }",
     ':root[data-theme="light"] .topbar-brand { color: #b57614; }',
     ':root[data-theme="dark"]  .topbar-brand { color: #fabd2f; }',
-    '.topbar-nav { display: flex; gap: 1.25rem; }',
+    /* line-height: 1 so the links don't inherit the page body's tall line-height (1.7),
+       which made their box taller than the brand/toggle and pushed them off-centre. */
+    '.topbar-nav { display: flex; gap: 1.25rem; line-height: 1; }',
     '.topbar-nav a { text-decoration: none; font-size: 0.95rem; opacity: 0.8; white-space: nowrap; }',
     ':root[data-theme="light"] .topbar-nav a { color: #3c3836; }',
     ':root[data-theme="dark"]  .topbar-nav a { color: #ebdbb2; }',
