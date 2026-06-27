@@ -4,7 +4,7 @@ from urllib.parse import quote
 # --- CONFIGURATION ---
 DOCS_DIR = os.path.join('site', 'docs')
 SIDEBAR_FILE = os.path.join(DOCS_DIR, '_sidebar.md')
-HOMEPAGE = 'The Fab Lab README.md'
+HOMEPAGE = 'README.md'
 
 # Files and directories to completely hide from the sidebar navigation
 EXCLUDE_DIRS = {'assets', 'images', '.git', '.github'}
