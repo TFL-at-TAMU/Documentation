@@ -101,11 +101,14 @@
       return '<a' + (isActive(item.href) ? ' class="active"' : '') + ' href="' + item.href + '">' + item.label + '</a>';
     }).join('');
 
+    // Use a <div role="navigation"> rather than a <nav>: docsify hijacks the first <nav> on the
+    // page (adds its .app-nav class, which docsify-themeable positions absolutely top-right),
+    // which would float our links out of the bar. A div keeps them in the flex flow.
     var bar = document.createElement('header');
     bar.className = 'topbar';
     bar.innerHTML =
       '<a class="topbar-brand" href="/">The Fab Lab</a>' +
-      '<nav class="topbar-nav">' + links + '</nav>' +
+      '<div class="topbar-nav" role="navigation" aria-label="Primary">' + links + '</div>' +
       '<div class="topbar-actions"></div>';
     document.body.insertBefore(bar, document.body.firstChild);
     bar.querySelector('.topbar-actions').appendChild(makeToggle());
