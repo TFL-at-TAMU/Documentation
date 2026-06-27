@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fab Lab Safety &amp; Emergency Manual</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Safety and emergency procedures for The Fab Lab">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+  <!-- Set the light/dark theme BEFORE first paint to avoid a flash (shared with the docs site). -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+
+  <style>
+    /* Gruvbox palette, kept in sync with the docs site (site/docs/index.html). This is a
+       standalone single-page Docsify render of the safety manual — no sidebar, no search. */
+    :root {
+      --gb-d-bg0-hard: #1d2021; --gb-d-bg0: #282828; --gb-d-bg1: #3c3836; --gb-d-bg2: #504945;
+      --gb-d-fg0: #fbf1c7; --gb-d-fg1: #ebdbb2; --gb-d-fg4: #a89984;
+      --gb-d-yellow: #fabd2f; --gb-d-orange: #fe8019; --gb-d-aqua: #8ec07c;
+
+      --gb-l-bg0-hard: #f9f5d7; --gb-l-bg0: #fbf1c7; --gb-l-bg1: #ebdbb2; --gb-l-bg2: #d5c4a1;
+      --gb-l-fg0: #282828; --gb-l-fg1: #3c3836; --gb-l-fg4: #7c6f64;
+      --gb-l-yellow: #b57614; --gb-l-orange: #af3a03; --gb-l-aqua: #427b58;
+
+      --base-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --base-font-size: 17px;
+      --base-line-height: 1.7;
+      --heading-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    :root[data-theme="light"] {
+      --theme-color: var(--gb-l-yellow);
+      --base-background-color: var(--gb-l-bg0);
+      --base-color: var(--gb-l-fg1);
+      --heading-color: var(--gb-l-fg0);
+      --link-color: var(--gb-l-yellow);
+      --link-color--hover: var(--gb-l-orange);
+      --code-inline-background: var(--gb-l-bg1);
+      --code-inline-color: var(--gb-l-orange);
+      --code-theme-background: var(--gb-l-bg1);
+      --blockquote-border-color: var(--gb-l-aqua);
+      --border-color: var(--gb-l-bg2);
+    }
+
+    :root[data-theme="dark"] {
+      --theme-color: var(--gb-d-yellow);
+      --base-background-color: var(--gb-d-bg0);
+      --base-color: var(--gb-d-fg1);
+      --heading-color: var(--gb-d-fg0);
+      --link-color: var(--gb-d-yellow);
+      --link-color--hover: var(--gb-d-orange);
+      --code-inline-background: var(--gb-d-bg1);
+      --code-inline-color: var(--gb-d-orange);
+      --code-theme-background: var(--gb-d-bg0-hard);
+      --blockquote-border-color: var(--gb-d-aqua);
+      --border-color: var(--gb-d-bg2);
+      /* Invert themeable's internal "mono" scale so derived surfaces are dark too. */
+      --mono-shade3: var(--gb-d-fg0); --mono-shade2: var(--gb-d-fg1); --mono-shade1: var(--gb-d-fg4);
+      --mono-base: #928374;
+      --mono-tint1: var(--gb-d-bg2); --mono-tint2: var(--gb-d-bg1); --mono-tint3: var(--gb-d-bg0);
+    }
+
+    body { background-color: var(--base-background-color); }
+
+    :root { --topbar-h: 56px; }
+    .topbar {
+      position: fixed; top: 0; left: 0; right: 0;
+      height: var(--topbar-h);
+      display: flex; align-items: center; gap: 1.5rem;
+      padding: 0 1rem 0 1.25rem;
+      background: var(--gb-l-bg0-hard);
+      border-bottom: 1px solid var(--border-color);
+      z-index: 20;
+    }
+    :root[data-theme="dark"] .topbar { background: var(--gb-d-bg0-hard); }
+    .topbar-brand {
+      font-family: 'Space Grotesk', var(--base-font-family);
+      font-weight: 700; font-size: 1.25rem; letter-spacing: 0.04em; text-transform: uppercase;
+      color: var(--theme-color); text-decoration: none; white-space: nowrap;
+    }
+    .topbar-nav { display: flex; gap: 1.25rem; }
+    .topbar-nav a { color: var(--base-color); text-decoration: none; font-size: 0.95rem; opacity: 0.8; white-space: nowrap; }
+    .topbar-nav a:hover { color: var(--theme-color); opacity: 1; }
+    .topbar-nav a.active { color: var(--theme-color); opacity: 1; }
+    .topbar-actions { margin-left: auto; display: flex; align-items: center; gap: 0.75rem; }
+    .theme-toggle {
+      display: flex; align-items: center; justify-content: center;
+      width: 2rem; height: 2rem; padding: 0; flex: none;
+      background: transparent; border: 1px solid var(--border-color); border-radius: 6px;
+      color: var(--base-color); cursor: pointer;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .theme-toggle:hover { color: var(--theme-color); border-color: var(--theme-color); }
+    .theme-toggle svg { width: 1.1rem; height: 1.1rem; }
+
+    /* Single-page layout: no sidebar, content fills the width below the bar. */
+    .sidebar, .sidebar-toggle { display: none !important; }
+    .content { left: 0 !important; padding-top: var(--topbar-h); }
+
+    @media (max-width: 768px) {
+      .topbar { gap: 0.5rem; padding: 0 0.75rem; }
+      .topbar-nav { gap: 0.85rem; font-size: 0.9rem; }
+      .topbar-brand { font-size: 1.05rem; }
+    }
+  </style>
+</head>
+<body>
+  <div id="app">Loading…</div>
+
+  <script>
+    window.$docsify = {
+      name: '',
+      loadSidebar: false,      // single page — render only the manual, no nav tree
+      homepage: 'README.md',
+      autoHeader: true,
+      auto2top: true
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
+
+  <script>
+    // Minimal top bar (brand + nav + light/dark toggle), matching the docs site.
+    function topbarPlugin(hook) {
+      var SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
+      var MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+      function curTheme() { return document.documentElement.getAttribute('data-theme') || 'light'; }
+      function makeToggle() {
+        var btn = document.createElement('button');
+        btn.className = 'theme-toggle';
+        btn.type = 'button';
+        var dark = curTheme() === 'dark';
+        btn.innerHTML = dark ? SUN : MOON;
+        var label = dark ? 'Switch to light mode' : 'Switch to dark mode';
+        btn.setAttribute('aria-label', label);
+        btn.setAttribute('title', label);
+        btn.addEventListener('click', function () {
+          var next = curTheme() === 'dark' ? 'light' : 'dark';
+          try { localStorage.setItem('theme', next); } catch (e) {}
+          document.documentElement.setAttribute('data-theme', next);
+          window.location.reload();   // docsify-themeable bakes colors at render; reload repaints cleanly
+        });
+        return btn;
+      }
+      hook.doneEach(function () {
+        if (document.querySelector('.topbar')) return;
+        var bar = document.createElement('header');
+        bar.className = 'topbar';
+        bar.innerHTML =
+          '<a class="topbar-brand" href="/">The Fab Lab</a>' +
+          '<nav class="topbar-nav">' +
+            '<a href="/">Home</a>' +
+            '<a href="/docs/">Documentation</a>' +
+            '<a class="active" href="/safety/">Safety</a>' +
+          '</nav>' +
+          '<div class="topbar-actions"></div>';
+        document.body.insertBefore(bar, document.body.firstChild);
+        bar.querySelector('.topbar-actions').appendChild(makeToggle());
+      });
+    }
+    window.$docsify.plugins = [topbarPlugin].concat(window.$docsify.plugins || []);
+  </script>
+</body>
+</html>

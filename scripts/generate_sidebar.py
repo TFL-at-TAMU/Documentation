@@ -72,15 +72,10 @@ def main():
         print(f"Error: Could not find '{DOCS_DIR}' directory. Please run this script from the repository root.")
         return
 
-    # Start generating the content for the _sidebar.md file
-    # We always explicitly add the Home link at the very top.
-    sidebar_content = [
-        f"- [Home]({quote(HOMEPAGE)})",
-        "" # Empty line for spacing below the Home link
-    ]
-    
-    # Run the recursive crawler to build the rest of the navigation
-    sidebar_content.extend(generate_sidebar_content(DOCS_DIR, DOCS_DIR))
+    # Build the navigation by crawling the docs tree. The homepage ("The Fab Lab README.md")
+    # and the safety manual are intentionally NOT listed here: the homepage is reached via the
+    # top-bar "Home" tab (the landing page at /), and the safety manual is its own page at /safety/.
+    sidebar_content = generate_sidebar_content(DOCS_DIR, DOCS_DIR)
 
     # Write the assembled strings to the _sidebar.md file
     with open(SIDEBAR_FILE, 'w', encoding='utf-8') as f:
