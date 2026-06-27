@@ -1,10 +1,16 @@
 # Documentation
 
-The Fab Lab (TFL at TAMU) documentation site. Content lives as Markdown under [`docs/`](docs/)
-and is rendered in the browser by [Docsify](https://docsify.js.org/) — there is no build step
-for the content itself, the Markdown is served as-is.
+The Fab Lab (TFL at TAMU) site. A plain static landing page lives at [`site/index.html`](site/index.html);
+the documentation content lives as Markdown under [`site/docs/`](site/docs/) and is rendered in the
+browser by [Docsify](https://docsify.js.org/) — there is no build step for the content itself, the
+Markdown is served as-is.
 
-**Live site:** https://docs.aidanstew.art
+The publish directory is `site/`, so the landing page is served at `/` and the docs at `/docs/`.
+
+**Live site:** https://tfl.aidanstew.art (docs at https://tfl.aidanstew.art/docs/)
+
+> The old `docs.aidanstew.art` host 301-redirects to `https://tfl.aidanstew.art/docs/`, so previously
+> shared links (including Docsify `#/…` hash links) continue to work.
 
 ## Hosting
 
@@ -15,16 +21,16 @@ The site is hosted on **Cloudflare Pages**, auto-deploying on every push to `mai
 | Production branch | `main` |
 | Framework preset | None |
 | Build command | `python3 scripts/generate_sidebar.py` |
-| Build output directory | `docs` |
+| Build output directory | `site` |
 
 The build command regenerates the navigation sidebar (see below). If it is ever cleared, the
-site still deploys and serves the last-committed `docs/_sidebar.md` — the sidebar just stops
+site still deploys and serves the last-committed `site/docs/_sidebar.md` — the sidebar just stops
 updating automatically.
 
 ## Navigation sidebar
 
-`docs/_sidebar.md` is **generated**, not hand-edited. [`scripts/generate_sidebar.py`](scripts/generate_sidebar.py)
-walks the `docs/` folder tree and writes a Docsify sidebar from it (folders become section
+`site/docs/_sidebar.md` is **generated**, not hand-edited. [`scripts/generate_sidebar.py`](scripts/generate_sidebar.py)
+walks the `site/docs/` folder tree and writes a Docsify sidebar from it (folders become section
 headers, `.md` files become links). It uses only the Python standard library — no dependencies.
 
 It runs automatically as the Cloudflare Pages **build command** on every deploy, so you never
