@@ -2,7 +2,7 @@ import os
 from urllib.parse import quote
 
 # --- CONFIGURATION ---
-DOCS_DIR = 'docs'
+DOCS_DIR = os.path.join('site', 'docs')
 SIDEBAR_FILE = os.path.join(DOCS_DIR, '_sidebar.md')
 HOMEPAGE = 'The Fab Lab README.md'
 
