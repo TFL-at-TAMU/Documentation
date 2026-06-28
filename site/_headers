@@ -1,0 +1,10 @@
+# Cloudflare Pages response headers.
+#
+# By default Pages caches our assets in the browser for hours (e.g. /assets/topbar.js was
+# served with max-age=14400), so a deploy wouldn't show up until that window expired or the
+# visitor hard-refreshed. For a low-traffic docs site we'd rather have freshness: make the
+# browser revalidate with the edge on every load. Responses are still cached, but the browser
+# sends a conditional request and gets a cheap 304 when nothing changed — and the new file the
+# moment it does.
+/*
+  Cache-Control: public, max-age=0, must-revalidate
