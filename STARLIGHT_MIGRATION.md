@@ -51,7 +51,21 @@ Fix: tiny inline script on the docs index page only (`src/content/docs/docs/inde
 
 ## Header navigation parity
 
-Starlight's default header = title + search + theme select + GitHub icon. It does **not** include the Home/Documentation/Safety/Contact links from the current shared top bar. Add them via Starlight **component override** of `Header` (or `SocialIcons` slot hack — prefer the documented Header override): render the four links, active state from `Astro.url.pathname`. The landing page keeps its own matching bar (already built in PoC). **Contact is still a placeholder (`#`)** — ask the owner where it should point before or during Phase 2 (Discord `https://discord.gg/Tvn9rsBUWH` is the likely answer).
+Starlight's default header = title + search + theme select + GitHub icon. It does **not** include the Home/Documentation/Safety/Contact links from the current shared top bar. Add them via Starlight **component override** of `Header` (or `SocialIcons` slot hack — prefer the documented Header override): render the four links, active state from `Astro.url.pathname`. The landing page keeps its own matching bar (already built in PoC). **Contact points to `/contact/`** — see the Contact page spec below.
+
+## Contact page spec (owner-approved 2026-07-06)
+
+New custom Astro page at `src/pages/contact.astro` → **`/contact/`**, same Gruvbox shell/top bar as the landing page. Build it in Phase 2. Contents:
+
+1. **Discord CTA — the centerpiece.** A prominent, styled button ("fancy": Discord logo SVG + accent background, hover lift, both themes) linking `https://discord.gg/Tvn9rsBUWH`. Label along the lines of "Join us on Discord". This is also what the header's **Contact** link ultimately serves — the button must be visible without scrolling.
+2. **People** (card layout, like the landing page's quick-fact cards):
+   | Name | Role | Details |
+   |---|---|---|
+   | Jimmy Walker | President | email/contact: `PLACEHOLDER` |
+   | Aidan Stewart | Vice President | email/contact: `PLACEHOLDER` |
+   | Paul Deere | Sponsoring Professor | email/office: `PLACEHOLDER` |
+   Owner explicitly OK'd placeholders for unknown details — mark them visibly (e.g. muted "contact info coming soon") rather than fake data, and leave an HTML `<!-- TODO: real contact details -->` comment at each.
+3. **Location & hours** (reuse landing copy: Wisenbaker Engineering Building (WEB) Room 121; 12:00 PM – 10:00 PM, 7 days a week, staffing permitting).
 
 ## Phases (each = one PR, checks `check-file-size` + Cloudflare Pages must pass, admin-merge per repo convention)
 
@@ -66,8 +80,8 @@ Branch from `poc/starlight`. Upgrade `scripts/poc_import_content.mjs` into `scri
 ### Phase 2 — The real migration PR (to `main`)
 Fresh branch from `main`. Recreate the Astro scaffold (copy from Phase 1 branch), then **`git mv`** content into place (history-preserving), run `scripts/migrate_content.mjs` in in-place mode (frontmatter/link rewrites applied to the moved files, committed as content edits), delete the list above, update `README.md` (new architecture, build commands, "how to add a doc" for contributors: *drop a `.md` file in the right folder — title comes from the filename or a `title:` frontmatter line*). Full local build + verification checklist from Phase 1 again.
 
-### Phase 3 — Cloudflare cutover (dashboard, coordinated with Phase 2 merge)
-Same coordination pattern as the `site/` restructure (see `hosting-architecture` memory / repo history):
+### Phase 3 — Cloudflare cutover (dashboard, after Phase 2 merge)
+Owner note (2026-07-06): the site is effectively unused right now, so **brief downtime or a stale window during cutover is acceptable** — don't over-engineer the coordination. Sequence:
 1. Merge the Phase 2 PR. Production build will fail or go stale — expected; the last good deploy keeps serving.
 2. In the Pages project (**documentation**, account `7cb3961b81cd8b4c62808cb72b47dff6`): Settings → Build: **Build command** `npm ci && npm run build` · **Build output directory** `dist` · add env var **`NODE_VERSION=24`** (build image default may be older).
 3. Deployments → **Retry** the failed deploy. Verify live: `/`, `/docs/`, `/safety/`, one deep manual URL, `/files/` binary, search, dark/light, the old-hash shim, and that `docs.aidanstew.art/#/...` still lands sensibly.
@@ -86,8 +100,10 @@ Revert the Phase 2 merge commit on `main`, flip Cloudflare build settings back (
 - Lesson from the PoC: agents verify what you tell them to verify. The PoC agent confirmed sidebar *labels* existed but not that groups had *children* (they were empty). **Briefs must demand behavioral verification** (counts of links inside groups, curl of actual child URLs), and the supervisor re-verifies independently.
 - Second lesson: browser caching masked a correct fix twice in this project. When verifying rebuilt output, check `dist/` HTML on disk first, then hard-refresh (cache-busting query) in the browser.
 
-## Open questions for the owner (ask before Phase 2)
+## Open questions for the owner
 
-1. Where should **Contact** point? (Discord invite is the standing guess.)
-2. Sidebar group ordering: alphabetical (current) or curated (e.g. printers first)?
-3. Keep `documentation-63v.pages.dev` publicly accessible or restrict to the custom domain?
+Answered 2026-07-06: Contact → the `/contact/` page spec above (Discord button + people cards). Cutover downtime → acceptable, site currently unused. `pages.dev` domain → leave as-is, not a concern.
+
+Still open (non-blocking, default to current behavior):
+1. Sidebar group ordering: alphabetical (current) or curated (e.g. printers first)?
+2. Real contact details for Jimmy Walker / Aidan Stewart / Paul Deere to replace the placeholders.
