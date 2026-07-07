@@ -1,5 +1,13 @@
 # TODO
 
+## ⚠️ In flight: Starlight migration
+
+The site is migrating from Docsify to **Astro Starlight** — full plan, locked decisions, and
+phase-by-phase execution guide in [STARLIGHT_MIGRATION.md](STARLIGHT_MIGRATION.md).
+Proof-of-concept lives on the `poc/starlight` branch. Several roadmap items below are
+solved or re-scoped by the migration (sidebar, search, "on this page", reload-free theme
+toggle all come built-in with Starlight).
+
 ## Site UI roadmap
 
 Improvements drawn from reviewing reference docs sites (Linear, Cloudflare, Supabase,
