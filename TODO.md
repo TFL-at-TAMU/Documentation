@@ -1,5 +1,7 @@
 # TODO
 
+> **New here / picking this up cold?** Start with [HANDOFF.md](HANDOFF.md) — full project context, decisions, open threads, and infra reference.
+
 ## ⚠️ In flight: Starlight migration
 
 The site is migrating from Docsify to **Astro Starlight** — full plan, locked decisions, and
