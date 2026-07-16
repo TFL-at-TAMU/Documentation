@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "docs",
-      "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "4173", "--bind", "127.0.0.1", "--directory", "site"],
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["astro", "dev", "--port", "4173"],
       "port": 4173
     }
   ]
