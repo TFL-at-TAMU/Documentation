@@ -1,47 +1,83 @@
 # Documentation
 
-The Fab Lab (TFL at TAMU) site. A plain static landing page lives at [`site/index.html`](site/index.html);
-the documentation content lives as Markdown under [`site/docs/`](site/docs/) and is rendered in the
-browser by [Docsify](https://docsify.js.org/) — there is no build step for the content itself, the
-Markdown is served as-is.
+The Fab Lab (TFL at TAMU) documentation site: machine manuals, learning assignments, and shop
+standards for a university makerspace. Built with [Astro](https://astro.build/) and
+[Starlight](https://starlight.astro.build/).
 
-The publish directory is `site/`, so the landing page is served at `/` and the docs at `/docs/`.
+**Live site:** https://tfl.aidanstew.art — landing at `/`, docs at `/docs/`, safety manual at
+`/safety/`, contact at `/contact/`.
 
-**Live site:** https://tfl.aidanstew.art (docs at https://tfl.aidanstew.art/docs/)
+> The old `docs.aidanstew.art` host 301-redirects to `https://tfl.aidanstew.art/docs/`, and a
+> compatibility shim (see `astro.config.mjs`) client-redirects old Docsify `#/…` hash links to
+> their new slugged URL.
 
-> The old `docs.aidanstew.art` host 301-redirects to `https://tfl.aidanstew.art/docs/`, so previously
-> shared links (including Docsify `#/…` hash links) continue to work.
+## Stack
 
-## Hosting
+- **Astro** `7.0.6` + **Starlight** `0.41.3` (pinned exact versions — see `package.json`).
+- Static output: everything renders to HTML at build time (no client-side rendering of content).
+- GitHub-style `> [!NOTE]` callouts via `remark-github-blockquote-alert`.
+- Gruvbox light/dark theme (`src/styles/gruvbox.css`), Inter (body) / Space Grotesk (headings).
+- Starlight's sidebar autogenerates from the content folder tree — no separate sidebar file to
+  maintain.
 
-The site is hosted on **Cloudflare Pages**, auto-deploying on every push to `main`.
+## Layout
 
-| Setting | Value |
+| Path | What it is |
 |---|---|
-| Production branch | `main` |
-| Framework preset | None |
-| Build command | `python3 scripts/generate_sidebar.py` |
-| Build output directory | `site` |
+| `src/content/docs/docs/**` | The documentation manuals and learning assignments (Starlight content collection). Sidebar groups mirror the folder structure. |
+| `src/content/docs/safety.md` | The Fab Lab Safety & Emergency Manual, served at `/safety/`. |
+| `src/pages/` | Custom, non-Starlight pages: `index.astro` (landing page at `/`) and `contact.astro` (`/contact/`). |
+| `src/components/Header.astro` | Starlight header override that adds the shared Home / Documentation / Safety / Contact nav links. |
+| `public/files/` | Downloadable binaries referenced from the docs (`.stl`, `.pdf`, `.ods`, `.zip`) — served at `/files/...`. |
+| `public/_headers` | Cloudflare Pages response headers (cache control). |
+| `scripts/migrate_content.mjs` | The one-time Docsify → Starlight content migration tool. Not part of the normal contributor workflow — kept for reference. |
 
-The build command regenerates the navigation sidebar (see below). If it is ever cleared, the
-site still deploys and serves the last-committed `site/docs/_sidebar.md` — the sidebar just stops
-updating automatically.
+Staff-facing docs (credentials, networking/IT internals, service manuals) live elsewhere and are
+intentionally excluded from this site.
 
-## Navigation sidebar
+## Local development
 
-`site/docs/_sidebar.md` is **generated**, not hand-edited. [`scripts/generate_sidebar.py`](scripts/generate_sidebar.py)
-walks the `site/docs/` folder tree and writes a Docsify sidebar from it (folders become section
-headers, `.md` files become links). It uses only the Python standard library — no dependencies.
-
-It runs automatically as the Cloudflare Pages **build command** on every deploy, so you never
-need to edit the sidebar by hand. Just add, rename, or remove Markdown files and the navigation
-follows on the next deploy.
-
-To preview the regenerated sidebar locally, run it from the repo root:
+Requires Node.js v20+ (v22/v24 both work).
 
 ```bash
-python3 scripts/generate_sidebar.py
+npm ci
+npx astro dev
 ```
+
+This starts a dev server with live reload at `http://localhost:4321`.
+
+## Build
+
+```bash
+npm run build
+```
+
+Outputs the static site to `dist/`. Preview the production build locally with `npx astro preview`.
+
+**Cloudflare Pages** builds with `npm ci && npm run build`, output directory `dist`.
+
+## How to add a doc
+
+1. Drop a `.md` file into the right folder under `src/content/docs/docs/` (create a new folder if
+   it's a new machine or category — folders become sidebar groups automatically).
+2. The page title comes from the filename, or you can set it explicitly with a `title:` line in
+   YAML frontmatter:
+
+   ```markdown
+   ---
+   title: My Machine Operation Manual
+   ---
+
+   Page content here...
+   ```
+3. That's it — the sidebar updates automatically on the next build, no separate navigation file to
+   edit.
+
+If your doc links to another doc, use a normal relative Markdown link
+(`[Safety Manual](../Safety%20Manual.md)`); if it references a binary file (`.stl`/`.pdf`/`.ods`/
+`.zip`), put the binary in the same folder as the doc — binaries aren't served directly from
+`src/content/`, so ask a maintainer to run the migration/relocation step if you're adding new
+non-image binaries.
 
 ## Contributing
 
