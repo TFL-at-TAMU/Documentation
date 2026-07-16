@@ -16,7 +16,7 @@ Last Updated: 3/12/26
 
 Responsible Student Worker: Aidan Spira
 
-Linked Operations Manual: [Link Here](<Bambu Lab X1C 3D Printer Operation Manual.md>)
+Linked Operations Manual: [Link Here](/docs/fdm-printers/bambu-labs-x1c-3d-printer/operations--safety-manuals/bambu-lab-x1c-3d-printer-operation-manual/)
 
 ## 1\. Purpose of This Safety Manual
 

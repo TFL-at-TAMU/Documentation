@@ -1,3 +1,7 @@
+---
+title: "FormLabs 3 Resin Printer Operations Manual"
+---
+
 ## What This Machine Is For
 * Printing high‑resolution resin 3D prints for prototyping, design verification, and small functional or aesthetic parts
 * Creating fine‑detail components such as housings, enclosures, fixtures, or display models
@@ -11,7 +15,7 @@
 ## What You Need Before You Start
 
 * There is trained Fab Lab staff present
-* The Fab Lab[ Formlabs Resin Printer Safety Manual ](<Formlabs Resin Printer Safety Manual.md>)was acknowledged
+* The Fab Lab[ Formlabs Resin Printer Safety Manual ](/docs/sla-printers/formlabs-form-3-resin-printer/operations--safety-manuals/formlabs-resin-printer-safety-manual/)was acknowledged
 * The required PPE is being used: 
 
 
@@ -51,7 +55,7 @@ Main points:
 ### Start-Up
 
 1. Prepare and slice your model and present it to the pertinent Staff (refer to section 11 to learn how to slice )
-2. Ensure that the working area is clean (nothing is obstructing the build platform and resin tank). If in the case, refer to the [Formlabs Cleaning Manual](<../Wasing and Curing Machines/Formlabs Cleaning Manual.md>) and clean the working area
+2. Ensure that the working area is clean (nothing is obstructing the build platform and resin tank). If in the case, refer to the [Formlabs Cleaning Manual](/docs/sla-printers/formlabs-form-3-resin-printer/wasing-and-curing-machines/formlabs-cleaning-manual/) and clean the working area
 
 
 
@@ -160,7 +164,7 @@ These are the finishing tools used for cleaning and other purposes:
 
 11\. Non-reactive nitrile gloves - Nitrile gloves that will not react with resin
 
-(more information on the [cleaning manual](<../Wasing and Curing Machines/Formlabs Cleaning Manual.md>))
+(more information on the [cleaning manual](/docs/sla-printers/formlabs-form-3-resin-printer/wasing-and-curing-machines/formlabs-cleaning-manual/))
 
 1. Shake slowly the build platform to break the leftover resin left on the print and wait  2 to 3 minutes to let some of the resin naturally drip onto the tank.
 
@@ -185,7 +189,7 @@ These are the finishing tools used for cleaning and other purposes:
 ![](../../../assets/images/formlabs_3_resin_pri_859e73a1df.jpeg)
 
 4. After removing the object, send the print to the washer, and after finishing to the curing machine
-5. While the print is washing and curing, clean the build platform and the workspace (refer to [Cleaning Manual](<../Wasing and Curing Machines/Formlabs Cleaning Manual.md>))
+5. While the print is washing and curing, clean the build platform and the workspace (refer to [Cleaning Manual](/docs/sla-printers/formlabs-form-3-resin-printer/wasing-and-curing-machines/formlabs-cleaning-manual/))
 
 
 
@@ -198,7 +202,7 @@ These are the finishing tools used for cleaning and other purposes:
 
 After using this machine, you are responsible for:
 
-Note: For cleaning sections, refer to  [Formlabs Cleaning Manual](<../Wasing and Curing Machines/Formlabs Cleaning Manual.md>)to learn how to clean
+Note: For cleaning sections, refer to  [Formlabs Cleaning Manual](/docs/sla-printers/formlabs-form-3-resin-printer/wasing-and-curing-machines/formlabs-cleaning-manual/)to learn how to clean
 
 * Clean the Build Platform of Pieces and resin
 * Clean the used tools and set them back on their respective hold stations
@@ -222,7 +226,7 @@ Do not attempt to troubleshoot major issues yourself; contact a staff member.
 ## Common Issues & What To Do
 
 * Issue: If the print fails and objects fall onto the Plate  
-Action: abort print and notify staff to perform a cleaning mesh (refer to [cleaning manual](<../Wasing and Curing Machines/Formlabs Cleaning Manual.md>)) and clean the working area before restarting.
+Action: abort print and notify staff to perform a cleaning mesh (refer to [cleaning manual](/docs/sla-printers/formlabs-form-3-resin-printer/wasing-and-curing-machines/formlabs-cleaning-manual/)) and clean the working area before restarting.
 * Issue: If the print starts to make abnormal noises(clashing, scratching,banging, etc)  
 Action:  Pause the print, abort if an issue is apparent or dangerous to the user or machine, and notify the staff.
 * Issue: If the print starts to get low on resin or none is left  

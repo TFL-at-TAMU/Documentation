@@ -16,7 +16,7 @@ Last Updated: 4/8/2026
 
 Responsible Student Worker: Aidan Spira
 
-Linked Safety Manual: [Link Here](<Glowforge Safety Manual.md>)
+Linked Safety Manual: [Link Here](/docs/laser-cutter/operations--safety-manuals/glowforge-safety-manual/)
 
 * * *
 

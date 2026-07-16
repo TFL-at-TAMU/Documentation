@@ -94,4 +94,4 @@ How to Slice in IdeaMaker
 
 ![](../../assets/images/slicing_in_ideamaker_34bf55aedd.png)
 
-  11. You are now ready to plug your USB into the Raise3D E2 Printer and start the print. Reference the [Raise 3D E2 Dual Head Printer Operations Manual](<Operations & Safety Manual/Raise3D E2 Printer Machine Operation Manual.md>) to get started.
+  11. You are now ready to plug your USB into the Raise3D E2 Printer and start the print. Reference the [Raise 3D E2 Dual Head Printer Operations Manual](/docs/fdm-printers/dual-head-fdm-printer/operations--safety-manual/raise3d-e2-printer-machine-operation-manual/) to get started.

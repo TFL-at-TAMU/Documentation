@@ -47,7 +47,7 @@ Output| Single discrete measurements| Full 3D surface mesh
 Best For| Diameters, depths, steps, simple geometry| Organic shapes, reverse engineering, full-surface inspection  
 Limitations| Cannot characterize curves or complex surfaces| Expensive; requires software; requires powerful computer; cannot measure hidden/internal features  
   
-# Part 2 – Infrared vs. LASER
+## Part 2 – Infrared vs. LASER
 
 ## The Creality Raptor Pro operates in three scanning modes: NIR (Near-Infrared) Structured Light, 7 Parallel Blue Laser Lines, and 22 Cross Blue Laser Lines. Understanding when to use each mode is important for getting a useful scan on your first attempt.
 
@@ -55,12 +55,12 @@ Limitations| Cannot characterize curves or complex surfaces| Expensive; requires
 
 ## Laser scanning works similarly: the scanner projects one or more lines of blue laser light across the object while cameras measure where the line bends or shifts. The Raptor Pro's blue lasers (405 nm wavelength) trace these lines across the part at up to 60 fps, building up a point cloud row by row.
 
-## ![](../../assets/images/3d_scanner_assignmen_1026f7050a.png)![](../../assets/images/3d_scanner_assignmen_612c709f6a.png)
+## ![](../assets/images/3d_scanner_assignmen_1026f7050a.png)![](../assets/images/3d_scanner_assignmen_612c709f6a.png)
 
 (Left) Scan using cross lines. (Right) Scan using Parallel lines.  
 ([https://www.reddit.com/r/3DScanning/comments/1knrtgo/metrox_cross_laser_vs_parallel/](<https://www.google.com/url?q=https://www.reddit.com/r/3DScanning/comments/1knrtgo/metrox_cross_laser_vs_parallel/&sa=D&source=editors&ust=1776804255921666&usg=AOvVaw0yh2qq59TaEG_rLQxEA_vR>))
 
-## ![](../../assets/images/3d_scanner_assignmen_e30fd343e0.png)
+## ![](../assets/images/3d_scanner_assignmen_e30fd343e0.png)
 
 Structured Light 3D Scanning 
 
@@ -81,7 +81,7 @@ Single capture area| 630 × 550 mm| 397 × 290 mm| 397 × 290 mm
 Best object size| Medium–large| Small–medium| Medium–large  
 Color texture capture?| Yes (24-bit)| No| No  
   
-# Part 3 – Tracking Modes
+## Part 3 – Tracking Modes
 
 The Raptor Pro supports three tracking modes in the Creality Scan software: Geometry, Texture, and Marker. Tracking mode determines how the scanner knows where it is in space relative to the object — it is a separate choice from your scanning light mode. Choosing the wrong tracking mode is one of the most common reasons a scan fails, so understanding each option is important.
 
@@ -120,7 +120,7 @@ Limitations: Applying and removing markers takes time. In laser mode, markers a
 
 Important Distinction: Just because markers are required in laser mode doesn’t necessarily mean you need to apply markers to the object itself. You can place the supplied movable markers around and on top of objects and remove them in post-processing. Refer to the [Fab Lab 3D Scanner Operations Manual](<../Operations & Safety Manuals/3D Scanner Operations Manual.md>).
 
-# Part 4 – The Assignment
+## Part 4 – The Assignment
 
 Generate a model of the cutting board. Use [Fab Lab 3D Scanner Operations Manual](<../Operations & Safety Manuals/3D Scanner Operations Manual.md>) to guide you through the process.
 

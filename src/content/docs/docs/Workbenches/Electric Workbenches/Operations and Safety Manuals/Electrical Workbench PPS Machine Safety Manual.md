@@ -16,7 +16,7 @@ Last Updated: 2/19/2026
 
 Responsible Student Workers: Michael Allen and Joshua Russell
 
-Linked Operations Manual: [Link Here](<Electrical Workbench Operation Manual.md>)
+Linked Operations Manual: [Link Here](/docs/workbenches/electric-workbenches/operations-and-safety-manuals/electrical-workbench-operation-manual/)
 
 ## 1\. Purpose of This Safety Manual
 

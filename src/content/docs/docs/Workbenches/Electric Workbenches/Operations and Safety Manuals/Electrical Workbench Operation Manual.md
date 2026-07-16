@@ -16,7 +16,7 @@ Last Updated: 2/2/26
 
 Responsible Student Worker: Michael Allen, Joshua Russell
 
-Linked Safety Manual: [Link Here](<Electrical Workbench PPS Machine Safety Manual.md>)
+Linked Safety Manual: [Link Here](/docs/workbenches/electric-workbenches/operations-and-safety-manuals/electrical-workbench-pps-machine-safety-manual/)
 
 ## 1\. What Are These Machines Used For
 

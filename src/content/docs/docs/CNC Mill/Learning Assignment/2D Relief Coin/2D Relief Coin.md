@@ -1,3 +1,7 @@
+---
+title: "2D Relief Coin"
+---
+
 **Carvera CNC Coin Tutorial**
 
 **Machine Name:** Carvera Desktop CNC

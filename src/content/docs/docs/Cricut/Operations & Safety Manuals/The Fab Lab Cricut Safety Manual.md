@@ -16,7 +16,7 @@ Last Updated: 4/11/26
 
 Responsible Student Worker: Priyanka Naphade
 
-Linked Operations Manual: [OPERATIONS MANUAL](<The Fab Lab Cricut Operations Manual.md>)
+Linked Operations Manual: [OPERATIONS MANUAL](/docs/cricut/operations--safety-manuals/the-fab-lab-cricut-operations-manual/)
 
 ## 1\. Purpose of This Safety Manual
 
@@ -81,7 +81,7 @@ Know the location and function of the following before operating the machine:
   * Emergency Stop: 
 
 
-  * There is a pause button, button 9, on the right side of the machine, an image of this is in the [operations manual](<The Fab Lab Cricut Operations Manual.md>). 
+  * There is a pause button, button 9, on the right side of the machine, an image of this is in the [operations manual](/docs/cricut/operations--safety-manuals/the-fab-lab-cricut-operations-manual/). 
   * As a last resort you may unplug the machine and notify a staff member. 
 
 
@@ -94,7 +94,7 @@ Know the location and function of the following before operating the machine:
   * Safety Interlocks / Covers: 
 
 
-  * There is a button with raised circles on the left hand side of the machine, button 12 as mentioned in the [operations manual](<The Fab Lab Cricut Operations Manual.md>), this physically opens the machine to close the machine you must push the cover back into place 
+  * There is a button with raised circles on the left hand side of the machine, button 12 as mentioned in the [operations manual](/docs/cricut/operations--safety-manuals/the-fab-lab-cricut-operations-manual/), this physically opens the machine to close the machine you must push the cover back into place 
 
 
 

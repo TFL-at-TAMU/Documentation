@@ -1,5 +1,5 @@
 ---
-title: "Elegoo Resin 3D Printer Cleaning Manual"
+title: "![](../../assets/images/elegoo_resin_3d_prin_41a5ce92d6.png)"
 source_id: "1tRtOTDxy1XjXWuI0dzXjhsIFctVX2W1PDT9G2lzX9Ao"
 modified: "2026-04-15T19:45:11.355Z"
 ---
@@ -38,8 +38,6 @@ This is the cleaning manual for the Elegoo resin printer.
 The manual contains procedures for cleaning the resin vat in the printer, as well as the cleaning procedures for the parts made by the printer.
 
 The vat cleaning is to take place BEFORE the use of the resin printer, the washing and curing is for AFTER the piece is made.
-
-# ![](../../assets/images/elegoo_resin_3d_prin_41a5ce92d6.png)
 
 Resin VAT Cleaning
 

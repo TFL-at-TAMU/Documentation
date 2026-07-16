@@ -16,9 +16,9 @@ Last Updated: 3/26/2026
 
 Responsible Student Worker: Gael Ramos
 
-Linked Operations Manual: [FormLabs 3 Resin Printer Operations Manual](<FormLabs 3 Resin Printer Operations Manual.md>)
+Linked Operations Manual: [FormLabs 3 Resin Printer Operations Manual](/docs/sla-printers/formlabs-form-3-resin-printer/operations--safety-manuals/formlabs-3-resin-printer-operations-manual/)
 
-Cleaning Manual: [Formlabs Cleaning Manual](<../Wasing and Curing Machines/Formlabs Cleaning Manual.md>)
+Cleaning Manual: [Formlabs Cleaning Manual](/docs/sla-printers/formlabs-form-3-resin-printer/wasing-and-curing-machines/formlabs-cleaning-manual/)
 
 ## 1\. Purpose of This Safety Manual
 
@@ -107,7 +107,7 @@ Know the location and function of the following before operating the machine:
 
 
 
-For more information, refer to the: [FormLabs 3 Resin Printer Operations Manual](<FormLabs 3 Resin Printer Operations Manual.md>)
+For more information, refer to the: [FormLabs 3 Resin Printer Operations Manual](/docs/sla-printers/formlabs-form-3-resin-printer/operations--safety-manuals/formlabs-3-resin-printer-operations-manual/)
 
 ## 7\. Unsafe Conditions – Stop Immediately If:
 
@@ -142,7 +142,7 @@ Care:
   1. Use Nitrile Gloves  whenever possible contact or resin may occur, or during handling alcohol
 
 
-  1. Beware of where and what you touch when using the gloves, and if any trace of either alcohol or resin is left, clean with a paper towel. (For information on cleaning, refer to the [cleaning manual](<../Wasing and Curing Machines/Formlabs Cleaning Manual.md>))
+  1. Beware of where and what you touch when using the gloves, and if any trace of either alcohol or resin is left, clean with a paper towel. (For information on cleaning, refer to the [cleaning manual](/docs/sla-printers/formlabs-form-3-resin-printer/wasing-and-curing-machines/formlabs-cleaning-manual/))
 
 
   2. Always keep the Orange UV case on unless something needs to be done inside the machine.

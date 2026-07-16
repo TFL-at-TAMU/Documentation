@@ -16,7 +16,7 @@ Last Updated: 2/17/2026
 
 Responsible Student Worker: Luca Nealon
 
-Linked Safety Manual: [Raise3D E2 Printer Machine Safety Manual](<../Operations & Safety Manual/Raise3D E2 Printer Machine Safety Manual.md>)
+Linked Safety Manual: [Raise3D E2 Printer Machine Safety Manual](/docs/fdm-printers/dual-head-fdm-printer/operations--safety-manual/raise3d-e2-printer-machine-safety-manual/)
 
 Goal: 3D Print a Part with Two Colors
 
@@ -77,7 +77,7 @@ As shown above, the sign aligns perfectly now.
 
 You will also see a ghost tow[[a]](<#cmnt1>)er appear. This is called a wipe tower, and it automatically appears for multicolor prints. The purpose of the tower is to have excessive filament ooze get wiped on a trash part instead of the actual filament. Wipe towers can be disabled in advanced slicer settings.
 
-  6. Using the [Slicing in Ideamaker](<../Slicing in Ideamaker.md>) instructions, slice the model for PLA and print.
+  6. Using the [Slicing in Ideamaker](/docs/fdm-printers/dual-head-fdm-printer/slicing-in-ideamaker/) instructions, slice the model for PLA and print.
 
 
 

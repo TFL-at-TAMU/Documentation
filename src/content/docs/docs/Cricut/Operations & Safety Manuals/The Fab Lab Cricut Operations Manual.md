@@ -16,7 +16,7 @@ Last Updated: 4/11/26
 
 Responsible Student Worker: Priyanka Naphade
 
-Linked Safety Manual: [Safety Manuel](<The Fab Lab Cricut Safety Manual.md>)
+Linked Safety Manual: [Safety Manuel](/docs/cricut/operations--safety-manuals/the-fab-lab-cricut-safety-manual/)
 
 ## 1\. What This Machine Is For
 
@@ -47,7 +47,7 @@ Do not use this machine for:
 
 Before operating this machine, ensure:
 
-  * [S](<The Fab Lab Cricut Safety Manual.md>)[afety Manual](<The Fab Lab Cricut Safety Manual.md>) acknowledged
+  * [S](/docs/cricut/operations--safety-manuals/the-fab-lab-cricut-safety-manual/)[afety Manual](/docs/cricut/operations--safety-manuals/the-fab-lab-cricut-safety-manual/) acknowledged
   * Material to be cut: Paper, vinyl, HTV, fabric, metals, wood
   * Cricut design space 
 

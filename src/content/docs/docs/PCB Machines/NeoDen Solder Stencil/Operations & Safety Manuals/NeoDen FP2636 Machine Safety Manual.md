@@ -16,7 +16,7 @@ Last Updated: 4/06/2026
 
 Responsible Student Worker: Luca Nealon
 
-Linked Operations Manual: [Operations Manual](<NeoDen FP2636 Machine Operation Manual.md>)
+Linked Operations Manual: [Operations Manual](/docs/pcb-machines/neoden-solder-stencil/operations--safety-manuals/neoden-fp2636-machine-operation-manual/)
 
 ## 1\. Purpose of This Safety Manual
 

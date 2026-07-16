@@ -16,7 +16,7 @@ Last Updated: 03/26/2026
 
 Responsible Student Worker: Tyler Roussett
 
-Linked Operations Manual: [Elegoo Saturn 4 Ultra 16K Operations Manual](<Elegoo Resin 3D Printer Operations Manual.md>)
+Linked Operations Manual: [Elegoo Saturn 4 Ultra 16K Operations Manual](/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/elegoo-resin-3d-printer-operations-manual/)
 
 Linked Assignment: [Elegoo Saturn 4 Ultra 16K Safety Manual](<#h.58qiiww27mic>)
 
@@ -34,7 +34,7 @@ This document outlines the minimum safety information required to operate the El
 
 
 
-This document does not teach you how to operate the machine. Refer to the linked [Operations Manual](<Elegoo Resin 3D Printer Operations Manual.md>) for usage instructions.
+This document does not teach you how to operate the machine. Refer to the linked [Operations Manual](/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/elegoo-resin-3d-printer-operations-manual/) for usage instructions.
 
 ## 2\. Who May Use This Machine
 

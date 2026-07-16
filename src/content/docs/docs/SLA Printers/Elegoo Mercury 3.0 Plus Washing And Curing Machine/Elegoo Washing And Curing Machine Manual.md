@@ -1,6 +1,8 @@
-**Disclaimer: YOU WILL NOT LEAVE UNCURED RESIN IN THE WORK AREA**
+---
+title: "SAFETY MANUAL"
+---
 
-# SAFETY MANUAL
+**Disclaimer: YOU WILL NOT LEAVE UNCURED RESIN IN THE WORK AREA**
 
 ## 1\. Purpose of This Safety Manual
 
@@ -149,9 +151,9 @@ End of Safety Manual
 
 * * *
 
-# 
+## 
 
-# OPERATIONS MANUAL
+## OPERATIONS MANUAL
 
 ## 11\. What This Machine Is For
 

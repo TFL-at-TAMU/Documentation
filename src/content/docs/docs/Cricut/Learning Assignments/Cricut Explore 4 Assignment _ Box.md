@@ -1,3 +1,7 @@
+---
+title: "Cricut Explore 4 Assignment _ Box"
+---
+
 **Cricut Explore 4 Assignment**
 
 **Machine Name:** Cricut Smart Cutting Machine | Explore 4 
@@ -10,7 +14,7 @@
 
 **Responsible Student Worker: Priyanka Naphade**
 
-**Linked Operations Manual:**[**Operations Manuel**](../Operations & Safety Manuals/The Fab Lab Cricut Operations Manual.md)
+**Linked Operations Manual:**[**Operations Manuel**](/docs/cricut/operations--safety-manuals/the-fab-lab-cricut-operations-manual/)
 
 **Objective: Make a Gable box**
 
@@ -18,7 +22,7 @@
 
 
 
-Go to [Cricut Design Space](https://design.cricut.com/?referrer=https%3A%2F%2Fwww.google.com%2F&visitorId=4fb264f8-804f-4cde-a08a-6768973df652&deepLinkGuid=d9460574-036f-4575-b553-6d04e986ecf6) and follow the prompts from the website and the [operation manuel ](../Operations & Safety Manuals/The Fab Lab Cricut Operations Manual.md)to Design Space. 
+Go to [Cricut Design Space](https://design.cricut.com/?referrer=https%3A%2F%2Fwww.google.com%2F&visitorId=4fb264f8-804f-4cde-a08a-6768973df652&deepLinkGuid=d9460574-036f-4575-b553-6d04e986ecf6) and follow the prompts from the website and the [operation manuel ](/docs/cricut/operations--safety-manuals/the-fab-lab-cricut-operations-manual/)to Design Space. 
 
   1. **Download Template**
 

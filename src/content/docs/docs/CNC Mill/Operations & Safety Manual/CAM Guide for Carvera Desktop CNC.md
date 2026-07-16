@@ -16,7 +16,7 @@ Last Updated: 4/12/2026
 
 Responsible Student Worker: Marcus Gou, Aiden Stewart
 
-Linked Safety Manual: [Carvera Safety Manual](<Carvera CNC Safety Manual.md>)
+Linked Safety Manual: [Carvera Safety Manual](/docs/cnc-mill/operations--safety-manual/carvera-cnc-safety-manual/)
 
 Pasted info removed from main doc:
 

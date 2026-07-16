@@ -1,3 +1,7 @@
+---
+title: "Bambu X1C 3D Printer Learning Assignment"
+---
+
 Bambu X1C 3D Printer Learning Assignment
 
 **Machine Name:** Bambu Lab X1 Carbon (X1C) 3D Printer
@@ -10,7 +14,7 @@ Bambu X1C 3D Printer Learning Assignment
 
 **Responsible Student Worker:** Aidan Spira
 
-**Linked Operations Manual:**[Link Here](../Operations & Safety Manuals/Bambu Lab X1C 3D Printer Operation Manual.md)
+**Linked Operations Manual:**[Link Here](/docs/fdm-printers/bambu-labs-x1c-3d-printer/operations--safety-manuals/bambu-lab-x1c-3d-printer-operation-manual/)
 
 ## 1\. Purpose of This Learning Assignment
 

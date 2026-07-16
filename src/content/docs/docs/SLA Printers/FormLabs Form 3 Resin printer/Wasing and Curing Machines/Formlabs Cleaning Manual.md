@@ -18,9 +18,9 @@ Responsible Student Worker: Gael Ramos
 
 Linked Operations Manual: 
 
-Linked Safety Manual: [Formlabs Resin Printer Safety Manual ](<../Operations & Safety Manuals/Formlabs Resin Printer Safety Manual.md>)
+Linked Safety Manual: [Formlabs Resin Printer Safety Manual ](/docs/sla-printers/formlabs-form-3-resin-printer/operations--safety-manuals/formlabs-resin-printer-safety-manual/)
 
-Cleaning Manual: [Formlabs Cleaning Manual](<Formlabs Cleaning Manual.md>)
+Cleaning Manual: [Formlabs Cleaning Manual](/docs/sla-printers/formlabs-form-3-resin-printer/wasing-and-curing-machines/formlabs-cleaning-manual/)
 
 Required Materials:
 
@@ -150,7 +150,7 @@ Do not remove any material from numbers 4 to 10 unless specifically allowed
 
 To clean the object, first move the object to the washer and click on the knob on the section labeled "open” to lift the basket. 
 
-Set the object on the basket and select the time according to the [manual](<Formlabs Washing Machines Operations Manual.md>) for Formlabs resins or according to the manufacturer.(for more info refer to the manual)
+Set the object on the basket and select the time according to the [manual](/docs/sla-printers/formlabs-form-3-resin-printer/wasing-and-curing-machines/formlabs-washing-machines-operations-manual/) for Formlabs resins or according to the manufacturer.(for more info refer to the manual)
 
 With the washer finished, wait 1 to 2 minutes for the pieces to dry the leftover alcohol and then set to the curer.
 
@@ -174,7 +174,7 @@ Do not remove any material unless specifically allowed
 
 
 
-First, set a time and temperature (see reference on the cure and [washer manual](<Formlabs Washing Machines Operations Manual.md>)) and set the object or objects as close to the center as possible.
+First, set a time and temperature (see reference on the cure and [washer manual](/docs/sla-printers/formlabs-form-3-resin-printer/wasing-and-curing-machines/formlabs-washing-machines-operations-manual/)) and set the object or objects as close to the center as possible.
 
 Wait the time specified, and when it finishes, take the print, and if there is no wet section, you are done. If it does not, repeat the same procedure with less time.
 
@@ -198,7 +198,7 @@ First, go to settings -> maintenance -> cleaning mesh
 
 Then click “clean” and wait for it to finish doing the mesh. In the meanwhile, ask a staff member for the resin storage boxes and search for the box of the respective resin being used and set the tank in it.
 
-(To remove the tank refer to the [operations manual](<../Operations & Safety Manuals/FormLabs 3 Resin Printer Operations Manual.md>) 5.1.1 Change Resin)
+(To remove the tank refer to the [operations manual](/docs/sla-printers/formlabs-form-3-resin-printer/operations--safety-manuals/formlabs-3-resin-printer-operations-manual/) 5.1.1 Change Resin)
 
 ![](../../../assets/images/formlabs_cleaning_ma_43cc0255b0.png)
 

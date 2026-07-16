@@ -16,7 +16,7 @@ Last Updated: 4/12/2026
 
 Responsible Student Worker: Aidan Stewart, Marcus Gou
 
-Linked Operations Manual: [Carvera CNC Operation Manual](<Carvera CNC Operation Manual.md>)
+Linked Operations Manual: [Carvera CNC Operation Manual](/docs/cnc-mill/operations--safety-manual/carvera-cnc-operation-manual/)
 
 ## 1\. Purpose of This Safety Manual
 

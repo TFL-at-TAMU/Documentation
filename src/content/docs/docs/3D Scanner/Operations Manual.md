@@ -1,3 +1,7 @@
+---
+title: "Operations Manual"
+---
+
 ## What This Machine Is For
 
 * Gathering point-cloud and photogrammetry data of real-world geometry
@@ -17,7 +21,7 @@
 
 ## Machine Overview
 
-![Diagram of the Creality Raptor Pro](../../assets/images/3d_scanner_operation_fa6423e291.png)
+![Diagram of the Creality Raptor Pro](../assets/images/3d_scanner_operation_fa6423e291.png)
 
 1. 3D Scanning Camera: The cameras used to capture geometric data
 2. Color Camera: The cameras used to capture color textures to map to the scanned model
@@ -96,7 +100,7 @@ Depending on your use case, post-processing may be the bulk of your work. For sp
 
 Luckily, CrealityScan provides some decent post-processing tools directly in the application. To get started, after finishing your scan(s), return to the project’s main page.
 
-![CrealityScan project main page](../../assets/images/3d_scanner_operation_7094e72915.png)
+![CrealityScan project main page](../assets/images/3d_scanner_operation_7094e72915.png)
 
 Use the editing toolbar to remove excess data points. [Shift] [LMB] selects, while [CTRL] [LMB] deselects.
 
@@ -109,7 +113,7 @@ Tip for removing most excess data:
 5. Click the “Delete Selection” tool.
 6. Click “Save Edit”.
 
-![Process for easy removal of most excess data](../../assets/images/3d_scanner_operation_4c8658d219.png)
+![Process for easy removal of most excess data](../assets/images/3d_scanner_operation_4c8658d219.png)
 
 To process the scanned data into a mesh, use the “Fusion” tool. Once processed, again ensure there’s no excess geometry. You can now remove the reusable markers from your object.
 

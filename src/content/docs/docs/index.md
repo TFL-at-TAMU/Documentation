@@ -1,4 +1,6 @@
-# The Fab Lab Documentation
+---
+title: "The Fab Lab Documentation"
+---
 
 Welcome to the documentation hub for **The Fab Lab**. This is where the lab's machine manuals, learning assignments, and shop standards live — everything you need to use the equipment safely and confidently.
 

@@ -1,3 +1,7 @@
+---
+title: "Formlabs Washing Machines Operations Manual"
+---
+
 Form Wash and Form Cure Operations Manual
 
 **Machine Name:** Form Wash and Form Cure
@@ -10,7 +14,7 @@ Form Wash and Form Cure Operations Manual
 
 **Responsible Student Worker:** Gael Ramos
 
-**Linked Safety Manual:** [The Fab Lab Formlabs Resin Printer Safety Manual ](../Operations & Safety Manuals/Formlabs Resin Printer Safety Manual.md)
+**Linked Safety Manual:** [The Fab Lab Formlabs Resin Printer Safety Manual ](/docs/sla-printers/formlabs-form-3-resin-printer/operations--safety-manuals/formlabs-resin-printer-safety-manual/)
 
 ## 1\. What This Machine Is For
 
@@ -81,7 +85,7 @@ Set the objects to wash inside the basket and turn the knob to start to lower th
 
 ![](../../../assets/images/formlabs_washing_mac_808d6b680e.jpeg)
 
-As soon as it finishes, the basket will lift, objects can be taken out(if not needing another cycle), and pass to the career. For any cleaning, refer to the [cleaning manual](Formlabs Cleaning Manual.md)
+As soon as it finishes, the basket will lift, objects can be taken out(if not needing another cycle), and pass to the career. For any cleaning, refer to the [cleaning manual](/docs/sla-printers/formlabs-form-3-resin-printer/wasing-and-curing-machines/formlabs-cleaning-manual/)
 
 **4.1 Clean Time for Resins**
 
@@ -145,7 +149,7 @@ First, set the time and temperature according to section 5.1, open the cover fro
 
 ![](../../../assets/images/formlabs_washing_mac_2d08bd0fca.jpeg)
 
-After it ends, remove the object, and everything is done. For any cleaning, refer to [cleaning manual](Formlabs Cleaning Manual.md)
+After it ends, remove the object, and everything is done. For any cleaning, refer to [cleaning manual](/docs/sla-printers/formlabs-form-3-resin-printer/wasing-and-curing-machines/formlabs-cleaning-manual/)
 
 **5.1 Resin Temperature and Time**
 

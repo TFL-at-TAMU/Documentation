@@ -16,7 +16,7 @@ Last Updated: 2/24/2026
 
 Responsible Student Worker: Luca Nealon
 
-Linked Safety Manual: [Safety Manual](<NeoDen FP2636 Machine Safety Manual.md>)
+Linked Safety Manual: [Safety Manual](/docs/pcb-machines/neoden-solder-stencil/operations--safety-manuals/neoden-fp2636-machine-safety-manual/)
 
 ## 1\. What This Machine Is For
 

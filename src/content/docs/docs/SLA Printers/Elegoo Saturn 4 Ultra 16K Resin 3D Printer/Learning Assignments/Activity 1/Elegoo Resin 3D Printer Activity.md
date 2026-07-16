@@ -1,3 +1,7 @@
+---
+title: "Elegoo Resin 3D Printer Activity"
+---
+
 Elegoo Resin 3D Activity
 
 **Machine Name:** Elegoo Saturn 4 Ultra 16K
@@ -37,7 +41,7 @@ Possible answers examples: Needs post-processing (washing and curing), uses liqu
 ## Why is post-processing required for SLA prints?  
 Answer: Printed parts still have uncured resin and need to be washed and UV-cured to fully harden
 
-# Part 2 – Basic Machine Knowledge
+## Part 2 – Basic Machine Knowledge
 
 ## What is the purpose of the resin vat?  
 Answer: It holds the liquid resin that is cured in the printing process
@@ -54,7 +58,7 @@ Answers: Protects from UV exposure, contains fumes and resin odor, prevents dust
 Answer: Stop the print and notify staff  
 
 
-# Part 3 – Safety
+## Part 3 – Safety
 
 ## What PPE is required when handling resin?  
 Answers: Nitrile gloves (minimum requirement), safety glasses are recommended, and masks are optional.  
@@ -72,9 +76,9 @@ Answer: According to the [manufacturer](https://elegoo-downloads.oss-us-west-1.a
 
 ## Answer: According to the [manufacturer](https://elegoo-downloads.oss-us-west-1.aliyuncs.com/download.elegoo.com/04%20LCD%20Printer/12%20Photopolymer%20Resin/SGS%2020240206/Standard%20Photopolymer%20Resin/MSDS-US%20Standard/CANEC24000105203\(SZP24-000166\)-Final.pdf), “In case of contact may cause irritation, immediately flush eyes with plenty of water for at least 15 minutes. Call a physician immediately if eyes are hurt.”
 
-# 
+## 
 
-# Part 4 – Printing!
+## Part 4 – Printing!
 
 Objective: In this section, you will go through the process of setting up a print and printing your first part!
 

@@ -16,7 +16,7 @@ Last Updated: 3/12/2026
 
 Responsible Student Worker: Aidan Spira
 
-Linked Operations Manual: [Link Here](<Glowforge Operation Manual.md>)
+Linked Operations Manual: [Link Here](/docs/laser-cutter/operations--safety-manuals/glowforge-operation-manual/)
 
 ## 1\. Purpose of This Safety Manual[[b]](<#cmnt2>)
 

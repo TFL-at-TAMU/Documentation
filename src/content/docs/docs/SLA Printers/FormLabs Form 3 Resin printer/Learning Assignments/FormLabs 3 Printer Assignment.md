@@ -16,7 +16,7 @@ Last Updated: 2/22/2026
 
 Responsible Student Worker: Gael Ramos
 
-Linked Safety Manual: [Formlabs 3 Safety Manual](<../Operations & Safety Manuals/Formlabs Resin Printer Safety Manual.md>)
+Linked Safety Manual: [Formlabs 3 Safety Manual](/docs/sla-printers/formlabs-form-3-resin-printer/operations--safety-manuals/formlabs-resin-printer-safety-manual/)
 
 Goal: 3D Print a Bot with rafts and supports
 
@@ -43,7 +43,7 @@ If an error or warning appears on the slicer, ignore it only this time.
 
 ## 2\. Print 
 
-Once the preparation is finished, connect to the printer to begin the print(if unsure how refer to the [operations manual](<../Operations & Safety Manuals/FormLabs 3 Resin Printer Operations Manual.md>)). Before starting, make sure the printer is set up, the resin has a sufficient amount, and everything is clean. Start the print and monitor the first layers to ensure correct adhesion. 
+Once the preparation is finished, connect to the printer to begin the print(if unsure how refer to the [operations manual](/docs/sla-printers/formlabs-form-3-resin-printer/operations--safety-manuals/formlabs-3-resin-printer-operations-manual/)). Before starting, make sure the printer is set up, the resin has a sufficient amount, and everything is clean. Start the print and monitor the first layers to ensure correct adhesion. 
 
 If everything is correct, you should have a good print like this.
 
@@ -51,7 +51,7 @@ If everything is correct, you should have a good print like this.
 
 ## 3\. Clean
 
-For more information about [cleaning ](<../Wasing and Curing Machines/Formlabs Cleaning Manual.md>)and [processing](<../Operations & Safety Manuals/FormLabs 3 Resin Printer Operations Manual.md>), refer to the respective manual:
+For more information about [cleaning ](/docs/sla-printers/formlabs-form-3-resin-printer/wasing-and-curing-machines/formlabs-cleaning-manual/)and [processing](/docs/sla-printers/formlabs-form-3-resin-printer/operations--safety-manuals/formlabs-3-resin-printer-operations-manual/), refer to the respective manual:
 
   1. Shake slowly the build platform to break the leftover resin left on the print and wait  2 to 3 minutes to let some of the resin naturally drip onto the tank.
 
@@ -74,7 +74,7 @@ For more information about [cleaning ](<../Wasing and Curing Machines/Formlabs C
 ![](../../../assets/images/formlabs_3_printer_a_859e73a1df.jpeg)
 
   4. After removing the object, send the print to the washer, and after finishing to the curing machine
-  5. While the print is washing and curing, clean the build platform and the workspace (refer to [Cleaning Manual](<../Wasing and Curing Machines/Formlabs Cleaning Manual.md>))
+  5. While the print is washing and curing, clean the build platform and the workspace (refer to [Cleaning Manual](/docs/sla-printers/formlabs-form-3-resin-printer/wasing-and-curing-machines/formlabs-cleaning-manual/))
 
 
 

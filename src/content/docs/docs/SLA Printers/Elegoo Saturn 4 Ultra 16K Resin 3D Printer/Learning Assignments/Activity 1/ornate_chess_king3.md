@@ -1,3 +1,5 @@
-# Ornate Chess King3
+---
+title: "Ornate Chess King3"
+---
 
-<model-viewer src="ornate_chess_king3.stl" auto-rotate camera-controls style="width: 100%; height: 500px; background-color: #2F333D;"></model-viewer>
+<model-viewer src="/files/SLA%20Printers/Elegoo%20Saturn%204%20Ultra%2016K%20Resin%203D%20Printer/Learning%20Assignments/Activity%201/ornate_chess_king3.stl" auto-rotate camera-controls style="width: 100%; height: 500px; background-color: #2F333D;"></model-viewer>

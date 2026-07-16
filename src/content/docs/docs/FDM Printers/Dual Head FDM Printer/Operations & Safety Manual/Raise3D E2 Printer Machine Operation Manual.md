@@ -16,7 +16,7 @@ Last Updated: 3/27/2026
 
 Responsible Student Worker: Luca Nealon
 
-Linked Safety Manual: [Raise3D E2 Printer Machine Safety Manual](<Raise3D E2 Printer Machine Safety Manual.md>)
+Linked Safety Manual: [Raise3D E2 Printer Machine Safety Manual](/docs/fdm-printers/dual-head-fdm-printer/operations--safety-manual/raise3d-e2-printer-machine-safety-manual/)
 
 ## 1\. What This Machine Is For
 
@@ -44,10 +44,10 @@ Do not use this machine for:
 Before operating this machine, ensure:
 
   * Trained Fab Lab staff present
-  * [Raise3D E2 Printer safety manual](<Raise3D E2 Printer Machine Safety Manual.md>) acknowledgement
+  * [Raise3D E2 Printer safety manual](/docs/fdm-printers/dual-head-fdm-printer/operations--safety-manual/raise3d-e2-printer-machine-safety-manual/) acknowledgement
   * No loose hanging garments or jewelry that is at risk of catching in pinch points
   * Heat protective gloves (Optional)
-  * STL file that has been properly sliced ([Slicing Instructions](<../Slicing in Ideamaker.md>)) in [IdeaMake](<https://www.google.com/url?q=https://www.raise3d.com/download/&sa=D&source=editors&ust=1776804165570617&usg=AOvVaw24m-8U5zemXoBaUZ6rcMKp>)[r](<https://www.google.com/url?q=https://www.raise3d.com/download/&sa=D&source=editors&ust=1776804165570683&usg=AOvVaw3YBbiOshL4qkAsW3sx5Aps>) 
+  * STL file that has been properly sliced ([Slicing Instructions](/docs/fdm-printers/dual-head-fdm-printer/slicing-in-ideamaker/)) in [IdeaMake](<https://www.google.com/url?q=https://www.raise3d.com/download/&sa=D&source=editors&ust=1776804165570617&usg=AOvVaw24m-8U5zemXoBaUZ6rcMKp>)[r](<https://www.google.com/url?q=https://www.raise3d.com/download/&sa=D&source=editors&ust=1776804165570683&usg=AOvVaw3YBbiOshL4qkAsW3sx5Aps>) 
 
 
 
@@ -257,7 +257,7 @@ Action: Stop and notify Staff
 
 For more detailed information, refer to:
 
-  * [Slicing in IdeaMaker](<../Slicing in Ideamaker.md>)
+  * [Slicing in IdeaMaker](/docs/fdm-printers/dual-head-fdm-printer/slicing-in-ideamaker/)
   * [User Manual](<https://www.google.com/url?q=https://drive.google.com/file/d/1hFhwoAXc_nZfEGcRR90xvQsZExhSBRz1/view?usp%3Ddrive_link&sa=D&source=editors&ust=1776804165585892&usg=AOvVaw1ZwnyOdZ40wu0Ss-Xuc5HU>)
   * [Support](<https://www.google.com/url?q=https://support.raise3d.com/list.html?cid%3D20%26pid%3D992&sa=D&source=editors&ust=1776804165586116&usg=AOvVaw37mb4RYK8NU1pdSql-Q0FI>) 
   * [Ideamaker Download](<https://www.google.com/url?q=https://www.raise3d.com/download/&sa=D&source=editors&ust=1776804165586334&usg=AOvVaw1xL9eLRPA0PKCQHZfbLpJ5>)

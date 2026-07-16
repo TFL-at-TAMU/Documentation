@@ -16,7 +16,7 @@ Last Updated: 3/27/2026
 
 Responsible Student Worker: Luca Nealon
 
-Linked Operations Manual: [Raise3D E2 Printer Machine Operation Manual](<Raise3D E2 Printer Machine Operation Manual.md>)
+Linked Operations Manual: [Raise3D E2 Printer Machine Operation Manual](/docs/fdm-printers/dual-head-fdm-printer/operations--safety-manual/raise3d-e2-printer-machine-operation-manual/)
 
 ## 1\. Purpose of This Safety Manual
 

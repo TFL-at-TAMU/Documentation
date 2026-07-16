@@ -1,4 +1,8 @@
-# Purpose of This Document
+---
+title: "Fab Lab Safety & Emergency Manual"
+---
+
+## Purpose of This Document
 
 This document establishes blanket emergency response procedures and general safety rules for the Fab Lab. It is intended to:
 
@@ -11,7 +15,7 @@ This document does not replace machine-specific Safety or Operations Manuals. Al
 
 Insert safety area picture and info here
 
-# Scope & Applicability
+## Scope & Applicability
 
 This document applies to:
 
@@ -19,7 +23,7 @@ This document applies to:
 * All users regardless of experience level
 * All operational hours, including supervised and unsupervised use (if allowed)
 
-# General Safety Principles
+## General Safety Principles
 
 All Fab Lab users must follow these core principles at all times:
 
@@ -29,7 +33,7 @@ All Fab Lab users must follow these core principles at all times:
 4. Never bypass guards, interlocks, or safety systems.
 5. In general, if an injury occurs, use the equipment in the safety area and call emergencies services if needed.
 
-# Required Conduct & Attire
+## Required Conduct & Attire
 
 ## 4.1 Personal Conduct
 
@@ -50,7 +54,7 @@ All Fab Lab users must follow these core principles at all times:
 * Cut-resistant gloves
 * All other PPE specified in machine specific safety manuals
 
-# Emergency Response – General Rules
+## Emergency Response – General Rules
 
 In any emergency situation:
 
@@ -61,7 +65,7 @@ In any emergency situation:
 
 If staff are unavailable or the situation is severe, follow institutional emergency procedures.
 
-# Fire Emergencies
+## Fire Emergencies
 
 ## If You See Fire or Smoke
 
@@ -73,7 +77,7 @@ If staff are unavailable or the situation is severe, follow institutional emerge
 
 IF YOU SEE AN OPEN FLAME, USE THE FIRE EXTINGUISHER
 
-# Electrical Emergencies
+## Electrical Emergencies
 
 Includes sparks, exposed wiring, electrical burning smell, or shocks.
 
@@ -86,7 +90,7 @@ Includes sparks, exposed wiring, electrical burning smell, or shocks.
 
 Do not attempt electrical repairs.
 
-# Mechanical Emergencies
+## Mechanical Emergencies
 
 Includes entanglement, crushing, unexpected motion, or tool breakage.
 
@@ -97,7 +101,7 @@ Includes entanglement, crushing, unexpected motion, or tool breakage.
 * Do not attempt to free stuck parts while powered
 * Notify staff immediately
 
-# Thermal & Burn Injuries
+## Thermal & Burn Injuries
 
 Includes hot surfaces, molten material, heated tools, or lasers.
 
@@ -108,7 +112,7 @@ Includes hot surfaces, molten material, heated tools, or lasers.
 * Use appropriate PPE if assisting others
 * For burns, use the first aid kit as needed
 
-# Chemical & Air Quality Emergencies
+## Chemical & Air Quality Emergencies
 
 Includes fumes, strong odors, resin spills, solvent exposure, or dust.
 
@@ -122,7 +126,7 @@ Includes fumes, strong odors, resin spills, solvent exposure, or dust.
 
 IF YOUR PROJECT IS EMITTING FUMES OR THERE IS A SAFETY ISSUE, IT WILL GET SHUT DOWN
 
-# Medical Emergencies & First Aid Procedures
+## Medical Emergencies & First Aid Procedures
 
 This section defines approved first aid actions that may be taken in the Fab Lab. Users must only provide first aid within their level of training. Do not exceed your qualifications.
 
@@ -221,12 +225,12 @@ Procedure:
 * Call emergency services per institutional protocol
 * Provide first aid if able to
 
-# Evacuation Procedures
+## Evacuation Procedures
 
 * Stop all active work
 * Follow exit signs
 
-# Prohibited Actions (Zero Tolerance)
+## Prohibited Actions (Zero Tolerance)
 
 * Operating equipment without authorization
 * Bypassing safety systems
@@ -235,7 +239,7 @@ Procedure:
 * Ignoring staff instructions
 * Horseplay/Recklessness
 
-# Responsibilities
+## Responsibilities
 
 ## Users
 

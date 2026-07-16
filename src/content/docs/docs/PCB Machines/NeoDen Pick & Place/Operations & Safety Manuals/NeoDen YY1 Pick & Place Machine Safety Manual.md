@@ -16,7 +16,7 @@ Last Updated: 02/06/2026
 
 Responsible Student Worker: Juan Aldapa
 
-Linked Operations Manual: [Link](<NeoDen YY1 Pick & Place Machine Operation Manual.md>)
+Linked Operations Manual: [Link](/docs/pcb-machines/neoden-pick--place/operations--safety-manuals/neoden-yy1-pick--place-machine-operation-manual/)
 
 ## 1\. Purpose of This Safety Manual
 

@@ -16,7 +16,7 @@ Last Updated: 3/3/26
 
 Responsible Student Worker: Priyanka Naphade
 
-Linked Operations Manual: [[a]](<#cmnt1>)[Operations Manuel](<../Operations & Safety Manuals/The Fab Lab Cricut Operations Manual.md>)
+Linked Operations Manual: [[a]](<#cmnt1>)[Operations Manuel](/docs/cricut/operations--safety-manuals/the-fab-lab-cricut-operations-manual/)
 
 Objective: Cut a sticker
 
@@ -24,7 +24,7 @@ Objective: Cut a sticker
 
 
 
-        Go to [Cricut Design Space](<https://www.google.com/url?q=https://design.cricut.com/?referrer%3Dhttps%253A%252F%252Fwww.google.com%252F%26visitorId%3D4fb264f8-804f-4cde-a08a-6768973df652%26deepLinkGuid%3Dd9460574-036f-4575-b553-6d04e986ecf6&sa=D&source=editors&ust=1776804298665948&usg=AOvVaw2rwtHwJJA08qXOrsUSfFOr>) and follow the prompts from the website and the [operation manual ](<../Operations & Safety Manuals/The Fab Lab Cricut Operations Manual.md>)to Design Space. 
+        Go to [Cricut Design Space](<https://www.google.com/url?q=https://design.cricut.com/?referrer%3Dhttps%253A%252F%252Fwww.google.com%252F%26visitorId%3D4fb264f8-804f-4cde-a08a-6768973df652%26deepLinkGuid%3Dd9460574-036f-4575-b553-6d04e986ecf6&sa=D&source=editors&ust=1776804298665948&usg=AOvVaw2rwtHwJJA08qXOrsUSfFOr>) and follow the prompts from the website and the [operation manual ](/docs/cricut/operations--safety-manuals/the-fab-lab-cricut-operations-manual/)to Design Space. 
 
   2. Create a design 
 
@@ -99,7 +99,7 @@ After the cut press the unload button and remove the decal from the mat and peel
 
 
 
-Turn the cricut off and follow the instructions in the [operation manual ](<../Operations & Safety Manuals/The Fab Lab Cricut Operations Manual.md>)to clean up and turn off the machine. [[f]](<#cmnt6>)[[g]](<#cmnt7>)
+Turn the cricut off and follow the instructions in the [operation manual ](/docs/cricut/operations--safety-manuals/the-fab-lab-cricut-operations-manual/)to clean up and turn off the machine. [[f]](<#cmnt6>)[[g]](<#cmnt7>)
 
 [[a]](<#cmnt_ref1>)fix links
 

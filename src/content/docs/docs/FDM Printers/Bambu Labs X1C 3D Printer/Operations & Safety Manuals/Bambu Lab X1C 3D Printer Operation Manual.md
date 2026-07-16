@@ -16,7 +16,7 @@ Last Updated: 3/12/26
 
 Responsible Student Worker: Aidan Spira
 
-Linked Safety Manual: [Link Here](<Bambu Lab X1C 3D Printer Safety Manual.md>)
+Linked Safety Manual: [Link Here](/docs/fdm-printers/bambu-labs-x1c-3d-printer/operations--safety-manuals/bambu-lab-x1c-3d-printer-safety-manual/)
 
 ## 1\. What This Machine Is For
 
@@ -150,7 +150,7 @@ DNT = Do Not Touch
   5. Verify the desired filament is loaded
 
 
-  1. To load filament, see the [Learning Assignment here](<../Learning Assignments/Bambu X1C 3D Printer Learning Assignment.md>)
+  1. To load filament, see the [Learning Assignment here](/docs/fdm-printers/bambu-labs-x1c-3d-printer/learning-assignments/bambu-x1c-3d-printer-learning-assignment/)
 
 
 

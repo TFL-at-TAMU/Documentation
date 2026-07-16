@@ -1,3 +1,7 @@
+---
+title: "Elegoo Resin 3D Printer Operations Manual"
+---
+
 Disclaimer: YOU WILL NOT LEAVE UNCURED RESIN IN THE WORK AREA
 
 ## What This Machine Is For
@@ -29,7 +33,7 @@ Before operating this machine, ensure:
 
 ## Machine Overview
 
-![](../../../assets/images/elegoo_manual_image_1.png)Figure 1| ![](../../../assets/images/elegoo_manual_image_2.png)Figure 2  
+![](../../assets/images/elegoo_manual_image_1.png)Figure 1| ![](../../assets/images/elegoo_manual_image_2.png)Figure 2  
 ---|---  
   
 1. Z Axis
@@ -100,19 +104,19 @@ KEY USER INTERACTION POINTS:
 
 
 
-![](../../../assets/images/elegoo_manual_image_3.jpeg)
+![](../../assets/images/elegoo_manual_image_3.jpeg)
 
 2. Open the SatelLite slicer and open the file using the file icon in the red circle below
 
 
 
-![](../../../assets/images/elegoo_manual_image_4.png)
+![](../../assets/images/elegoo_manual_image_4.png)
 
 3. If piece printing is a solid piece, use the “Hollow” tool on the top toolbar on the piece and set the wall thickness (~2-3mm, but will vary based on what the user prefers)
 
 
 
-![](../../../assets/images/elegoo_manual_image_5.jpeg)
+![](../../assets/images/elegoo_manual_image_5.jpeg)
 
 4. Generate supports using the “Support” function at the top of the toolbar next to “Hollow.”
 5. After clicking, it will auto-generate supports. Use these. 
@@ -120,7 +124,7 @@ KEY USER INTERACTION POINTS:
 
 
 
-![](../../../assets/images/elegoo_manual_image_6.jpeg)
+![](../../assets/images/elegoo_manual_image_6.jpeg)
 
 Notes for supports: The stock baseplate with automatic supports makes the prints extremely difficult to remove from the baseplate. To combat this, in Advanced Mode:
 
@@ -136,13 +140,13 @@ Notes for supports: The stock baseplate with automatic supports makes the prints
 
 
 
-![](../../../assets/images/elegoo_manual_image_7.jpeg)
+![](../../assets/images/elegoo_manual_image_7.jpeg)
 
 8. When confirmed, click “Network Transmission” and click the Elegoo Printer
 
 
 
-![](../../../assets/images/elegoo_manual_image_8.jpeg)
+![](../../assets/images/elegoo_manual_image_8.jpeg)
 
 9. Click “Send” and wait for the file to transfer. You will know it is done when the percentage reaches 100%, and the “Print” button is Blue on the right-hand side
 10. Before you click Print, make sure the printer has a sufficient amount of resin (above Min but below Max) and that the build plate is clean 

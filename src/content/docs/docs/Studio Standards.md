@@ -1,10 +1,8 @@
 ---
-title: "Studio Standards"
+title: "Shop Standards & SOP"
 source_id: "18tCTlU0UNB3uQKCUchyYrwePzmDXr_XogTUdvFe06ws"
 modified: "2026-04-07T15:24:29.204Z"
 ---
-
-# Shop Standards & SOP
 
 Document Purpose:  
 This SOP defines the software, hardware, and workflow standards for the shop. It ensures consistency, quality, and safety across all operations.
