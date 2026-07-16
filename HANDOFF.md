@@ -48,7 +48,7 @@ The Fab Lab (TFL at TAMU) documentation site — a university makerspace's machi
 
 ## 5. Open threads (pick up here)
 
-1. **UNANSWERED:** whether to fold the "staff docs leave the public site" exclusion (and other mechanical cleanup) into `STARLIGHT_MIGRATION.md`. Lean: add just the staff-tree exclusion.
+1. ~~**UNANSWERED:** whether to fold the "staff docs leave the public site" exclusion (and other mechanical cleanup) into `STARLIGHT_MIGRATION.md`. Lean: add just the staff-tree exclusion.~~ **Resolved 2026-07-15:** the staff-tree exclusion is now item 5 of "Known issues the migration MUST fix" in `STARLIGHT_MIGRATION.md` (excludes `IT/`, `Networking/`, and the Raise3D staff service manual). Note: `Networking/Learning Assignment/` (student-facing) goes dark with it — owner to relocate if it should stay public.
 2. **Content / information-architecture restructure of the manuals is being handled by the owner in a separate effort — do NOT drive content-IA work here unless asked.** A Diátaxis analysis was done and set aside per the owner. Two grain decisions were left open for the owner: (a) the 3D-model `<model-viewer>` stub pages — merge into their parent tutorial vs. keep as standalone pages; (b) the Electric Workbench manual covering 5 instruments — one combined doc vs. split per tool.
 3. **Non-blocking:** sidebar group ordering (alphabetical vs curated); real contact details for the three people above.
 4. **Post-migration wishlist:** Lucide sidebar icons (Starlight-native), "fancy" safety page, landing refresh. See `TODO.md`.
