@@ -4,17 +4,19 @@ Instructions for restructuring the TAMU Fab Lab machine documentation. The site 
 
 ## Background
 
-The existing docs were written in Google Docs by multiple employees and exported to Markdown, leaving conversion artifacts (stray headers, broken formatting, inconsistent structure). Separate "operations manual" and "safety manual" files exist per machine. All of this is being replaced: **one page per machine**, with safety content integrated inline. Learning assignments are **not** covered by this standard — they stay as their own pages next to the machine page.
+The existing docs were written in Google Docs by multiple employees and exported to Markdown, leaving conversion artifacts (stray headers, broken formatting, inconsistent structure). Separate "operations manual" and "safety manual" files exist per machine. Those pairs are being replaced: **one manual page per machine**, with the safety content integrated inline at the point of hazard. Everything else a machine has — learning assignments, activity pages, model pages — is **not** covered by this standard and stays as its own pages alongside the manual.
 
 ## Files, frontmatter, and URLs
 
-- Machine pages live in the category folders under `src/content/docs/docs/` (folders become sidebar groups automatically — there is no sidebar file to edit). The target shape per machine, replacing the old `Operations & Safety Manual/` subfolder:
+- Content lives under `src/content/docs/docs/` (folders become sidebar groups automatically — there is no sidebar file to edit). The merged manual page sits directly in the machine's folder, replacing the old operations + safety manual pair (and the `Operations & Safety Manual/` subfolder where one exists):
 
   ```
   docs/Laser Cutter/
-    Laser Cutter.md            ← the machine page (this standard)
-    Learning Assignment/…      ← untouched by this standard
+    Laser Cutter (Glowforge Pro).md   ← the merged manual (this standard)
+    Glowforge CO2 Laser Learning Assignment.md   ← unchanged
   ```
+
+  Name the manual file after the page title so the URL matches it.
 
 - Every page starts with YAML frontmatter carrying the title — **the title is NOT written as a `#` heading in the body** (Starlight renders the frontmatter title as the page H1; a body H1 duplicates it):
 
@@ -78,15 +80,13 @@ No other sections. In particular, do **not** include:
 - [ ] Enable `lastUpdated: true` in `astro.config.mjs` — and verify the dates are right on the deployed site, not just locally (Cloudflare's build clone depth could affect git-derived dates).
 - [ ] Create the two load-bearing shared pages: `/docs/which-machine/` and `/docs/approved-materials/`.
 - [ ] Consider adding the `starlight-links-validator` plugin so builds fail on broken internal links (there are ~35 known-dead legacy links to clean up or remove first).
-- [ ] Verify how the sidebar renders a machine page that sits next to its machine's subfolders before mass-applying the file layout (group label vs. page entry).
 - [ ] Retire the two master templates under `docs/Templates/` once this standard replaces them.
-- [ ] The old per-machine sidebar groups will shrink to one page + assignments; revisit whether the category folders (FDM Printers, SLA Printers, …) are still the right grouping.
 
 ---
 
 # Reference example: Glowforge Pro page
 
-The canonical example of the format. File: `docs/Laser Cutter/Laser Cutter.md` → `/docs/laser-cutter/laser-cutter/`.
+The canonical example of the format. File: `docs/Laser Cutter/Laser Cutter (Glowforge Pro).md` → `/docs/laser-cutter/laser-cutter-glowforge-pro/`, replacing today's `Glowforge Operation Manual.md` + `Glowforge Safety Manual.md` (each retired URL gets a `_redirects` line pointing here).
 
 ```markdown
 ---
