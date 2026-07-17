@@ -16,11 +16,13 @@ You must hold **TAMU laser safety certification** to operate this machine — be
 > [!WARNING]
 > **Never leave the machine unattended during a job** unless a staff member has explicitly OK'd it for a long job.
 
-> [!WARNING]
-> **Do not open the lid while a job is running.** To stop the machine, press the **glowing button** on top — it pauses the job. To kill all power, flip the **ON/OFF switch at the rear** of the machine.
+:::caution[EMERGENCY STOP]
+**Do not open the lid while a job is running.** To stop the machine, press the **glowing button** on top — it pauses the job. To kill all power, flip the **ON/OFF switch at the rear** of the machine.
+:::
 
-> [!WARNING]
-> **Fire:** small, brief flames at the cut point are normal. If a flame persists, keep the lid closed (it starves the fire), pause the job, and get a staff member immediately. **Only if no staff member can reach the machine in time:** open the lid and throw the **fire blanket** (located **[location]**) over the workpiece.
+:::caution[FIRE PROCEDURE]
+Small, brief flames at the cut point are normal. If a flame persists, keep the lid closed (it starves the fire), pause the job, and get a staff member immediately. **Only if no staff member can reach the machine in time:** open the lid and throw the **fire blanket** (located **[location]**) over the workpiece.
+:::
 
 > [!WARNING]
 > **Never run a job without the ventilation system on.**
