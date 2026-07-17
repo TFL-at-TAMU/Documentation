@@ -169,3 +169,25 @@ h6,
 .markdown-alert.markdown-alert-caution {
 	--gb-alert-color: var(--sl-color-red);
 }
+
+/* ---------------------------------------------------------------------------
+   Layout: slim down the right "On this page" rail and give the article
+   column the reclaimed room (it was crowding the content).
+   - --gb-toc-width: the rail's minimum width (Starlight default reuses the
+     300px left-sidebar width; we use a slimmer rail).
+   - --sl-content-width: the article column's max width (Starlight default
+     45rem). Tweak these two numbers to taste.
+   The width formula mirrors Starlight's own: at least --gb-toc-width, plus
+   half of any leftover space so the rail hugs the right edge.
+--------------------------------------------------------------------------- */
+:root {
+	--gb-toc-width: 13rem;
+	--sl-content-width: 50rem;
+}
+
+:root right-sidebar-container {
+	width: max(
+		var(--gb-toc-width),
+		calc(var(--gb-toc-width) + (100% - var(--sl-content-width) - var(--gb-toc-width)) / 2)
+	);
+}
