@@ -1,0 +1,101 @@
+---
+// Starlight component override for `Header` (see astro.config.mjs ->
+// starlight({ components: { Header: ... } })). Starlight's default header is
+// just title + search + theme-select + GitHub icon — it doesn't carry the
+// site's four shared nav links (Home / Documentation / Safety / Contact)
+// that the landing page (src/pages/index.astro) already renders in its own
+// top bar. This wraps the default Header and adds those links alongside it.
+import Default from '@astrojs/starlight/components/Header.astro';
+
+const navLinks = [
+	{ href: '/', label: 'Home' },
+	{ href: '/docs/', label: 'Documentation' },
+	{ href: '/safety/', label: 'Safety' },
+	// Built in Phase 2; linked ahead of time per the migration plan.
+	{ href: '/contact/', label: 'Contact' },
+];
+
+const currentPath = Astro.url.pathname;
+
+/** Home is only "active" on an exact match; the rest match by prefix. */
+function isActive(href: string): boolean {
+	if (href === '/') return currentPath === '/';
+	return currentPath === href || currentPath.startsWith(href);
+}
+---
+
+<div class="site-nav-header">
+	<nav class="site-nav" aria-label="Site">
+		<ul>
+			{
+				navLinks.map((link) => (
+					<li>
+						<a href={link.href} aria-current={isActive(link.href) ? 'page' : undefined}>
+							{link.label}
+						</a>
+					</li>
+				))
+			}
+		</ul>
+	</nav>
+	<div class="default-header">
+		<Default {...Astro.props}><slot /></Default>
+	</div>
+</div>
+
+<style>
+	.site-nav-header {
+		display: flex;
+		align-items: center;
+		gap: 1.5rem;
+		width: 100%;
+	}
+
+	.site-nav {
+		/* Hidden on narrow viewports — Starlight's own mobile menu (sidebar
+		   drawer) already provides in-site navigation there, so this stays
+		   simple rather than building a second responsive nav. */
+		display: none;
+	}
+
+	.site-nav ul {
+		display: flex;
+		align-items: center;
+		gap: 1.25rem;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		white-space: nowrap;
+	}
+
+	.site-nav a {
+		display: inline-block;
+		padding: 0.25rem 0;
+		font-size: var(--sl-text-sm);
+		font-weight: 600;
+		color: var(--sl-color-text);
+		text-decoration: none;
+		border-bottom: 2px solid transparent;
+		transition: color 0.15s ease, border-color 0.15s ease;
+	}
+
+	.site-nav a:hover {
+		color: var(--sl-color-text-accent);
+	}
+
+	.site-nav a[aria-current='page'] {
+		color: var(--sl-color-text-accent);
+		border-bottom-color: var(--sl-color-accent);
+	}
+
+	.default-header {
+		flex: 1;
+		min-width: 0;
+	}
+
+	@media (min-width: 72rem) {
+		.site-nav {
+			display: block;
+		}
+	}
+</style>

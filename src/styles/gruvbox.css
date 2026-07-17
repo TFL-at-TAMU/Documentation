@@ -1,0 +1,171 @@
+/* ==========================================================================
+   Gruvbox theme for Starlight — mirrors the palette of the current site
+   (site/index.html + Docsify theme). Overrides Starlight's CSS custom
+   properties for both dark and light modes.
+   ========================================================================== */
+
+/* ---- Dark mode (default) ---- */
+:root {
+	/* Grayscale / surfaces */
+	--sl-color-white: #fbf1c7; /* headings, strong text */
+	--sl-color-gray-1: #ebdbb2; /* body text */
+	--sl-color-gray-2: #ebdbb2;
+	--sl-color-gray-3: #a89984; /* muted */
+	--sl-color-gray-4: #7c6f64;
+	--sl-color-gray-5: #504945; /* borders */
+	--sl-color-gray-6: #3c3836; /* surfaces */
+	--sl-color-black: #282828; /* page background */
+
+	/* Accents */
+	--sl-color-accent-low: #45402a;
+	--sl-color-accent: #fe8019; /* gruvbox orange (accent-2) */
+	--sl-color-accent-high: #fabd2f; /* gruvbox yellow (accent) */
+	--sl-color-text-accent: #fabd2f;
+
+	/* Backgrounds */
+	--sl-color-bg: #282828;
+	--sl-color-bg-nav: #1d2021; /* bg-hard */
+	--sl-color-bg-sidebar: #1d2021; /* bg-hard */
+	--sl-color-bg-inline-code: #3c3836;
+
+	/* Hairlines / borders */
+	--sl-color-hairline-light: #504945;
+	--sl-color-hairline: #504945;
+	--sl-color-hairline-shade: #1d2021;
+
+	/* Text */
+	--sl-color-text: #ebdbb2;
+	--sl-color-text-invert: #282828;
+
+	/* Semantic colors (used by asides/badges) */
+	--sl-color-green: #8ec07c; /* gruvbox aqua */
+	--sl-color-green-high: #b8e0a8;
+	--sl-color-green-low: #2e3a2a;
+	--sl-color-orange: #fe8019;
+	--sl-color-orange-high: #fbbf8c;
+	--sl-color-orange-low: #4a2e16;
+	--sl-color-red: #fb4934;
+	--sl-color-red-high: #fca79c;
+	--sl-color-red-low: #442222;
+	--sl-color-blue: #83a598;
+	--sl-color-blue-high: #b8cfc6;
+	--sl-color-blue-low: #2a3634;
+	--sl-color-purple: #d3869b;
+	--sl-color-purple-high: #e7bcc8;
+	--sl-color-purple-low: #3d2c31;
+	--sl-color-yellow: #fabd2f;
+	--sl-color-yellow-high: #fdd88a;
+	--sl-color-yellow-low: #45402a;
+
+	/* Fonts — match the current site */
+	--sl-font: 'Inter', system-ui, sans-serif;
+}
+
+/* ---- Light mode ---- */
+:root[data-theme='light'] {
+	--sl-color-white: #282828; /* headings */
+	--sl-color-gray-1: #3c3836; /* body text */
+	--sl-color-gray-2: #3c3836;
+	--sl-color-gray-3: #7c6f64; /* muted */
+	--sl-color-gray-4: #a89984;
+	--sl-color-gray-5: #d5c4a1; /* borders */
+	--sl-color-gray-6: #ebdbb2; /* surfaces */
+	--sl-color-gray-7: #f2e5bc;
+	--sl-color-black: #fbf1c7; /* page background */
+
+	--sl-color-accent-low: #f2e5bc;
+	--sl-color-accent: #af3a03; /* gruvbox orange (accent-2) */
+	--sl-color-accent-high: #b57614; /* gruvbox yellow-dark (accent) */
+	--sl-color-text-accent: #b57614;
+
+	--sl-color-bg: #fbf1c7;
+	--sl-color-bg-nav: #f9f5d7; /* bg-hard */
+	--sl-color-bg-sidebar: #f9f5d7; /* bg-hard */
+	--sl-color-bg-inline-code: #ebdbb2;
+
+	--sl-color-hairline-light: #d5c4a1;
+	--sl-color-hairline: #d5c4a1;
+	--sl-color-hairline-shade: #ebdbb2;
+
+	--sl-color-text: #3c3836;
+	--sl-color-text-invert: #fbf1c7;
+
+	--sl-color-green: #427b58; /* gruvbox aqua (light) */
+	--sl-color-green-high: #2e5a40;
+	--sl-color-green-low: #dcead8;
+	--sl-color-orange: #af3a03;
+	--sl-color-orange-high: #8a2d02;
+	--sl-color-orange-low: #f6dfc8;
+	--sl-color-red: #9d0006;
+	--sl-color-red-high: #7a0005;
+	--sl-color-red-low: #f3d5cd;
+	--sl-color-blue: #076678;
+	--sl-color-blue-high: #05505e;
+	--sl-color-blue-low: #d8e5e2;
+	--sl-color-purple: #8f3f71;
+	--sl-color-purple-high: #6f3158;
+	--sl-color-purple-low: #ecdae4;
+	--sl-color-yellow: #b57614;
+	--sl-color-yellow-high: #8a5a0f;
+	--sl-color-yellow-low: #f2e5bc;
+}
+
+/* ---- Headings use Space Grotesk, like the current site ---- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.site-title {
+	font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+}
+
+/* ==========================================================================
+   GitHub-style blockquote alerts (remark-github-blockquote-alert output:
+   .markdown-alert.markdown-alert-{note,tip,important,warning,caution})
+   ========================================================================== */
+.markdown-alert {
+	padding: 0.75rem 1rem;
+	margin: 1rem 0;
+	border-inline-start: 0.25rem solid var(--gb-alert-color, var(--sl-color-hairline));
+	border-radius: 0.25rem;
+	background-color: var(--sl-color-bg-inline-code);
+	color: var(--sl-color-text);
+}
+
+.markdown-alert > :first-child {
+	margin-top: 0;
+}
+.markdown-alert > :last-child {
+	margin-bottom: 0;
+}
+
+.markdown-alert .markdown-alert-title {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-weight: 600;
+	margin-bottom: 0.25rem;
+	color: var(--gb-alert-color, var(--sl-color-text));
+}
+
+.markdown-alert .markdown-alert-title svg {
+	fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+	--gb-alert-color: var(--sl-color-blue);
+}
+.markdown-alert.markdown-alert-tip {
+	--gb-alert-color: var(--sl-color-green);
+}
+.markdown-alert.markdown-alert-important {
+	--gb-alert-color: var(--sl-color-purple);
+}
+.markdown-alert.markdown-alert-warning {
+	--gb-alert-color: var(--sl-color-yellow);
+}
+.markdown-alert.markdown-alert-caution {
+	--gb-alert-color: var(--sl-color-red);
+}

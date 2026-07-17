@@ -1,0 +1,351 @@
+---
+// The Fab Lab contact page — a standalone Astro page (NOT a Starlight doc).
+// Same Gruvbox shell + top bar as src/pages/index.astro. Spec (owner-approved,
+// see STARLIGHT_MIGRATION.md "Contact page spec"): a prominent Discord CTA
+// front-and-center, people cards with visible placeholders (never fake data),
+// and a location/hours section reusing the landing-page copy.
+---
+
+<!doctype html>
+<html lang="en" data-theme="dark">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Contact — The Fab Lab</title>
+		<meta
+			name="description"
+			content="Get in touch with The Fab Lab — join our Discord, or reach the team."
+		/>
+		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+		<!-- No-FOUC theme: honor the docs site's saved choice (Starlight), else the
+		     legacy 'theme' key, else system preference. -->
+		<script is:inline>
+			(function () {
+				var t =
+					localStorage.getItem('starlight-theme') ||
+					localStorage.getItem('theme') ||
+					(matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+				if (t !== 'dark' && t !== 'light') {
+					t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+				}
+				document.documentElement.setAttribute('data-theme', t);
+			})();
+		</script>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+		/>
+	</head>
+
+	<body>
+		<nav class="topbar">
+			<div class="topbar-inner">
+				<a class="brand" href="/">The Fab Lab</a>
+				<div class="links">
+					<a href="/">Home</a>
+					<a href="/docs/">Documentation</a>
+					<a href="/safety/">Safety</a>
+					<a href="/contact/" aria-current="page">Contact</a>
+				</div>
+			</div>
+		</nav>
+
+		<header class="hero">
+			<div class="wrap">
+				<h1>Get in Touch</h1>
+				<p class="tagline">
+					The fastest way to reach us, ask a question, or find out what's happening in the lab.
+				</p>
+				<a
+					class="discord-cta"
+					href="https://discord.gg/Tvn9rsBUWH"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<svg
+						class="discord-mark"
+						viewBox="0 0 24 24"
+						width="24"
+						height="24"
+						fill="currentColor"
+						aria-hidden="true"
+					>
+						<path
+							d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.522 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"
+						></path>
+					</svg>
+					Join us on Discord
+				</a>
+			</div>
+		</header>
+
+		<main class="wrap">
+			<h2>The Team</h2>
+			<div class="people">
+				<div class="person-card">
+					<div class="person-name">Jimmy Walker</div>
+					<div class="person-role">President</div>
+					<div class="person-contact">Contact info coming soon</div>
+					<!-- TODO: real contact details -->
+				</div>
+				<div class="person-card">
+					<div class="person-name">Aidan Stewart</div>
+					<div class="person-role">Vice President</div>
+					<div class="person-contact">Contact info coming soon</div>
+					<!-- TODO: real contact details -->
+				</div>
+				<div class="person-card">
+					<div class="person-name">Paul Deere</div>
+					<div class="person-role">Sponsoring Professor</div>
+					<div class="person-contact">Contact info coming soon</div>
+					<!-- TODO: real contact details -->
+				</div>
+			</div>
+
+			<h2>Location &amp; Hours</h2>
+			<div class="quick-facts">
+				<div class="fact">
+					<div class="label">Location</div>
+					<div class="value">Wisenbaker Engineering Building (WEB), Room 121</div>
+				</div>
+				<div class="fact">
+					<div class="label">Hours</div>
+					<div class="value">
+						12:00 PM – 10:00 PM, 7 days a week<br /><span
+							style="font-weight:400;color:var(--fg-muted)">(staffing permitting)</span
+						>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer>
+			<div class="wrap">
+				The Fab Lab · Texas A&amp;M University · <a href="/docs/">Documentation</a>
+			</div>
+		</footer>
+	</body>
+</html>
+
+<style is:global>
+	/* ---- Gruvbox palette (kept in sync with the docs site / landing page) ---- */
+	:root[data-theme='dark'] {
+		--bg: #282828;
+		--bg-soft: #32302f;
+		--bg-card: #3c3836;
+		--fg: #ebdbb2;
+		--fg-muted: #a89984;
+		--border: #504945;
+		--accent: #fabd2f;
+		--accent-2: #fe8019;
+		--discord-blurple: #5865f2;
+		--discord-blurple-hover: #4752c4;
+	}
+	:root[data-theme='light'] {
+		--bg: #fbf1c7;
+		--bg-soft: #f2e5bc;
+		--bg-card: #f9f5d7;
+		--fg: #3c3836;
+		--fg-muted: #7c6f64;
+		--border: #d5c4a1;
+		--accent: #b57614;
+		--accent-2: #af3a03;
+		--discord-blurple: #5865f2;
+		--discord-blurple-hover: #454fbf;
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+	html,
+	body {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		background: var(--bg);
+		color: var(--fg);
+		font-family: 'Inter', system-ui, sans-serif;
+		line-height: 1.65;
+		-webkit-font-smoothing: antialiased;
+	}
+	a {
+		color: var(--accent);
+	}
+	a:hover {
+		color: var(--accent-2);
+	}
+
+	.wrap {
+		max-width: 860px;
+		margin: 0 auto;
+		padding: 0 1.5rem;
+	}
+
+	/* ---- Top bar ---- */
+	.topbar {
+		background: var(--bg-soft);
+		border-bottom: 1px solid var(--border);
+	}
+	.topbar-inner {
+		max-width: 1100px;
+		margin: 0 auto;
+		padding: 0.75rem 1.5rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+	}
+	.topbar .brand {
+		font-family: 'Space Grotesk', sans-serif;
+		font-weight: 700;
+		font-size: 1.1rem;
+		color: var(--fg);
+		text-decoration: none;
+	}
+	.topbar .links {
+		display: flex;
+		gap: 1.25rem;
+	}
+	.topbar .links a {
+		color: var(--fg-muted);
+		text-decoration: none;
+		font-size: 0.95rem;
+	}
+	.topbar .links a:hover {
+		color: var(--accent);
+	}
+	.topbar .links a[aria-current='page'] {
+		color: var(--accent);
+	}
+
+	/* ---- Hero (compact — the Discord CTA must be visible without scrolling) ---- */
+	.hero {
+		text-align: center;
+		padding: 2.5rem 1.5rem 2.25rem;
+		border-bottom: 1px solid var(--border);
+		background: var(--bg-soft);
+	}
+	.hero h1 {
+		font-family: 'Space Grotesk', sans-serif;
+		font-size: clamp(2rem, 5vw, 3rem);
+		margin: 0 0 0.5rem;
+		letter-spacing: -0.02em;
+	}
+	.hero .tagline {
+		font-size: 1.05rem;
+		color: var(--fg-muted);
+		max-width: 34rem;
+		margin: 0 auto 1.75rem;
+	}
+
+	/* ---- Discord CTA: the centerpiece of this page ---- */
+	.discord-cta {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.65rem;
+		background: var(--discord-blurple);
+		color: #fff;
+		font-weight: 700;
+		font-size: 1.1rem;
+		text-decoration: none;
+		padding: 0.9rem 1.85rem;
+		border-radius: 999px;
+		box-shadow: 0 4px 14px rgba(88, 101, 242, 0.35);
+		transition:
+			transform 0.15s ease,
+			background 0.15s ease,
+			box-shadow 0.15s ease;
+	}
+	.discord-cta:hover {
+		background: var(--discord-blurple-hover);
+		color: #fff;
+		transform: translateY(-2px);
+		box-shadow: 0 6px 18px rgba(88, 101, 242, 0.45);
+	}
+	.discord-cta:active {
+		transform: translateY(0);
+	}
+	.discord-mark {
+		flex-shrink: 0;
+	}
+
+	/* ---- Content ---- */
+	main {
+		padding: 2.5rem 0 4rem;
+	}
+	main h2 {
+		font-family: 'Space Grotesk', sans-serif;
+		font-size: 1.4rem;
+		margin: 0 0 0.75rem;
+	}
+	main h2 + .people,
+	main h2 + .quick-facts {
+		margin-top: 0;
+	}
+
+	.people {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+		gap: 1rem;
+		margin: 1rem 0 2.5rem;
+	}
+	.person-card {
+		background: var(--bg-card);
+		border: 1px solid var(--border);
+		border-radius: 10px;
+		padding: 1.1rem 1.25rem;
+	}
+	.person-name {
+		font-family: 'Space Grotesk', sans-serif;
+		font-weight: 700;
+		font-size: 1.05rem;
+	}
+	.person-role {
+		color: var(--fg-muted);
+		font-size: 0.9rem;
+		margin-top: 0.15rem;
+	}
+	.person-contact {
+		margin-top: 0.75rem;
+		font-size: 0.85rem;
+		font-style: italic;
+		color: var(--fg-muted);
+		opacity: 0.75;
+	}
+
+	.quick-facts {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 1rem;
+		margin: 1rem 0 2rem;
+	}
+	.fact {
+		background: var(--bg-card);
+		border: 1px solid var(--border);
+		border-radius: 10px;
+		padding: 1rem 1.25rem;
+	}
+	.fact .label {
+		font-size: 0.8rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: var(--fg-muted);
+		margin-bottom: 0.25rem;
+	}
+	.fact .value {
+		font-weight: 600;
+	}
+
+	footer {
+		border-top: 1px solid var(--border);
+		padding: 2rem 0;
+		text-align: center;
+		color: var(--fg-muted);
+		font-size: 0.9rem;
+	}
+</style>

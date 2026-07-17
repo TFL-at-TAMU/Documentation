@@ -1,0 +1,21 @@
+{
+  "name": "fab-lab-docs",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "migrate-content": "node scripts/migrate_content.mjs"
+  },
+  "dependencies": {
+    "@astrojs/markdown-remark": "7.2.1",
+    "@astrojs/starlight": "0.41.3",
+    "astro": "7.0.6",
+    "remark-github-blockquote-alert": "2.1.0",
+    "sharp": "0.34.5"
+  }
+}
