@@ -171,23 +171,29 @@ h6,
 }
 
 /* ---------------------------------------------------------------------------
-   Layout: slim down the right "On this page" rail and give the article
-   column the reclaimed room (it was crowding the content).
-   - --gb-toc-width: the rail's minimum width (Starlight default reuses the
-     300px left-sidebar width; we use a slimmer rail).
-   - --sl-content-width: the article column's max width (Starlight default
-     45rem). Tweak these two numbers to taste.
-   The width formula mirrors Starlight's own: at least --gb-toc-width, plus
-   half of any leftover space so the rail hugs the right edge.
+   Layout: pin the right "On this page" rail at a fixed width against the
+   right side of the page (it was crowding the content).
+   Starlight's default lets the rail absorb half of all leftover space, so on
+   wide screens its links drift left toward the article. Instead the rail
+   stays --gb-toc-width wide at the far right, and the article column
+   (max --sl-content-width) centers in the remaining space.
+   Tweak these two numbers to taste.
 --------------------------------------------------------------------------- */
 :root {
 	--gb-toc-width: 13rem;
 	--sl-content-width: 50rem;
 }
 
-:root right-sidebar-container {
-	width: max(
-		var(--gb-toc-width),
-		calc(var(--gb-toc-width) + (100% - var(--sl-content-width) - var(--gb-toc-width)) / 2)
-	);
+:root .right-sidebar-container {
+	width: var(--gb-toc-width);
+}
+
+/* The content pane doesn't grow by default, so the row stops short of the
+   viewport's right edge — grow it so the rail is pushed all the way right,
+   and center the article between the two sidebars. */
+:root .main-pane {
+	flex: 1;
+}
+:root .content-panel .sl-container {
+	margin-inline: auto;
 }
