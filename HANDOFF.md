@@ -8,7 +8,7 @@
 
 ## 1. What this project is
 
-The Fab Lab (TFL at TAMU) documentation site — a university makerspace's machine manuals, learning assignments, and shop standards. Repo: **`TFL-at-TAMU/Documentation`** (currently **public**). Content is Markdown; the site is currently rendered by **Docsify** (client-side, no build step for content).
+The Fab Lab (TFL at TAMU) documentation site — a university makerspace's machine manuals, learning assignments, and shop standards. Repo: **`TFL-at-TAMU/Documentation`** (currently **public**). Content is Markdown; the site is built statically with **Astro Starlight** (migrated from Docsify July 2026, PR #30).
 
 **Live:** `https://tfl.aidanstew.art` — landing at `/`, docs at `/docs/`, safety manual at `/safety/`.
 
@@ -17,28 +17,29 @@ The Fab Lab (TFL at TAMU) documentation site — a university makerspace's machi
 | Thing | Value |
 |---|---|
 | Host | Cloudflare Pages, project **`documentation`**, account `7cb3961b81cd8b4c62808cb72b47dff6` |
-| Publish dir | `site/` |
-| Build command | `python3 scripts/generate_sidebar.py` (regenerates `site/docs/_sidebar.md`) |
-| Build output dir | `site` |
+| Build command | `npm ci && npm run build` (env var `NODE_VERSION=24`) |
+| Build output dir | `dist` |
 | Primary domain | `tfl.aidanstew.art` (placeholder personal domain, not final) |
 | Old domain | `docs.aidanstew.art` → 301 → `tfl.aidanstew.art/docs/` via a zone **Redirect Rule** (preserves old Docsify `#/…` hash links) |
 | pages.dev | `documentation-63v.pages.dev` |
-| Caching | `site/_headers` sets `max-age=0, must-revalidate` (added after browser caching repeatedly masked deploys — see gotchas) |
+| Caching | `public/_headers` sets `max-age=0, must-revalidate` (added after browser caching repeatedly masked deploys — see gotchas) |
 
 **Branch protection:** all changes go through a PR into `main`; required status check **`check-file-size`** fails any file > 25 MiB. Admin bypass is enabled — the solo maintainer force-merges with `gh pr merge <n> --repo TFL-at-TAMU/Documentation --squash --admin --delete-branch`, then `git checkout main && git pull --ff-only`.
 
-## 3. Current site architecture (Docsify — the thing being migrated away from)
+## 3. Current site architecture (Astro Starlight)
 
-- `site/index.html` — static landing page (Gruvbox hero + info sections)
-- `site/docs/` — Docsify app (`index.html`) + ~70 Markdown manuals in nested folders (names contain spaces and `&`); `README.md` is the docs home
-- `site/safety/` — the Fab Lab Safety & Emergency Manual, rendered standalone
-- `site/assets/topbar.js` — **shared top bar** (brand + Home/Documentation/Safety/Contact + light/dark toggle), loaded by all three pages. Single source of truth for the nav.
-- `scripts/generate_sidebar.py` — generates the Docsify sidebar from the folder tree (obsolete after the Starlight migration)
-- Stack: Docsify v4 + docsify-themeable, Gruvbox light+dark palette, Inter (body) / Space Grotesk (headings), GitHub-style `> [!NOTE]` callouts via flexible-alerts.
+- `src/content/docs/docs/**` — the manuals (Starlight content collection; original folder/file names with spaces and `&` kept, Astro slugifies routes; `index.md` is the docs home). `src/content/docs/safety.md` → `/safety/`.
+- `src/pages/index.astro` (landing at `/`), `src/pages/contact.astro` (`/contact/`: Discord CTA + people cards with placeholder contact details).
+- `src/components/Header.astro` — Starlight header override adding the shared Home/Documentation/Safety/Contact nav.
+- `astro.config.mjs` — Starlight config: sidebar `autogenerate` groups (**gotcha:** `autogenerate.directory` matches the on-disk folder path, not the slugified route) and the old-Docsify `#/…` hash-redirect shim in `head` (its slugify function must stay in sync with `scripts/migrate_content.mjs`).
+- `public/files/` — downloadable binaries (`/files/...`); `public/_headers` — cache policy.
+- `scripts/migrate_content.mjs` — the one-time Docsify→Starlight conversion tool, kept for reference.
+- `site/docs/` — **only** the unpublished staff trees remain here (see §6); nothing under `site/` is deployed.
+- Stack: Astro 7.0.6 + Starlight 0.41.3 (pinned), Gruvbox light+dark, Inter / Space Grotesk, `> [!NOTE]` callouts via `remark-github-blockquote-alert`, Pagefind search built in.
 
-## 4. The big in-flight effort: migrate to Astro Starlight
+## 4. The Starlight migration (DONE)
 
-**Status: planned & approved, not executed.** Full plan (locked decisions, phases, Cloudflare cutover, rollback) is in **[STARLIGHT_MIGRATION.md](STARLIGHT_MIGRATION.md)** — that doc is authoritative; this is the summary.
+**Status: executed and live** — Phases 1–3 of **[STARLIGHT_MIGRATION.md](STARLIGHT_MIGRATION.md)** completed 2026-07-16/17 (PR #30 + Cloudflare cutover). Content moved with `git mv` (history preserved); cross-links slugified; duplicate H1s deduped; binaries under `/files/`; staff trees excluded from the build. Remaining Phase 4 cleanup is tracked in `TODO.md`. Historical notes below.
 
 - **Why:** Docsify renders in-browser (weak SEO, hijacks shared elements — it grabbed the top bar's `<nav>` and abs-positioned it; bakes theme colors so the toggle needs a reload; no build-time validation of broken links). Starlight = static HTML at build, autogenerated sidebar (retires `generate_sidebar.py`), Pagefind search, custom pages for the landing, and is Cloudflare-backed (Cloudflare acquired Astro Jan 2026 — same platform we host on).
 - **Proof-of-concept:** branch **`poc/starlight`** (pushed to origin). Astro **7.0.6** + Starlight **0.41.3**, pinned. Builds 73 pages clean; reviewed and approved. It's a reference — the real migration re-does the work with `git mv`.
@@ -55,7 +56,7 @@ The Fab Lab (TFL at TAMU) documentation site — a university makerspace's machi
 
 ## 6. Security remediation (in progress — handle with care)
 
-A staff **credentials** document is present in the `site/docs/Networking/…` tree (and therefore in git history) on this public repo. Remediation is underway and **owner-directed**:
+A staff **credentials** document is present in the `site/docs/Networking/…` tree (and therefore in git history) on this public repo. Since the Starlight migration (PR #30) the staff trees (`site/docs/IT/`, `site/docs/Networking/`, one FDM staff service manual) are **no longer published to the website**, but the files remain in this public repo and its history. Remediation is underway and **owner-directed**:
 1. The IT lead is **rotating the affected credentials first** (treat the exposed ones as burned regardless).
 2. The file comes **off the site/repo after rotation is confirmed** — do not delete it or write about the specifics publicly until then.
 3. **Policy decision:** staff-facing docs (credentials, networking, IT, service manuals, and a tail of personal emails / internal network details) **move to Google Docs, not the repo.** The public site becomes user-facing only. Fold this exclusion into the migration (don't publish the staff tree).
