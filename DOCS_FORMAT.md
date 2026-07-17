@@ -39,7 +39,7 @@ Every machine page has exactly these sections, in this order:
 
 1. **Frontmatter title** — as above. No body H1.
 2. **Untitled intro paragraph** — first thing in the body, no heading. Plain prose: what the machine does, what it's good at, typical jobs, key capacity numbers (bed size, max thickness, etc.). Ends with a link to the shared [Which machine should I use?](/docs/which-machine/) page. Do **not** use "What this machine is for" / "not for" headings — that content lives in the intro paragraph and the which-machine page respectively.
-3. **Critical hazards callouts** — a stack of individual callouts immediately after the intro, **one hazard per callout**, no preamble line. If the machine has a hard access requirement (e.g. the laser cutter's TAMU laser certification), it leads the stack as a standout `:::danger[…]` callout (see Callout rules). The rest are `> [!WARNING]` callouts covering ONLY hazards that can't wait for a specific step: prohibited materials, emergency stop method and location, fire/emergency procedure, off-limits features. Everything step-specific goes inline in Operating instead.
+3. **Critical hazards callouts** — a stack of individual callouts immediately after the intro, **one hazard per callout**, no preamble line, covering ONLY what can't wait for a specific step. Order and type: a hard access requirement first, as a standout `:::danger[…]` callout (e.g. the laser cutter's TAMU laser certification); prohibited materials and off-limits features as `> [!WARNING]` callouts; emergency procedures (how to stop the machine, fire response) as titled `:::caution[…]` callouts (see Callout rules). Everything step-specific goes inline in Operating instead.
 4. **`## Before you start`** — training/access requirements, the machine's **approved materials listed inline** (each machine's page owns its own list — there is no shared materials page), file format requirements, how to get files onto the machine, material size limits.
 5. **`## Operating`** — the numbered procedure. Safety callouts placed inline, directly above or below the step where the hazard occurs.
 6. **`## Finishing up`** — cleanup and shutdown. Always includes removing all material/scrap and "take your project with you — the lab has no storage" (this enforces lab policy at the moment it matters).
@@ -59,8 +59,9 @@ No other sections. In particular, do **not** include:
 - One hazard per callout — don't bundle several warnings into one block.
 - Callouts are **reserved for safety warnings and genuinely important notes**. Never use them for decoration, tips, or general emphasis.
 - Place each warning at the point of hazard — a warning about fires during cutting belongs next to the cutting step, not in a separate section.
-- **Custom-titled callouts** use Starlight's aside syntax (`:::type[Custom Title]` … `:::`), which renders in a visually distinct filled style. Two sanctioned uses:
-  - **Certification / hard access requirements** — `:::danger[LASER CERTIFICATION REQUIRED]` (red, unmistakable). Reserve `danger` for these so the color keeps its meaning.
+- **Custom-titled callouts** use Starlight's aside syntax (`:::type[Custom Title]` … `:::`), which renders in a visually distinct filled style. Three sanctioned uses — reserve each type for its meaning so the colors stay unambiguous:
+  - **Emergency procedures** — `:::caution[EMERGENCY STOP]`, `:::caution[FIRE PROCEDURE]` (orange filled). Any callout that tells the user what to do when something goes wrong gets this treatment, visually distinct from ordinary warnings.
+  - **Certification / hard access requirements** — `:::danger[LASER CERTIFICATION REQUIRED]` (red, unmistakable).
   - **Staff notes** — `:::note[Staff note — <machine> lead]` for an unresolved lab-policy question that the responsible staffer needs to settle (e.g. a procedure the old manuals left ambiguous). State the question, the options, and what to update once decided. Remove the note when it's resolved. These are publicly visible — write accordingly.
 - An aside placed between numbered steps at column 0 splits the list; just continue the numbering explicitly (`8.`) and the built page renders it correctly.
 
@@ -111,11 +112,13 @@ You must hold **TAMU laser safety certification** to operate this machine — be
 > [!WARNING]
 > **Never leave the machine unattended during a job** unless a staff member has explicitly OK'd it for a long job.
 
-> [!WARNING]
-> **Do not open the lid while a job is running.** To stop the machine, press the **glowing button** on top — it pauses the job. To kill all power, flip the **ON/OFF switch at the rear** of the machine.
+:::caution[EMERGENCY STOP]
+**Do not open the lid while a job is running.** To stop the machine, press the **glowing button** on top — it pauses the job. To kill all power, flip the **ON/OFF switch at the rear** of the machine.
+:::
 
-> [!WARNING]
-> **Fire:** small, brief flames at the cut point are normal. If a flame persists, keep the lid closed (it starves the fire), pause the job, and get a staff member immediately. **Only if no staff member can reach the machine in time:** open the lid and throw the **fire blanket** (located **[location]**) over the workpiece.
+:::caution[FIRE PROCEDURE]
+Small, brief flames at the cut point are normal. If a flame persists, keep the lid closed (it starves the fire), pause the job, and get a staff member immediately. **Only if no staff member can reach the machine in time:** open the lid and throw the **fire blanket** (located **[location]**) over the workpiece.
+:::
 
 > [!WARNING]
 > **The passthrough slot on the front and back is off-limits** unless a staff member has specifically trained you on it. Using the slot exposes the laser (Class 4 operation) and requires extra safety precautions.
