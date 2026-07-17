@@ -209,3 +209,15 @@ h6,
 :root #starlight__sidebar ul:not(.top-level) .group-label .large {
 	color: var(--sl-color-gray-3);
 }
+
+/* ---------------------------------------------------------------------------
+   Left sidebar: current-page highlight. Starlight's default fills the
+   active link with a solid --sl-color-text-accent background + inverted
+   text; swapped for a subtler grey surface with accent-colored text.
+--------------------------------------------------------------------------- */
+:root #starlight__sidebar [aria-current='page'],
+:root #starlight__sidebar [aria-current='page']:hover,
+:root #starlight__sidebar [aria-current='page']:focus {
+	background-color: var(--sl-color-gray-6);
+	color: var(--sl-color-text-accent);
+}
