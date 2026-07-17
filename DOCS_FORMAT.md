@@ -39,8 +39,8 @@ Every machine page has exactly these sections, in this order:
 
 1. **Frontmatter title** — as above. No body H1.
 2. **Untitled intro paragraph** — first thing in the body, no heading. Plain prose: what the machine does, what it's good at, typical jobs, key capacity numbers (bed size, max thickness, etc.). Ends with a link to the shared [Which machine should I use?](/docs/which-machine/) page. Do **not** use "What this machine is for" / "not for" headings — that content lives in the intro paragraph and the which-machine page respectively.
-3. **Critical hazards callout** — one `> [!WARNING]` block immediately after the intro. Contains ONLY hazards that can't wait for a specific step: prohibited materials, emergency stop method and location, fire/emergency procedure, and any off-limits features. Everything step-specific goes inline in Operating instead.
-4. **`## Before you start`** — training requirement, approved materials (link to the shared [approved materials list](/docs/approved-materials/), don't inline it), file format requirements, how to get files onto the machine, material size limits.
+3. **Critical hazards callouts** — a stack of individual callouts immediately after the intro, **one hazard per callout**, no preamble line. If the machine has a hard access requirement (e.g. the laser cutter's TAMU laser certification), it leads the stack as a standout `:::danger[…]` callout (see Callout rules). The rest are `> [!WARNING]` callouts covering ONLY hazards that can't wait for a specific step: prohibited materials, emergency stop method and location, fire/emergency procedure, off-limits features. Everything step-specific goes inline in Operating instead.
+4. **`## Before you start`** — training/access requirements, the machine's **approved materials listed inline** (each machine's page owns its own list — there is no shared materials page), file format requirements, how to get files onto the machine, material size limits.
 5. **`## Operating`** — the numbered procedure. Safety callouts placed inline, directly above or below the step where the hazard occurs.
 6. **`## Finishing up`** — cleanup and shutdown. Always includes removing all material/scrap and "take your project with you — the lab has no storage" (this enforces lab policy at the moment it matters).
 7. **`## Common problems`** — optional troubleshooting. Each entry: bold problem statement as the lead sentence, then a short prose paragraph with the fix. No numbered lists here.
@@ -55,16 +55,21 @@ No other sections. In particular, do **not** include:
 
 ## Callout rules
 
-- Syntax is `> [!WARNING]` and `> [!NOTE]` (GitHub blockquote-alert style). The site supports these already via `remark-github-blockquote-alert` — nothing to install or configure per page. `[!TIP]`, `[!IMPORTANT]`, and `[!CAUTION]` also render, but machine pages should rarely need more than WARNING and NOTE.
+- Standard syntax is `> [!WARNING]` and `> [!NOTE]` (GitHub blockquote-alert style). The site supports these already — nothing to install or configure per page. `[!TIP]`, `[!IMPORTANT]`, and `[!CAUTION]` also render, but machine pages should rarely need more than WARNING and NOTE.
+- One hazard per callout — don't bundle several warnings into one block.
 - Callouts are **reserved for safety warnings and genuinely important notes**. Never use them for decoration, tips, or general emphasis.
 - Place each warning at the point of hazard — a warning about fires during cutting belongs next to the cutting step, not in a separate section.
+- **Custom-titled callouts** use Starlight's aside syntax (`:::type[Custom Title]` … `:::`), which renders in a visually distinct filled style. Two sanctioned uses:
+  - **Certification / hard access requirements** — `:::danger[LASER CERTIFICATION REQUIRED]` (red, unmistakable). Reserve `danger` for these so the color keeps its meaning.
+  - **Staff notes** — `:::note[Staff note — <machine> lead]` for an unresolved lab-policy question that the responsible staffer needs to settle (e.g. a procedure the old manuals left ambiguous). State the question, the options, and what to update once decided. Remove the note when it's resolved. These are publicly visible — write accordingly.
+- An aside placed between numbered steps at column 0 splits the list; just continue the numbering explicitly (`8.`) and the built page renders it correctly.
 
 ## Style
 
 - Direct second person ("you"), imperative steps ("Turn on the power switch"), plain language for a non-engineering audience.
 - Bold the things a user must locate or click: **button names**, **switch locations**, **app labels**, **key terms**.
 - Machine-specific facts that are unknown or lab-configuration-dependent go in **[bracketed placeholders]** so staff can fill them in — never invent locations, settings, or account details.
-- Shared content lives in shared pages: the approved/prohibited materials list and all "which machine should I use" guidance each have one page that machine pages link to. Don't duplicate them per machine.
+- "Which machine should I use" guidance lives in one shared page that machine pages link to — don't duplicate it per machine. (Approved materials are the opposite: listed inline on each machine's page.)
 
 ## Migration checklist per page
 
@@ -78,7 +83,7 @@ No other sections. In particular, do **not** include:
 ## Rollout notes (one-time, not per page)
 
 - [ ] Enable `lastUpdated: true` in `astro.config.mjs` — and verify the dates are right on the deployed site, not just locally (Cloudflare's build clone depth could affect git-derived dates).
-- [ ] Create the two load-bearing shared pages: `/docs/which-machine/` and `/docs/approved-materials/`.
+- [ ] Create the load-bearing shared page: `/docs/which-machine/`.
 - [ ] Consider adding the `starlight-links-validator` plugin so builds fail on broken internal links (there are ~35 known-dead legacy links to clean up or remove first).
 - [ ] Retire the two master templates under `docs/Templates/` once this standard replaces them.
 
@@ -96,18 +101,29 @@ title: Laser Cutter (Glowforge Pro)
 
 The Glowforge Pro cuts and engraves flat sheet materials — plywood, MDF, acrylic, cardboard, leather, and more — by tracing your design with a 45W CO₂ laser. It's the fastest way in the lab to go from a 2D drawing to a physical part, and it excels at precise cuts, interlocking parts, enclosures, signage, and surface engraving. Most jobs finish in minutes. It accepts sheets up to about 20.4" × 12", cuts within a roughly 19.5" × 11" area, and cuts reliably through stock up to about 1/4" thick. If you're not sure this is the right machine for your project, see [Which machine should I use?](/docs/which-machine/).
 
+:::danger[LASER CERTIFICATION REQUIRED]
+You must hold **TAMU laser safety certification** to operate this machine — be ready to show it to staff. No certification, no laser.
+:::
+
 > [!WARNING]
-> **Read before using this machine.**
-> - **Never cut PVC, vinyl, or any material containing chlorine.** It releases gas that is toxic to you and corrodes the machine. Polycarbonate (Lexan), ABS, HDPE, and fiberglass are also prohibited — they melt, catch fire, or produce hazardous fumes.
-> - **Never leave the machine unattended while a job is running.** Laser cutters cause fires.
-> - **To stop a print immediately, open the lid.** This cancels the job instantly. To kill all power, use the power switch on the back-left of the machine.
-> - A CO₂ fire extinguisher is located **[location]**. If a fire does not go out when you cancel the print, keep the lid closed, cut power, and get a staff member immediately.
-> - **The passthrough slot on the front and back is off-limits** unless a staff member has specifically trained you on it. Using the slot exposes the laser (Class 4 operation) and requires extra safety precautions.
+> **Never cut PVC, vinyl, or any material containing chlorine.** It releases gas that is toxic to you and corrodes the machine. Polycarbonate (Lexan), ABS, HDPE, and fiberglass are also prohibited — they melt, catch fire, or produce hazardous fumes. Cut only staff-approved materials.
+
+> [!WARNING]
+> **Never leave the machine unattended during a job** unless a staff member has explicitly OK'd it for a long job.
+
+> [!WARNING]
+> **Do not open the lid while a job is running.** To stop the machine, press the **glowing button** on top — it pauses the job. To kill all power, flip the **ON/OFF switch at the rear** of the machine.
+
+> [!WARNING]
+> **Fire:** small, brief flames at the cut point are normal. If a flame persists, keep the lid closed (it starves the fire), pause the job, and get a staff member immediately. **Only if no staff member can reach the machine in time:** open the lid and throw the **fire blanket** (located **[location]**) over the workpiece.
+
+> [!WARNING]
+> **The passthrough slot on the front and back is off-limits** unless a staff member has specifically trained you on it. Using the slot exposes the laser (Class 4 operation) and requires extra safety precautions.
 
 ## Before you start
 
 - You must complete laser cutter training before operating this machine. Ask a staff member if you haven't.
-- Only cut materials from the **[approved materials list](/docs/approved-materials/)**. If your material isn't on the list or you don't know what it is, ask a staff member — don't guess.
+- Only cut **staff-approved materials**: wood, acrylic, cardboard, rubber (lab-provided), and metal (**engraving only**). If your material isn't listed or you don't know what it is, ask a staff member — don't guess.
 - Prepare your design as an **SVG or PDF** for cutting. Plain images (JPG/PNG) can be engraved but not cut.
 - The Glowforge is controlled entirely from a web browser — there's no local software and no USB port. Have your file accessible from the lab computer via [cloud location / email / drive].
 - Material must fit within about 20.4" × 12" and be no thicker than 1/2" with the crumb tray in place.
@@ -125,7 +141,7 @@ The Glowforge Pro cuts and engraves flat sheet materials — plywood, MDF, acryl
 7. Click **Print** in the app, then press the **glowing button on top of the machine** when it pulses.
 
 > [!WARNING]
-> Stay at the machine for the entire job. A small, candle-like flame at the cut point that moves with the laser head is normal. A flame that lingers, spreads, or persists after the head moves on is not — **open the lid to cancel the print immediately**. If the fire doesn't go out, keep the lid closed, cut power, and follow the fire procedure at the top of this page.
+> Stay at the machine for the entire job. A small, candle-like flame at the cut point that moves with the laser head is normal. A flame that lingers, spreads, or persists after the head moves on is not — **pause the job with the button and follow the fire procedure at the top of this page**.
 
 8. When the job finishes, **wait for the fans to quiet down** (10–15 seconds) so smoke clears before opening the lid.
 9. Remove your parts and any scrap. If pieces fell through the crumb tray, lift it out and collect them.
@@ -135,7 +151,7 @@ The Glowforge Pro cuts and engraves flat sheet materials — plywood, MDF, acryl
 - Remove all material and scrap from the bed, including cutoffs in the tray underneath.
 - Brush or vacuum debris off the crumb tray, and confirm the tray is seated flat in its dimples for the next user.
 - Sign out of the Glowforge app if you used a personal account.
-- Turn off the power switch.
+- Leave the machine on — it stays on by default.
 - Take your project and materials with you — the lab has no storage.
 
 ## Common problems
