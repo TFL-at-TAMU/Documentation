@@ -197,3 +197,15 @@ h6,
 :root .content-panel .sl-container {
 	margin-inline: auto;
 }
+
+/* ---------------------------------------------------------------------------
+   Left sidebar: dim nested group labels (subfolders, e.g. "Learning
+   Assignments" under a machine) relative to top-level machine categories.
+   Starlight's own SidebarSublist gives every folder — any depth — the same
+   ".large" treatment (bold + --sl-color-white), so nested groups pop as
+   loud as the top-level ones. Keep the bold weight, just quiet the color
+   for anything nested (ul ul, i.e. not the top-level list).
+--------------------------------------------------------------------------- */
+:root #starlight__sidebar ul:not(.top-level) .group-label .large {
+	color: var(--sl-color-gray-3);
+}
