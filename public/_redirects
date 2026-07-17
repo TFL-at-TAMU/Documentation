@@ -1,0 +1,6 @@
+# Cloudflare Pages redirects (301s) for retired page URLs.
+# Add a line here every time a page is renamed or merged — see DOCS_FORMAT.md.
+
+# Glowforge operations + safety manuals merged into one machine page (format-standard pilot).
+/docs/laser-cutter/operations--safety-manuals/glowforge-operation-manual/ /docs/laser-cutter/laser-cutter-glowforge-pro/ 301
+/docs/laser-cutter/operations--safety-manuals/glowforge-safety-manual/ /docs/laser-cutter/laser-cutter-glowforge-pro/ 301
