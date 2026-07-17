@@ -16,9 +16,7 @@ Last Updated: 3/12/2026
 
 Responsible Student Worker: Aidan Spira
 
-Linked Operations Manual: [Link Here](/docs/laser-cutter/operations--safety-manuals/glowforge-operation-manual/)
-
-Linked Safety Manual: [Link Here](/docs/laser-cutter/operations--safety-manuals/glowforge-safety-manual/)
+Linked Machine Manual: [Laser Cutter (Glowforge Pro)](/docs/laser-cutter/laser-cutter-glowforge-pro/)
 
 ## 1\. Purpose of This Learning Assignment
 
