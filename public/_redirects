@@ -4,3 +4,6 @@
 # Glowforge operations + safety manuals merged into one machine page (format-standard pilot).
 /docs/laser-cutter/operations--safety-manuals/glowforge-operation-manual/ /docs/laser-cutter/laser-cutter-glowforge-pro/ 301
 /docs/laser-cutter/operations--safety-manuals/glowforge-safety-manual/ /docs/laser-cutter/laser-cutter-glowforge-pro/ 301
+
+# 3D Scanner operations manual merged into the machine page (no safety manual existed).
+/docs/3d-scanner/operations-manual/ /docs/3d-scanner/3d-scanner-creality-raptor-pro/ 301

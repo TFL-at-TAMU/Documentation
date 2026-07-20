@@ -16,9 +16,7 @@ Last Updated: 03/27/2026
 
 Responsible Student Worker: Aidan Stewart
 
-Linked Operations Manual: [Fab Lab 3D Scanner Operations Manual](<../Operations & Safety Manuals/3D Scanner Operations Manual.md>)
-
-Linked Safety Manual: [Praxis PS 3D Scanner Safety Manual](<../Operations & Safety Manuals/3D Scanner Safety Manual.md>)
+Linked Machine Manual: [3D Scanner (Creality Raptor Pro)](/docs/3d-scanner/3d-scanner-creality-raptor-pro/)
 
 Assignment: Understand the use cases of a 3D scanner and scan an object.
 
@@ -118,11 +116,11 @@ Key tips:
 
 Limitations: Applying and removing markers takes time. In laser mode, markers are required.
 
-Important Distinction: Just because markers are required in laser mode doesn’t necessarily mean you need to apply markers to the object itself. You can place the supplied movable markers around and on top of objects and remove them in post-processing. Refer to the [Fab Lab 3D Scanner Operations Manual](<../Operations & Safety Manuals/3D Scanner Operations Manual.md>).
+Important Distinction: Just because markers are required in laser mode doesn’t necessarily mean you need to apply markers to the object itself. You can place the supplied movable markers around and on top of objects and remove them in post-processing. Refer to the [3D Scanner (Creality Raptor Pro) manual](/docs/3d-scanner/3d-scanner-creality-raptor-pro/).
 
 ## Part 4 – The Assignment
 
-Generate a model of the cutting board. Use [Fab Lab 3D Scanner Operations Manual](<../Operations & Safety Manuals/3D Scanner Operations Manual.md>) to guide you through the process.
+Generate a model of the cutting board. Use [3D Scanner (Creality Raptor Pro) manual](/docs/3d-scanner/3d-scanner-creality-raptor-pro/) to guide you through the process.
 
 Hint: You will need more than one scan to complete this assignment, which must then be aligned to create a single model. Pay attention to what tracking mode you use for each scan.
 
