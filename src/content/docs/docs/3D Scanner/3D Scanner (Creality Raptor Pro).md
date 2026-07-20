@@ -11,12 +11,9 @@ The Creality Raptor Pro is a handheld 3D scanner that captures the geometry — 
 > [!NOTE]
 > The scanner's lasers are **Class 1 — eye-safe by design**. No eye protection or special precautions are needed.
 
-:::note[Staff note — 3D Scanner lead]
-Confirm the access policy (free walk-up use vs. training or staff checkout), so "Before you start" can state it instead of guessing.
-:::
-
 ## Before you start
 
+- No training or checkout is required to use the scanner in the lab. **To use it outside the lab, coordinate with staff first.**
 - You need a **clear space** to maneuver the scanner all the way around the object.
 - The object — and the surface it rests on — should **not be black, reflective, or transparent**. If it is, scanning spray can fix it (see Common problems below).
 - Bring an [adequately powered](https://wiki.creality.com/en/3d-scanner/tutorials/general/performance) laptop with a **USB 3.0 port**, set up next to the scanning area. Keep an eye on free disk space — scan files get decently large.
