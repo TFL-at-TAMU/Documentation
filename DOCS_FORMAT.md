@@ -35,7 +35,7 @@ The existing docs were written in Google Docs by multiple employees and exported
 
 ## Page structure
 
-Every machine page has exactly these sections, in this order:
+Every machine page starts from these sections, in this order:
 
 1. **Frontmatter title** — as above. No body H1.
 2. **Untitled intro paragraph** — first thing in the body, no heading. Plain prose: what the machine does, what it's good at, typical jobs, key capacity numbers (bed size, max thickness, etc.). Ends with a link to the shared [Which machine should I use?](/docs/which-machine/) page. Do **not** use "What this machine is for" / "not for" headings — that content lives in the intro paragraph and the which-machine page respectively.
@@ -45,7 +45,9 @@ Every machine page has exactly these sections, in this order:
 6. **`## Finishing up`** — cleanup and shutdown. Always includes removing all material/scrap and "take your project with you — the lab has no storage" (this enforces lab policy at the moment it matters).
 7. **`## Common problems`** — optional troubleshooting. Each entry: bold problem statement as the lead sentence, then a short prose paragraph with the fix. No numbered lists here.
 
-No other sections. In particular, do **not** include:
+**This structure is the default, not a straitjacket.** These pages are curated by hand, so when a machine's content is genuinely better served by an extra or reshaped section, do that — clarity beats conformity. (Example: the 3D scanner has a "Choosing scan and tracking modes" reference section between Before-you-start and Operating, because mode selection needs more than a step can hold; the Glowforge doesn't, because its settings chart lives next to the machine.) What never bends: the frontmatter/no-body-H1 rule, the callout meanings and their placement at the point of hazard, link/redirect mechanics, and safety content living on the machine page itself.
+
+Regardless of structure, do **not** include:
 
 - Metadata blocks ("Machine Name", "Location", "Version", "Last Updated", "Responsible Student Worker") — last-modified comes from git, and the rest is either in the title or doesn't belong on a public page
 - "Stop conditions" sections — these become inline `> [!WARNING]` callouts at the relevant step
