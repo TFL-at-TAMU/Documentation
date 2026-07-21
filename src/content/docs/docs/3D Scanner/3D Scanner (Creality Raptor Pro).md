@@ -22,6 +22,36 @@ The Creality Raptor Pro is a handheld 3D scanner that captures the geometry — 
 > [!NOTE]
 > For additional reference, the Raptor Pro's official [user manual](https://wiki.creality.com/en/3d-scanner/raptorpro/manual) is genuinely good.
 
+## Choosing scan and tracking modes
+
+You make two independent choices for every scan: a **scan mode** (which light source captures the geometry) and a **tracking mode** (how the scanner knows where it is relative to the object). Choosing the wrong tracking mode is one of the most common reasons a scan fails.
+
+### Scan modes
+
+The Raptor Pro scans with NIR (near-infrared) structured light or with blue laser lines (7 parallel, or 22 crossed). NIR captures the whole field of view at once — fast, and it's the only mode that captures color texture. The laser modes trace lines across the part for higher accuracy, but they **require markers**.
+
+| Criteria | NIR structured light | 7 parallel laser lines | 22 cross laser lines |
+|---|---|---|---|
+| Pattern shape | Dot/speckle field | 7 parallel lines | 22 crossed lines (grid) |
+| Advertised accuracy | 0.075 mm | 0.02 mm | 0.02 mm |
+| Real-world accuracy ([user-reported](https://www.youtube.com/watch?v=UYjavPonUaE)) | ~0.1–0.2 mm | ~0.04–0.1 mm | ~0.04–0.1 mm |
+| Single capture area | 630 × 550 mm | 397 × 290 mm | 397 × 290 mm |
+| Best object size | Medium–large | Small–medium | Medium–large |
+| Color texture capture? | Yes (24-bit) | No | No |
+
+### Tracking modes
+
+- **Geometry mode** tracks by the shape of the object itself — edges, curves, and corners become landmarks. Best for objects with complex, distinct geometry. It struggles with regular, repetitive, or symmetrical shapes: a cube, cylinder, or flat panel looks the same from every angle, so the scanner can lose its position or silently produce wildly incorrect geometry.
+- **Texture mode** tracks by surface appearance — color patterns, markings, grain, or printed graphics. Best for visually rich but geometrically plain objects (decorated pottery, artwork, fabrics). It needs a visually distinct surface, and it works best with NIR since the laser modes capture no color.
+- **Marker mode** tracks using the small reflective adhesive dots from the kit as fixed reference points. Best when neither shape nor texture gives the scanner anything to lock onto — smooth, plain, or symmetrical objects — and for large objects (up to 4 m). **Required in the laser modes.**
+
+Marker tips:
+
+- Use 6 mm markers for larger objects, 3 mm for smaller ones.
+- Place markers irregularly, not in a grid, so the scanner can tell regions apart.
+- The scanner must see at least **four markers at all times** to keep tracking — denser is safer.
+- For small objects, don't put markers on the object at all: lay a dense field of markers on the mat or table around it. Markers required by laser mode can be the supplied movable ones placed around and on top of the object, then removed in post-processing.
+
 ## Operating
 
 ![Diagram of the Creality Raptor Pro](../assets/images/3d_scanner_operation_fa6423e291.png)
@@ -50,7 +80,7 @@ The Creality Raptor Pro is a handheld 3D scanner that captures the geometry — 
 
 7. In CrealityScan, click **"New Project"** and complete the dialogue.
 8. At the top center of the screen, enter the **Calibration** tab and follow the on-screen instructions. You only need to calibrate once.
-9. Back in the scan tab, choose your mode — **blue laser or infrared**. If you're unsure, hover over the **"🛈" tooltips** for more information.
+9. Back in the scan tab, choose your **scan mode and tracking mode** — see [Choosing scan and tracking modes](#choosing-scan-and-tracking-modes) above if you're unsure.
 10. Customize the additional settings in the sidebar to your needs. If you're using markers, do a **"Global Markers" scan first** — it detects markers better than the actual scan modes, and having all markers mapped before scanning makes the scan itself much easier.
 11. Click **"Preview"** (or press the center button on the scanner) and get a feel for how far to hold the scanner from the object. The colored distance sidebar helps here, though it can get confused.
 12. Click **"Start"** and perform your scan, watching the point cloud populate in real time. The point cloud lives in RAM while you scan — available RAM limits how many points you can capture and post-process. If you need to split the object into multiple scans, store them in the same project and let CrealityScan align them automatically.
@@ -84,6 +114,6 @@ Don't attempt to troubleshoot major issues yourself — get a staff member.
 
 **The scanner crashes, freezes, or loses connection.** Unless something looks seriously wrong, don't worry — it happens. Close CrealityScan, unplug and replug the scanner, then relaunch.
 
-**The scanner keeps losing track.** Switch to a more effective tracking mode — use the "ⓘ" tooltips to help decide. If issues persist, add more markers or switch to marker-based tracking. Also check that the object isn't black, reflective, or transparent; if it is, scanning spray may be needed.
+**The scanner keeps losing track.** Switch to a more effective tracking mode — [Choosing scan and tracking modes](#choosing-scan-and-tracking-modes) explains which fits which object. If issues persist, add more markers or switch to marker-based tracking. Also check that the object isn't black, reflective, or transparent; if it is, scanning spray may be needed.
 
 **The object has black, reflective, or transparent surfaces.** Bring the object to the sink, shake the scanning spray well, and apply a light coat. Don't over-apply — the effect only becomes visible once it fully evaporates. The spray is simply a mixture of isopropanol and talcum powder.
