@@ -58,6 +58,10 @@ All three modes — how each one tracks, what it's best for, its limitations, an
 
 ## Part 4 – The assignment
 
+:::note[Staff note — 3D Scanner lead]
+The cutting board was a tentative choice — the final assignment object is picked but not yet added here. Update this Part (and the hint below, if the scan strategy changes) once it's in the lab.
+:::
+
 Generate a model of the cutting board, using the [3D Scanner (Creality Raptor Pro) manual](/docs/3d-scanner/3d-scanner-creality-raptor-pro/) to guide you through the process.
 
 Hint: you will need more than one scan to complete this assignment, which must then be aligned into a single model. Pay attention to what tracking mode you use for each scan.
