@@ -221,3 +221,24 @@ h6,
 	background-color: var(--sl-color-gray-6);
 	color: var(--sl-color-text-accent);
 }
+
+/* ---------------------------------------------------------------------------
+   Side-by-side images. Markdown images written adjacent (same line, no blank
+   line between them) land in one paragraph and render as an even row; put a
+   blank line between them to keep the default stacked layout. No special
+   syntax for authors — just where the line breaks go. Wraps to stacked on
+   narrow screens.
+--------------------------------------------------------------------------- */
+.sl-markdown-content p:has(img + img) {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	align-items: flex-start;
+}
+.sl-markdown-content p:has(img + img) img {
+	flex: 1 1 0;
+	min-width: min(15rem, 100%);
+	width: auto;
+	height: auto;
+	margin: 0;
+}
