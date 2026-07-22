@@ -188,6 +188,24 @@ h6,
 	width: var(--gb-toc-width);
 }
 
+/* Starlight's fixed rail is `width: 100%`, which for a fixed element resolves
+   against the viewport, not its container — so its contents lay out as if they
+   had a full screen of room and the "On this page" text spills off the right
+   edge. Constrain the fixed element to the container width so entries wrap
+   within the visible rail. */
+:root .right-sidebar {
+	width: var(--gb-toc-width);
+}
+
+/* The panel's inner container is sized off --sl-sidebar-width (Starlight's
+   LEFT-sidebar width, ~300px) on the assumption both rails match — which we've
+   deliberately broken. Re-derive it from our narrower rail width so the TOC
+   text wraps inside the visible rail instead of overflowing the right edge. */
+:root .right-sidebar-panel .sl-container {
+	width: calc(var(--gb-toc-width) - 2 * var(--sl-sidebar-pad-x));
+	max-width: 100%;
+}
+
 /* The content pane doesn't grow by default, so the row stops short of the
    viewport's right edge — grow it so the rail is pushed all the way right,
    and center the article between the two sidebars. */
