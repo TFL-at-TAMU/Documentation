@@ -1,0 +1,92 @@
+---
+// Starlight component override for `MobileMenuFooter` — the footer inside the
+// mobile hamburger drawer (shown only below the 50rem breakpoint, where the
+// header nav is hidden). Starlight's default footer is just social icons +
+// theme/language selectors; the site's four shared nav links (Home /
+// Documentation / Safety / Contact) live in the header on wider screens but
+// have no home in the drawer, so we add them here. Keeps the default
+// preferences row intact below the links.
+import LanguageSelect from 'virtual:starlight/components/LanguageSelect';
+import SocialIcons from 'virtual:starlight/components/SocialIcons';
+import ThemeSelect from 'virtual:starlight/components/ThemeSelect';
+
+const navLinks = [
+	{ href: '/', label: 'Home' },
+	{ href: '/docs/', label: 'Documentation' },
+	{ href: '/safety/', label: 'Safety' },
+	{ href: '/contact/', label: 'Contact' },
+];
+
+const currentPath = Astro.url.pathname;
+
+/** Home is only "active" on an exact match; the rest match by prefix. */
+function isActive(href: string): boolean {
+	if (href === '/') return currentPath === '/';
+	return currentPath === href || currentPath.startsWith(href);
+}
+---
+
+<nav class="site-mobile-nav" aria-label="Site">
+	<ul>
+		{
+			navLinks.map((link) => (
+				<li>
+					<a href={link.href} aria-current={isActive(link.href) ? 'page' : undefined}>
+						{link.label}
+					</a>
+				</li>
+			))
+		}
+	</ul>
+</nav>
+
+<div class="mobile-preferences sl-flex">
+	<div class="social-icons">
+		<SocialIcons />
+	</div>
+	<ThemeSelect />
+	<LanguageSelect />
+</div>
+
+<style>
+	.site-mobile-nav ul {
+		list-style: none;
+		margin: 0;
+		padding: 0.5rem 0 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+	}
+	.site-mobile-nav a {
+		display: block;
+		padding: 0.6rem 0;
+		font-size: var(--sl-text-base);
+		font-weight: 600;
+		color: var(--sl-color-white);
+		text-decoration: none;
+		border-bottom: 1px solid var(--sl-color-gray-6);
+	}
+	.site-mobile-nav a[aria-current='page'] {
+		color: var(--sl-color-text-accent);
+	}
+
+	/* Replicates Starlight's default MobileMenuFooter preferences row so the
+	   social/theme/language controls keep their original layout. */
+	.social-icons {
+		display: flex;
+		margin-inline-end: auto;
+		gap: 1rem;
+		align-items: center;
+		padding-block: 1rem;
+	}
+	.social-icons:empty {
+		display: none;
+	}
+	.mobile-preferences {
+		justify-content: space-between;
+		flex-wrap: wrap;
+		border-top: 1px solid var(--sl-color-gray-6);
+		column-gap: 1rem;
+		padding: 0.5rem 0;
+	}
+</style>
