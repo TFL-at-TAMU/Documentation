@@ -4,7 +4,7 @@ Instructions for restructuring the TAMU Fab Lab machine documentation. The site 
 
 ## Background
 
-The existing docs were written in Google Docs by multiple employees and exported to Markdown, leaving conversion artifacts (stray headers, broken formatting, inconsistent structure). Separate "operations manual" and "safety manual" files exist per machine. Those pairs are being replaced: **one manual page per machine**, with the safety content integrated inline at the point of hazard. Everything else a machine has — learning assignments, activity pages, model pages — is **not** covered by this standard and stays as its own pages alongside the manual.
+The existing docs were written in Google Docs by multiple employees and exported to Markdown, leaving conversion artifacts (stray headers, broken formatting, inconsistent structure). Separate "operations manual" and "safety manual" files exist per machine. Those pairs are being replaced: **one manual page per machine**, with the safety content integrated inline at the point of hazard. Everything else a machine has — learning assignments, activity pages, model pages — stays as its own pages alongside the manual; assignments follow the lighter pattern in the "Learning assignments" section below.
 
 ## Files, frontmatter, and URLs
 
@@ -73,6 +73,14 @@ Regardless of structure, do **not** include:
 - Bold the things a user must locate or click: **button names**, **switch locations**, **app labels**, **key terms**.
 - Machine-specific facts that are unknown or lab-configuration-dependent go in **[bracketed placeholders]** so staff can fill them in — never invent locations, settings, or account details.
 - "Which machine should I use" guidance lives in one shared page that machine pages link to — don't duplicate it per machine. (Approved materials are the opposite: listed inline on each machine's page.)
+
+## Learning assignments
+
+Machines get **multiple assignments**, so an assignment is an exercise, not a textbook — teaching content baked into one assignment either gets duplicated by the others or turns "Assignment 1" into a silent prerequisite. The pattern:
+
+- **An assignment page contains:** a one-line goal, "read these first" pointers, the task itself, and any hints. Keep it short.
+- **Teaching content lives where it's reusable:** operating reference (settings, mode selection) belongs in the manual; substantial conceptual/background material gets its own page next to the manual (e.g. `3D Scanner/How 3D Scanning Works.md`), shared by all of that machine's assignments; a mere paragraph's worth folds into the manual's intro instead of becoming a page.
+- Assignments follow the same mechanical rules as every page (frontmatter title, callout meanings, site-URL links, no metadata blocks) but not the machine-page section structure.
 
 ## Migration checklist per page
 
