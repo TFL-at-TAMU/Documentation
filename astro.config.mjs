@@ -113,6 +113,7 @@ export default defineConfig({
 			],
 			components: {
 				Header: './src/components/Header.astro',
+				MobileMenuFooter: './src/components/MobileMenuFooter.astro',
 			},
 		}),
 	],

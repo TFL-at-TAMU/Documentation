@@ -52,9 +52,10 @@ function isActive(href: string): boolean {
 	}
 
 	.site-nav {
-		/* Hidden on narrow viewports — Starlight's own mobile menu (sidebar
-		   drawer) already provides in-site navigation there, so this stays
-		   simple rather than building a second responsive nav. */
+		/* Hidden below 50rem, where Starlight switches to the hamburger drawer —
+		   the four links live in the drawer there (see MobileMenuFooter.astro).
+		   Shown at >= 50rem, exactly where the hamburger disappears, so there's
+		   no width band with no reachable nav. */
 		display: none;
 	}
 
@@ -93,7 +94,7 @@ function isActive(href: string): boolean {
 		min-width: 0;
 	}
 
-	@media (min-width: 72rem) {
+	@media (min-width: 50rem) {
 		.site-nav {
 			display: block;
 		}
