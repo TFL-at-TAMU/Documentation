@@ -184,36 +184,42 @@ h6,
 	--sl-content-width: 50rem;
 }
 
-:root .right-sidebar-container {
-	width: var(--gb-toc-width);
-}
+/* All of the rail geometry below is scoped to >= 72rem, the breakpoint where
+   Starlight actually shows the right "On this page" rail. Below it there is no
+   rail — the TOC becomes a full-width dropdown that REUSES .right-sidebar-panel
+   .sl-container, so leaving these unscoped shrank the mobile TOC to the rail
+   width. Keep them desktop-only. */
+@media (min-width: 72rem) {
+	:root .right-sidebar-container {
+		width: var(--gb-toc-width);
+	}
 
-/* Starlight's fixed rail is `width: 100%`, which for a fixed element resolves
-   against the viewport, not its container — so its contents lay out as if they
-   had a full screen of room and the "On this page" text spills off the right
-   edge. Constrain the fixed element to the container width so entries wrap
-   within the visible rail. */
-:root .right-sidebar {
-	width: var(--gb-toc-width);
-}
+	/* Starlight's fixed rail is `width: 100%`, which for a fixed element resolves
+	   against the viewport, not its container — so its contents lay out as if
+	   they had a full screen of room and the "On this page" text spills off the
+	   right edge. Constrain the fixed element to the container width. */
+	:root .right-sidebar {
+		width: var(--gb-toc-width);
+	}
 
-/* The panel's inner container is sized off --sl-sidebar-width (Starlight's
-   LEFT-sidebar width, ~300px) on the assumption both rails match — which we've
-   deliberately broken. Re-derive it from our narrower rail width so the TOC
-   text wraps inside the visible rail instead of overflowing the right edge. */
-:root .right-sidebar-panel .sl-container {
-	width: calc(var(--gb-toc-width) - 2 * var(--sl-sidebar-pad-x));
-	max-width: 100%;
-}
+	/* The panel's inner container is sized off --sl-sidebar-width (Starlight's
+	   LEFT-sidebar width, ~300px) on the assumption both rails match — which
+	   we've deliberately broken. Re-derive it from our narrower rail width so
+	   the TOC text wraps inside the visible rail instead of overflowing. */
+	:root .right-sidebar-panel .sl-container {
+		width: calc(var(--gb-toc-width) - 2 * var(--sl-sidebar-pad-x));
+		max-width: 100%;
+	}
 
-/* The content pane doesn't grow by default, so the row stops short of the
-   viewport's right edge — grow it so the rail is pushed all the way right,
-   and center the article between the two sidebars. */
-:root .main-pane {
-	flex: 1;
-}
-:root .content-panel .sl-container {
-	margin-inline: auto;
+	/* The content pane doesn't grow by default, so the row stops short of the
+	   viewport's right edge — grow it so the rail is pushed all the way right,
+	   and center the article between the two sidebars. */
+	:root .main-pane {
+		flex: 1;
+	}
+	:root .content-panel .sl-container {
+		margin-inline: auto;
+	}
 }
 
 /* ---------------------------------------------------------------------------

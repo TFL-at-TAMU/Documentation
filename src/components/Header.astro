@@ -94,6 +94,18 @@ function isActive(href: string): boolean {
 		min-width: 0;
 	}
 
+	/* Below 50rem the nav lives in the hamburger drawer, so these wrapper divs
+	   have no job — and their flex context was making the header taller than
+	   Starlight's native content height, pushing search out of alignment with
+	   the (independently positioned) hamburger. `display: contents` removes the
+	   wrappers from layout so Starlight's default header aligns natively. */
+	@media (max-width: 49.9999rem) {
+		.site-nav-header,
+		.default-header {
+			display: contents;
+		}
+	}
+
 	@media (min-width: 50rem) {
 		.site-nav {
 			display: block;
