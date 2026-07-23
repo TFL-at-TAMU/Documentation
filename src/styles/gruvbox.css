@@ -31,7 +31,11 @@
 	/* Hairlines / borders */
 	--sl-color-hairline-light: #504945;
 	--sl-color-hairline: #504945;
-	--sl-color-hairline-shade: #1d2021;
+	/* Subtle divider (header bottom, mobile TOC bar). Must contrast with the
+	   nav/sidebar background (--sl-color-bg-nav, #1d2021) or the divider is
+	   invisible — which it was when this equalled #1d2021. #3c3836 (gruvbox
+	   bg1) reads as a thin line like Starlight's default header divider. */
+	--sl-color-hairline-shade: #3c3836;
 
 	/* Text */
 	--sl-color-text: #ebdbb2;
