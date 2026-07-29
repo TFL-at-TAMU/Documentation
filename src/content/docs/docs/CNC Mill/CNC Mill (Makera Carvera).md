@@ -2,7 +2,7 @@
 title: CNC Mill (Makera Carvera)
 ---
 
-The Makera Carvera is an enclosed desktop CNC mill that cuts detailed parts from wood, hard plastics, and soft metals — and doubles as a laser engraver for wood and metal. Use it for precision-milled parts, pockets and profiles, engraving, and, with the optional 4th axis, rotational work on cylindrical stock. Jobs are designed and posted to G-code in Fusion 360, then run from the Carvera Controller app on the lab Wi-Fi. If you're not sure this is the right machine for your project, ask a staff member.
+The Makera Carvera is an enclosed desktop CNC mill that cuts detailed parts from wood, hard plastics, and soft metals — and doubles as a laser engraver for wood and metal. Use it for precision-milled parts, pockets and profiles, engraving, and, with the optional 4th axis, rotational work on cylindrical stock. If you're not sure this is the right machine for your project, ask a staff member.
 
 :::danger[LASER SAFETY TRAINING REQUIRED]
 TAMU laser safety training is required before using the Carvera's laser, and **laser goggles must be worn whenever the laser is running**.
@@ -15,7 +15,7 @@ TAMU laser safety training is required before using the Carvera's laser, and **l
 > **Only mill approved materials** (listed under [Before you start](#before-you-start)). Materials that are brittle, fibrous, or "dead soft" — softening and going pliable with heat — cannot be milled. Anything unusual needs staff approval first.
 
 > [!WARNING]
-> **Never open the protective cover while a job is running,** and never bypass the interlocks or guards. The spindle and laser head move before, during, and after a job — keep hands, hair, clothing, and loose items clear of the moving system.
+> The spindle and laser head move before, during, and after a job — keep hands, hair, clothing, and loose items clear of the moving system. **Opening the hood stops the machine immediately**, and the interlocks and guards should never be bypassed.
 
 > [!WARNING]
 > **Never run the machine without the vacuum and ventilation running.** Milling and laser work produce dust and fumes that may contain hazardous compounds.
