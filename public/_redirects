@@ -7,3 +7,10 @@
 
 # 3D Scanner operations manual merged into the machine page (no safety manual existed).
 /docs/3d-scanner/operations-manual/ /docs/3d-scanner/3d-scanner-creality-raptor-pro/ 301
+
+# CNC Mill: operations + safety manuals merged into one machine page; CAM guide
+# and pre-flight checklist moved up out of the retired subfolder.
+/docs/cnc-mill/operations--safety-manual/carvera-cnc-operation-manual/ /docs/cnc-mill/cnc-mill-makera-carvera/ 301
+/docs/cnc-mill/operations--safety-manual/carvera-cnc-safety-manual/ /docs/cnc-mill/cnc-mill-makera-carvera/ 301
+/docs/cnc-mill/operations--safety-manual/cam-guide-for-carvera-desktop-cnc/ /docs/cnc-mill/cam-guide-for-carvera-desktop-cnc/ 301
+/files/CNC%20Mill/Operations%20&%20Safety%20Manual/Pre-Flight%20Checklist%20for%20Carvera%20CNC.ods /files/CNC%20Mill/Pre-Flight%20Checklist%20for%20Carvera%20CNC.ods 301
