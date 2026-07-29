@@ -1,5 +1,8 @@
 ---
 title: "CAM Guide for Carvera Desktop CNC"
+# Unpublished until written: this page is still the unfilled template.
+# Remove this line to publish it (it stays visible in `astro dev`).
+draft: true
 source_id: "1mMPYvKm1WcPMXqxKzWPTf_exPH9mU961AeBnq2X-Pxk"
 modified: "2026-04-12T20:35:31.127Z"
 ---
