@@ -38,7 +38,7 @@ The hardware:
 
 On the software side:
 
-  * Read the “**CAM Guide for Carvera CNC** ” document.
+  * Ask a staff member to walk you through the Fusion 360 CAM setup for the Carvera.
   * The Image2Surface add-in for Fusion360. This will be used to turn an image into a 3D heightmap mesh, which will become the surface of the coin.
   * A picture for the coin. For best results, use a photo with a solid background and good contrast, such as a Linkedin headshot, where there is space between the subject and the edges of the image. There are online tools to give photos a solid background, if needed.
 

@@ -39,7 +39,7 @@ Keep the lid closed if the flames are small — they often self-extinguish withi
 
   This list is subject to change — ask a staff member about anything that isn't on it.
 - Install the Carvera Controller: either the [official Makera release](https://www.makera.com/pages/software) or the [community controller](https://github.com/Carvera-Community/Carvera_Controller/releases).
-- Prepare your job in **Fusion 360** and post it to G-code. See the [CAM guide](/docs/cnc-mill/cam-guide-for-carvera-desktop-cnc/) for the plugins and settings needed to post correctly for this machine.
+- Prepare your job in **Fusion 360** and post it to G-code. Ask a staff member for the Fusion 360 plugins and post-processor settings this machine needs — a written CAM guide is on the way.
 - Wear the right PPE:
   - **(Required)** Laser goggles during laser use.
   - **(Required)** Safety glasses for post-processing — filing, sanding, cutting, snapping.
