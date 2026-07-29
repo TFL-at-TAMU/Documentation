@@ -14,14 +14,8 @@ TAMU laser safety training is required before using the Carvera's laser, and **l
 > [!WARNING]
 > **Only mill approved materials** (listed under [Before you start](#before-you-start)). Materials that are brittle, fibrous, or "dead soft" — softening and going pliable with heat — cannot be milled. Anything unusual needs staff approval first.
 
-> [!WARNING]
-> The spindle and laser head move before, during, and after a job — keep hands, hair, clothing, and loose items clear of the moving system. **Opening the hood stops the machine immediately**, and the interlocks and guards should never be bypassed.
-
-> [!WARNING]
-> **Never run the machine without the vacuum and ventilation running.** Milling and laser work produce dust and fumes that may contain hazardous compounds.
-
 :::caution[EMERGENCY STOP]
-Hit the red **Emergency Stop** button on the table next to the machine. You can also press the red **STOP** button at the bottom right of the Carvera Controller to pause the job. If the situation persists, flip the **power switch at the rear right** of the machine. After an emergency stop every function locks — the machine has to be released with **Unlock** in the controller before it will run again.
+Hit the red **Emergency Stop** button on the table next to the machine. You can also press the red **STOP** button at the bottom right of the controller to pause the job. If the situation persists, flip the **power switch at the rear right** of the machine. After an emergency stop every function locks — the machine has to be released with **Unlock** in the controller before it will run again.
 :::
 
 :::caution[FIRE PROCEDURE]
@@ -38,8 +32,10 @@ Keep the lid closed if the flames are small — they often self-extinguish withi
   - **Plastic** — ABS, acrylic. *(Hard rubbers pending approval.)*
 
   This list is subject to change — ask a staff member about anything that isn't on it.
-- Install the Carvera Controller: either the [official Makera release](https://www.makera.com/pages/software) or the [community controller](https://github.com/Carvera-Community/Carvera_Controller/releases).
-- Prepare your job in **Fusion 360** and post it to G-code. Ask a staff member for the Fusion 360 plugins and post-processor settings this machine needs — a written CAM guide is on the way.
+- Install the [Carvera Community Controller](https://github.com/Carvera-Community/Carvera_Controller/releases) — the lab uses the community build, not Makera's official controller.
+- Prepare your job in **Fusion 360** and post it to G-code. For CAM setup, the lab follows the **ACE machining program's documentation** — ask a staff member for it.
+  <!-- TODO: link the ACE machining program's CAM documentation once we have a URL students can reach. -->
+
 - Wear the right PPE:
   - **(Required)** Laser goggles during laser use.
   - **(Required)** Safety glasses for post-processing — filing, sanding, cutting, snapping.
@@ -49,21 +45,29 @@ Keep the lid closed if the flames are small — they often self-extinguish withi
 > [!NOTE]
 > For deeper reference, the [Carvera wiki](https://wiki.makera.com/en/home) and the [Carvera How-To playlist](https://youtube.com/playlist?list=PL7zu0ucQCuYRTigCJ4nqRrI0TIhcHHbZl) are both good. Tool specifications — RPM, feed, and depth-of-cut guidance for your material — come from the manufacturer's website or store page for that tool.
 
+:::note[Staff note — CNC lead]
+Lab-specific feeds and speeds are being worked out with experienced Carvera users and will be published here as they're confirmed. Until then, use the tool manufacturer's guidance and check with staff.
+:::
+
 ## Machine overview
 
 ![The Carvera with its protective cover open, showing the cover, vacuum hose, spindle and laser, tool holder, MDF bed, and indicator light](../assets/images/carvera_cnc_operatio_86b74cb556.png)![The optional 4th-axis module mounted on the bed, showing its connector, chuck, and tail stock](../assets/images/carvera_cnc_operatio_565fa40719.png)
 
-| # | Part | # | Part |
-|---|---|---|---|
-| 1 | Protective cover | 6 | Indicator light |
-| 2 | Vacuum hose | 7 | 4th-axis connector |
-| 3 | Spindle & laser | 8 | Chuck |
-| 4 | Tool holder | 9 | Tail stock |
-| 5 | MDF bed | | |
+| # | Part |
+|---|---|
+| 1 | Protective cover (hood) |
+| 2 | Vacuum hose |
+| 3 | Spindle & laser |
+| 4 | Tool holder |
+| 5 | MDF bed |
+| 6 | Indicator light |
+| 7 | 4th-axis connector |
+| 8 | Chuck |
+| 9 | Tail stock |
 
-![The Carvera Controller app, with the Wi-Fi connection controls, tool status dropdown, Unlock button, file upload button, and emergency stop button marked](../assets/images/carvera_cnc_operatio_f9883ccccb.png)
+![The Carvera Community Controller, with the Wi-Fi connection controls, tool status dropdown, Unlock button, file upload button, and emergency stop button marked](../assets/images/carvera_cnc_operatio_f9883ccccb.png)
 
-| # | Control in the Carvera Controller |
+| # | Control in the community controller |
 |---|---|
 | 1 | **Scan Wi-Fi** / **Reconnect** — connect to the Carvera |
 | 2 | **Tool Status** dropdown — drop or change tools |
@@ -78,8 +82,12 @@ Keep the lid closed if the flames are small — they often self-extinguish withi
 1. Turn on the power switch at the **back right** of the machine.
 2. *(Optional)* If your job uses the 4th axis, attach the module to the bed and plug it in.
 3. Secure your material to the bed as planned in CAM. If the job cuts through the part, put an **MDF waste board** underneath so you don't cut into the bed. On the 4th axis, make sure the stock is properly aligned in the jaws.
-4. Connect your computer to the **TamuFabLab_MACHINES** Wi-Fi, then connect to the Carvera in the Controller app using **Scan Wi-Fi** or **Reconnect**.
+4. Connect your computer to the **TamuFabLab_MACHINES** Wi-Fi, then connect to the Carvera in the community controller using **Scan Wi-Fi** or **Reconnect**.
 5. Drop the current tool if one is loaded, and check that the correct tools are in the correct numbered slots as defined in your CAM file.
+
+> [!WARNING]
+> The spindle and laser head move before, during, and after a job — keep hands, hair, clothing, and loose items clear of the moving system. **Opening the hood stops the machine immediately** (it's on an interlock), and the interlocks and guards should never be bypassed.
+
 6. Locate the **Emergency Stop** button and have it ready.
 7. Work through the [Carvera pre-flight checklist](/files/CNC%20Mill/Pre-Flight%20Checklist%20for%20Carvera%20CNC.ods).
 
@@ -88,6 +96,10 @@ Keep the lid closed if the flames are small — they often self-extinguish withi
 8. Upload your G-code — the page icon at the bottom right of the controller, then **upload and select**.
 9. Inspect the toolpath on screen to confirm you selected the right file.
 10. Turn on the vacuum.
+
+> [!WARNING]
+> **Never run the machine without the vacuum and ventilation running.** Milling and laser work produce dust and fumes that may contain hazardous compounds.
+
 11. Click **Run**.
 
 > [!WARNING]
