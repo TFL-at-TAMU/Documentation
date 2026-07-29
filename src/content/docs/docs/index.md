@@ -19,5 +19,4 @@ Browse by category in the sidebar on the left, or use the search bar up top.
 ## New here?
 
 1. Read the lab-wide **Safety & Emergency Manual** (the *Safety* tab above).
-2. Find your machine's section in the sidebar.
-3. Work through its Operations & Safety Manual, then its Learning Assignment.
+2. \[Fill in later\]
