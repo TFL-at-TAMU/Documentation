@@ -87,10 +87,10 @@ not a straitjacket). Read that file first, then imitate the finished pages:
 
 - **Done:** Laser Cutter (Glowforge) · 3D Scanner (full trio: manual +
   "How 3D Scanning Works" background page + lean assignment — the best model
-  of the end state) · CNC Mill (Carvera).
+  of the end state) · CNC Mill (Carvera) · Solder Reflow Oven (Novastar GF-C2).
 - **Remaining:** Cricut · FDM Printers (Bambu Labs X1C; Dual Head / Raise3D E2)
-  · PCB Machines · SLA Printers (Elegoo Saturn 4; FormLabs 3; washing/curing
-  machines) · Workbenches. Also eventually: retire the `Templates` group
+  · PCB Machines (NeoDen Pick & Place; NeoDen Solder Stencil) · SLA Printers
+  (Elegoo Saturn 4; FormLabs 3; washing/curing machines) · Workbenches. Also eventually: retire the `Templates` group
   (superseded by the standard) and create the shared which-machine page.
 
 **Per machine:** merge the operations + safety manual pair into one machine
