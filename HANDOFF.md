@@ -78,3 +78,51 @@ Do not surface, reproduce, or propagate staff credentials. If picking this up, c
 2. (Optional) The prior structured Claude memory lived at `~/.claude/projects/<project-hash>/memory/` on the **old** laptop — copy that folder over if you want it, but its content is reflected here.
 3. (Optional) The full raw transcript of the chat that produced all this was at `~/.claude/projects/<project-hash>/6bcc2834-5aca-409e-9fdb-4a502c4d24df.jsonl` on the old laptop, if the literal blow-by-blow is ever needed.
 4. Install Node.js (see §4) before Starlight work.
+
+## 9. Machine-page revamp workflow (for per-machine sessions)
+
+The machine docs are being rebuilt one machine per session, each following
+**[DOCS_FORMAT.md](DOCS_FORMAT.md)** (the format standard — a strong default,
+not a straitjacket). Read that file first, then imitate the finished pages:
+
+- **Done:** Laser Cutter (Glowforge) · 3D Scanner (full trio: manual +
+  "How 3D Scanning Works" background page + lean assignment — the best model
+  of the end state) · CNC Mill (Carvera).
+- **Remaining:** Cricut · FDM Printers (Bambu Labs X1C; Dual Head / Raise3D E2)
+  · PCB Machines · SLA Printers (Elegoo Saturn 4; FormLabs 3; washing/curing
+  machines) · Workbenches. Also eventually: retire the `Templates` group
+  (superseded by the standard) and create the shared which-machine page.
+
+**Per machine:** merge the operations + safety manual pair into one machine
+page; keep assignments as lean exercises (teaching content → manual or a
+background page); clean Google-Docs export damage (`## ` on paragraphs,
+comment markers `[[a]]`, google-redirect URLs, metadata blocks); add
+`public/_redirects` 301s for every retired URL; repoint inbound links.
+Facts you don't have get **[bracketed placeholders]** or a
+`:::note[Staff note — <machine> lead]` — never invented. `draft: true`
+in frontmatter unpublishes a page that isn't ready.
+
+**Process (owner-approved):** work on your session branch; one PR into `main`
+per coherent change; Claude squash-merges its own PRs via the GitHub tools
+(add a true merge commit instead only when preserving multi-commit structure
+matters); after each merge, reset the session branch onto `origin/main` and
+force-push — stacking on pre-squash history causes phantom merge conflicts.
+Cloudflare auto-deploys `main` (~2 min; hard-refresh when checking).
+
+**Verification before every merge** (behavioral, not eyeballed): `npm run build`
+clean; every internal link and slugged route in `dist/` resolves; zero pages
+with two `<h1`; no staff-tree content in the output; screenshot the built page
+(desktop AND ~390px mobile) and actually look at it. When serving `dist/`
+locally for a headless-browser check, set `Content-Type: text/html` or scripts
+won't execute and tests false-fail.
+
+**Standing constraints:** plain `.md` only — MDX was evaluated and rejected
+(staff editability). No subagents (owner pays per-token and prefers direct
+work). Never touch `site/docs/` (unpublished staff trees — see §6). Don't run
+`scripts/migrate_content.mjs`; it was the one-time migration tool. For
+aesthetic/CSS calls, render options and let the owner pick before merging.
+
+**Open items being carried:** Glowforge staff-note verdicts (lid procedure;
+cut-vs-engrave order) · scanner assignment's final object · CNC work envelope
+for the intro · ACE machining program CAM-doc link · CNC feeds/speeds
+(in progress with experienced Carvera users).
