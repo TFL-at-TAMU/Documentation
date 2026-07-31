@@ -44,7 +44,7 @@ A faint flux odor during reflow is normal. A strong burning smell or visible smo
 1. **Oven ON/OFF** — rocker switch for main oven power.
 2. **Temperature controller** — displays and sets the hotplate/chamber temperature, always in °C.
 3. **Fan ON/OFF** — rocker switch for the convection fan. **ON** for reflow, **OFF** for hotplate-only use.
-4. **Timer** — sets and runs the heating-cycle time in minutes and seconds, up to 99:99.
+4. **Timer** — a **standalone battery-powered countdown timer** bolted to the panel. It isn't wired into the oven and controls nothing: the oven keeps heating whether or not the timer is running. You use it to time the reflow yourself, and it just beeps when the time runs out (up to 99 min 99 sec — minutes first, then seconds).
 
 ## Choosing a heating mode
 
@@ -72,7 +72,7 @@ These are starting points only — when your solder paste has a datasheet, follo
 
 1. With the hood **closed**, flip the **Oven ON/OFF (1)** and **Fan ON/OFF (3)** rockers to **ON**.
 2. Set your temperature on the **temperature controller (2)**: press and hold the **SET** key to display the set temperature, and while still holding it, press the **UP**/**DOWN** keys to adjust. When you release the keys, the display returns to the **ACTUAL** temperature.
-3. Set your process time on the **timer (4)**: press the **MIN** and **SEC** keys until the display shows the time you want — the first two digits are minutes, the last two are seconds.
+3. Dial in your reflow time on the **timer (4)** — press the **MIN** and **SEC** keys until the display shows the duration you'll run (first two digits minutes, last two seconds). This is a **standalone battery-powered timer that only beeps when the time is up; it doesn't run the oven or switch off the heat**, so don't start it yet — you'll start it in step 6, once the board is in and back up to temperature.
 
    ![The built-in timer, with MIN and SEC keys and a START/STOP button](../../assets/images/reflow_oven_operatio_1796bfbd4e.png)
 
