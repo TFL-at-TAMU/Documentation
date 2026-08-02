@@ -6,7 +6,7 @@ The Glowforge Pro cuts and engraves flat sheet materials — wood, acrylic, card
 <!-- TODO: link /docs/which-machine/ at the end of the intro once that page exists -->
 
 :::danger[LASER CERTIFICATION REQUIRED]
-You must hold **TAMU laser safety certification** to operate this machine — be ready to show it to staff. No certification, no laser.
+The Glowforge is a **Class 4 laser**. You must hold **TAMU laser safety certification** to operate it — be ready to show it to staff. No certification, no laser.
 <!-- TODO: link certification via The Fab Lab Tracker when available -->
 :::
 
