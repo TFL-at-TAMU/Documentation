@@ -2,17 +2,11 @@
 title: CNC Mill (Makera Carvera)
 ---
 
-The Makera Carvera is an enclosed desktop CNC mill that cuts detailed parts from wood, hard plastics, and soft metals — and doubles as a laser engraver for wood and metal. Use it for precision-milled parts, pockets and profiles, engraving, and, with the optional 4th axis, rotational work on cylindrical stock. If you're not sure this is the right machine for your project, ask a staff member.
+The Makera Carvera is an enclosed desktop CNC mill that cuts detailed parts from wood, hard plastics, and soft metals. Use it for precision-milled parts, pockets and profiles, engraving, and, with the optional 4th axis, rotational work on cylindrical stock. If you're not sure this is the right machine for your project, ask a staff member.
 
 :::danger[LASER SAFETY TRAINING REQUIRED]
-TAMU laser safety training is required before using the Carvera's laser, and **laser goggles must be worn whenever the laser is running**.
+The Carvera includes a **Class 4 laser**. TAMU laser safety training and laser goggles are required before operating it — never run the laser without both.
 :::
-
-> [!WARNING]
-> **A staff member must be present whenever this machine is in use.** Don't run a job alone.
-
-> [!WARNING]
-> **Only mill approved materials** (listed under [Before you start](#before-you-start)). Materials that are brittle, fibrous, or "dead soft" — softening and going pliable with heat — cannot be milled. Anything unusual needs staff approval first.
 
 :::caution[EMERGENCY STOP]
 Hit the red **Emergency Stop** button on the table next to the machine. You can also press the red **STOP** button at the bottom right of the controller to pause the job. If the situation persists, flip the **power switch at the rear right** of the machine. After an emergency stop every function locks — the machine has to be released with **Unlock** in the controller before it will run again.
@@ -25,19 +19,17 @@ Keep the lid closed if the flames are small — they often self-extinguish withi
 ## Before you start
 
 - **A staff member must be present** to oversee the operation.
-- **Using the laser?** You need TAMU laser safety training, and laser goggles are required while it runs.
 - Only mill **approved materials**:
   - **Wood** — hard and soft woods, MDF and HDF. *(Composites pending approval.)*
   - **Metal** — 6061 aluminum, brass.
   - **Plastic** — ABS, acrylic. *(Hard rubbers pending approval.)*
 
-  This list is subject to change — ask a staff member about anything that isn't on it.
+  Materials that are brittle, fibrous, or "dead soft" — softening and going pliable with heat — cannot be milled. This list is subject to change; ask a staff member about anything that isn't on it.
 - Install the [Carvera Community Controller](https://github.com/Carvera-Community/Carvera_Controller/releases) — the lab uses the community build, not Makera's official controller.
 - Prepare your job in **Fusion 360** and post it to G-code. For CAM setup, the lab follows the **ACE machining program's documentation** — ask a staff member for it.
   <!-- TODO: link the ACE machining program's CAM documentation once we have a URL students can reach. -->
 
 - Wear the right PPE:
-  - **(Required)** Laser goggles during laser use.
   - **(Required)** Safety glasses for post-processing — filing, sanding, cutting, snapping.
   - **(Recommended)** Gloves for handling metal parts with sharp edges.
   - Milling itself needs no special PPE beyond standard Fab Lab attire.
@@ -51,13 +43,13 @@ Lab-specific feeds and speeds are being worked out with experienced Carvera user
 
 ## Machine overview
 
-![The Carvera with its protective cover open, showing the cover, vacuum hose, spindle and laser, tool holder, MDF bed, and indicator light](../assets/images/carvera_cnc_operatio_86b74cb556.png)![The optional 4th-axis module mounted on the bed, showing its connector, chuck, and tail stock](../assets/images/carvera_cnc_operatio_565fa40719.png)
+![The Carvera with its protective cover open, showing the cover, vacuum hose, spindle, tool holder, MDF bed, and indicator light](../assets/images/carvera_cnc_operatio_86b74cb556.png)![The optional 4th-axis module mounted on the bed, showing its connector, chuck, and tail stock](../assets/images/carvera_cnc_operatio_565fa40719.png)
 
 | # | Part |
 |---|---|
 | 1 | Protective cover (hood) |
 | 2 | Vacuum hose |
-| 3 | Spindle & laser |
+| 3 | Spindle |
 | 4 | Tool holder |
 | 5 | MDF bed |
 | 6 | Indicator light |
@@ -86,7 +78,7 @@ Lab-specific feeds and speeds are being worked out with experienced Carvera user
 5. Drop the current tool if one is loaded, and check that the correct tools are in the correct numbered slots as defined in your CAM file.
 
 > [!WARNING]
-> The spindle and laser head move before, during, and after a job — keep hands, hair, clothing, and loose items clear of the moving system. **Opening the hood stops the machine immediately** (it's on an interlock), and the interlocks and guards should never be bypassed.
+> The spindle head moves before, during, and after a job — keep hands, hair, clothing, and loose items clear of the moving system. **Opening the hood stops the machine immediately** (it's on an interlock), and the interlocks and guards should never be bypassed.
 
 6. Locate the **Emergency Stop** button and have it ready.
 7. Work through the [Carvera pre-flight checklist](/files/CNC%20Mill/Pre-Flight%20Checklist%20for%20Carvera%20CNC.ods).
@@ -98,7 +90,7 @@ Lab-specific feeds and speeds are being worked out with experienced Carvera user
 10. Turn on the vacuum.
 
 > [!WARNING]
-> **Never run the machine without the vacuum and ventilation running.** Milling and laser work produce dust and fumes that may contain hazardous compounds.
+> **Never run the machine without the vacuum and ventilation running.** Milling produces dust and fumes that may contain hazardous compounds.
 
 11. Click **Run**.
 
