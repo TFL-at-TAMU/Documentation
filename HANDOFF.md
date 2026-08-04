@@ -81,6 +81,11 @@ Do not surface, reproduce, or propagate staff credentials. If picking this up, c
 
 ## 9. Machine-page revamp workflow (for per-machine sessions)
 
+> **Kicking off a machine session?** Copy the prompt in
+> **[REVAMP_PROMPT.md](REVAMP_PROMPT.md)** into the new chat's first message
+> and fill its two slots. This section is the process detail that prompt
+> points at; keep the two in sync.
+
 The machine docs are being rebuilt one machine per session, each following
 **[DOCS_FORMAT.md](DOCS_FORMAT.md)** (the format standard — a strong default,
 not a straitjacket). Read that file first, then imitate the finished pages:
