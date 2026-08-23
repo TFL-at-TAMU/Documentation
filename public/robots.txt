@@ -1,0 +1,9 @@
+# The Fab Lab documentation is public and meant to be read — by people and by AI
+# assistants students point at it (see /ask/). Everything is allowed.
+#
+# Note: this file cannot override edge/CDN bot rules. If AI fetchers are being
+# blocked, check the Cloudflare dashboard (Bots / AI Crawl Control) as well.
+User-agent: *
+Allow: /
+
+Sitemap: https://tfl.aidanstew.art/sitemap-index.xml

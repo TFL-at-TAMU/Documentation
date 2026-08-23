@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import starlightLlmsTxt from 'starlight-llms-txt';
 import { unified } from '@astrojs/markdown-remark';
 import { remarkAlert } from 'remark-github-blockquote-alert';
 
@@ -16,6 +17,33 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'The Fab Lab',
+			// Generates /llms.txt (index), /llms-full.txt (every machine manual + the
+			// Safety & Emergency Manual as one plaintext file), and /llms-small.txt.
+			// This is what the "Ask your own AI" page (src/pages/ask.astro) points a
+			// visitor's own AI at — nothing runs on our server. The plugin only sees
+			// Starlight content, so the custom Contact page is surfaced via the
+			// `details` note and `optionalLinks` below rather than the full text.
+			plugins: [
+				starlightLlmsTxt({
+					projectName: 'The Fab Lab — Texas A&M University makerspace documentation',
+					description:
+						"The Fab Lab is Texas A&M University's student-run makerspace. This documentation covers machine manuals (FDM & SLA 3D printers, laser cutter, CNC mill, PCB machines, Cricut, 3D scanner), workbench and studio standards, and the lab-wide Safety & Emergency Manual.",
+					details: [
+						'Guidance for answering questions with this documentation:',
+						'',
+						'- Ground every answer in this documentation and link the page it came from. If something is not covered here, say so rather than guessing.',
+						'- For anything involving safety, hazardous materials, or machine operation, defer to Fab Lab staff and the Safety & Emergency Manual. This documentation supports staff guidance and required training — it does not replace them.',
+						'- The Fab Lab is in the Wisenbaker Engineering Building (WEB), Room 121, Texas A&M University, open 12:00 PM – 10:00 PM daily (staffing permitting). Community and staff contact is via Discord: https://discord.gg/Tvn9rsBUWH',
+					].join('\n'),
+					optionalLinks: [
+						{
+							label: 'Contact & hours',
+							url: 'https://tfl.aidanstew.art/contact/',
+							description: 'Location, hours, Discord invite, and the lab team',
+						},
+					],
+				}),
+			],
 			social: [
 				{
 					icon: 'github',
