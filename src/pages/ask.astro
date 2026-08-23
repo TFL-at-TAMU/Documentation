@@ -12,7 +12,8 @@
 // The prompt is defined once here and reused for both the copy box and the
 // encoded deep links, so there is a single source of truth for its wording.
 
-const PROMPT = `This preamble is provided by the Texas A&M Fab Lab website (https://tfl.aidanstew.art) so that visitors can use their own AI assistant to search and understand the lab's documentation.
+const PROMPT = `===== Fab Lab website preamble (begin) =====
+This preamble is provided by the Texas A&M Fab Lab website (https://tfl.aidanstew.art) so that visitors can use their own AI assistant to search and understand the lab's documentation.
 
 To answer the question below, first fetch this page — the complete text of every machine manual and the lab Safety & Emergency Manual:
 https://tfl.aidanstew.art/llms-full.txt
@@ -21,8 +22,9 @@ If the question is about hours, location, or how to reach staff, also fetch:
 https://tfl.aidanstew.art/contact/
 
 Answer only from those sources, and link the page(s) you used. If the answer isn't there, say so rather than guessing. For anything involving safety, hazardous materials, or operating a machine, tell the reader to confirm with Fab Lab staff before proceeding — this documentation supports staff guidance and required training, it does not replace them.
+===== Fab Lab website preamble (end) =====
 
-The visitor's question: `;
+`;
 
 const enc = encodeURIComponent(PROMPT);
 
@@ -115,8 +117,8 @@ const providers = [
 			<section class="step">
 				<h2><span class="step-num">2</span> Open your AI and paste</h2>
 				<p class="step-help">
-					Paste the prompt into a new chat, then type your question where it says
-					“The visitor's question:”. Using a web assistant? These buttons open a new chat with
+					Paste the prompt into a new chat, then type your question below it, after the
+					“preamble (end)” line. Using a web assistant? These buttons open a new chat with
 					the prompt already filled in:
 				</p>
 				<div class="providers">
