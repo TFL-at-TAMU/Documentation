@@ -1,0 +1,432 @@
+---
+// The Fab Lab "Ask your own AI" page — a standalone Astro page (NOT a Starlight
+// doc). Same Gruvbox shell + top bar as src/pages/index.astro and contact.astro.
+//
+// This page does NOT run any AI on our server. It hands the visitor a ready-made
+// prompt that points *their own* AI (Claude, ChatGPT, Copilot, a local model,
+// anything) at the machine-readable copy of this site — /llms-full.txt, generated
+// at build time by the starlight-llms-txt plugin (see astro.config.mjs). The
+// visitor copies the prompt (best for desktop apps like Claude Desktop) or uses a
+// quick-launch button for a web provider that accepts a prefilled `?q=` prompt.
+//
+// The prompt is defined once here and reused for both the copy box and the
+// encoded deep links, so there is a single source of truth for its wording.
+
+const PROMPT = `===== Fab Lab website preamble (begin) =====
+This preamble is provided by the Texas A&M Fab Lab website (https://tfl.aidanstew.art) so that visitors can use their own AI assistant to search and understand the lab's documentation.
+
+To answer the question below, first fetch this page — the complete text of every machine manual and the lab Safety & Emergency Manual:
+https://tfl.aidanstew.art/llms-full.txt
+
+If the question is about hours, location, or how to reach staff, also fetch:
+https://tfl.aidanstew.art/contact/
+
+Answer only from those sources, and link the page(s) you used. If the answer isn't there, say so rather than guessing. For anything involving safety, hazardous materials, or operating a machine, tell the reader to confirm with Fab Lab staff before proceeding — this documentation supports staff guidance and required training, it does not replace them.
+===== Fab Lab website preamble (end) =====
+
+`;
+
+const enc = encodeURIComponent(PROMPT);
+
+// Providers that accept a prefilled prompt via a URL query parameter. These are
+// undocumented and can change; the Copy button is the universal fallback and
+// works with every provider (and with desktop apps).
+const providers = [
+	{ name: 'Claude', url: `https://claude.ai/new?q=${enc}` },
+	{ name: 'ChatGPT', url: `https://chatgpt.com/?q=${enc}` },
+	{ name: 'Perplexity', url: `https://www.perplexity.ai/search?q=${enc}` },
+	{ name: 'Copilot', url: `https://copilot.microsoft.com/?q=${enc}` },
+];
+---
+
+<!doctype html>
+<html lang="en" data-theme="dark">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ask your own AI — The Fab Lab</title>
+		<meta
+			name="description"
+			content="Use your own AI assistant to get quick answers from the Fab Lab documentation. Nothing is built into this site — you bring the AI."
+		/>
+		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+		<!-- No-FOUC theme: honor the docs site's saved choice (Starlight), else the
+		     legacy 'theme' key, else system preference. -->
+		<script is:inline>
+			(function () {
+				var t =
+					localStorage.getItem('starlight-theme') ||
+					localStorage.getItem('theme') ||
+					(matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+				if (t !== 'dark' && t !== 'light') {
+					t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+				}
+				document.documentElement.setAttribute('data-theme', t);
+			})();
+		</script>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+		/>
+	</head>
+
+	<body>
+		<nav class="topbar">
+			<div class="topbar-inner">
+				<a class="brand" href="/">The Fab Lab</a>
+				<div class="links">
+					<a href="/">Home</a>
+					<a href="/docs/">Documentation</a>
+					<a href="/safety/">Safety</a>
+					<a href="/contact/">Contact</a>
+				</div>
+			</div>
+		</nav>
+
+		<header class="hero">
+			<div class="wrap">
+				<h1>Ask your own AI</h1>
+				<p class="tagline">
+					Get quick answers from the Fab Lab docs using the AI assistant <em>you</em> already
+					use — Claude, ChatGPT, Copilot, or any other. There's no chatbot built into this
+					site; you bring the AI, and this page hands it the whole manual to read.
+				</p>
+			</div>
+		</header>
+
+		<main class="wrap">
+			<section class="step">
+				<h2><span class="step-num">1</span> Copy the prompt</h2>
+				<p class="step-help">
+					This tells your AI to read the full Fab Lab documentation and answer only from it.
+					Best option for desktop apps like Claude Desktop — copy it, then paste into a new
+					chat.
+				</p>
+				<div class="prompt-box">
+					<textarea id="prompt" readonly rows="8" aria-label="Prompt to copy">{PROMPT}</textarea>
+					<button id="copy-btn" type="button" class="copy-btn" data-label="Copy prompt">
+						Copy prompt
+					</button>
+				</div>
+			</section>
+
+			<section class="step">
+				<h2><span class="step-num">2</span> Open your AI and paste</h2>
+				<p class="step-help">
+					Paste the prompt into a new chat, then type your question below it, after the
+					“preamble (end)” line. Using a web assistant? These buttons open a new chat with
+					the prompt already filled in:
+				</p>
+				<div class="providers">
+					{
+						providers.map((p) => (
+							<a class="provider-btn" href={p.url} target="_blank" rel="noopener noreferrer">
+								Open in {p.name}
+							</a>
+						))
+					}
+				</div>
+				<p class="step-note">
+					Don't see yours (Gemini, a local model, something else)? Use <strong>Copy prompt</strong>
+					above — it works with any assistant, web or desktop.
+				</p>
+			</section>
+
+			<aside class="disclaimer">
+				<strong>A note on AI answers.</strong> These answers come from a third-party AI reading the
+				documentation — they can still be wrong or incomplete. Verify anything important against
+				the <a href="/docs/">manuals</a> themselves, and for anything involving safety, hazardous
+				materials, or operating a machine, always confirm with <a href="/contact/">Fab Lab staff</a>.
+				An AI is never a substitute for staff guidance or required training.
+			</aside>
+		</main>
+
+		<footer>
+			<div class="wrap">
+				The Fab Lab · Texas A&amp;M University · <a href="/docs/">Documentation</a>
+			</div>
+		</footer>
+
+		<script is:inline>
+			(function () {
+				var btn = document.getElementById('copy-btn');
+				var ta = document.getElementById('prompt');
+				if (!btn || !ta) return;
+				var resetTimer;
+				btn.addEventListener('click', function () {
+					var text = ta.value;
+					function ok() {
+						btn.textContent = 'Copied!';
+						btn.classList.add('copied');
+						clearTimeout(resetTimer);
+						resetTimer = setTimeout(function () {
+							btn.textContent = btn.getAttribute('data-label');
+							btn.classList.remove('copied');
+						}, 2000);
+					}
+					function fallback() {
+						// Older browsers / non-secure contexts without the async clipboard API.
+						ta.focus();
+						ta.select();
+						try {
+							document.execCommand('copy');
+							ok();
+						} catch (e) {
+							btn.textContent = 'Press Ctrl/Cmd+C';
+						}
+					}
+					if (navigator.clipboard && navigator.clipboard.writeText) {
+						navigator.clipboard.writeText(text).then(ok, fallback);
+					} else {
+						fallback();
+					}
+				});
+			})();
+		</script>
+	</body>
+</html>
+
+<style is:global>
+	/* ---- Gruvbox palette (kept in sync with the docs site / landing / contact) ---- */
+	:root[data-theme='dark'] {
+		--bg: #282828;
+		--bg-soft: #32302f;
+		--bg-card: #3c3836;
+		--fg: #ebdbb2;
+		--fg-muted: #a89984;
+		--border: #504945;
+		--accent: #fabd2f;
+		--accent-2: #fe8019;
+	}
+	:root[data-theme='light'] {
+		--bg: #fbf1c7;
+		--bg-soft: #f2e5bc;
+		--bg-card: #f9f5d7;
+		--fg: #3c3836;
+		--fg-muted: #7c6f64;
+		--border: #d5c4a1;
+		--accent: #b57614;
+		--accent-2: #af3a03;
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+	html,
+	body {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		background: var(--bg);
+		color: var(--fg);
+		font-family: 'Inter', system-ui, sans-serif;
+		line-height: 1.65;
+		-webkit-font-smoothing: antialiased;
+	}
+	a {
+		color: var(--accent);
+	}
+	a:hover {
+		color: var(--accent-2);
+	}
+
+	.wrap {
+		max-width: 860px;
+		margin: 0 auto;
+		padding: 0 1.5rem;
+	}
+
+	/* ---- Top bar ---- */
+	.topbar {
+		background: var(--bg-soft);
+		border-bottom: 1px solid var(--border);
+	}
+	.topbar-inner {
+		max-width: 1100px;
+		margin: 0 auto;
+		padding: 0.75rem 1.5rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.5rem 1rem;
+		flex-wrap: wrap;
+	}
+	.topbar .brand {
+		font-family: 'Space Grotesk', sans-serif;
+		font-weight: 700;
+		font-size: 1.1rem;
+		color: var(--fg);
+		text-decoration: none;
+		white-space: nowrap;
+	}
+	.topbar .links {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem 1.25rem;
+	}
+	.topbar .links a {
+		color: var(--fg-muted);
+		text-decoration: none;
+		font-size: 0.95rem;
+	}
+	.topbar .links a:hover {
+		color: var(--accent);
+	}
+	.topbar .links a[aria-current='page'] {
+		color: var(--accent);
+	}
+
+	/* ---- Hero ---- */
+	.hero {
+		text-align: center;
+		padding: 2.5rem 1.5rem 2.25rem;
+		border-bottom: 1px solid var(--border);
+		background: var(--bg-soft);
+	}
+	.hero h1 {
+		font-family: 'Space Grotesk', sans-serif;
+		font-size: clamp(2rem, 5vw, 3rem);
+		margin: 0 0 0.5rem;
+		letter-spacing: -0.02em;
+	}
+	.hero .tagline {
+		font-size: 1.05rem;
+		color: var(--fg-muted);
+		max-width: 40rem;
+		margin: 0 auto;
+	}
+
+	/* ---- Content ---- */
+	main {
+		padding: 2.5rem 0 4rem;
+	}
+	.step {
+		margin-bottom: 2.5rem;
+	}
+	.step h2 {
+		font-family: 'Space Grotesk', sans-serif;
+		font-size: 1.4rem;
+		margin: 0 0 0.5rem;
+		display: flex;
+		align-items: center;
+		gap: 0.6rem;
+	}
+	.step-num {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 1.8rem;
+		height: 1.8rem;
+		flex-shrink: 0;
+		border-radius: 50%;
+		background: var(--accent);
+		color: var(--bg);
+		font-size: 1rem;
+		font-weight: 700;
+	}
+	.step-help {
+		color: var(--fg-muted);
+		margin: 0 0 1rem;
+	}
+	.step-note {
+		color: var(--fg-muted);
+		font-size: 0.9rem;
+		margin: 1rem 0 0;
+	}
+
+	/* ---- Prompt box ---- */
+	.prompt-box {
+		background: var(--bg-card);
+		border: 1px solid var(--border);
+		border-radius: 10px;
+		padding: 1rem;
+	}
+	#prompt {
+		width: 100%;
+		resize: vertical;
+		background: var(--bg);
+		color: var(--fg);
+		border: 1px solid var(--border);
+		border-radius: 8px;
+		padding: 0.75rem;
+		font-family: ui-monospace, 'SFMono-Regular', 'Menlo', monospace;
+		font-size: 0.85rem;
+		line-height: 1.55;
+	}
+	.copy-btn {
+		display: inline-block;
+		margin-top: 0.85rem;
+		background: var(--accent);
+		color: var(--bg);
+		font-weight: 600;
+		font-size: 1rem;
+		font-family: inherit;
+		border: none;
+		cursor: pointer;
+		padding: 0.7rem 1.5rem;
+		border-radius: 8px;
+		transition:
+			transform 0.12s ease,
+			background 0.12s ease;
+	}
+	.copy-btn:hover {
+		background: var(--accent-2);
+		transform: translateY(-1px);
+	}
+	.copy-btn.copied {
+		background: var(--accent-2);
+	}
+
+	/* ---- Provider quick-launch buttons ---- */
+	.providers {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+	}
+	.provider-btn {
+		display: inline-block;
+		background: var(--bg-card);
+		border: 1px solid var(--border);
+		color: var(--fg);
+		font-weight: 600;
+		text-decoration: none;
+		padding: 0.6rem 1.25rem;
+		border-radius: 8px;
+		transition:
+			transform 0.12s ease,
+			border-color 0.12s ease,
+			color 0.12s ease;
+	}
+	.provider-btn:hover {
+		color: var(--accent);
+		border-color: var(--accent);
+		transform: translateY(-1px);
+	}
+
+	/* ---- Disclaimer ---- */
+	.disclaimer {
+		background: var(--bg-soft);
+		border: 1px solid var(--border);
+		border-left: 4px solid var(--accent);
+		border-radius: 8px;
+		padding: 1rem 1.25rem;
+		font-size: 0.92rem;
+		color: var(--fg-muted);
+	}
+	.disclaimer strong {
+		color: var(--fg);
+	}
+
+	footer {
+		border-top: 1px solid var(--border);
+		padding: 2rem 0;
+		text-align: center;
+		color: var(--fg-muted);
+		font-size: 0.9rem;
+	}
+</style>

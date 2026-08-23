@@ -60,6 +60,7 @@
 				</p>
 				<div class="hero-ctas">
 					<a class="cta" href="/docs/">Browse the Documentation</a>
+					<a class="cta cta-secondary" href="/ask/">Ask your own AI</a>
 					<a
 						class="discord-cta"
 						href="https://discord.gg/Tvn9rsBUWH"
@@ -305,6 +306,18 @@
 		background: var(--accent-2);
 		color: var(--bg);
 		transform: translateY(-1px);
+	}
+	/* Secondary hero CTA ("Ask your own AI"): outlined so it reads as a companion
+	   action, not competing with the solid primary "Browse the Documentation". */
+	.cta-secondary {
+		background: transparent;
+		color: var(--fg);
+		border: 1px solid var(--border);
+	}
+	.cta-secondary:hover {
+		background: transparent;
+		color: var(--accent);
+		border-color: var(--accent);
 	}
 
 	/* ---- Content ---- */
