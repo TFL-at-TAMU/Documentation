@@ -16,6 +16,9 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'The Fab Lab',
+			// Site-wide notification banner (semester dates, closures, etc.).
+			// Edit the message or take it down in src/routeData.ts.
+			routeMiddleware: './src/routeData.ts',
 			social: [
 				{
 					icon: 'github',
