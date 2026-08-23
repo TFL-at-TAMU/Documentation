@@ -17,6 +17,9 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'The Fab Lab',
+			// Site-wide notification banner (semester dates, closures, etc.).
+			// Edit the message or take it down in src/routeData.ts.
+			routeMiddleware: './src/routeData.ts',
 			// Generates /llms.txt (index), /llms-full.txt (every machine manual + the
 			// Safety & Emergency Manual as one plaintext file), and /llms-small.txt.
 			// This is what the "Ask your own AI" page (src/pages/ask.astro) points a
