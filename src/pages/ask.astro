@@ -3,14 +3,10 @@
 // doc). Same Gruvbox shell + top bar as src/pages/index.astro and contact.astro.
 //
 // This page does NOT run any AI on our server. It hands the visitor a ready-made
-// prompt that points *their own* AI (Claude, ChatGPT, Copilot, a local model,
-// anything) at the machine-readable copy of this site — /llms-full.txt, generated
-// at build time by the starlight-llms-txt plugin (see astro.config.mjs). The
-// visitor copies the prompt (best for desktop apps like Claude Desktop) or uses a
-// quick-launch button for a web provider that accepts a prefilled `?q=` prompt.
-//
-// The prompt is defined once here and reused for both the copy box and the
-// encoded deep links, so there is a single source of truth for its wording.
+// prompt to copy and paste into *their own* AI (Claude, ChatGPT, Copilot, a local
+// model, anything) — the prompt points that AI at the machine-readable copy of this
+// site, /llms-full.txt, generated at build time by the starlight-llms-txt plugin
+// (see astro.config.mjs). Copy-and-paste works with every assistant, web or desktop.
 
 const PROMPT = `===== Fab Lab website preamble (begin) =====
 This preamble is provided by the Texas A&M Fab Lab website (https://tfl.aidanstew.art) so that visitors can use their own AI assistant to search and understand the lab's documentation.
@@ -25,18 +21,6 @@ Answer only from those sources, and link the page(s) you used. If the answer isn
 ===== Fab Lab website preamble (end) =====
 
 `;
-
-const enc = encodeURIComponent(PROMPT);
-
-// Providers that accept a prefilled prompt via a URL query parameter. These are
-// undocumented and can change; the Copy button is the universal fallback and
-// works with every provider (and with desktop apps).
-const providers = [
-	{ name: 'Claude', url: `https://claude.ai/new?q=${enc}` },
-	{ name: 'ChatGPT', url: `https://chatgpt.com/?q=${enc}` },
-	{ name: 'Perplexity', url: `https://www.perplexity.ai/search?q=${enc}` },
-	{ name: 'Copilot', url: `https://copilot.microsoft.com/?q=${enc}` },
-];
 ---
 
 <!doctype html>
@@ -115,24 +99,11 @@ const providers = [
 			</section>
 
 			<section class="step">
-				<h2><span class="step-num">2</span> Open your AI and paste</h2>
+				<h2><span class="step-num">2</span> Paste it into your AI</h2>
 				<p class="step-help">
-					Paste the prompt into a new chat, then type your question below it, after the
-					“preamble (end)” line. Using a web assistant? These buttons open a new chat with
-					the prompt already filled in:
-				</p>
-				<div class="providers">
-					{
-						providers.map((p) => (
-							<a class="provider-btn" href={p.url} target="_blank" rel="noopener noreferrer">
-								Open in {p.name}
-							</a>
-						))
-					}
-				</div>
-				<p class="step-note">
-					Don't see yours (Gemini, a local model, something else)? Use <strong>Copy prompt</strong>
-					above — it works with any assistant, web or desktop.
+					Open a new chat in whatever assistant you use — Claude, ChatGPT, Copilot, Gemini,
+					a local model, web or desktop — paste the prompt, then type your question below it,
+					after the “preamble (end)” line.
 				</p>
 			</section>
 
@@ -333,11 +304,6 @@ const providers = [
 		color: var(--fg-muted);
 		margin: 0 0 1rem;
 	}
-	.step-note {
-		color: var(--fg-muted);
-		font-size: 0.9rem;
-		margin: 1rem 0 0;
-	}
 
 	/* ---- Prompt box ---- */
 	.prompt-box {
@@ -380,32 +346,6 @@ const providers = [
 	}
 	.copy-btn.copied {
 		background: var(--accent-2);
-	}
-
-	/* ---- Provider quick-launch buttons ---- */
-	.providers {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.75rem;
-	}
-	.provider-btn {
-		display: inline-block;
-		background: var(--bg-card);
-		border: 1px solid var(--border);
-		color: var(--fg);
-		font-weight: 600;
-		text-decoration: none;
-		padding: 0.6rem 1.25rem;
-		border-radius: 8px;
-		transition:
-			transform 0.12s ease,
-			border-color 0.12s ease,
-			color 0.12s ease;
-	}
-	.provider-btn:hover {
-		color: var(--accent);
-		border-color: var(--accent);
-		transform: translateY(-1px);
 	}
 
 	/* ---- Disclaimer ---- */
