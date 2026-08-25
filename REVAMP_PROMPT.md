@@ -3,7 +3,7 @@
 Copy the block below into the first message of a fresh session to revamp one
 machine's docs. Fill the two `[…]` slots. Keep this file in sync with reality:
 update the "already done" list as machines ship, and let it point at
-`HANDOFF.md` §9 + `DOCS_FORMAT.md` for process detail rather than restating it.
+`CLAUDE.md` + `DOCS_FORMAT.md` for process detail rather than restating it.
 
 ---
 
@@ -22,9 +22,8 @@ put into this determines what students get out of it.
 
 **Read first, in this order (don't skip — they carry the accumulated decisions
 of this project):**
-1. `HANDOFF.md` — project context and infra. §9 is the machine-revamp
-   workflow: the exact process, the verification bar, and the hard
-   constraints. Follow it.
+1. `CLAUDE.md` — project context, the machine-revamp workflow, the
+   verification bar, and the hard constraints. Follow it.
 2. `DOCS_FORMAT.md` — the format standard for machine pages. It's a strong
    default, not a straitjacket: follow it, but reshape when a machine's
    content is genuinely better served another way (it says when).
@@ -63,7 +62,7 @@ I'm *not* around, not the default. For anything visual or aesthetic (layout,
 styling), render the options and show me before committing — don't iterate
 blindly through merges.
 
-**Process and quality bar (full detail in `HANDOFF.md` §9):** work on your
+**Process and quality bar (full detail in `CLAUDE.md`):** work on your
 session branch; open one PR into `main` per coherent change and squash-merge
 your own PRs, then reset your branch onto `origin/main` and force-push
 (stacking on pre-squash history causes phantom conflicts). Cloudflare
@@ -73,13 +72,13 @@ route resolves in `dist/`; no page has two `<h1>`; no staff-tree content
 leaks into the build; and screenshot the built page at **desktop and ~390px
 mobile** and actually look at it. Hard constraints: **plain `.md` only** (MDX
 was evaluated and rejected for staff editability); **no subagents** (I pay
-per token and prefer direct work); **never touch `site/docs/`** (unpublished
-staff trees — see `HANDOFF.md` §6); don't run `scripts/migrate_content.mjs`
-(one-time migration tool, already used).
+per token and prefer direct work); **never add staff-facing content** to this
+public repo (credentials, IT/networking internals, service manuals — those
+live in Google Docs).
 
 **Already done (don't redo):** Laser Cutter · 3D Scanner · CNC Mill · Solder
 Reflow Oven. **Everything else** is fair game per the remaining list in
-`HANDOFF.md` §9.
+`CLAUDE.md`.
 
 **Machine-specific notes for this session (may be empty):**
 [PASTE FRESH DOC ATTACHMENTS OR NOTES HERE — e.g. "attached manuals are

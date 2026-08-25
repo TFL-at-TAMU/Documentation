@@ -89,8 +89,11 @@ export default defineConfig({
 					content: `(function () {
 	if (location.pathname !== '/docs/' || location.hash.slice(0, 2) !== '#/') return;
 
-	// KEEP IN SYNC with slugifySegment() in scripts/migrate_content.mjs — both
-	// must slugify path segments identically or old links land on the wrong page.
+	// This is the canonical copy of the migration's slug rule (the one-time
+	// migration script it originally mirrored is deleted; see git history).
+	// Per path segment: lowercase, spaces -> '-', '&' dropped, then anything
+	// outside [a-z0-9-_] dropped. Old links land on the wrong page if this
+	// ever diverges from how Astro slugged the migrated routes.
 	function slugifySegment(segment) {
 		return segment
 			.toLowerCase()

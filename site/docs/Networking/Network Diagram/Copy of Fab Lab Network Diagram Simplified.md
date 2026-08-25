@@ -1,8 +1,0 @@
-# Copy of Fab Lab Network Diagram Simplified
-
-```mermaid
-graph TD
-    A["TAMU Network"] --> B["Unifi Express 7"]
-    B --> C["TamuFabLab_STUDENT<br>(WiFi)<br>10.10.1.0/24"]
-    C --> D["Student Projects and<br>Servers are connected on<br>this network."]
-```

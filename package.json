@@ -8,8 +8,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "migrate-content": "node scripts/migrate_content.mjs"
+    "astro": "astro"
   },
   "dependencies": {
     "@astrojs/markdown-remark": "7.2.1",
