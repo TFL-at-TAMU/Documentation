@@ -9,9 +9,19 @@ name: Claude review
 # `CLAUDE_CODE_OAUTH_TOKEN` secret for Claude subscription auth. Until one
 # exists, the job detects the missing secret and skips quietly instead of
 # failing the PR.
+#
+# Scope: this runs only on PRs that touch documentation content — the pages
+# and assets students edit — not on site-code or CI changes. The `paths`
+# filter keys off which files the PR changes, so nobody has to label a PR by
+# hand. A PR touching both docs and code still gets reviewed (any one matching
+# path is enough). The full-site build check (build.yml) runs on every PR
+# regardless; only this review is doc-scoped.
 on:
   pull_request:
     types: [opened, synchronize]
+    paths:
+      - 'src/content/docs/**'   # all doc pages, the safety manual, and adjacent images
+      - 'public/files/**'       # downloadable doc assets (STL, PDF, ODS, ZIP)
 
 jobs:
   review:
