@@ -37,6 +37,8 @@ const providers = [
 	{ name: 'Perplexity', url: `https://www.perplexity.ai/search?q=${enc}` },
 	{ name: 'Copilot', url: `https://copilot.microsoft.com/?q=${enc}` },
 ];
+
+import SiteBanner from '../components/SiteBanner.astro';
 ---
 
 <!doctype html>
@@ -75,6 +77,7 @@ const providers = [
 	</head>
 
 	<body>
+		<SiteBanner />
 		<nav class="topbar">
 			<div class="topbar-inner">
 				<a class="brand" href="/">The Fab Lab</a>

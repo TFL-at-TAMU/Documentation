@@ -1,6 +1,7 @@
 ---
 // The Fab Lab landing page — a standalone Astro page (NOT a Starlight doc).
 // Recreates site/index.html: Gruvbox-styled hero + info sections.
+import SiteBanner from '../components/SiteBanner.astro';
 ---
 
 <!doctype html>
@@ -39,6 +40,7 @@
 	</head>
 
 	<body>
+		<SiteBanner />
 		<nav class="topbar">
 			<div class="topbar-inner">
 				<a class="brand" href="/">The Fab Lab</a>
