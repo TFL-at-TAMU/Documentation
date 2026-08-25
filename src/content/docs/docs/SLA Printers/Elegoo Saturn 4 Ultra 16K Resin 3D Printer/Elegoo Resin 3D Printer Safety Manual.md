@@ -20,9 +20,9 @@ Linked Operations Manual: [Elegoo Saturn 4 Ultra 16K Operations Manual](/docs/sl
 
 Linked Assignment: [Elegoo Saturn 4 Ultra 16K Safety Manual](<#h.58qiiww27mic>)
 
-Linked Cleaning Manual: [Elegoo Saturn 4 Ultra 16K Cleaning Manual](<../Elegoo Cleaning Procedure/Elegoo Resin 3D Printer Cleaning Manual.md>)
+Linked Cleaning Manual: [Elegoo Saturn 4 Ultra 16K Cleaning Manual](/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/elegoo-resin-3d-printer-cleaning-manual/)
 
-Linked Washing and Curing Manual: [Elegoo Mercury Plus V3.0](<../../Elegoo Mercury 3.0 Plus Washing And Curing Machine/Elegoo Washing And Curing Machine Manual.md>)
+Linked Washing and Curing Manual: [Elegoo Mercury Plus V3.0](/docs/sla-printers/elegoo-mercury-30-plus-washing-and-curing-machine/elegoo-washing-and-curing-machine-manual/)
 
 ## 1\. Purpose of This Safety Manual
 
@@ -127,7 +127,7 @@ If an incident occurs:
   1. Stop the machine using the emergency stop if safe to do so
   2. Move to a safe distance
   3. Notify Fab Lab staff immediately
-  4. For injuries, staff will follow Fab Lab [emergency procedu](<../../../Fab Lab Operations/Fab Lab Safety & Emergency Manual.md>)[res](<../../../Fab Lab Operations/Fab Lab Safety & Emergency Manual.md>)
+  4. For injuries, staff will follow Fab Lab [emergency procedures](/safety/)
 
 
 

@@ -1,0 +1,91 @@
+name: Claude review
+
+# Automatic first-pass review on every PR. Many contributors here are student
+# workers editing through the GitHub web UI with no Git experience — the point
+# of this review is to help them land their change, not to gate it (the
+# required `build` and `check-file-size` checks do the gating).
+#
+# Setup (one-time, repo admin): add an `ANTHROPIC_API_KEY` secret — or a
+# `CLAUDE_CODE_OAUTH_TOKEN` secret for Claude subscription auth. Until one
+# exists, the job detects the missing secret and skips quietly instead of
+# failing the PR.
+#
+# Scope: this runs only on PRs that touch documentation content — the pages
+# and assets students edit — not on site-code or CI changes. The `paths`
+# filter keys off which files the PR changes, so nobody has to label a PR by
+# hand. A PR touching both docs and code still gets reviewed (any one matching
+# path is enough). The full-site build check (build.yml) runs on every PR
+# regardless; only this review is doc-scoped.
+on:
+  pull_request:
+    types: [opened, synchronize]
+    paths:
+      - 'src/content/docs/**'   # all doc pages, the safety manual, and adjacent images
+      - 'public/files/**'       # downloadable doc assets (STL, PDF, ODS, ZIP)
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+      id-token: write
+    steps:
+      - name: Check for credentials
+        id: creds
+        run: echo "present=${{ secrets.ANTHROPIC_API_KEY != '' || secrets.CLAUDE_CODE_OAUTH_TOKEN != '' }}" >> "$GITHUB_OUTPUT"
+
+      - name: Checkout
+        if: steps.creds.outputs.present == 'true'
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Review the PR
+        if: steps.creds.outputs.present == 'true'
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          prompt: |
+            REPO: ${{ github.repository }}
+            PR NUMBER: ${{ github.event.pull_request.number }}
+
+            You are reviewing a pull request to the Fab Lab documentation site — a
+            public Astro Starlight site whose pages are read by first-time students
+            standing at unfamiliar, sometimes dangerous machines. Many PR authors are
+            student workers using the GitHub web editor for the first time; be warm,
+            concrete, and brief. Your job is to help them get the change merged, not
+            to gatekeep — required CI checks handle the hard failures.
+
+            The PR branch is checked out in the working directory. Read CLAUDE.md and
+            DOCS_FORMAT.md first, then review the diff (`gh pr diff`).
+
+            Check, in priority order:
+            1. Safety and accuracy: does the change state a spec, setting, or policy
+               as fact? If it looks invented or contradicts elsewhere in the docs,
+               flag it — a confident wrong number on a machine page is dangerous.
+               Placeholder brackets and staff-note callouts are the accepted way to
+               mark unknowns.
+            2. Never-private rule: this repo is public. Flag anything resembling
+               credentials, personal emails/phone numbers, or staff-only material.
+            3. Page renamed, moved, merged, or deleted without a matching 301 line in
+               public/_redirects.
+            4. DOCS_FORMAT.md conformance for machine pages: frontmatter title with no
+               duplicate body `#` H1; callout types used per their meaning, placed at
+               the point of hazard; no metadata blocks; warnings credible (flag
+               over-warning too — a callout with no real hazard weakens all of them).
+            5. Mechanics: broken or file-path (`.md`) links instead of site URLs,
+               images missing alt text, Markdown that won't render as intended.
+
+            Only comment on what the diff changes — don't audit pre-existing problems
+            in untouched parts of a page (pages get rebuilt machine-by-machine). Post
+            ONE consolidated comment with `gh pr comment`, leading with what's good;
+            use inline comments (mcp__github_inline_comment__create_inline_comment
+            with confirmed: true) only for line-specific problems. If the change looks
+            good, say so in a sentence or two and stop — no manufactured findings.
+            Do not submit review text as plain messages; only GitHub comments count.
+
+          claude_args: |
+            --allowedTools "mcp__github_inline_comment__create_inline_comment,Bash(gh pr comment:*),Bash(gh pr diff:*),Bash(gh pr view:*)"

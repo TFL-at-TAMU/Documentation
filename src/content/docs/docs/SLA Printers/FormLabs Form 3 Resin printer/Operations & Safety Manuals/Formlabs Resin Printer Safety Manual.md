@@ -129,7 +129,7 @@ If an incident occurs:
   1. Stop the machine using the emergency stop if safe to do so
   2. Move to a safe distance
   3. Notify Fab Lab staff immediately
-  4. For injuries, staff will follow Fab Lab [emergency procedures](<../../../Fab Lab Operations/Fab Lab Safety & Emergency Manual.md>)
+  4. For injuries, staff will follow Fab Lab [emergency procedures](/safety/)
 
 
 

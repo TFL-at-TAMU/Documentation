@@ -14,13 +14,13 @@ Elegoo Resin 3D Activity
 
 **Responsible Student Worker:** Tyler Roussett
 
-**Linked Operations Manual:** [Elegoo Saturn 4 Ultra 16K Operations Manual](../Operations & Safety Manuals/Elegoo Resin 3D Printer Operations Manual.md)
+**Linked Operations Manual:** [Elegoo Saturn 4 Ultra 16K Operations Manual](/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/elegoo-resin-3d-printer-operations-manual/)
 
-**Linked Safety Manual:** [Elegoo Saturn 4 Ultra 16K Safety Manual](../Operations & Safety Manuals/Elegoo Resin 3D Printer Safety Manual.md)
+**Linked Safety Manual:** [Elegoo Saturn 4 Ultra 16K Safety Manual](/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/elegoo-resin-3d-printer-safety-manual/)
 
-**Linked Cleaning Manual:**[Elegoo Saturn 4 Ultra 16K Cleaning Manual](../Elegoo Cleaning Procedure/Elegoo Resin 3D Printer Cleaning Manual.md)
+**Linked Cleaning Manual:**[Elegoo Saturn 4 Ultra 16K Cleaning Manual](/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/elegoo-resin-3d-printer-cleaning-manual/)
 
-**Linked Washing and Curing Manual:**[Elegoo Mercury Plus V3.0](../../Elegoo Mercury 3.0 Plus Washing And Curing Machine/Elegoo Washing And Curing Machine Manual.md)
+**Linked Washing and Curing Manual:**[Elegoo Mercury Plus V3.0](/docs/sla-printers/elegoo-mercury-30-plus-washing-and-curing-machine/elegoo-washing-and-curing-machine-manual/)
 
 Activity: Understand the use of an SLA printer and print the test piece.
 
@@ -106,7 +106,7 @@ Note: For .stl’s that need to be hollow or require supports, do the following:
 
 
 
-** For more information reference the [Operations Manual](../Operations & Safety Manuals/Elegoo Resin 3D Printer Operations Manual.md)
+** For more information reference the [Operations Manual](/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/elegoo-resin-3d-printer-operations-manual/)
 
   1. To Auto Orient to build plate according to slicer recommendations (strongly recommended), select your model, right click, and click “On Plate.”
 
@@ -134,20 +134,20 @@ Note: For .stl’s that need to be hollow or require supports, do the following:
 
 ![](../../../../assets/images/elegoo_resin_3d_prin_4a75aeb055.jpeg)
 
-  1. Before you click Print, make sure the printer has a sufficient amount of resin (above Min but below Max) and that the build plate has been cleaned (Reference[ Cleaning Manual ](../Elegoo Cleaning Procedure/Elegoo Resin 3D Printer Cleaning Manual.md)**Section 3.0** for more information)
+  1. Before you click Print, make sure the printer has a sufficient amount of resin (above Min but below Max) and that the build plate has been cleaned (Reference[ Cleaning Manual ](/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/elegoo-resin-3d-printer-cleaning-manual/)**Section 3.0** for more information)
 
 
 
 ![](../../../../assets/images/elegoo_resin_3d_prin_a33dd94951.jpeg)
 
-  1. Click Print and watch the first couple of layers to ensure the print adheres to the build plate according to the procedures in the [Operations Document](../Operations & Safety Manuals/Elegoo Resin 3D Printer Operations Manual.md)
+  1. Click Print and watch the first couple of layers to ensure the print adheres to the build plate according to the procedures in the [Operations Document](/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/elegoo-resin-3d-printer-operations-manual/)
   2. Now wait for the print to finish, and you should have a piece that looks like this:
 
 
 
 ![](../../../../assets/images/elegoo_resin_3d_prin_b54570943f.jpeg)
 
-  1. Now that the print is finished, you **have** to cure it. Refer to washing and curing in **Section 6.0** of the [cleaning document](../../Elegoo Mercury 3.0 Plus Washing And Curing Machine/Elegoo Washing And Curing Machine Manual.md). 
+  1. Now that the print is finished, you **have** to cure it. Refer to washing and curing in **Section 6.0** of the [cleaning document](/docs/sla-printers/elegoo-mercury-30-plus-washing-and-curing-machine/elegoo-washing-and-curing-machine-manual/). 
 
 ![](../../../../assets/images/elegoo_resin_3d_prin_e5d2c11142.jpeg)| ![](../../../../assets/images/elegoo_resin_3d_prin_040c988830.jpeg)  
 ---|---  

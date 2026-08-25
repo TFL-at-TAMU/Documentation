@@ -1,0 +1,33 @@
+name: Build
+
+# The site must build cleanly before a PR can merge. This is the main safety
+# net for web-editor edits: Astro fails the build on broken image paths, and
+# starlight-links-validator fails it on broken internal links.
+#
+# Make the `build` job a required status check in the main-branch ruleset
+# (next to check-file-size) so red builds can't merge.
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          # Matches the Cloudflare Pages build environment (NODE_VERSION=24).
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build

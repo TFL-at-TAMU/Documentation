@@ -18,13 +18,13 @@ Last Updated: 04/11/2026
 
 Responsible Student Worker: Tyler Roussett
 
-Linked Operations Manual: [Elegoo Saturn 4 Ultra 16K Operations Manual](<../Operations & Safety Manuals/Elegoo Resin 3D Printer Operations Manual.md>)
+Linked Operations Manual: [Elegoo Saturn 4 Ultra 16K Operations Manual](/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/elegoo-resin-3d-printer-operations-manual/)
 
-Linked Safety Manual: [Elegoo Saturn 4 Ultra 16K Safety Manual](<../Operations & Safety Manuals/Elegoo Resin 3D Printer Safety Manual.md>)
+Linked Safety Manual: [Elegoo Saturn 4 Ultra 16K Safety Manual](/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/elegoo-resin-3d-printer-safety-manual/)
 
-Linked Assignment: [Elegoo Saturn 4 Ultra 16K Safety Manual](<../Learning Assignments/Elegoo Resin 3D Printer Activity.md>)
+Linked Assignment: [Elegoo Saturn 4 Ultra 16K Safety Manual](/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/learning-assignments/activity-1/elegoo-resin-3d-printer-activity/)
 
-Linked Washing and Curing Manual: [Elegoo Mercury Plus V3.0](<../../Elegoo Mercury 3.0 Plus Washing And Curing Machine/Elegoo Washing And Curing Machine Manual.md>)
+Linked Washing and Curing Manual: [Elegoo Mercury Plus V3.0](/docs/sla-printers/elegoo-mercury-30-plus-washing-and-curing-machine/elegoo-washing-and-curing-machine-manual/)
 
 DISCLAIMER:
 
@@ -66,7 +66,7 @@ Required Materials:
 
 
 
-Refer to the [safety manual](<../Operations & Safety Manuals/Elegoo Resin 3D Printer Safety Manual.md>) for more details
+Refer to the [safety manual](/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/elegoo-resin-3d-printer-safety-manual/) for more details
 
 ## 2\. When to Clean
 
@@ -247,7 +247,7 @@ Tip:
 
 
 
-** For more information, view the [Elegoo Washing and Curing Manual](<../../Elegoo Mercury 3.0 Plus Washing And Curing Machine/Elegoo Washing And Curing Machine Manual.md>) **
+** For more information, view the [Elegoo Washing and Curing Manual](/docs/sla-printers/elegoo-mercury-30-plus-washing-and-curing-machine/elegoo-washing-and-curing-machine-manual/) **
 
   10. Let the standing liquid drip off in the washing station
   11. If it still feels slippery or glossy with uncured resin, wash it again briefly
@@ -279,7 +279,7 @@ Note: If the IPA is not removed completely, it can leave white marks, tackiness,
 
 
 
-** For more information, view the [Elegoo Washing and Curing Manual](<../../Elegoo Mercury 3.0 Plus Washing And Curing Machine/Elegoo Washing And Curing Machine Manual.md>) **
+** For more information, view the [Elegoo Washing and Curing Manual](/docs/sla-printers/elegoo-mercury-30-plus-washing-and-curing-machine/elegoo-washing-and-curing-machine-manual/) **
 
   17. After curing, ensure the part feels dry, no longer feels tacky, and holds its shape firmly
   18. If still slightly tacky, cure a little longer in short intervals, but do not overcure thin or detailed parts, because that can make them brittle.
