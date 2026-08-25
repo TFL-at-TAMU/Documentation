@@ -1,0 +1,34 @@
+---
+// Site-wide notification banner for the STANDALONE Astro pages (landing page,
+// Contact, etc.). Starlight docs pages get the same banner via src/routeData.ts;
+// both read the shared message + on/off switch from src/bannerConfig.ts, so the
+// notice stays in sync across the whole site.
+//
+// Render this as the very first element inside <body>, above the top bar.
+import { BANNER_ENABLED, BANNER_CONTENT } from '../bannerConfig';
+---
+
+{
+	BANNER_ENABLED && (
+		<div class="site-banner" role="note" set:html={BANNER_CONTENT} />
+	)
+}
+
+<style is:global>
+	.site-banner {
+		background: var(--accent);
+		color: var(--bg);
+		text-align: center;
+		padding: 0.7rem 1.5rem;
+		font-size: 0.95rem;
+		line-height: 1.5;
+		border-bottom: 1px solid var(--border);
+	}
+	.site-banner a {
+		color: var(--bg);
+		text-decoration: underline;
+	}
+	.site-banner strong {
+		font-weight: 700;
+	}
+</style>
