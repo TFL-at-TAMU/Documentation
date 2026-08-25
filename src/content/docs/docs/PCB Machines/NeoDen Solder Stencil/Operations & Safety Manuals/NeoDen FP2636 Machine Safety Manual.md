@@ -87,7 +87,7 @@ If an incident occurs:
   2. Move to a safe distance
   3. Notify Fab Lab staff immediately
   4. Rinse any solder paste from hands and body thoroughly
-  5. For injuries, staff will follow Fab Lab [e](<../../../Fab Lab Operations/Fab Lab Safety & Emergency Manual.md>)[mergency procedures](<../../../Fab Lab Operations/Fab Lab Safety & Emergency Manual.md>)
+  5. For injuries, staff will follow Fab Lab [emergency procedures](/safety/)
 
 
 

@@ -355,7 +355,7 @@ Action: Replace IPA
 ## 19\. External Resources
 
   * Manufacturer Manual (Mercury 3.0 Plus): [https://f00.psgsm.net/product/921685/mercury-3.0-plus.pdf](<https://www.google.com/url?q=https://f00.psgsm.net/product/921685/mercury-3.0-plus.pdf&sa=D&source=editors&ust=1776804210123315&usg=AOvVaw3vOVpj0wMomjMBXPl8YXfH>)
-  * Elegoo Printer Manuals: ([Safety Manual](<../Elegoo Saturn 4 Ultra 16K Resin 3D Printer/Operations & Safety Manuals/Elegoo Resin 3D Printer Safety Manual.md>), [Operations Manual](<../Elegoo Saturn 4 Ultra 16K Resin 3D Printer/Operations & Safety Manuals/Elegoo Resin 3D Printer Operations Manual.md>))
+  * Elegoo Printer Manuals: ([Safety Manual](/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/elegoo-resin-3d-printer-safety-manual/), [Operations Manual](/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/elegoo-resin-3d-printer-operations-manual/))
 
 
 

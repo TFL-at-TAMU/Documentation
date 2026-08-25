@@ -22,7 +22,7 @@ Disclaimer: YOU WILL NOT LEAVE UNCURED RESIN IN THE WORK AREA
 Before operating this machine, ensure:
 
 1. Staff present
-2. You have read the safety guidelines in [The Fab Lab General Safety Manual](<../../../Fab Lab Operations/Fab Lab Safety & Emergency Manual.md>)
+2. You have read the safety guidelines in [The Fab Lab General Safety Manual](/safety/)
 3. Required PPE is worn:
     1. Nitrile gloves (required)
     2. Safety glasses (recommended)
@@ -81,7 +81,7 @@ KEY USER INTERACTION POINTS:
 
 ** The Preprint routine is only done BEFORE printing. **
 
-1. Complete the preprinting cleaning instructions in the [cleaning manual](<../Elegoo Cleaning Procedure/Elegoo Resin 3D Printer Cleaning Manual.md>) Section 3.0
+1. Complete the preprinting cleaning instructions in the [cleaning manual](/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/elegoo-resin-3d-printer-cleaning-manual/) Section 3.0
 2. If these are not completed, your print is at risk of failing and damaging the machine
 
 
@@ -93,7 +93,7 @@ KEY USER INTERACTION POINTS:
 3. Confirm:
 
 
-1. Resin tank is clean and properly installed (Refer to [cleaning instructions](<../Elegoo Cleaning Procedure/Elegoo Resin 3D Printer Cleaning Manual.md>) in Section 3.0)
+1. Resin tank is clean and properly installed (Refer to [cleaning instructions](/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/elegoo-resin-3d-printer-cleaning-manual/) in Section 3.0)
 2. Build plate is secured
 
 
@@ -159,7 +159,7 @@ Notes for supports: The stock baseplate with automatic supports makes the prints
 
 ### 5.4 End-of-Job / Shutdown
 1. Allow the print to fully complete and allow excess resin to drip back into the vat
-2. Complete the post-processing according to the washing and curing instructions in the [cleaning document](<../../Elegoo Mercury 3.0 Plus Washing And Curing Machine/Elegoo Washing And Curing Machine Manual.md>) Section 6.0.
+2. Complete the post-processing according to the washing and curing instructions in the [cleaning document](/docs/sla-printers/elegoo-mercury-30-plus-washing-and-curing-machine/elegoo-washing-and-curing-machine-manual/) Section 6.0.
 3. DO NOT USE THE METAL SCRAPER
 4. Clean tools and work area with IPA
 5. Ensure no pieces of cured resin are in the tank
@@ -173,14 +173,14 @@ Notes for supports: The stock baseplate with automatic supports makes the prints
 
 ## Before use:
 
-* If the user is changing resin to their own, you must change the resin according to the instructions in the [Cleaning Manual](<../Elegoo Cleaning Procedure/Elegoo Resin 3D Printer Cleaning Manual.md>) Section 5.0
+* If the user is changing resin to their own, you must change the resin according to the instructions in the [Cleaning Manual](/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/elegoo-resin-3d-printer-cleaning-manual/) Section 5.0
 * Filling the resin so the level is between the Min and Max lines
 
 
 
 After use:
 
-* If the user used their own resin, they MUST drain the resin and leave an empty vat using the procedures in the [Cleaning Manual](<../Elegoo Cleaning Procedure/Elegoo Resin 3D Printer Cleaning Manual.md>) Section 5.0
+* If the user used their own resin, they MUST drain the resin and leave an empty vat using the procedures in the [Cleaning Manual](/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/elegoo-resin-3d-printer-cleaning-manual/) Section 5.0
 * Cleaning the build plate, tools, and surrounding work area
 * Disposing of resin waste in the trash
 * Reporting failed prints, damage, or abnormal behavior to staff

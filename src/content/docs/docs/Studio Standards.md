@@ -254,7 +254,7 @@ Staff are responsible for ensuring compliance, maintenance, and training.
 
 * * *
 
-## 4\. [Safety Standards](<Fab Lab Safety & Emergency Manual.md>)
+## 4\. [Safety Standards](/safety/)
 
 ### 4.1 General Shop Safety
 

@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightLlmsTxt from 'starlight-llms-txt';
+import starlightLinksValidator from 'starlight-links-validator';
 import { unified } from '@astrojs/markdown-remark';
 import { remarkAlert } from 'remark-github-blockquote-alert';
 
@@ -27,6 +28,12 @@ export default defineConfig({
 			// Starlight content, so the custom Contact page is surfaced via the
 			// `details` note and `optionalLinks` below rather than the full text.
 			plugins: [
+				// Fails the build on broken internal links, so link rot from renames
+				// gets caught in the PR build check instead of shipping.
+				// errorOnInvalidHashes is off because pre-revamp pages still carry
+				// dead Google-Docs comment anchors (#cmnt1 etc.); the per-machine
+				// revamps strip those — flip it back on once they're done.
+				starlightLinksValidator({ errorOnInvalidHashes: false }),
 				starlightLlmsTxt({
 					projectName: 'The Fab Lab — Texas A&M University makerspace documentation',
 					description:
@@ -133,6 +140,7 @@ export default defineConfig({
 			sidebar: [
 				{ label: 'Welcome', slug: 'docs' },
 				{ label: 'Studio Standards', slug: 'docs/studio-standards' },
+				{ label: 'Contributing to These Docs', slug: 'docs/contributing-to-these-docs' },
 				// NOTE: autogenerate.directory matches the on-disk folder path under src/content/docs/
 				// (original names with spaces/&), NOT the slugified route segment.
 				{ label: '3D Scanner', collapsed: true, items: [{ autogenerate: { collapsed: true, directory: 'docs/3D Scanner' } }] },
