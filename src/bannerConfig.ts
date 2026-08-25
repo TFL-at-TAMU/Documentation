@@ -13,4 +13,4 @@
 export const BANNER_ENABLED = true;
 
 export const BANNER_CONTENT =
-	'The Fab Lab opens for the new semester on <strong>Monday, August 31</strong> — the second week of classes. Check back here for hours and machine checkout dates.';
+	'The Fab Lab opens for the new semester on <strong>Monday, August 31</strong> — the second week of classes.';
