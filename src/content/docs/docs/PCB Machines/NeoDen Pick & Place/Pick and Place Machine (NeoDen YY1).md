@@ -50,7 +50,7 @@ The machine reads exactly one thing: a CSV file in **NeoDen YY1 format**, with t
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | R1 | 0603 | 10.5 | 20.3 | Top | 90 | 1 |
 
-PCB design programs don't export this format directly — their placement exports all name and order the columns differently. The lab's **NeoDen YY1 Formatter**, a free Windows app, converts them for you:
+PCB design programs don't export this format directly — their placement exports all name and order the columns differently. The lab's **NeoDen YY1 Formatter**, a free app for Windows and macOS, converts them for you:
 
 > [!NOTE]
 > **Export your placement file as a CSV, with units set to mm.** The formatter accepts no other file type, and the machine needs all coordinates in millimeters — set both in your design software *before* exporting.
@@ -58,7 +58,9 @@ PCB design programs don't export this format directly — their placement export
 1. In your PCB design software (Fusion 360, KiCad, Altium, EasyEDA, and others all work), set the units to **mm** and export your board's placement file — also called a **pick-and-place** or **centroid** export — as a **CSV**.
 2. Download the formatter and run it on your own computer (or a lab PC):
 
-   <a class="tfl-download-button" href="/files/PCB%20Machines/NeoDen%20Pick%20%26%20Place/NeoDen%20YY1%20Formatter%20%28Windows%29.zip">⬇ Download the NeoDen YY1 Formatter — Windows</a>
+   <a class="tfl-download-button" href="https://drive.google.com/file/d/1W5b28qzZU0AuM1y9Uwsw85C3ulrWqh_V/view?usp=sharing">⬇ Download for Windows</a> <a class="tfl-download-button" href="https://drive.google.com/file/d/1CaqqreY8S0gjq014CbNd2aT7VBqq2Z_T/view?usp=sharing">⬇ Download for macOS</a>
+
+   The links open Google Drive — click the **Download** icon on the page that appears.
 
 3. Drag your CSV into the formatter, then assign each component the **feeder slot** its parts are loaded in — the [feeder slot chart](https://docs.google.com/spreadsheets/d/18dMiUAIPoFiYq0AChLLP8tyWiuEx4bR4EatctU6wq48/edit?usp=sharing) says what's where.
 4. Export. The formatter saves a `…_yy1.csv` file ready for the machine — copy it onto the SD card.
