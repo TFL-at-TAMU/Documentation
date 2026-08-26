@@ -77,8 +77,8 @@ public repo (credentials, IT/networking internals, service manuals — those
 live in Google Docs).
 
 **Already done (don't redo):** Laser Cutter · 3D Scanner · CNC Mill · Solder
-Reflow Oven. **Everything else** is fair game per the remaining list in
-`CLAUDE.md`.
+Reflow Oven · NeoDen Pick & Place. **Everything else** is fair game per the
+remaining list in `CLAUDE.md`.
 
 **Machine-specific notes for this session (may be empty):**
 [PASTE FRESH DOC ATTACHMENTS OR NOTES HERE — e.g. "attached manuals are
