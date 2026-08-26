@@ -70,6 +70,12 @@ including the credentials doc. This rewrites history to purge them. It's disrupt
       (e.g. printers first) is worth it.
 - [ ] **"Fancy" safety page** — richer layout for `/safety/`.
 - [ ] **Landing page refresh.**
+- [ ] **Re-home the NeoDen YY1 Formatter downloads** — the two download buttons on the
+      pick-and-place page point at Google Drive links (owner's interim choice; the Mac
+      build is >25 MiB so Cloudflare Pages can't host it). Proper home: GitHub Releases
+      on an org-owned formatter repo (source currently lives under the `juancajuanca1`
+      personal account — transfer/fork it to `TFL-at-TAMU` first), then point the
+      buttons at `releases/latest/download/…` URLs.
 - [ ] **Dead-link cleanup** — a set of links was already dead pre-migration and left
       as-is; the build's link validator now reports them (see the `exclude` list in
       `astro.config.mjs` if any are grandfathered). Fix or remove as content gets touched.
@@ -78,7 +84,7 @@ including the credentials doc. This rewrites history to purge them. It's disrupt
 
 - [ ] **Machine-page revamps** — remaining machines per the list in
       [CLAUDE.md](CLAUDE.md) / [REVAMP_PROMPT.md](REVAMP_PROMPT.md): Cricut, FDM
-      Printers, PCB Machines (NeoDen ×2), SLA Printers, Workbenches. Then retire the
+      Printers, PCB Machines (NeoDen solder stencil), SLA Printers, Workbenches. Then retire the
       `Templates` group and create the shared which-machine page.
 - [ ] **Content structure / information architecture** — Diátaxis-style restructure of
       the manuals. Grain decisions still open: 3D-model stub pages (merge vs.

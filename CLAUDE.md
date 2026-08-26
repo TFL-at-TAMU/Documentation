@@ -82,6 +82,9 @@ work around the check.
 - The hash-redirect shim in `astro.config.mjs` encodes the slug rule old Docsify links
   depend on (per segment: lowercase, spaces→`-`, `&` dropped, other non `[a-z0-9-_]`
   dropped). Don't alter it casually.
+- An image filename containing `&` breaks Astro's image pipeline **silently**: the build
+  succeeds but the page ships a bare `__ASTRO_IMAGE_` placeholder instead of an `<img>`.
+  Rename the asset (the migration left several `…_&_…` names under `docs/assets/images/`).
 - **Browser caching masks deploys.** When verifying web output: check the built file in
   `dist/` first, then hard-refresh (Ctrl+Shift+R) or cache-bust the URL.
 - Repo-layout changes and Cloudflare build settings must change together; if they diverge
@@ -117,8 +120,8 @@ safety manual pair into one machine page; slim assignments to lean exercises; cl
 Google-Docs export damage (`##` on paragraphs, `[[a]]` comment markers,
 google-redirect URLs, metadata blocks); add `_redirects` 301s for every retired URL;
 repoint inbound links. The **3D Scanner trio** (manual + "How 3D Scanning Works" +
-lean assignment) is the gold standard to imitate; Laser Cutter, CNC Mill, and Solder
-Reflow Oven are also done.
+lean assignment) is the gold standard to imitate; Laser Cutter, CNC Mill, Solder
+Reflow Oven, and NeoDen Pick & Place are also done.
 
 ## Talking to the owner
 

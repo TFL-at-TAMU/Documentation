@@ -251,6 +251,27 @@ h6,
 }
 
 /* ---------------------------------------------------------------------------
+   Download button for machine pages (e.g. the NeoDen YY1 Formatter).
+   Plain <a class="tfl-download-button" href="/files/..."> in Markdown;
+   degrades to an ordinary link if the class is ever removed.
+--------------------------------------------------------------------------- */
+.sl-markdown-content a.tfl-download-button {
+	display: inline-block;
+	padding: 0.5rem 1rem;
+	/* Space between adjacent buttons (e.g. Windows/macOS pair), horizontally
+	   and vertically when they wrap on narrow screens. */
+	margin: 0.25rem 0.5rem 0.25rem 0;
+	border-radius: 0.5rem;
+	background-color: var(--sl-color-text-accent);
+	color: var(--sl-color-text-invert);
+	font-weight: 600;
+	text-decoration: none;
+}
+.sl-markdown-content a.tfl-download-button:hover {
+	background-color: var(--sl-color-accent);
+}
+
+/* ---------------------------------------------------------------------------
    Side-by-side images. Markdown images written adjacent (same line, no blank
    line between them) land in one paragraph and render as an even row; put a
    blank line between them to keep the default stacked layout. No special

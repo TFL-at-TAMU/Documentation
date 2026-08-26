@@ -18,6 +18,12 @@
 /docs/cnc-mill/cam-guide-for-carvera-desktop-cnc/ /docs/cnc-mill/cnc-mill-makera-carvera/ 301
 /files/CNC%20Mill/Operations%20&%20Safety%20Manual/Pre-Flight%20Checklist%20for%20Carvera%20CNC.ods /files/CNC%20Mill/Pre-Flight%20Checklist%20for%20Carvera%20CNC.ods 301
 
+# NeoDen Pick & Place: operations + safety manuals merged into one machine page;
+# the empty "Nothing Here" learning-assignment placeholder was removed.
+/docs/pcb-machines/neoden-pick--place/operations--safety-manuals/neoden-yy1-pick--place-machine-operation-manual/ /docs/pcb-machines/neoden-pick--place/pick-and-place-machine-neoden-yy1/ 301
+/docs/pcb-machines/neoden-pick--place/operations--safety-manuals/neoden-yy1-pick--place-machine-safety-manual/ /docs/pcb-machines/neoden-pick--place/pick-and-place-machine-neoden-yy1/ 301
+/docs/pcb-machines/neoden-pick--place/learning-assignments/nothing-here/ /docs/pcb-machines/neoden-pick--place/pick-and-place-machine-neoden-yy1/ 301
+
 # Solder Reflow Oven: reference sheet + safety manual merged into one machine page
 # (the operations manual only ever lived in Google Docs); the empty "Nothing Here"
 # learning-assignment placeholder was removed.
