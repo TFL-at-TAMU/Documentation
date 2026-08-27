@@ -8,7 +8,6 @@ Welcome to the documentation hub for **The Fab Lab**. This is where the lab's ma
 
 - **Operations & Safety Manuals** — how to run each machine, and the rules for doing it safely. Read the relevant one *before* using any equipment.
 - **Learning Assignments** — guided exercises to get checked out on a tool.
-- **Studio Standards** — shop-wide software, hardware, and workflow expectations.
 - **Templates** — starting points for new manuals and documents.
 
 Browse by category in the sidebar on the left, or use the search bar up top.
