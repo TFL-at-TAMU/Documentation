@@ -30,3 +30,6 @@
 /docs/pcb-machines/novastar-solder-reflow-oven/operations--safety-manuals/reflow-oven-reference-sheet/ /docs/pcb-machines/novastar-solder-reflow-oven/solder-reflow-oven-ddm-novastar-gf-c2/ 301
 /docs/pcb-machines/novastar-solder-reflow-oven/operations--safety-manuals/reflow-oven-safety-manual/ /docs/pcb-machines/novastar-solder-reflow-oven/solder-reflow-oven-ddm-novastar-gf-c2/ 301
 /docs/pcb-machines/novastar-solder-reflow-oven/learning-assignments/nothing-here/ /docs/pcb-machines/novastar-solder-reflow-oven/solder-reflow-oven-ddm-novastar-gf-c2/ 301
+
+# Studio Standards page removed; send its old URL to the docs index.
+/docs/studio-standards/ /docs/ 301
