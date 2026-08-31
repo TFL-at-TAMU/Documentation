@@ -30,12 +30,7 @@ This document outlines the fundamental information required to operate the Glowf
 
 Completion of this assignment DOES NOT qualify the user to operate this laser without staff supervision. Only those who have done the TAMU training may operate the laser.
 
-TAMU Training [Link](<https://www.google.com/url?q=https://ehsa.tamu.edu/ehsa/&sa=D&source=editors&ust=1776804264093807&usg=AOvVaw2IQr9tzGOofPFJw-iLpDDG>):
-
-  1. Click on: EHSA Online Training Courses
-  2. Fill in your information
-  3. Complete the LASER training course and keep the certificate on hand
-  4. Show staff completion
+To get certified, follow the steps in the safety manual's [Laser Safety Certification](/safety/#laser-safety-certification) section.
 
 
 
