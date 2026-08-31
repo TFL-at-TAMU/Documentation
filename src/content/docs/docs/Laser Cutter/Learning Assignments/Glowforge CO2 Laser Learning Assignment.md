@@ -30,7 +30,7 @@ This document outlines the fundamental information required to operate the Glowf
 
 Completion of this assignment DOES NOT qualify the user to operate this laser without staff supervision. Only those who have done the TAMU training may operate the laser.
 
-To get certified, follow the steps on the [Laser Safety Certification](/docs/laser-cutter/laser-safety-certification/) page.
+To get certified, follow the steps in the safety manual's [Laser Safety Certification](/safety/#laser-safety-certification) section.
 
 
 
