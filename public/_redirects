@@ -1,6 +1,14 @@
 # Cloudflare Pages redirects (301s) for retired page URLs.
 # Add a line here every time a page is renamed or merged — see DOCS_FORMAT.md.
 
+# Serve the sitemap at the conventional root path /sitemap.xml (what crawlers and
+# AI agents probe, and what Cloudflare's "agent ready" check expects). Starlight's
+# bundled @astrojs/sitemap emits the URL set as sitemap-0.xml (+ a sitemap-index.xml
+# wrapper); a 200 rewrite serves that flat <urlset> at /sitemap.xml with HTTP 200,
+# so it regenerates with every build and never goes stale. sitemap-0.xml stays the
+# single file until 45,000 URLs (we have ~50), so no other shard is missed.
+/sitemap.xml /sitemap-0.xml 200
+
 # Glowforge operations + safety manuals merged into one machine page (format-standard pilot).
 /docs/laser-cutter/operations--safety-manuals/glowforge-operation-manual/ /docs/laser-cutter/laser-cutter-glowforge-pro/ 301
 /docs/laser-cutter/operations--safety-manuals/glowforge-safety-manual/ /docs/laser-cutter/laser-cutter-glowforge-pro/ 301
