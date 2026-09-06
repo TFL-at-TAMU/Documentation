@@ -10,7 +10,7 @@
 //   • To take the banner down: set BANNER_ENABLED to false. Nothing else needed.
 // ─────────────────────────────────────────────────────────────────────────────
 
-export const BANNER_ENABLED = false;
+export const BANNER_ENABLED = true;
 
 export const BANNER_CONTENT =
-	'The Fab Lab opens for the new semester on <strong>Monday, August 31</strong> — the second week of classes.';
+	'<strong>Labor Day weekend:</strong> the Fab Lab closes at <strong>7 PM today</strong> and is <strong>closed all day Monday</strong>. We reopen <strong>Tuesday, September 8</strong>.';
