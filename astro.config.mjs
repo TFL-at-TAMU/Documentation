@@ -64,7 +64,7 @@ export default defineConfig({
 			editLink: {
 				baseUrl: 'https://github.com/TFL-at-TAMU/Documentation/edit/main/',
 			},
-			customCss: ['./src/styles/gruvbox.css'],
+			customCss: ['./src/styles/theme.css'],
 			head: [
 				// Fonts matching the current site: Inter (body) + Space Grotesk (headings).
 				{

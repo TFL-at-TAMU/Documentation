@@ -1,12 +1,15 @@
 ---
 // The Fab Lab "Ask your own AI" page — a standalone Astro page (NOT a Starlight
-// doc). Same Gruvbox shell + top bar as src/pages/index.astro and contact.astro.
+// doc). Same shell + top bar as src/pages/index.astro and contact.astro
+// (palette: src/styles/site.css).
 //
 // This page does NOT run any AI on our server. It hands the visitor a ready-made
 // prompt to copy and paste into *their own* AI (Claude, ChatGPT, Copilot, a local
 // model, anything) — the prompt points that AI at the machine-readable copy of this
 // site, /llms-full.txt, generated at build time by the starlight-llms-txt plugin
 // (see astro.config.mjs). Copy-and-paste works with every assistant, web or desktop.
+
+import '../styles/site.css';
 
 const PROMPT = `===== Fab Lab website preamble (begin) =====
 This preamble is provided by the Texas A&M Fab Lab website (https://tfl.aidanstew.art) so that visitors can use their own AI assistant to search and understand the lab's documentation.
@@ -165,27 +168,7 @@ import SiteBanner from '../components/SiteBanner.astro';
 </html>
 
 <style is:global>
-	/* ---- Gruvbox palette (kept in sync with the docs site / landing / contact) ---- */
-	:root[data-theme='dark'] {
-		--bg: #282828;
-		--bg-soft: #32302f;
-		--bg-card: #3c3836;
-		--fg: #ebdbb2;
-		--fg-muted: #a89984;
-		--border: #504945;
-		--accent: #fabd2f;
-		--accent-2: #fe8019;
-	}
-	:root[data-theme='light'] {
-		--bg: #fbf1c7;
-		--bg-soft: #f2e5bc;
-		--bg-card: #f9f5d7;
-		--fg: #3c3836;
-		--fg-muted: #7c6f64;
-		--border: #d5c4a1;
-		--accent: #b57614;
-		--accent-2: #af3a03;
-	}
+	/* Palette: src/styles/site.css (imported above). */
 
 	* {
 		box-sizing: border-box;
@@ -217,7 +200,6 @@ import SiteBanner from '../components/SiteBanner.astro';
 
 	/* ---- Top bar ---- */
 	.topbar {
-		background: var(--bg-soft);
 		border-bottom: 1px solid var(--border);
 	}
 	.topbar-inner {
@@ -259,8 +241,6 @@ import SiteBanner from '../components/SiteBanner.astro';
 	.hero {
 		text-align: center;
 		padding: 2.5rem 1.5rem 2.25rem;
-		border-bottom: 1px solid var(--border);
-		background: var(--bg-soft);
 	}
 	.hero h1 {
 		font-family: 'Space Grotesk', sans-serif;
@@ -298,8 +278,8 @@ import SiteBanner from '../components/SiteBanner.astro';
 		height: 1.8rem;
 		flex-shrink: 0;
 		border-radius: 50%;
-		background: var(--accent);
-		color: var(--bg);
+		background: var(--cta-bg);
+		color: var(--cta-fg);
 		font-size: 1rem;
 		font-weight: 700;
 	}
@@ -330,8 +310,6 @@ import SiteBanner from '../components/SiteBanner.astro';
 	.copy-btn {
 		display: inline-block;
 		margin-top: 0.85rem;
-		background: var(--accent);
-		color: var(--bg);
 		font-weight: 600;
 		font-size: 1rem;
 		font-family: inherit;
@@ -344,11 +322,7 @@ import SiteBanner from '../components/SiteBanner.astro';
 			background 0.12s ease;
 	}
 	.copy-btn:hover {
-		background: var(--accent-2);
 		transform: translateY(-1px);
-	}
-	.copy-btn.copied {
-		background: var(--accent-2);
 	}
 
 	/* ---- Disclaimer ---- */

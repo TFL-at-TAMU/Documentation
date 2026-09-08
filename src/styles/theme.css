@@ -1,65 +1,97 @@
 /* ==========================================================================
-   Gruvbox theme for Starlight — mirrors the palette of the current site
-   (site/index.html + Docsify theme). Overrides Starlight's CSS custom
-   properties for both dark and light modes.
+   "Heat" theme for Starlight — the Fab Lab's dark grey / chrome / orange
+   scheme, with Aggie maroon used only as a ground or the hot end of a
+   gradient (it measures ~1.1:1 on the dark grey, so it can never be text
+   or a line in dark mode). Overrides Starlight's CSS custom properties for
+   both modes, then adds the few "Heat" accents: a brushed-metal header
+   with an orange stripe, an orange glow on primary buttons and the current
+   sidebar page, and maroon-to-orange heading rules.
+
+   Base palette:  orange #f9882c · chrome #cccccc · grey #282828 · maroon #500000
+   Derived shades were chosen for WCAG contrast (links ≥ 4.5:1 on the page
+   ground in both modes). The standalone pages (landing, Contact, Ask) read
+   the same palette from src/styles/site.css — keep the two in sync.
    ========================================================================== */
+
+/* ---- Base colors + Heat accents (shared by both modes) ---- */
+:root {
+	--tfl-orange: #f9882c;
+	--tfl-orange-soft: #fba661;
+	--tfl-chrome: #cccccc;
+	--tfl-grey: #282828;
+	--tfl-maroon: #500000;
+
+	/* 3px stripe along the top of the header. */
+	--tfl-stripe: var(--tfl-orange);
+	/* Heading rule: maroon into orange, fading out to the right. */
+	--tfl-heading-rule: linear-gradient(90deg, var(--tfl-maroon), var(--tfl-orange) 55%, rgba(249, 136, 44, 0));
+}
 
 /* ---- Dark mode (default) ---- */
 :root {
 	/* Grayscale / surfaces */
-	--sl-color-white: #fbf1c7; /* headings, strong text */
-	--sl-color-gray-1: #ebdbb2; /* body text */
-	--sl-color-gray-2: #ebdbb2;
-	--sl-color-gray-3: #a89984; /* muted */
-	--sl-color-gray-4: #7c6f64;
-	--sl-color-gray-5: #504945; /* borders */
-	--sl-color-gray-6: #3c3836; /* surfaces */
-	--sl-color-black: #282828; /* page background */
+	--sl-color-white: #ebebeb; /* headings, strong text */
+	--sl-color-gray-1: #cccccc; /* body text (chrome) */
+	--sl-color-gray-2: #cccccc;
+	--sl-color-gray-3: #8c8c8c; /* muted */
+	--sl-color-gray-4: #5f5f5f;
+	--sl-color-gray-5: #4d4d4d; /* borders */
+	--sl-color-gray-6: #373737; /* surfaces */
+	--sl-color-black: #232323; /* page background */
 
 	/* Accents */
-	--sl-color-accent-low: #45402a;
-	--sl-color-accent: #fe8019; /* gruvbox orange (accent-2) */
-	--sl-color-accent-high: #fabd2f; /* gruvbox yellow (accent) */
-	--sl-color-text-accent: #fabd2f;
+	--sl-color-accent-low: #523925;
+	--sl-color-accent: #f9882c; /* orange */
+	--sl-color-accent-high: #fba661;
+	--sl-color-text-accent: #f9882c; /* links, active nav — 6.4:1 on the page */
 
 	/* Backgrounds */
-	--sl-color-bg: #282828;
-	--sl-color-bg-nav: #1d2021; /* bg-hard */
-	--sl-color-bg-sidebar: #1d2021; /* bg-hard */
-	--sl-color-bg-inline-code: #3c3836;
+	--sl-color-bg: #232323;
+	--sl-color-bg-nav: #191919;
+	--sl-color-bg-sidebar: #191919;
+	--sl-color-bg-inline-code: #444444;
 
 	/* Hairlines / borders */
-	--sl-color-hairline-light: #504945;
-	--sl-color-hairline: #504945;
-	/* Subtle divider (header bottom, mobile TOC bar). Must contrast with the
-	   nav/sidebar background (--sl-color-bg-nav, #1d2021) or the divider is
-	   invisible — which it was when this equalled #1d2021. #3c3836 (gruvbox
-	   bg1) reads as a thin line like Starlight's default header divider. */
-	--sl-color-hairline-shade: #3c3836;
+	--sl-color-hairline-light: #4d4d4d;
+	--sl-color-hairline: #4d4d4d;
+	/* Header bottom divider — must contrast with --sl-color-bg-nav or it
+	   vanishes (it did once; see git history). */
+	--sl-color-hairline-shade: #4f4f4f;
 
 	/* Text */
-	--sl-color-text: #ebdbb2;
-	--sl-color-text-invert: #282828;
+	--sl-color-text: #cccccc;
+	--sl-color-text-invert: #232323;
 
-	/* Semantic colors (used by asides/badges) */
-	--sl-color-green: #8ec07c; /* gruvbox aqua */
-	--sl-color-green-high: #b8e0a8;
-	--sl-color-green-low: #2e3a2a;
-	--sl-color-orange: #fe8019;
-	--sl-color-orange-high: #fbbf8c;
-	--sl-color-orange-low: #4a2e16;
-	--sl-color-red: #fb4934;
-	--sl-color-red-high: #fca79c;
-	--sl-color-red-low: #442222;
-	--sl-color-blue: #83a598;
-	--sl-color-blue-high: #b8cfc6;
-	--sl-color-blue-low: #2a3634;
-	--sl-color-purple: #d3869b;
-	--sl-color-purple-high: #e7bcc8;
-	--sl-color-purple-low: #3d2c31;
-	--sl-color-yellow: #fabd2f;
-	--sl-color-yellow-high: #fdd88a;
-	--sl-color-yellow-low: #45402a;
+	/* Semantic colors (asides / GitHub-style alerts / badges).
+	   red = danger: maroon ground, rail warmed toward orange so it clears 3:1.
+	   orange & yellow = caution / warning: the orange.
+	   green = tip. blue = note. purple = "important" (GitHub alerts). */
+	--sl-color-red: #b24f1a;
+	--sl-color-red-high: #c3764c;
+	--sl-color-red-low: #371313;
+	--sl-color-orange: #f9882c;
+	--sl-color-orange-high: #fba661;
+	--sl-color-orange-low: #413124;
+	--sl-color-yellow: #f9882c;
+	--sl-color-yellow-high: #fba661;
+	--sl-color-yellow-low: #413124;
+	--sl-color-green: #8fbf7a;
+	--sl-color-green-high: #b3d8a3;
+	--sl-color-green-low: #32392f;
+	--sl-color-blue: #8fb4c7;
+	--sl-color-blue-high: #b8d0dc;
+	--sl-color-blue-low: #2b3438;
+	--sl-color-purple: #c49ab0;
+	--sl-color-purple-high: #dcbfcd;
+	--sl-color-purple-low: #35292f;
+
+	/* Heat accents */
+	--tfl-brush-a: #1c1c1c;
+	--tfl-brush-b: #2e2e2e;
+	--tfl-glow: 0 0 0 1px rgba(249, 136, 44, 0.55), 0 0 18px rgba(249, 136, 44, 0.38);
+	--tfl-active-bg: #382d24;
+	--tfl-active-fg: #f9882c;
+	--tfl-active-glow: rgba(249, 136, 44, 0.25);
 
 	/* Fonts — match the current site */
 	--sl-font: 'Inter', system-ui, sans-serif;
@@ -67,51 +99,94 @@
 
 /* ---- Light mode ---- */
 :root[data-theme='light'] {
-	--sl-color-white: #282828; /* headings */
-	--sl-color-gray-1: #3c3836; /* body text */
-	--sl-color-gray-2: #3c3836;
-	--sl-color-gray-3: #7c6f64; /* muted */
-	--sl-color-gray-4: #a89984;
-	--sl-color-gray-5: #d5c4a1; /* borders */
-	--sl-color-gray-6: #ebdbb2; /* surfaces */
-	--sl-color-gray-7: #f2e5bc;
-	--sl-color-black: #fbf1c7; /* page background */
+	--sl-color-white: #1c1c1c; /* headings */
+	--sl-color-gray-1: #282828; /* body text */
+	--sl-color-gray-2: #282828;
+	--sl-color-gray-3: #6f6f6f; /* muted */
+	--sl-color-gray-4: #a6a6a6;
+	--sl-color-gray-5: #b4b4b4; /* borders */
+	--sl-color-gray-6: #e6e6e6; /* surfaces */
+	--sl-color-gray-7: #ededed;
+	--sl-color-black: #f5f5f5; /* page background (chrome-white) */
 
-	--sl-color-accent-low: #f2e5bc;
-	--sl-color-accent: #af3a03; /* gruvbox orange (accent-2) */
-	--sl-color-accent-high: #b57614; /* gruvbox yellow-dark (accent) */
-	--sl-color-text-accent: #b57614;
+	--sl-color-accent-low: #f6ddc9;
+	--sl-color-accent: #f9882c; /* orange — fills and underlines only */
+	--sl-color-accent-high: #874a18;
+	/* Raw orange is 2.2:1 on the light page, so text roles use it darkened
+	   toward black until it clears 4.5:1. */
+	--sl-color-text-accent: #a95c1e;
 
-	--sl-color-bg: #fbf1c7;
-	--sl-color-bg-nav: #f9f5d7; /* bg-hard */
-	--sl-color-bg-sidebar: #f9f5d7; /* bg-hard */
-	--sl-color-bg-inline-code: #ebdbb2;
+	--sl-color-bg: #f5f5f5;
+	--sl-color-bg-nav: #dbdbdb; /* chrome */
+	--sl-color-bg-sidebar: #e9e9e9;
+	--sl-color-bg-inline-code: #e0e0e0;
 
-	--sl-color-hairline-light: #d5c4a1;
-	--sl-color-hairline: #d5c4a1;
-	--sl-color-hairline-shade: #ebdbb2;
+	--sl-color-hairline-light: #b4b4b4;
+	--sl-color-hairline: #b4b4b4;
+	--sl-color-hairline-shade: #adadad;
 
-	--sl-color-text: #3c3836;
-	--sl-color-text-invert: #fbf1c7;
+	--sl-color-text: #282828;
+	--sl-color-text-invert: #f5f5f5;
 
-	--sl-color-green: #427b58; /* gruvbox aqua (light) */
-	--sl-color-green-high: #2e5a40;
-	--sl-color-green-low: #dcead8;
-	--sl-color-orange: #af3a03;
-	--sl-color-orange-high: #8a2d02;
-	--sl-color-orange-low: #f6dfc8;
-	--sl-color-red: #9d0006;
-	--sl-color-red-high: #7a0005;
-	--sl-color-red-low: #f3d5cd;
-	--sl-color-blue: #076678;
-	--sl-color-blue-high: #05505e;
-	--sl-color-blue-low: #d8e5e2;
-	--sl-color-purple: #8f3f71;
-	--sl-color-purple-high: #6f3158;
-	--sl-color-purple-low: #ecdae4;
-	--sl-color-yellow: #b57614;
-	--sl-color-yellow-high: #8a5a0f;
-	--sl-color-yellow-low: #f2e5bc;
+	--sl-color-red: #500000; /* danger = maroon (9.8:1 on the page) */
+	--sl-color-red-high: #500000;
+	--sl-color-red-low: #e8e1e1;
+	--sl-color-orange: #a95c1e;
+	--sl-color-orange-high: #874a18;
+	--sl-color-orange-low: #f5eae1;
+	--sl-color-yellow: #a95c1e;
+	--sl-color-yellow-high: #874a18;
+	--sl-color-yellow-low: #f5eae1;
+	--sl-color-green: #3e7a3c;
+	--sl-color-green-high: #2e5c2d;
+	--sl-color-green-low: #e3e9e3;
+	--sl-color-blue: #2f6a80;
+	--sl-color-blue-high: #235061;
+	--sl-color-blue-low: #e0e7ea;
+	--sl-color-purple: #7a4a66;
+	--sl-color-purple-high: #5c3750;
+	--sl-color-purple-low: #ebe3e8;
+
+	--tfl-brush-a: #d4d4d4;
+	--tfl-brush-b: #e3e3e3;
+	--tfl-glow: 0 0 0 1px rgba(249, 136, 44, 0.55), 0 0 18px rgba(249, 136, 44, 0.28);
+	--tfl-active-bg: #f5ece5;
+	--tfl-active-fg: #a95c1e;
+	--tfl-active-glow: rgba(249, 136, 44, 0.18);
+}
+
+/* ==========================================================================
+   Heat accents
+   ========================================================================== */
+
+/* Brushed-metal header: fine 1px vertical striping under a faint top-to-
+   bottom sheen, plus the orange stripe along the very top. Starlight's
+   header is position: fixed, so the ::before sits inside it. */
+:root header.header {
+	background-image:
+		repeating-linear-gradient(90deg, var(--tfl-brush-a) 0 1px, var(--tfl-brush-b) 1px 3px),
+		linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(0, 0, 0, 0.08));
+	background-blend-mode: normal, overlay;
+}
+:root header.header::before {
+	content: '';
+	position: absolute;
+	inset: 0 0 auto 0;
+	height: 3px;
+	background: var(--tfl-stripe);
+	pointer-events: none;
+}
+
+/* Page title and section headings: a thin maroon-to-orange rule. */
+:root .content-panel h1#_top {
+	padding-bottom: 0.3em;
+	border-bottom: 2px solid transparent;
+	border-image: var(--tfl-heading-rule) 1;
+}
+.sl-markdown-content h2:not(:where(.not-content *)) {
+	padding-bottom: 0.2em;
+	border-bottom: 1px solid transparent;
+	border-image: var(--tfl-heading-rule) 1;
 }
 
 /* ---- Headings use Space Grotesk, like the current site ---- */
@@ -241,13 +316,17 @@ h6,
 /* ---------------------------------------------------------------------------
    Left sidebar: current-page highlight. Starlight's default fills the
    active link with a solid --sl-color-text-accent background + inverted
-   text; swapped for a subtler grey surface with accent-colored text.
+   text; swapped for a warm tinted surface, orange text, a 2px orange edge
+   on the left, and a soft orange glow (the "Heat" accent).
 --------------------------------------------------------------------------- */
 :root #starlight__sidebar [aria-current='page'],
 :root #starlight__sidebar [aria-current='page']:hover,
 :root #starlight__sidebar [aria-current='page']:focus {
-	background-color: var(--sl-color-gray-6);
-	color: var(--sl-color-text-accent);
+	background-color: var(--tfl-active-bg);
+	color: var(--tfl-active-fg);
+	box-shadow:
+		inset 2px 0 0 var(--tfl-orange),
+		0 0 14px var(--tfl-active-glow);
 }
 
 /* ---------------------------------------------------------------------------
@@ -262,13 +341,17 @@ h6,
 	   and vertically when they wrap on narrow screens. */
 	margin: 0.25rem 0.5rem 0.25rem 0;
 	border-radius: 0.5rem;
-	background-color: var(--sl-color-text-accent);
-	color: var(--sl-color-text-invert);
+	/* Raw orange with dark grey text in both modes (6:1), plus the glow. */
+	background-color: var(--tfl-orange);
+	color: var(--tfl-grey);
 	font-weight: 600;
 	text-decoration: none;
+	box-shadow: var(--tfl-glow);
+	transition: background-color 0.12s ease;
 }
 .sl-markdown-content a.tfl-download-button:hover {
-	background-color: var(--sl-color-accent);
+	background-color: var(--tfl-orange-soft);
+	color: var(--tfl-grey);
 }
 
 /* ---------------------------------------------------------------------------

@@ -1,7 +1,9 @@
 ---
 // The Fab Lab landing page — a standalone Astro page (NOT a Starlight doc).
-// Recreates site/index.html: Gruvbox-styled hero + info sections.
+// Hero + info sections. Palette and the top-bar/hero accents come from the
+// shared src/styles/site.css ("Heat" theme); only layout CSS lives here.
 import SiteBanner from '../components/SiteBanner.astro';
+import '../styles/site.css';
 ---
 
 <!doctype html>
@@ -174,31 +176,7 @@ import SiteBanner from '../components/SiteBanner.astro';
 </html>
 
 <style is:global>
-	/* ---- Gruvbox palette (kept in sync with the docs site) ---- */
-	:root[data-theme='dark'] {
-		--bg: #282828;
-		--bg-soft: #32302f;
-		--bg-card: #3c3836;
-		--fg: #ebdbb2;
-		--fg-muted: #a89984;
-		--border: #504945;
-		--accent: #fabd2f;
-		--accent-2: #fe8019;
-		--discord-blurple: #5865f2;
-		--discord-blurple-hover: #4752c4;
-	}
-	:root[data-theme='light'] {
-		--bg: #fbf1c7;
-		--bg-soft: #f2e5bc;
-		--bg-card: #f9f5d7;
-		--fg: #3c3836;
-		--fg-muted: #7c6f64;
-		--border: #d5c4a1;
-		--accent: #b57614;
-		--accent-2: #af3a03;
-		--discord-blurple: #5865f2;
-		--discord-blurple-hover: #454fbf;
-	}
+	/* Palette: src/styles/site.css (imported above). */
 
 	* {
 		box-sizing: border-box;
@@ -230,7 +208,6 @@ import SiteBanner from '../components/SiteBanner.astro';
 
 	/* ---- Top bar ---- */
 	.topbar {
-		background: var(--bg-soft);
 		border-bottom: 1px solid var(--border);
 	}
 	.topbar-inner {
@@ -270,8 +247,6 @@ import SiteBanner from '../components/SiteBanner.astro';
 	.hero {
 		text-align: center;
 		padding: 5rem 1.5rem 3.5rem;
-		border-bottom: 1px solid var(--border);
-		background: var(--bg-soft);
 	}
 	.hero-ctas {
 		display: flex;
@@ -294,8 +269,6 @@ import SiteBanner from '../components/SiteBanner.astro';
 	}
 	.cta {
 		display: inline-block;
-		background: var(--accent);
-		color: var(--bg);
 		font-weight: 600;
 		text-decoration: none;
 		padding: 0.7rem 1.5rem;
@@ -305,22 +278,11 @@ import SiteBanner from '../components/SiteBanner.astro';
 			background 0.12s ease;
 	}
 	.cta:hover {
-		background: var(--accent-2);
-		color: var(--bg);
 		transform: translateY(-1px);
 	}
 	/* Secondary hero CTA ("Ask your own AI"): outlined so it reads as a companion
-	   action, not competing with the solid primary "Browse the Documentation". */
-	.cta-secondary {
-		background: transparent;
-		color: var(--fg);
-		border: 1px solid var(--border);
-	}
-	.cta-secondary:hover {
-		background: transparent;
-		color: var(--accent);
-		border-color: var(--accent);
-	}
+	   action, not competing with the solid primary "Browse the Documentation".
+	   Colors in site.css. */
 
 	/* ---- Content ---- */
 	main {

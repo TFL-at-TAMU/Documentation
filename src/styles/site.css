@@ -1,0 +1,154 @@
+/* ==========================================================================
+   Shared shell for the STANDALONE Astro pages (landing, Contact, Ask) — the
+   "Heat" palette (dark grey / chrome / orange, maroon only as a gradient
+   endpoint) plus the top-bar and hero accents. Mirrors src/styles/theme.css,
+   which does the same job for the Starlight docs pages; change both together.
+
+   Each page imports this from its frontmatter and keeps only its own layout
+   CSS, so the palette lives in one place instead of three.
+   ========================================================================== */
+
+:root {
+	--orange: #f9882c;
+	--orange-soft: #fba661;
+	--chrome: #cccccc;
+	--grey: #282828;
+	--maroon: #500000;
+
+	/* Primary buttons: raw orange with dark grey text (6:1) in both modes. */
+	--cta-bg: var(--orange);
+	--cta-bg-hover: var(--orange-soft);
+	--cta-fg: var(--grey);
+	--stripe: var(--orange);
+	--heading-rule: linear-gradient(90deg, var(--maroon), var(--orange) 55%, rgba(249, 136, 44, 0));
+
+	--discord-blurple: #5865f2;
+}
+
+:root[data-theme='dark'] {
+	--bg: #232323;
+	--bg-soft: #191919;
+	--bg-card: #373737;
+	--fg: #cccccc;
+	--fg-muted: #8c8c8c;
+	--border: #4d4d4d;
+	--accent: #f9882c; /* links (6.4:1 on the page) */
+	--accent-2: #fba661; /* link hover */
+
+	/* The hero is a dark band in both modes. */
+	--hero-bg: #191919;
+	--hero-fg: #ebebeb;
+	--hero-muted: #cccccc;
+	--glow-soft: rgba(249, 136, 44, 0.22);
+	--cta-glow: 0 0 0 1px rgba(249, 136, 44, 0.55), 0 0 18px rgba(249, 136, 44, 0.38);
+	--brush-a: #1c1c1c;
+	--brush-b: #2e2e2e;
+	--discord-blurple-hover: #4752c4;
+}
+:root[data-theme='light'] {
+	--bg: #f5f5f5;
+	--bg-soft: #dbdbdb;
+	--bg-card: #e6e6e6;
+	--fg: #282828;
+	--fg-muted: #6f6f6f;
+	--border: #b4b4b4;
+	/* Raw orange is 2.2:1 on the light page; links use it darkened to 4.5:1. */
+	--accent: #a95c1e;
+	--accent-2: #874a18;
+
+	--hero-bg: #282828;
+	--hero-fg: #ebebeb;
+	--hero-muted: #cccccc;
+	--glow-soft: rgba(249, 136, 44, 0.16);
+	--cta-glow: 0 0 0 1px rgba(249, 136, 44, 0.55), 0 0 18px rgba(249, 136, 44, 0.28);
+	--brush-a: #d4d4d4;
+	--brush-b: #e3e3e3;
+	--discord-blurple-hover: #454fbf;
+}
+
+/* ---- Top bar: brushed metal with the orange stripe along the top ---- */
+body .topbar {
+	position: relative;
+	background-color: var(--bg-soft);
+	background-image:
+		repeating-linear-gradient(90deg, var(--brush-a) 0 1px, var(--brush-b) 1px 3px),
+		linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(0, 0, 0, 0.08));
+	background-blend-mode: normal, overlay;
+	border-top: 3px solid var(--stripe);
+}
+body .topbar .links a[aria-current='page'],
+body .topbar .links a:hover {
+	color: var(--accent);
+}
+
+/* ---- Hero: dark band, film grain, and a soft orange wash behind the title ---- */
+body .hero {
+	position: relative;
+	isolation: isolate;
+	overflow: hidden;
+	background: var(--hero-bg);
+	color: var(--hero-fg);
+	border-bottom: 1px solid var(--border);
+}
+body .hero > * {
+	position: relative;
+	z-index: 1;
+}
+body .hero::before {
+	/* Grain: SVG turbulence, overlay-blended so it reads as texture, not dirt. */
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	opacity: 0.16;
+	mix-blend-mode: overlay;
+	pointer-events: none;
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .6 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+body .hero::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	pointer-events: none;
+	background: radial-gradient(ellipse 55% 90% at 50% 35%, var(--glow-soft), transparent 65%);
+}
+body .hero h1 {
+	color: var(--hero-fg);
+}
+body .hero .tagline {
+	color: var(--hero-muted);
+}
+
+/* ---- Primary button (landing "Browse", Ask "Copy") ---- */
+body .cta,
+body .copy-btn {
+	background: var(--cta-bg);
+	color: var(--cta-fg);
+	box-shadow: var(--cta-glow);
+}
+body .cta:hover,
+body .copy-btn:hover,
+body .copy-btn.copied {
+	background: var(--cta-bg-hover);
+	color: var(--cta-fg);
+}
+/* Secondary hero button: chrome outline on the dark hero band. */
+body .cta-secondary {
+	background: transparent;
+	color: var(--hero-fg);
+	border: 1px solid var(--hero-muted);
+	box-shadow: none;
+}
+body .cta-secondary:hover {
+	background: transparent;
+	color: var(--orange);
+	border-color: var(--orange);
+}
+
+/* ---- Section headings: the maroon-to-orange rule, as on the docs pages ---- */
+body main h2 {
+	padding-bottom: 0.2em;
+	border-bottom: 1px solid transparent;
+	border-image: var(--heading-rule) 1;
+}

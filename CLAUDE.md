@@ -28,7 +28,7 @@ no deadline; a page shipped 90% right is worse than one done right.
 | `src/pages/` | Custom non-Starlight pages: `index.astro` (landing), `contact.astro`, `ask.astro` ("Ask your own AI" — hands visitors a prompt pointing their AI at `/llms-full.txt`). |
 | `src/components/Header.astro` | Starlight header override adding the shared Home / Documentation / Safety / Contact nav (+ `MobileMenuFooter.astro`). |
 | `src/routeData.ts` | The site-wide notification banner. Edit `BANNER_CONTENT` / flip `BANNER_ENABLED` there — nothing else to touch. |
-| `src/styles/gruvbox.css` | The theme (Gruvbox light/dark; Inter body, Space Grotesk headings). |
+| `src/styles/theme.css` | The docs theme ("Heat": dark grey / chrome / orange, maroon only as a ground or gradient end; Inter body, Space Grotesk headings). `src/styles/site.css` carries the same palette for the standalone pages — change both together. |
 | `astro.config.mjs` | Starlight config: sidebar, edit-link, llms-txt plugin, fonts, and the old-Docsify hash-redirect shim (its slug rule is documented inline — keep it intact). |
 | `public/files/` | Downloadable binaries (`.stl`, `.pdf`, `.ods`, `.zip`) served at `/files/…`. |
 | `public/_redirects` | Cloudflare Pages 301s. **Every page rename or merge adds a line here.** |

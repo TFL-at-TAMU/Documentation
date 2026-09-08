@@ -1,10 +1,11 @@
 ---
 // The Fab Lab contact page — a standalone Astro page (NOT a Starlight doc).
-// Same Gruvbox shell + top bar as src/pages/index.astro. Spec (owner-approved
+// Same shell + top bar as src/pages/index.astro (palette: src/styles/site.css). Spec (owner-approved
 // during the Starlight migration): a prominent Discord CTA
 // front-and-center, people cards with visible placeholders (never fake data),
 // and a location/hours section reusing the landing-page copy.
 import SiteBanner from '../components/SiteBanner.astro';
+import '../styles/site.css';
 ---
 
 <!doctype html>
@@ -134,31 +135,7 @@ import SiteBanner from '../components/SiteBanner.astro';
 </html>
 
 <style is:global>
-	/* ---- Gruvbox palette (kept in sync with the docs site / landing page) ---- */
-	:root[data-theme='dark'] {
-		--bg: #282828;
-		--bg-soft: #32302f;
-		--bg-card: #3c3836;
-		--fg: #ebdbb2;
-		--fg-muted: #a89984;
-		--border: #504945;
-		--accent: #fabd2f;
-		--accent-2: #fe8019;
-		--discord-blurple: #5865f2;
-		--discord-blurple-hover: #4752c4;
-	}
-	:root[data-theme='light'] {
-		--bg: #fbf1c7;
-		--bg-soft: #f2e5bc;
-		--bg-card: #f9f5d7;
-		--fg: #3c3836;
-		--fg-muted: #7c6f64;
-		--border: #d5c4a1;
-		--accent: #b57614;
-		--accent-2: #af3a03;
-		--discord-blurple: #5865f2;
-		--discord-blurple-hover: #454fbf;
-	}
+	/* Palette: src/styles/site.css (imported above). */
 
 	* {
 		box-sizing: border-box;
@@ -190,7 +167,6 @@ import SiteBanner from '../components/SiteBanner.astro';
 
 	/* ---- Top bar ---- */
 	.topbar {
-		background: var(--bg-soft);
 		border-bottom: 1px solid var(--border);
 	}
 	.topbar-inner {
@@ -233,8 +209,6 @@ import SiteBanner from '../components/SiteBanner.astro';
 	.hero {
 		text-align: center;
 		padding: 2.5rem 1.5rem 2.25rem;
-		border-bottom: 1px solid var(--border);
-		background: var(--bg-soft);
 	}
 	.hero h1 {
 		font-family: 'Space Grotesk', sans-serif;
