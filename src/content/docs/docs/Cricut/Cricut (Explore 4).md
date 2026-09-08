@@ -36,7 +36,7 @@ The controls you'll actually use are the four buttons on the right-hand side —
 The button lights tell you what the machine is waiting for. The **Power** button glows white when it's on, **blue** once it's connected over Bluetooth, purple while it updates, and red on an error. The **Load** and **Go** buttons flash white when it's your turn to press them.
 
 :::note[Staff note — Cricut lead]
-The machine has a cover-release button on its left side that Cricut's own diagram above doesn't label or number. Replace this diagram with a lab photo that shows it, and update the "open the cover" instruction in step 4 below to match.
+The machine has a cover-release button on its left side that Cricut's own diagram above doesn't label or number. Replace this diagram with a lab photo that shows it, and correct step 2 of Operating below if the release works differently than described.
 :::
 
 ## Setting up Design Space
@@ -53,23 +53,25 @@ Either way, the machine connects over **Bluetooth**, so turn Bluetooth on and ke
 
 1. Press the **Power button (6)** on the right side of the machine. It glows white when the machine is on, and turns blue once your computer connects.
 
-2. Open your project in Design Space, or start a new one. When it's ready to cut, click **Make** in the top right.
+2. Open the machine's cover — press the **release button on the left side** of the machine (the one with the raised ridges) and lift. The cover has to be open to reach the tool clamps and to load a mat.
 
-3. Choose how your material loads. Pick **On Mat** for almost everything — vinyl, iron-on, paper, cardstock. Pick **Without Mat** only for Cricut Smart Materials.
+3. Open your project in Design Space, or start a new one. When it's ready to cut, click **Make** in the top right.
+
+4. Choose how your material loads. Pick **On Mat** for almost everything — vinyl, iron-on, paper, cardstock. Pick **Without Mat** only for Cricut Smart Materials.
 
    ![Design Space asking "How will you load your materials?", with On Mat and Without Mat options](../assets/images/the_fab_lab_cricut_o_ead4ec9c77.png)
 
    Then confirm the **mat size** matches the physical mat you're holding — a 12 in × 12 in mat needs the 12 in × 12 in setting, or your design will be cut in the wrong place.
 
-4. Put your material on the mat. Peel the clear plastic film off the mat and **keep it somewhere safe** — it goes back on at the end to protect the adhesive. Press the material down firmly, lined up with the same corner Design Space shows it in.
+5. Put your material on the mat. Peel the clear plastic film off the mat and **keep it somewhere safe** — it goes back on at the end to protect the adhesive. Press the material down firmly, lined up with the same corner Design Space shows it in.
 
-5. Wait for Design Space to connect to the machine — the top of the screen will name it, like **Explore 4 : 0364 Bluetooth**. If it doesn't find the machine, see [Common problems](#common-problems).
+6. Wait for Design Space to connect to the machine — the top of the screen will name it, like **Explore 4 : 0364 Bluetooth**. If it doesn't find the machine, see [Common problems](#common-problems).
 
-6. Set your **base material**. Design Space suggests a few, but the exact material matters — it sets the blade pressure — so click **Browse All Materials** and search for what you're actually cutting.
+7. Set your **base material**. Design Space suggests a few, but the exact material matters — it sets the blade pressure — so click **Browse All Materials** and search for what you're actually cutting.
 
    ![The Set Base Material step in Design Space, with a material picker and a Browse All Materials link](../assets/images/the_fab_lab_cricut_o_b8e7f6d2f0.png)
 
-7. Load the tools Design Space asks for. It shows you exactly what goes in each clamp — usually nothing in **Clamp A** and the fine-point blade in **Clamp B**.
+8. Load the tools Design Space asks for. It shows you exactly what goes in each clamp — usually nothing in **Clamp A** and the fine-point blade in **Clamp B**.
 
    ![Design Space's three Make steps: set base material, load tools and material, press Go](../assets/images/the_fab_lab_cricut_o_61591f4341.png)
 
@@ -77,16 +79,16 @@ Either way, the machine connects over **Bluetooth**, so turn Bluetooth on and ke
 
    ![Clamp A and Clamp B closed, with the blade housing seated in Clamp B](../assets/images/the_fab_lab_cricut_o_0c722af3ea.jpeg) ![Clamp B open with the blade housing removed](../assets/images/the_fab_lab_cricut_o_43aa47aac4.jpeg)
 
-8. Load the mat. Hold it flat against the **material guides (11)** and push it up against the rollers, then press the flashing **Load button (7)**. Keep holding the mat until the rollers grip it and pull it in — if you let go early it will feed in crooked and the cut will be off.
+9. Load the mat. Hold it flat against the **material guides (11)** and push it up against the rollers, then press the flashing **Load button (7)**. Keep holding the mat until the rollers grip it and pull it in — if you let go early it will feed in crooked and the cut will be off.
 
-9. Press the flashing **Go button (8)** to start the cut. Stay with the machine while it runs.
+10. Press the flashing **Go button (8)** to start the cut. Stay with the machine while it runs.
 
 > [!WARNING]
 > Stop the machine with the **Pause button (9)** and get a staff member if you hear grinding or knocking, if the blade is dragging or tearing the material instead of cutting it, or if you smell burning. Don't try to fix a job in progress with your hands in the machine.
 
-10. When the cut finishes, press the **Load/Unload button (7)** again to release the mat.
+11. When the cut finishes, press the **Load/Unload button (7)** again to release the mat.
 
-11. Peel your material off the mat rather than lifting the mat off the material — bending the material away from the mat keeps paper and vinyl from curling and tearing. Put the clear plastic film back on the mat.
+12. Peel your material off the mat rather than lifting the mat off the material — bending the material away from the mat keeps paper and vinyl from curling and tearing. Put the clear plastic film back on the mat.
 
 ## Finishing up
 
