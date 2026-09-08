@@ -86,6 +86,14 @@ including the credentials doc. This rewrites history to purge them. It's disrupt
       [CLAUDE.md](CLAUDE.md) / [REVAMP_PROMPT.md](REVAMP_PROMPT.md): FDM
       Printers, PCB Machines (NeoDen solder stencil), SLA Printers, Workbenches. Then retire the
       `Templates` group and create the shared which-machine page.
+- [ ] **Fix the sidebar title on the stray SLA page** — one page under SLA Printers has a
+      raw markdown image tag as its frontmatter title, so the sidebar renders
+      `![](../../assets/images/elegoo_resin_3d_prin_41a5ce92d6.png)` as a literal entry.
+      Migration damage; fold it into the SLA Printers revamp.
+- [ ] **Pin the manual first in the un-revamped machine groups** — FDM Printers, SLA
+      Printers and Workbenches still have operations/safety pairs rather than a single
+      manual, so there is no page to pin yet. Do it as each machine is revamped
+      (`sidebar.order: 1`, see `DOCS_FORMAT.md`).
 - [ ] **Rename the remaining "Learning Assignments" to "Activities"** — the Cricut
       revamp renamed the group and `DOCS_FORMAT.md` now makes `Activities/` the
       standard. 3D Scanner, Laser Cutter, and CNC Mill still use the old naming;
