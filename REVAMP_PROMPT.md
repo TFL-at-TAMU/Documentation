@@ -29,13 +29,16 @@ of this project):**
    content is genuinely better served another way (it says when).
 3. The finished pages under `src/content/docs/docs/`, and imitate them rather
    than reinventing: **the 3D Scanner trio** (manual + "How 3D Scanning Works"
-   background page + lean assignment) is the gold standard for the end state;
-   the **Laser Cutter (Glowforge)**, **CNC Mill (Carvera)**, and **Solder
-   Reflow Oven** pages are also done and worth studying.
+   background page + lean activity) is the gold standard for the end state;
+   the **Laser Cutter (Glowforge)**, **CNC Mill (Carvera)**, **Solder Reflow
+   Oven**, and **Cricut (Explore 4)** pages are also done and worth studying —
+   the Cricut is the first to use the `Activities/` naming.
 
 **What to produce for this machine:** merge its operations + safety manuals
-into one machine page per the standard; slim any learning assignments to pure
-exercises (teaching content goes in the manual or a shared background page);
+into one machine page per the standard; move its guided exercises into an
+`Activities/` subfolder, each page named for what the student makes (they're
+called **activities** now, not "learning assignments") and trimmed so the
+reusable teaching content lives in the manual or a shared background page;
 clean up the Google-Docs export damage (paragraphs turned into `##` headings,
 `[[a]]` comment markers, google-redirect URLs, metadata blocks); add
 `public/_redirects` 301s for every retired URL; repoint inbound links. If the
@@ -77,7 +80,7 @@ public repo (credentials, IT/networking internals, service manuals — those
 live in Google Docs).
 
 **Already done (don't redo):** Laser Cutter · 3D Scanner · CNC Mill · Solder
-Reflow Oven · NeoDen Pick & Place. **Everything else** is fair game per the
+Reflow Oven · NeoDen Pick & Place · Cricut. **Everything else** is fair game per the
 remaining list in `CLAUDE.md`.
 
 **Machine-specific notes for this session (may be empty):**

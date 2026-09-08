@@ -4,7 +4,7 @@ Instructions for restructuring the TAMU Fab Lab machine documentation. The site 
 
 ## Background
 
-The existing docs were written in Google Docs by multiple employees and exported to Markdown, leaving conversion artifacts (stray headers, broken formatting, inconsistent structure). Separate "operations manual" and "safety manual" files exist per machine. Those pairs are being replaced: **one manual page per machine**, with the safety content integrated inline at the point of hazard. Everything else a machine has — learning assignments, activity pages, model pages — stays as its own pages alongside the manual; assignments follow the lighter pattern in the "Learning assignments" section below.
+The existing docs were written in Google Docs by multiple employees and exported to Markdown, leaving conversion artifacts (stray headers, broken formatting, inconsistent structure). Separate "operations manual" and "safety manual" files exist per machine. Those pairs are being replaced: **one manual page per machine**, with the safety content integrated inline at the point of hazard. Everything else a machine has — activities, model pages — stays as its own pages alongside the manual; activities follow the lighter pattern in the "Activities" section below.
 
 ## Files, frontmatter, and URLs
 
@@ -13,7 +13,8 @@ The existing docs were written in Google Docs by multiple employees and exported
   ```
   docs/Laser Cutter/
     Laser Cutter (Glowforge Pro).md   ← the merged manual (this standard)
-    Glowforge CO2 Laser Learning Assignment.md   ← unchanged
+    Activities/
+      Business Card.md                ← the machine's activities
   ```
 
   Name the manual file after the page title so the URL matches it.
@@ -76,22 +77,25 @@ Regardless of structure, do **not** include:
 - Machine-specific facts that are unknown or lab-configuration-dependent go in **[bracketed placeholders]** so staff can fill them in — never invent locations, settings, or account details.
 - "Which machine should I use" guidance lives in one shared page that machine pages link to — don't duplicate it per machine. (Approved materials are the opposite: listed inline on each machine's page.)
 
-## Learning assignments
+## Activities
 
-Machines get **multiple assignments**, so an assignment is an exercise, not a textbook — teaching content baked into one assignment either gets duplicated by the others or turns "Assignment 1" into a silent prerequisite. The pattern:
+Guided exercises are called **activities**, not "learning assignments" — students aren't being graded, and "assignment" made them read as coursework. Each machine's activities live in an `Activities/` subfolder, and each page is named for what you make (`Vinyl Sticker.md`, `Gable Box.md`), not for the machine or a number. Renaming an existing "Learning Assignment(s)" folder or page retires its URL, so it gets a 301 like any other rename.
 
-- **An assignment page contains:** a one-line goal, "read these first" pointers, the task itself, and any hints. Keep it short.
-- **Teaching content lives where it's reusable:** operating reference (settings, mode selection) belongs in the manual; substantial conceptual/background material gets its own page next to the manual (e.g. `3D Scanner/How 3D Scanning Works.md`), shared by all of that machine's assignments; a mere paragraph's worth folds into the manual's intro instead of becoming a page.
-- Assignments follow the same mechanical rules as every page (frontmatter title, callout meanings, site-URL links, no metadata blocks) but not the machine-page section structure.
+Machines get **multiple activities**, so an activity is an exercise, not a textbook — teaching content baked into one activity either gets duplicated by the others or turns "Activity 1" into a silent prerequisite. The pattern:
+
+- **An activity page contains:** a one-line goal, "read this first" pointers, the task itself, and any hints. Keep it short. Step-by-step walkthroughs are fine where the machine's software is the hard part — but the operating reference behind them still belongs in the manual.
+- **Teaching content lives where it's reusable:** operating reference (settings, mode selection) belongs in the manual; substantial conceptual/background material gets its own page next to the manual (e.g. `3D Scanner/How 3D Scanning Works.md`), shared by all of that machine's activities; a mere paragraph's worth folds into the manual's intro instead of becoming a page.
+- Activities follow the same mechanical rules as every page (frontmatter title, callout meanings, site-URL links, no metadata blocks) but not the machine-page section structure.
 
 ## Migration checklist per page
 
-1. Strip Google Docs export artifacts: stray `##` on non-headings, bold-as-heading lines, empty headings, escaped characters, redundant title repetition, stale frontmatter keys.
-2. Merge the machine's safety manual into the machine page as callouts per the rules above; confirm every safety item is either in the top hazards block or inline, then delete the safety manual file.
-3. Rewrite sections to the structure above; move "not for" content to the which-machine page.
-4. Add `public/_redirects` entries for the retired operation- and safety-manual URLs → the merged page.
-5. Check links: every internal link uses the `/docs/…/` URL form and resolves on the built site.
-6. Build locally if you can (`npm ci && npx astro build`) — it catches broken images and malformed frontmatter. If you're editing from the GitHub web editor, the PR's Cloudflare build check does the same job.
+1. Move the machine's activities into an `Activities/` subfolder, renaming them for what the student makes; add a 301 for each retired URL.
+2. Strip Google Docs export artifacts: stray `##` on non-headings, bold-as-heading lines, empty headings, escaped characters, redundant title repetition, stale frontmatter keys.
+3. Merge the machine's safety manual into the machine page as callouts per the rules above; confirm every safety item is either in the top hazards block or inline, then delete the safety manual file.
+4. Rewrite sections to the structure above; move "not for" content to the which-machine page.
+5. Add `public/_redirects` entries for the retired operation- and safety-manual URLs → the merged page.
+6. Check links: every internal link uses the `/docs/…/` URL form and resolves on the built site.
+7. Build locally if you can (`npm ci && npx astro build`) — it catches broken images and malformed frontmatter. If you're editing from the GitHub web editor, the PR's Cloudflare build check does the same job.
 
 ## Rollout notes (one-time, not per page)
 

@@ -83,9 +83,21 @@ including the credentials doc. This rewrites history to purge them. It's disrupt
 ## Content (owner-led, separate effort)
 
 - [ ] **Machine-page revamps** — remaining machines per the list in
-      [CLAUDE.md](CLAUDE.md) / [REVAMP_PROMPT.md](REVAMP_PROMPT.md): Cricut, FDM
+      [CLAUDE.md](CLAUDE.md) / [REVAMP_PROMPT.md](REVAMP_PROMPT.md): FDM
       Printers, PCB Machines (NeoDen solder stencil), SLA Printers, Workbenches. Then retire the
       `Templates` group and create the shared which-machine page.
+- [ ] **Rename the remaining "Learning Assignments" to "Activities"** — the Cricut
+      revamp renamed the group and `DOCS_FORMAT.md` now makes `Activities/` the
+      standard. 3D Scanner, Laser Cutter, and CNC Mill still use the old naming;
+      rename their folders/pages and add a 301 per retired URL. Update the
+      "Learning Assignments" bullet on `docs/index.md` in the same sweep so the
+      user-facing wording changes all at once.
+- [ ] **Supply the missing Gable Box canvas screenshot** — the Google-Docs export of
+      that activity produced a 1×1 transparent PNG where the "how the design should
+      look on the canvas" image belonged (and the folding overview reused it). The
+      broken file is deleted; drop a real screenshot into
+      `src/content/docs/docs/assets/images/` and reference it from
+      `Cricut/Activities/Gable Box.md`.
 - [ ] **Content structure / information architecture** — Diátaxis-style restructure of
       the manuals. Grain decisions still open: 3D-model stub pages (merge vs.
       standalone), Electric Workbench manual (combined vs. per-instrument).
