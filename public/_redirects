@@ -41,3 +41,10 @@
 
 # Studio Standards page removed; send its old URL to the docs index.
 /docs/studio-standards/ /docs/ 301
+
+# Cricut: operations + safety manuals merged into one machine page, and the
+# "Learning Assignments" group renamed to "Activities" (see DOCS_FORMAT.md).
+/docs/cricut/operations--safety-manuals/the-fab-lab-cricut-operations-manual/ /docs/cricut/cricut-explore-4/ 301
+/docs/cricut/operations--safety-manuals/the-fab-lab-cricut-safety-manual/ /docs/cricut/cricut-explore-4/ 301
+/docs/cricut/learning-assignments/cricut-explore-4-assignment/ /docs/cricut/activities/vinyl-sticker/ 301
+/docs/cricut/learning-assignments/cricut-explore-4-assignment-_-box/ /docs/cricut/activities/gable-box/ 301
