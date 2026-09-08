@@ -25,7 +25,7 @@ standards for a university makerspace. Built with [Astro](https://astro.build/) 
 - Static output: everything renders to HTML at build time (no client-side rendering of content).
 - GitHub-style `> [!NOTE]` callouts via `remark-github-blockquote-alert`.
 - Build-time internal-link validation via `starlight-links-validator` (broken links fail the build).
-- Gruvbox light/dark theme (`src/styles/gruvbox.css`), Inter (body) / Space Grotesk (headings).
+- "Heat" light/dark theme — dark grey, chrome, orange, with Aggie maroon as an accent (`src/styles/theme.css` for docs, `src/styles/site.css` for the standalone pages), Inter (body) / Space Grotesk (headings).
 - Starlight's sidebar autogenerates from the content folder tree — no separate sidebar file to
   maintain.
 
