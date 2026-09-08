@@ -1,5 +1,7 @@
 ---
 title: Laser Cutter (Glowforge Pro)
+sidebar:
+  order: 1
 ---
 
 The Glowforge Pro cuts and engraves flat sheet materials — wood, acrylic, cardboard, and more — by tracing your design with a 45W CO₂ laser. It's the fastest way in the lab to go from a 2D drawing to a physical part, and it excels at precise cuts, interlocking parts, enclosures, signage, and surface engraving (including engraving on approved metals). Most jobs finish in minutes. It accepts sheets up to about 20.4" × 12", cuts within a roughly 19.5" × 11" area, and cuts reliably through stock up to about 1/4" thick. If you're not sure this is the right machine for your project, ask a staff member.

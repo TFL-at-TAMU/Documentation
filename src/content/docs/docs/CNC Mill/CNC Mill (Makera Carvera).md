@@ -1,5 +1,7 @@
 ---
 title: CNC Mill (Makera Carvera)
+sidebar:
+  order: 1
 ---
 
 The Makera Carvera is an enclosed desktop CNC mill that cuts detailed parts from wood, hard plastics, and soft metals. Use it for precision-milled parts, pockets and profiles, engraving, and, with the optional 4th axis, rotational work on cylindrical stock. If you're not sure this is the right machine for your project, ask a staff member.
