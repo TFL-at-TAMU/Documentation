@@ -33,7 +33,15 @@ export default defineConfig({
 				// errorOnInvalidHashes is off because pre-revamp pages still carry
 				// dead Google-Docs comment anchors (#cmnt1 etc.); the per-machine
 				// revamps strip those — flip it back on once they're done.
-				starlightLinksValidator({ errorOnInvalidHashes: false }),
+				starlightLinksValidator({
+					errorOnInvalidHashes: false,
+					// The validator only knows Starlight-managed routes, so links from docs
+					// pages to the custom pages in src/pages/ fail as "invalid link to custom
+					// page" even though they resolve. These two are linked from docs/index.md.
+					// If a custom page is ever removed, remove its line here too — nothing else
+					// will catch the dead link.
+					exclude: ['/ask/', '/contact/'],
+				}),
 				starlightLlmsTxt({
 					projectName: 'The Fab Lab — Texas A&M University makerspace documentation',
 					description:
@@ -149,7 +157,6 @@ export default defineConfig({
 				{ label: 'Laser Cutter', collapsed: true, items: [{ autogenerate: { collapsed: true, directory: 'docs/Laser Cutter' } }] },
 				{ label: 'PCB Machines', collapsed: true, items: [{ autogenerate: { collapsed: true, directory: 'docs/PCB Machines' } }] },
 				{ label: 'SLA Printers', collapsed: true, items: [{ autogenerate: { collapsed: true, directory: 'docs/SLA Printers' } }] },
-				{ label: 'Templates', collapsed: true, items: [{ autogenerate: { collapsed: true, directory: 'docs/Templates' } }] },
 				{ label: 'Workbenches', collapsed: true, items: [{ autogenerate: { collapsed: true, directory: 'docs/Workbenches' } }] },
 			],
 			components: {
