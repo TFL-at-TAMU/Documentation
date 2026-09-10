@@ -48,3 +48,9 @@
 /docs/cricut/operations--safety-manuals/the-fab-lab-cricut-safety-manual/ /docs/cricut/cricut-explore-4/ 301
 /docs/cricut/learning-assignments/cricut-explore-4-assignment/ /docs/cricut/activities/vinyl-sticker/ 301
 /docs/cricut/learning-assignments/cricut-explore-4-assignment-_-box/ /docs/cricut/activities/gable-box/ 301
+
+# Bambu Lab X1C: operations + safety manuals merged into one machine page, and the
+# "Learning Assignments" group renamed to "Activities" (see DOCS_FORMAT.md).
+/docs/fdm-printers/bambu-labs-x1c-3d-printer/operations--safety-manuals/bambu-lab-x1c-3d-printer-operation-manual/ /docs/fdm-printers/bambu-labs-x1c-3d-printer/fdm-3d-printer-bambu-lab-x1-carbon/ 301
+/docs/fdm-printers/bambu-labs-x1c-3d-printer/operations--safety-manuals/bambu-lab-x1c-3d-printer-safety-manual/ /docs/fdm-printers/bambu-labs-x1c-3d-printer/fdm-3d-printer-bambu-lab-x1-carbon/ 301
+/docs/fdm-printers/bambu-labs-x1c-3d-printer/learning-assignments/bambu-x1c-3d-printer-learning-assignment/ /docs/fdm-printers/bambu-labs-x1c-3d-printer/activities/lego-flower/ 301
