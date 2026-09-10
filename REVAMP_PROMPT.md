@@ -80,7 +80,7 @@ public repo (credentials, IT/networking internals, service manuals — those
 live in Google Docs).
 
 **Already done (don't redo):** Laser Cutter · 3D Scanner · CNC Mill · Solder
-Reflow Oven · NeoDen Pick & Place · Cricut. **Everything else** is fair game per the
+Reflow Oven · NeoDen Pick & Place · Cricut · Bambu Lab X1C. **Everything else** is fair game per the
 remaining list in `CLAUDE.md`.
 
 **Machine-specific notes for this session (may be empty):**
