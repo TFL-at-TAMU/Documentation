@@ -90,22 +90,28 @@ import '../styles/site.css';
 			<h2>The Team</h2>
 			<div class="people">
 				<div class="person-card">
+					<div class="person-name">Paul Deere</div>
+					<div class="person-role">Founding Professor</div>
+					<ul class="person-links">
+						<li><a href="mailto:paul.deere@tamu.edu">paul.deere@tamu.edu</a></li>
+					</ul>
+					<!-- TODO: LinkedIn — owner is supplying the URL. -->
+				</div>
+				<div class="person-card">
 					<div class="person-name">Jimmy Walker</div>
-					<div class="person-role">President</div>
-					<div class="person-contact">Contact info coming soon</div>
-					<!-- TODO: real contact details -->
+					<div class="person-role">Lead</div>
+					<ul class="person-links">
+						<li><a href="mailto:james_walker83@tamu.edu">james_walker83@tamu.edu</a></li>
+					</ul>
+					<!-- TODO: LinkedIn — owner is supplying the URL. -->
 				</div>
 				<div class="person-card">
 					<div class="person-name">Aidan Stewart</div>
-					<div class="person-role">Vice President</div>
-					<div class="person-contact">Contact info coming soon</div>
-					<!-- TODO: real contact details -->
-				</div>
-				<div class="person-card">
-					<div class="person-name">Paul Deere</div>
-					<div class="person-role">Sponsoring Professor</div>
-					<div class="person-contact">Contact info coming soon</div>
-					<!-- TODO: real contact details -->
+					<div class="person-role">Deputy Lead</div>
+					<ul class="person-links">
+						<li><a href="mailto:aidanstewart05@tamu.edu">aidanstewart05@tamu.edu</a></li>
+					</ul>
+					<!-- TODO: LinkedIn — owner is supplying the URL. -->
 				</div>
 			</div>
 
@@ -290,12 +296,23 @@ import '../styles/site.css';
 		font-size: 0.9rem;
 		margin-top: 0.15rem;
 	}
-	.person-contact {
-		margin-top: 0.75rem;
+	.person-links {
+		list-style: none;
+		margin: 0.75rem 0 0;
+		padding: 0;
 		font-size: 0.85rem;
-		font-style: italic;
-		color: var(--fg-muted);
-		opacity: 0.75;
+	}
+	.person-links li + li {
+		margin-top: 0.3rem;
+	}
+	.person-links a {
+		/* Addresses are longer than the narrowest card column, so let them wrap
+		   rather than push the grid wider. */
+		overflow-wrap: anywhere;
+		text-decoration: none;
+	}
+	.person-links a:hover {
+		text-decoration: underline;
 	}
 
 	.quick-facts {
