@@ -84,8 +84,8 @@ including the credentials doc. This rewrites history to purge them. It's disrupt
 
 - [ ] **Machine-page revamps** — remaining machines per the list in
       [CLAUDE.md](CLAUDE.md) / [REVAMP_PROMPT.md](REVAMP_PROMPT.md): FDM
-      Printers, PCB Machines (NeoDen solder stencil), SLA Printers, Workbenches. Then retire the
-      `Templates` group and create the shared which-machine page.
+      Printers, PCB Machines (NeoDen solder stencil), SLA Printers, Workbenches. Then
+      create the shared which-machine page. (The `Templates` group is already retired.)
 - [ ] **Fix the sidebar title on the stray SLA page** — one page under SLA Printers has a
       raw markdown image tag as its frontmatter title, so the sidebar renders
       `![](../../assets/images/elegoo_resin_3d_prin_41a5ce92d6.png)` as a literal entry.
@@ -97,9 +97,9 @@ including the credentials doc. This rewrites history to purge them. It's disrupt
 - [ ] **Rename the remaining "Learning Assignments" to "Activities"** — the Cricut
       revamp renamed the group and `DOCS_FORMAT.md` now makes `Activities/` the
       standard. 3D Scanner, Laser Cutter, and CNC Mill still use the old naming;
-      rename their folders/pages and add a 301 per retired URL. Update the
-      "Learning Assignments" bullet on `docs/index.md` in the same sweep so the
-      user-facing wording changes all at once.
+      rename their folders/pages and add a 301 per retired URL. `docs/index.md` already
+      calls them activities and carries a parenthetical noting the leftover "Learning
+      Assignments" sidebar labels — drop that parenthetical once the last one is renamed.
 - [ ] **Supply the missing Gable Box canvas screenshot** — the Google-Docs export of
       that activity produced a 1×1 transparent PNG where the "how the design should
       look on the canvas" image belonged (and the folding overview reused it). The

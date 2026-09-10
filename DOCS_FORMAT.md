@@ -119,7 +119,7 @@ Machines get **multiple activities**, so an activity is an exercise, not a textb
 - [ ] Enable `lastUpdated: true` in `astro.config.mjs` — and verify the dates are right on the deployed site, not just locally (Cloudflare's build clone depth could affect git-derived dates).
 - [ ] Create the load-bearing shared page: `/docs/which-machine/`.
 - [ ] Consider adding the `starlight-links-validator` plugin so builds fail on broken internal links (there are ~35 known-dead legacy links to clean up or remove first).
-- [ ] Retire the two master templates under `docs/Templates/` once this standard replaces them.
+- [x] Retire the two master templates under `docs/Templates/` once this standard replaces them. (Done — this file is the format standard now; the templates are in git history.)
 
 ---
 

@@ -54,3 +54,9 @@
 /docs/fdm-printers/bambu-labs-x1c-3d-printer/operations--safety-manuals/bambu-lab-x1c-3d-printer-operation-manual/ /docs/fdm-printers/bambu-labs-x1c-3d-printer/fdm-3d-printer-bambu-lab-x1-carbon/ 301
 /docs/fdm-printers/bambu-labs-x1c-3d-printer/operations--safety-manuals/bambu-lab-x1c-3d-printer-safety-manual/ /docs/fdm-printers/bambu-labs-x1c-3d-printer/fdm-3d-printer-bambu-lab-x1-carbon/ 301
 /docs/fdm-printers/bambu-labs-x1c-3d-printer/learning-assignments/bambu-x1c-3d-printer-learning-assignment/ /docs/fdm-printers/bambu-labs-x1c-3d-printer/activities/lego-flower/ 301
+
+# Master manual templates retired — DOCS_FORMAT.md is the format standard now,
+# and it lives in the repo rather than on the public site.
+/docs/templates/fab-lab-machine-operation-manual-master-template/ /docs/ 301
+/docs/templates/fab-lab-machine-safety-manual-master-template/ /docs/ 301
+/docs/templates/ /docs/ 301
