@@ -53,8 +53,10 @@ including the credentials doc. This rewrites history to purge them. It's disrupt
 
 - [ ] **Machine-page revamps** — remaining machines per the list in
       [CLAUDE.md](CLAUDE.md) / [REVAMP_PROMPT.md](REVAMP_PROMPT.md): FDM
-      Printers, PCB Machines (NeoDen solder stencil), SLA Printers, Workbenches. Then
-      create the shared which-machine page. (The `Templates` group is already retired.)
+      Printers, PCB Machines (NeoDen solder stencil), SLA Printers, Workbenches.
+      (The `Templates` group is already retired, and the shared
+      [Which Machine?](src/content/docs/docs/Which%20Machine.md) page now exists —
+      revisit its entry for each machine as that machine is revamped.)
 - [ ] **Pin the manual first in the un-revamped machine groups** — FDM Printers, SLA
       Printers and Workbenches still have operations/safety pairs rather than a single
       manual, so there is no page to pin yet. Do it as each machine is revamped

@@ -32,6 +32,9 @@ You are not expected to already know how any of this works. Nobody did the first
 
 ## What's in here
 
+- **[Which Machine?](/docs/which-machine/)** — a directory of every machine in the lab
+  and what it's good at. Start here if you know what you want to make but not what to
+  make it on.
 - **Machine manuals** — one page per machine, covering what it's for, its hazards, how to
   set up a job, and how to run it. Safety lives in the manual itself, at the step where
   it matters, rather than in a separate document you'd have to remember to open.

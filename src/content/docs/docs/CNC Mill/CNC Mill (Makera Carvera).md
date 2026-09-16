@@ -4,7 +4,7 @@ sidebar:
   order: 1
 ---
 
-The Makera Carvera is an enclosed desktop CNC mill that cuts detailed parts from wood, hard plastics, and soft metals. Use it for precision-milled parts, pockets and profiles, engraving, and, with the optional 4th axis, rotational work on cylindrical stock. If you're not sure this is the right machine for your project, ask a staff member.
+The Makera Carvera is an enclosed desktop CNC mill that cuts detailed parts from wood, hard plastics, and soft metals. Use it for precision-milled parts, pockets and profiles, engraving, and, with the optional 4th axis, rotational work on cylindrical stock. If you're not sure this is the right machine for your project, see [Which Machine?](/docs/which-machine/) or ask a staff member.
 
 :::danger[LASER SAFETY TRAINING REQUIRED]
 The Carvera includes a **Class 4 laser**. TAMU laser safety training and laser goggles are required before operating it — never run the laser without both.

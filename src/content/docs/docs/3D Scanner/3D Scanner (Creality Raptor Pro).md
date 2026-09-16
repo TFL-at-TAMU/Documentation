@@ -4,8 +4,7 @@ sidebar:
   order: 1
 ---
 
-The Creality Raptor Pro is a handheld 3D scanner that captures the geometry — and optionally the color — of real-world objects and turns them into texture-mapped 3D mesh models. Use it for reverse engineering, digitizing freeform shapes like body panels or organic forms, and full-surface capture where calipers and manual measurement are impractical. It handles objects from roughly coin-sized up to about 4 m (with markers), with a practical accuracy of about 0.05–0.2 mm depending on mode — far coarser than calipers, so it's the tool for complex surfaces, not precision measurement of simple features. If you're not sure this is the right tool for your project, ask a staff member.
-<!-- TODO: link /docs/which-machine/ at the end of the intro once that page exists -->
+The Creality Raptor Pro is a handheld 3D scanner that captures the geometry — and optionally the color — of real-world objects and turns them into texture-mapped 3D mesh models. Use it for reverse engineering, digitizing freeform shapes like body panels or organic forms, and full-surface capture where calipers and manual measurement are impractical. It handles objects from roughly coin-sized up to about 4 m (with markers), with a practical accuracy of about 0.05–0.2 mm depending on mode — far coarser than calipers, so it's the tool for complex surfaces, not precision measurement of simple features. If you're not sure this is the right tool for your project, see [Which Machine?](/docs/which-machine/) or ask a staff member.
 
 > [!WARNING]
 > **Handle the scanner with extreme care.** It's a precision optical instrument: don't drop it, strain the cables, or touch the glass. If you smudge the glass, clean it with the **included microfiber cloth** only.
