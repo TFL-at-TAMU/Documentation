@@ -3,36 +3,12 @@
 > **New here / picking this up cold?** Start with [CLAUDE.md](CLAUDE.md) — project
 > orientation, hard rules, workflow, and infra pointers.
 
-## Owner setup (one-time, needs repo admin — created by the maintainability PR)
+## Owner setup (one-time, needs repo admin)
 
-Each of these is a manual step GitHub only lets a repo admin do; the code side is
-already in place. Do them after the maintainability PR merges.
+The Claude review credential and the required `build` check are both in place.
+One admin task is still outstanding.
 
-### 1. Add the Claude credential (turns the review bot on)
-
-The review workflow (`.github/workflows/claude-review.yml`) skips itself until one of
-these secrets exists, so student PRs never see a red X in the meantime.
-
-- On your own machine run `claude setup-token` — it mints a token from your existing
-  Claude subscription (no separate API billing).
-- In the repo: **Settings → Secrets and variables → Actions → New repository secret**.
-  Name it `CLAUDE_CODE_OAUTH_TOKEN`, paste the token, save.
-- (Alternative, if you'd rather bill a metered API account: name the secret
-  `ANTHROPIC_API_KEY` and paste an API key from console.anthropic.com instead. The
-  workflow accepts either.)
-
-### 2. Make `build` a required check (blocks PRs that break the site)
-
-- **Settings → Rules → Rulesets** → open the ruleset protecting `main` (the one that
-  already requires `check-file-size`). If none exists, **New ruleset → New branch
-  ruleset**, target branch `main`.
-- Enable **Require status checks to pass**, click **Add checks**, and add **`build`**
-  (it appears in the list after the build workflow has run on at least one PR — open
-  this repo's first PR, let CI run, then come back). Leave `check-file-size` checked too.
-- Save. Now a red build blocks merge; optionally add `Claude review` here as well if you
-  ever want the bot's pass to be required (not recommended — it's meant to advise, not gate).
-
-### 3. History scrub (removes the old staff files from git history)
+### History scrub (removes the old staff files from git history)
 
 The staff trees were deleted from the working tree, but old commits still contain them —
 including the credentials doc. This rewrites history to purge them. It's disruptive
@@ -56,16 +32,9 @@ including the credentials doc. This rewrites history to purge them. It's disrupt
 6. Treat the exposed credentials as burned regardless (rotation was already done), and
    optionally email GitHub Support to purge cached views and any forks.
 
-### 4. Delete the stale `poc/starlight` branch
-
-- [ ] Superseded by the merged migration — **Branches → delete `poc/starlight`** (or
-      `git push origin --delete poc/starlight`).
-
 ## Site wishlist
 
 - [ ] **Lucide icons on sidebar groups** — Starlight-native path via the sidebar config.
-- [ ] **Real contact details** for Jimmy Walker / Aidan Stewart / Paul Deere on
-      `/contact/` (visible placeholders + `TODO` comments are in `src/pages/contact.astro`).
 - [ ] **Sidebar group ordering** — currently alphabetical; decide if curated order
       (e.g. printers first) is worth it.
 - [ ] **"Fancy" safety page** — richer layout for `/safety/`.
@@ -86,10 +55,6 @@ including the credentials doc. This rewrites history to purge them. It's disrupt
       [CLAUDE.md](CLAUDE.md) / [REVAMP_PROMPT.md](REVAMP_PROMPT.md): FDM
       Printers, PCB Machines (NeoDen solder stencil), SLA Printers, Workbenches. Then
       create the shared which-machine page. (The `Templates` group is already retired.)
-- [ ] **Fix the sidebar title on the stray SLA page** — one page under SLA Printers has a
-      raw markdown image tag as its frontmatter title, so the sidebar renders
-      `![](../../assets/images/elegoo_resin_3d_prin_41a5ce92d6.png)` as a literal entry.
-      Migration damage; fold it into the SLA Printers revamp.
 - [ ] **Pin the manual first in the un-revamped machine groups** — FDM Printers, SLA
       Printers and Workbenches still have operations/safety pairs rather than a single
       manual, so there is no page to pin yet. Do it as each machine is revamped
@@ -100,12 +65,6 @@ including the credentials doc. This rewrites history to purge them. It's disrupt
       rename their folders/pages and add a 301 per retired URL. `docs/index.md` already
       calls them activities and carries a parenthetical noting the leftover "Learning
       Assignments" sidebar labels — drop that parenthetical once the last one is renamed.
-- [ ] **Supply the missing Gable Box canvas screenshot** — the Google-Docs export of
-      that activity produced a 1×1 transparent PNG where the "how the design should
-      look on the canvas" image belonged (and the folding overview reused it). The
-      broken file is deleted; drop a real screenshot into
-      `src/content/docs/docs/assets/images/` and reference it from
-      `Cricut/Activities/Gable Box.md`.
 - [ ] **Content structure / information architecture** — Diátaxis-style restructure of
       the manuals. Grain decisions still open: 3D-model stub pages (merge vs.
       standalone), Electric Workbench manual (combined vs. per-instrument).
