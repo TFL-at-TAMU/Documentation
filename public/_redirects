@@ -55,6 +55,10 @@
 /docs/fdm-printers/bambu-labs-x1c-3d-printer/operations--safety-manuals/bambu-lab-x1c-3d-printer-safety-manual/ /docs/fdm-printers/bambu-labs-x1c-3d-printer/fdm-3d-printer-bambu-lab-x1-carbon/ 301
 /docs/fdm-printers/bambu-labs-x1c-3d-printer/learning-assignments/bambu-x1c-3d-printer-learning-assignment/ /docs/fdm-printers/bambu-labs-x1c-3d-printer/activities/lego-flower/ 301
 
+# Laser Cutter: the "Learning Assignments" group renamed to "Activities", and its
+# page renamed for what you make rather than for the machine (see DOCS_FORMAT.md).
+/docs/laser-cutter/learning-assignments/glowforge-co2-laser-learning-assignment/ /docs/laser-cutter/activities/business-card/ 301
+
 # Master manual templates retired — DOCS_FORMAT.md is the format standard now,
 # and it lives in the repo rather than on the public site.
 /docs/templates/fab-lab-machine-operation-manual-master-template/ /docs/ 301
