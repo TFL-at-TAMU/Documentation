@@ -30,6 +30,9 @@ Press the **Pause button (9)** on the right side of the machine — it stops the
 
 ![Diagram of the Cricut Explore 4's controls and indicator lights](../assets/images/the_fab_lab_cricut_o_b7d5067722.png)
 
+![Labeled Picture of the Cricut Explore 4's controls and indicator lights](<img width="2410" height="1084" alt="image" src="https://github.com/user-attachments/assets/6d63a6ef-832d-4129-a0e7-da8b25cb794c" />)
+Button 12 as labeled on the 2nd picture opens the cover of the Cricut.
+
 The controls you'll actually use are the four buttons on the right-hand side — **Power (6)**, **Load/Unload (7)**, **Go (8)**, and **Pause (9)** — plus the two tool clamps behind the cover:
 
 - **Clamp A** holds accessories that draw or score, like the fine-point pen. It's empty for a plain cut.
