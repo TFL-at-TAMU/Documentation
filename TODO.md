@@ -53,7 +53,7 @@ including the credentials doc. This rewrites history to purge them. It's disrupt
 
 - [ ] **Machine-page revamps** — remaining machines per the list in
       [CLAUDE.md](CLAUDE.md) / [REVAMP_PROMPT.md](REVAMP_PROMPT.md): FDM
-      Printers, PCB Machines (NeoDen solder stencil), SLA Printers, Workbenches.
+      Printers, SLA Printers, Workbenches. (All three PCB machines are done.)
       (The `Templates` group is already retired, and the shared
       [Which Machine?](src/content/docs/docs/Which%20Machine.md) page now exists —
       revisit its entry for each machine as that machine is revamped.)
@@ -68,8 +68,7 @@ including the credentials doc. This rewrites history to purge them. It's disrupt
       naming** — hold it until PR #66's content question is settled, then move
       `Learning Assignment/2D Relief Coin/2D Relief Coin.md` to
       `Activities/2D Relief Coin.md` with a 301. The un-revamped machines (Dual Head
-      FDM, NeoDen solder stencil, both SLA printers, Workbenches) get renamed as each
-      one is revamped. `docs/index.md` carries a parenthetical noting the leftover
+      FDM, both SLA printers, Workbenches) get renamed as each one is revamped. `docs/index.md` carries a parenthetical noting the leftover
       "Learning Assignments" sidebar labels — drop it once the last one is renamed.
 - [ ] **Content structure / information architecture** — Diátaxis-style restructure of
       the manuals. Grain decisions still open: 3D-model stub pages (merge vs.

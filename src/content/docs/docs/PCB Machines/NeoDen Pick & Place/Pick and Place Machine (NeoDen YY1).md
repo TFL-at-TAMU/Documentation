@@ -2,7 +2,7 @@
 title: Pick and Place Machine (NeoDen YY1)
 ---
 
-The NeoDen YY1 places surface-mount components onto a circuit board for you. Give it a placement file from your PCB design software and load your parts into its tape feeders, and its vacuum nozzle picks up each component and sets it at the exact coordinates from your design — far faster and steadier than tweezers. It's the middle step of PCB assembly: after [solder paste is stenciled onto the board](/docs/pcb-machines/neoden-solder-stencil/operations--safety-manuals/neoden-fp2636-machine-operation-manual/) and before [the reflow oven](/docs/pcb-machines/novastar-solder-reflow-oven/solder-reflow-oven-ddm-novastar-gf-c2/) melts the paste to lock everything in place. It's built for prototypes, class projects, and small research batches on boards up to **315 mm × 350 mm** — not for production runs, and not for advanced packages (BGA, CSP, flip-chip) that need finer placement than its vision system can deliver. If you're not sure this is the right machine for your project, see [Which Machine?](/docs/which-machine/) or ask a staff member.
+The NeoDen YY1 places surface-mount components onto a circuit board for you. Give it a placement file from your PCB design software and load your parts into its tape feeders, and its vacuum nozzle picks up each component and sets it at the exact coordinates from your design — far faster and steadier than tweezers. It's the middle step of PCB assembly: after [solder paste is stenciled onto the board](/docs/pcb-machines/neoden-solder-stencil/solder-paste-stencil-neoden-fp2636/) and before [the reflow oven](/docs/pcb-machines/novastar-solder-reflow-oven/solder-reflow-oven-ddm-novastar-gf-c2/) melts the paste to lock everything in place. It's built for prototypes, class projects, and small research batches on boards up to **315 mm × 350 mm** — not for production runs, and not for advanced packages (BGA, CSP, flip-chip) that need finer placement than its vision system can deliver. If you're not sure this is the right machine for your project, see [Which Machine?](/docs/which-machine/) or ask a staff member.
 
 > [!WARNING]
 > **A trained staff member must be present** whenever the machine is in use.
@@ -16,7 +16,7 @@ This machine has no emergency-stop button. To stop a running job, tap **Stop** o
 
 ## Before you start
 
-- Your board must already have **lead-free solder paste** applied — that's the [solder paste stencil machine](/docs/pcb-machines/neoden-solder-stencil/operations--safety-manuals/neoden-fp2636-machine-operation-manual/)'s job, done just before this one.
+- Your board must already have **lead-free solder paste** applied — that's the [solder paste stencil machine](/docs/pcb-machines/neoden-solder-stencil/solder-paste-stencil-neoden-fp2636/)'s job, done just before this one.
 - Your board must fit within **315 mm × 350 mm**.
 - Bring your placement file as a **NeoDen YY1–format CSV** — see [Preparing your placement file](#preparing-your-placement-file) below. You'll load it into the machine on an SD card.
 - Every component in your file must be loaded in the machine, in the feeder slot the file says it's in. The [feeder slot chart](https://docs.google.com/spreadsheets/d/18dMiUAIPoFiYq0AChLLP8tyWiuEx4bR4EatctU6wq48/edit?usp=sharing) lists which parts are preloaded where and which slots are free for your own reels.
