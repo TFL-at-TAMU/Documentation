@@ -122,7 +122,8 @@ damage (`##` on paragraphs, `[[a]]` comment markers, google-redirect URLs, metad
 blocks); add `_redirects` 301s for every retired URL; repoint inbound links. The
 **3D Scanner trio** (manual + "How 3D Scanning Works" + lean activity) is the gold
 standard to imitate; Laser Cutter, CNC Mill, Solder Reflow Oven, NeoDen Pick & Place,
-Cricut, and the Bambu Lab X1C are also done.
+Cricut, the Bambu Lab X1C, and the Formlabs Form 3 (with its Form Wash / Form Cure
+as a sibling page) are also done.
 
 Guided exercises are called **activities**, not "learning assignments" — see the
 "Activities" section of `DOCS_FORMAT.md`. Machines revamped before that rename

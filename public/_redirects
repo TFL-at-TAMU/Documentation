@@ -69,3 +69,17 @@
 /docs/templates/fab-lab-machine-operation-manual-master-template/ /docs/ 301
 /docs/templates/fab-lab-machine-safety-manual-master-template/ /docs/ 301
 /docs/templates/ /docs/ 301
+
+# Formlabs Form 3: operations + safety manuals merged into one machine page; the
+# wash/cure operations manual became its own Form Wash and Form Cure page; the
+# cleaning manual split between the two (printer-side post-processing on the
+# machine page, washer/curer cleanup on the wash & cure page); and the
+# "Learning Assignments" group renamed to "Activities" (see DOCS_FORMAT.md).
+/docs/sla-printers/formlabs-form-3-resin-printer/operations--safety-manuals/formlabs-3-resin-printer-operations-manual/ /docs/sla-printers/formlabs-form-3-resin-printer/resin-3d-printer-formlabs-form-3/ 301
+/docs/sla-printers/formlabs-form-3-resin-printer/operations--safety-manuals/formlabs-resin-printer-safety-manual/ /docs/sla-printers/formlabs-form-3-resin-printer/resin-3d-printer-formlabs-form-3/ 301
+/docs/sla-printers/formlabs-form-3-resin-printer/wasing-and-curing-machines/formlabs-cleaning-manual/ /docs/sla-printers/formlabs-form-3-resin-printer/resin-3d-printer-formlabs-form-3/ 301
+/docs/sla-printers/formlabs-form-3-resin-printer/wasing-and-curing-machines/formlabs-washing-machines-operations-manual/ /docs/sla-printers/formlabs-form-3-resin-printer/form-wash-and-form-cure/ 301
+/docs/sla-printers/formlabs-form-3-resin-printer/learning-assignments/formlabs-3-printer-assignment/ /docs/sla-printers/formlabs-form-3-resin-printer/activities/lattice-benchy/ 301
+# The Lattice_Benchy_FCC page existed only to host the STL viewer; the model is
+# now linked from the activity instead.
+/docs/sla-printers/formlabs-form-3-resin-printer/learning-assignments/lattice_benchy_fcc/ /docs/sla-printers/formlabs-form-3-resin-printer/activities/lattice-benchy/ 301

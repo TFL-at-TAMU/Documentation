@@ -54,10 +54,10 @@ The lab has two: the **Elegoo Saturn 4 Ultra 16K** and the **Formlabs Form 3**.
 - **Every resin print needs washing and curing afterwards** — that's a separate machine and a required step, not an optional finish.
 
 :::caution
-Resin is the messiest material in the lab and the one with the most rules. Uncured resin never gets left in the work area. Read the cleaning manual before you print, not after.
+Resin is the messiest material in the lab and the one with the most rules. Uncured resin never gets left in the work area. Read the machine's page all the way through before you print, not after.
 :::
 
-[Elegoo Saturn 4 Ultra →](/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/elegoo-resin-3d-printer-operations-manual/) · [Formlabs Form 3 →](/docs/sla-printers/formlabs-form-3-resin-printer/operations--safety-manuals/formlabs-3-resin-printer-operations-manual/) · [Elegoo wash & cure →](/docs/sla-printers/elegoo-mercury-30-plus-washing-and-curing-machine/elegoo-washing-and-curing-machine-manual/) · [Formlabs wash & cure →](/docs/sla-printers/formlabs-form-3-resin-printer/wasing-and-curing-machines/formlabs-washing-machines-operations-manual/)
+[Elegoo Saturn 4 Ultra →](/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/elegoo-resin-3d-printer-operations-manual/) · [Formlabs Form 3 →](/docs/sla-printers/formlabs-form-3-resin-printer/resin-3d-printer-formlabs-form-3/) · [Elegoo wash & cure →](/docs/sla-printers/elegoo-mercury-30-plus-washing-and-curing-machine/elegoo-washing-and-curing-machine-manual/) · [Formlabs wash & cure →](/docs/sla-printers/formlabs-form-3-resin-printer/form-wash-and-form-cure/)
 
 ## Cutting and milling
 
