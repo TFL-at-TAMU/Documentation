@@ -45,6 +45,14 @@ including the credentials doc. This rewrites history to purge them. It's disrupt
       on an org-owned formatter repo (source currently lives under the `juancajuanca1`
       personal account — transfer/fork it to `TFL-at-TAMU` first), then point the
       buttons at `releases/latest/download/…` URLs.
+- [ ] **STL viewer for model pages** — several pages are nothing but a
+      `<model-viewer>` tag pointing at an `.stl` under `/files/`, but no script is
+      loaded anywhere on the site, so the tag renders as nothing. The six Elegoo chess
+      pieces (`SLA Printers/Elegoo Saturn 4 Ultra 16K Resin 3D Printer/Activities/
+      ornate_chess_*.md`) are parked as `draft: true` until a viewer exists — their URLs
+      301 to the Chess Piece activity meanwhile. `Dual Head FDM Printer/Learning
+      Assignment/beware_of_the_cat_body.md` and `FormLabs Form 3 Resin printer/Learning
+      Assignments/Lattice_Benchy_FCC.md` have the same problem and are still published.
 - [ ] **Dead-link cleanup** — a set of links was already dead pre-migration and left
       as-is; the build's link validator now reports them (see the `exclude` list in
       `astro.config.mjs` if any are grandfathered). Fix or remove as content gets touched.
@@ -52,15 +60,16 @@ including the credentials doc. This rewrites history to purge them. It's disrupt
 ## Content (owner-led, separate effort)
 
 - [ ] **Machine-page revamps** — remaining machines per the list in
-      [CLAUDE.md](CLAUDE.md) / [REVAMP_PROMPT.md](REVAMP_PROMPT.md): FDM
-      Printers, PCB Machines (NeoDen solder stencil), SLA Printers, Workbenches.
+      [CLAUDE.md](CLAUDE.md) / [REVAMP_PROMPT.md](REVAMP_PROMPT.md): Dual Head FDM
+      printer, PCB Machines (NeoDen solder stencil), the Formlabs Form 3 and its
+      wash/cure machines, Workbenches.
       (The `Templates` group is already retired, and the shared
       [Which Machine?](src/content/docs/docs/Which%20Machine.md) page now exists —
       revisit its entry for each machine as that machine is revamped.)
-- [ ] **Pin the manual first in the un-revamped machine groups** — FDM Printers, SLA
-      Printers and Workbenches still have operations/safety pairs rather than a single
-      manual, so there is no page to pin yet. Do it as each machine is revamped
-      (`sidebar.order: 1`, see `DOCS_FORMAT.md`).
+- [ ] **Pin the manual first in the un-revamped machine groups** — the Dual Head FDM
+      printer, the Formlabs Form 3 and Workbenches still have operations/safety pairs
+      rather than a single manual, so there is no page to pin yet. Do it as each machine
+      is revamped (`sidebar.order: 1`, see `DOCS_FORMAT.md`).
 - [ ] **Rename the remaining "Learning Assignments" to "Activities"** — the Cricut
       revamp renamed the group and `DOCS_FORMAT.md` now makes `Activities/` the
       standard. Laser Cutter is done, and the 3D Scanner's was retired rather than
@@ -68,7 +77,7 @@ including the credentials doc. This rewrites history to purge them. It's disrupt
       naming** — hold it until PR #66's content question is settled, then move
       `Learning Assignment/2D Relief Coin/2D Relief Coin.md` to
       `Activities/2D Relief Coin.md` with a 301. The un-revamped machines (Dual Head
-      FDM, NeoDen solder stencil, both SLA printers, Workbenches) get renamed as each
+      FDM, NeoDen solder stencil, Formlabs Form 3, Workbenches) get renamed as each
       one is revamped. `docs/index.md` carries a parenthetical noting the leftover
       "Learning Assignments" sidebar labels — drop it once the last one is renamed.
 - [ ] **Content structure / information architecture** — Diátaxis-style restructure of

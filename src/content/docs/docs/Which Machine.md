@@ -49,15 +49,16 @@ FDM, with two independent extruders. Reach for this one when the Bambu can't do 
 
 The lab has two: the **Elegoo Saturn 4 Ultra 16K** and the **Formlabs Form 3**.
 
-- **Good for:** high-resolution prints for prototyping, design verification, and small functional or aesthetic parts.
+- **Good for:** high-resolution prints for prototyping, design verification, and small functional or aesthetic parts — fine detail, thin walls, and a surface with no visible layers.
 - **Not for:** anything that isn't resin, or large structural parts that exceed the build volume or load limits.
-- **Every resin print needs washing and curing afterwards** — that's a separate machine and a required step, not an optional finish.
+- **Build volume (Elegoo):** 211 × 118 × 220 mm — tall and narrow rather than a cube.
+- **Every resin print needs washing and curing afterwards** — that's a separate machine and a required step, not an optional finish. Budget another 20–30 minutes after the print comes off.
 
 :::caution
-Resin is the messiest material in the lab and the one with the most rules. Uncured resin never gets left in the work area. Read the cleaning manual before you print, not after.
+Resin is the messiest material in the lab and the one with the most rules. Liquid resin irritates skin and eyes, so gloves are required from the moment a print leaves the printer until it comes out of the curing cycle, and uncured resin never gets left in the work area. Read the machine's page before you print, not after.
 :::
 
-[Elegoo Saturn 4 Ultra →](/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/elegoo-resin-3d-printer-operations-manual/) · [Formlabs Form 3 →](/docs/sla-printers/formlabs-form-3-resin-printer/operations--safety-manuals/formlabs-3-resin-printer-operations-manual/) · [Elegoo wash & cure →](/docs/sla-printers/elegoo-mercury-30-plus-washing-and-curing-machine/elegoo-washing-and-curing-machine-manual/) · [Formlabs wash & cure →](/docs/sla-printers/formlabs-form-3-resin-printer/wasing-and-curing-machines/formlabs-washing-machines-operations-manual/)
+[Resin 3D Printer (Elegoo Saturn 4 Ultra 16K) →](/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/resin-3d-printer-elegoo-saturn-4-ultra-16k/) · [Elegoo wash and cure →](/docs/sla-printers/elegoo-mercury-30-plus-washing-and-curing-machine/wash-and-cure-station-elegoo-mercury-30-plus/) · [Formlabs Form 3 →](/docs/sla-printers/formlabs-form-3-resin-printer/operations--safety-manuals/formlabs-3-resin-printer-operations-manual/) · [Formlabs wash & cure →](/docs/sla-printers/formlabs-form-3-resin-printer/wasing-and-curing-machines/formlabs-washing-machines-operations-manual/)
 
 ## Cutting and milling
 
