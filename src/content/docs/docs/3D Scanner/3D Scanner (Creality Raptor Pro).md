@@ -84,7 +84,7 @@ Marker tips:
 9. Back in the scan tab, choose your **scan mode and tracking mode** — see [Choosing scan and tracking modes](#choosing-scan-and-tracking-modes) above if you're unsure.
 10. Customize the additional settings in the sidebar to your needs. If you're using markers, do a **"Global Markers" scan first** — it detects markers better than the actual scan modes, and having all markers mapped before scanning makes the scan itself much easier.
 11. Click **"Preview"** (or press the center button on the scanner) and get a feel for how far to hold the scanner from the object. The colored distance sidebar helps here, though it can get confused.
-12. Click **"Start"** and perform your scan, watching the point cloud populate in real time. The point cloud lives in RAM while you scan — available RAM limits how many points you can capture and post-process. If you need to split the object into multiple scans, store them in the same project and let CrealityScan align them automatically.
+12. Click **"Start"** and perform your scan, watching the point cloud populate in real time. The point cloud lives in RAM while you scan — available RAM limits how many points you can capture and post-process. If you need to split the object into multiple scans, store them in the same project and let CrealityScan align them automatically. Expect to need more than one scan for anything with hidden or awkward faces. Tracking mode is a per-scan choice, so reconsider it for each one rather than reusing whatever the first scan used — the face you're capturing now may give the scanner less to lock onto than the last.
 13. When you're done scanning, click **"Finish"**.
 
 **Post-process:**

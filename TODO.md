@@ -63,10 +63,14 @@ including the credentials doc. This rewrites history to purge them. It's disrupt
       (`sidebar.order: 1`, see `DOCS_FORMAT.md`).
 - [ ] **Rename the remaining "Learning Assignments" to "Activities"** — the Cricut
       revamp renamed the group and `DOCS_FORMAT.md` now makes `Activities/` the
-      standard. 3D Scanner, Laser Cutter, and CNC Mill still use the old naming;
-      rename their folders/pages and add a 301 per retired URL. `docs/index.md` already
-      calls them activities and carries a parenthetical noting the leftover "Learning
-      Assignments" sidebar labels — drop that parenthetical once the last one is renamed.
+      standard. Laser Cutter is done, and the 3D Scanner's was retired rather than
+      renamed. **CNC Mill is the last of the revamped machines still on the old
+      naming** — hold it until PR #66's content question is settled, then move
+      `Learning Assignment/2D Relief Coin/2D Relief Coin.md` to
+      `Activities/2D Relief Coin.md` with a 301. The un-revamped machines (Dual Head
+      FDM, NeoDen solder stencil, both SLA printers, Workbenches) get renamed as each
+      one is revamped. `docs/index.md` carries a parenthetical noting the leftover
+      "Learning Assignments" sidebar labels — drop it once the last one is renamed.
 - [ ] **Content structure / information architecture** — Diátaxis-style restructure of
       the manuals. Grain decisions still open: 3D-model stub pages (merge vs.
       standalone), Electric Workbench manual (combined vs. per-instrument).

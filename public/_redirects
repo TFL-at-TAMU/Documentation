@@ -59,6 +59,11 @@
 # page renamed for what you make rather than for the machine (see DOCS_FORMAT.md).
 /docs/laser-cutter/learning-assignments/glowforge-co2-laser-learning-assignment/ /docs/laser-cutter/activities/business-card/ 301
 
+# 3D Scanner: the learning assignment is retired rather than renamed. It was built
+# around an object that was never finalised, and its one real lesson (expect several
+# scans, and choose tracking mode per scan) now lives in the manual's Operating section.
+/docs/3d-scanner/learning-assignment/ /docs/3d-scanner/3d-scanner-creality-raptor-pro/ 301
+
 # Master manual templates retired — DOCS_FORMAT.md is the format standard now,
 # and it lives in the repo rather than on the public site.
 /docs/templates/fab-lab-machine-operation-manual-master-template/ /docs/ 301
