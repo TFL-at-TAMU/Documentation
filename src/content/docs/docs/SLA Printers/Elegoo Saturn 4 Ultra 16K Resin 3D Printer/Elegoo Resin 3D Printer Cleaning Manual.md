@@ -1,5 +1,5 @@
 ---
-title: "![](../../assets/images/elegoo_resin_3d_prin_41a5ce92d6.png)"
+title: Elegoo Resin 3D Printer Cleaning Manual
 source_id: "1tRtOTDxy1XjXWuI0dzXjhsIFctVX2W1PDT9G2lzX9Ao"
 modified: "2026-04-15T19:45:11.355Z"
 ---
@@ -38,6 +38,8 @@ This is the cleaning manual for the Elegoo resin printer.
 The manual contains procedures for cleaning the resin vat in the printer, as well as the cleaning procedures for the parts made by the printer.
 
 The vat cleaning is to take place BEFORE the use of the resin printer, the washing and curing is for AFTER the piece is made.
+
+![Flowchart of the three cleaning workflows. Vat cleaning: return the printer home, attach the drip tray, line a baking sheet with shop towels, run tank cleaning mode, release and wash the film, then wipe the build plate dry and reattach it. Resin replacing: remove the film, unbolt the vat, pour the resin out through a funnel, wipe the vat with IPA and reattach it empty. Washing and curing: attach the drip tray, slide the part off the build plate, wash for 2-5 minutes, dry, cure for 2-10 minutes, then finish with sandpaper or paint.](../../assets/images/elegoo_resin_3d_prin_41a5ce92d6.png)
 
 Resin VAT Cleaning
 

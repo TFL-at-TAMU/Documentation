@@ -4,8 +4,7 @@ sidebar:
   order: 1
 ---
 
-The Bambu Lab X1 Carbon builds parts one thin layer at a time, melting plastic filament and drawing each layer onto a heated plate — fused deposition modeling, or FDM. It's the lab's workhorse: prototypes, brackets, enclosures, jigs, replacement parts, and anything else you'd rather hold than look at on a screen. Most parts come off in a few hours. The Fab Lab has **four** of them — **George**, **John**, **Paul**, and **Ringo** — and each one can print in up to four colors or materials at once from its **AMS** (Automatic Material System) filament changer. Your part has to fit inside a **256 × 256 × 256 mm** cube. If you're not sure this is the right machine for your project, ask a staff member.
-<!-- TODO: link /docs/which-machine/ at the end of the intro once that page exists -->
+The Bambu Lab X1 Carbon builds parts one thin layer at a time, melting plastic filament and drawing each layer onto a heated plate — fused deposition modeling, or FDM. It's the lab's workhorse: prototypes, brackets, enclosures, jigs, replacement parts, and anything else you'd rather hold than look at on a screen. Most parts come off in a few hours. The Fab Lab has **four** of them — **George**, **John**, **Paul**, and **Ringo** — and each one can print in up to four colors or materials at once from its **AMS** (Automatic Material System) filament changer. Your part has to fit inside a **256 × 256 × 256 mm** cube. If you're not sure this is the right machine for your project, see [Which Machine?](/docs/which-machine/) or ask a staff member.
 
 > [!WARNING]
 > **The nozzle and the build plate get hot enough to burn you.** The nozzle runs up to 300 °C and the plate up to 100 °C, and both stay dangerous for several minutes after a print ends. Never reach into the chamber to touch the toolhead or the plate.

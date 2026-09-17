@@ -4,8 +4,7 @@ sidebar:
   order: 1
 ---
 
-The Cricut Explore 4 is a desktop cutting machine: instead of a printer's ink head, it drags a small blade across sheet material to cut out any shape you can draw. Use it for vinyl decals and stickers, iron-on transfers for shirts and bags, paper and cardstock models, labels, stencils, and card-stock packaging. It can also draw on your material with a pen instead of cutting it. It works on sheets up to **12 in** wide (or 12 in × 24 in on the long mat) and material up to **2.0 mm** thick — anything thicker, or anything rigid like plywood, metal, or acrylic, belongs on another machine. If you're not sure this is the right machine for your project, ask a staff member.
-<!-- TODO: link /docs/which-machine/ at the end of the intro once that page exists -->
+The Cricut Explore 4 is a desktop cutting machine: instead of a printer's ink head, it drags a small blade across sheet material to cut out any shape you can draw. Use it for vinyl decals and stickers, iron-on transfers for shirts and bags, paper and cardstock models, labels, stencils, and card-stock packaging. It can also draw on your material with a pen instead of cutting it. It works on sheets up to **12 in** wide (or 12 in × 24 in on the long mat) and material up to **2.0 mm** thick — anything thicker, or anything rigid like plywood, metal, or acrylic, belongs on another machine. If you're not sure this is the right machine for your project, see [Which Machine?](/docs/which-machine/) or ask a staff member.
 
 > [!WARNING]
 > **Keep hands, hair, and loose clothing out of the machine while it's running.** The cutting head moves fast and without warning, and the blade in it is genuinely sharp. Don't reach in to straighten material mid-job — pause first. Only handle blades when the machine is stopped, and hold the housing, not the blade.

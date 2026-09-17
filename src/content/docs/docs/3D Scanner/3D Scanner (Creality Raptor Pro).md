@@ -4,8 +4,7 @@ sidebar:
   order: 1
 ---
 
-The Creality Raptor Pro is a handheld 3D scanner that captures the geometry — and optionally the color — of real-world objects and turns them into texture-mapped 3D mesh models. Use it for reverse engineering, digitizing freeform shapes like body panels or organic forms, and full-surface capture where calipers and manual measurement are impractical. It handles objects from roughly coin-sized up to about 4 m (with markers), with a practical accuracy of about 0.05–0.2 mm depending on mode — far coarser than calipers, so it's the tool for complex surfaces, not precision measurement of simple features. If you're not sure this is the right tool for your project, ask a staff member.
-<!-- TODO: link /docs/which-machine/ at the end of the intro once that page exists -->
+The Creality Raptor Pro is a handheld 3D scanner that captures the geometry — and optionally the color — of real-world objects and turns them into texture-mapped 3D mesh models. Use it for reverse engineering, digitizing freeform shapes like body panels or organic forms, and full-surface capture where calipers and manual measurement are impractical. It handles objects from roughly coin-sized up to about 4 m (with markers), with a practical accuracy of about 0.05–0.2 mm depending on mode — far coarser than calipers, so it's the tool for complex surfaces, not precision measurement of simple features. If you're not sure this is the right tool for your project, see [Which Machine?](/docs/which-machine/) or ask a staff member.
 
 > [!WARNING]
 > **Handle the scanner with extreme care.** It's a precision optical instrument: don't drop it, strain the cables, or touch the glass. If you smudge the glass, clean it with the **included microfiber cloth** only.
@@ -85,7 +84,7 @@ Marker tips:
 9. Back in the scan tab, choose your **scan mode and tracking mode** — see [Choosing scan and tracking modes](#choosing-scan-and-tracking-modes) above if you're unsure.
 10. Customize the additional settings in the sidebar to your needs. If you're using markers, do a **"Global Markers" scan first** — it detects markers better than the actual scan modes, and having all markers mapped before scanning makes the scan itself much easier.
 11. Click **"Preview"** (or press the center button on the scanner) and get a feel for how far to hold the scanner from the object. The colored distance sidebar helps here, though it can get confused.
-12. Click **"Start"** and perform your scan, watching the point cloud populate in real time. The point cloud lives in RAM while you scan — available RAM limits how many points you can capture and post-process. If you need to split the object into multiple scans, store them in the same project and let CrealityScan align them automatically.
+12. Click **"Start"** and perform your scan, watching the point cloud populate in real time. The point cloud lives in RAM while you scan — available RAM limits how many points you can capture and post-process. If you need to split the object into multiple scans, store them in the same project and let CrealityScan align them automatically. Expect to need more than one scan for anything with hidden or awkward faces. Tracking mode is a per-scan choice, so reconsider it for each one rather than reusing whatever the first scan used — the face you're capturing now may give the scanner less to lock onto than the last.
 13. When you're done scanning, click **"Finish"**.
 
 **Post-process:**

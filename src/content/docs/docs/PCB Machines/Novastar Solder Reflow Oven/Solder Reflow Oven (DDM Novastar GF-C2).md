@@ -2,8 +2,7 @@
 title: Solder Reflow Oven (DDM Novastar GF-C2)
 ---
 
-The reflow oven melts solder paste to permanently attach surface-mount components to a circuit board — the last step of PCB assembly, after paste has been stenciled on and components placed. It's a combined conduction/convection oven: a **12" × 12" hotplate** heats from below while a fan circulates hot air under the glass hood, and it can also run as a plain hotplate for preheating and rework. Boards up to the full plate size fit, with about **3"** of height clearance under the closed hood. A typical board reflows in under a minute once the oven is at temperature. If you're not sure this is the right machine for your project, ask a staff member.
-<!-- TODO: link /docs/which-machine/ at the end of the intro once that page exists -->
+The reflow oven melts solder paste to permanently attach surface-mount components to a circuit board — the last step of PCB assembly, after paste has been stenciled on and components placed. It's a combined conduction/convection oven: a **12" × 12" hotplate** heats from below while a fan circulates hot air under the glass hood, and it can also run as a plain hotplate for preheating and rework. Boards up to the full plate size fit, with about **3"** of height clearance under the closed hood. A typical board reflows in under a minute once the oven is at temperature. If you're not sure this is the right machine for your project, see [Which Machine?](/docs/which-machine/) or ask a staff member.
 
 > [!WARNING]
 > **A trained staff member must be present** whenever the oven is in use, and you must stay at the machine the entire time it's on — never leave it running unattended.
