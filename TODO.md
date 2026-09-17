@@ -52,14 +52,16 @@ including the credentials doc. This rewrites history to purge them. It's disrupt
 ## Content (owner-led, separate effort)
 
 - [ ] **Machine-page revamps** — remaining machines per the list in
-      [CLAUDE.md](CLAUDE.md) / [REVAMP_PROMPT.md](REVAMP_PROMPT.md): FDM
-      Printers, PCB Machines (NeoDen solder stencil), SLA Printers, Workbenches.
+      [CLAUDE.md](CLAUDE.md) / [REVAMP_PROMPT.md](REVAMP_PROMPT.md): PCB Machines
+      (NeoDen solder stencil), SLA Printers, Workbenches. FDM Printers came off this
+      list when the Raise3D E2 left the lab — the Bambu X1C is the only FDM machine
+      now, and it is already revamped.
       (The `Templates` group is already retired, and the shared
       [Which Machine?](src/content/docs/docs/Which%20Machine.md) page now exists —
       revisit its entry for each machine as that machine is revamped.)
-- [ ] **Pin the manual first in the un-revamped machine groups** — FDM Printers, SLA
-      Printers and Workbenches still have operations/safety pairs rather than a single
-      manual, so there is no page to pin yet. Do it as each machine is revamped
+- [ ] **Pin the manual first in the un-revamped machine groups** — SLA Printers and
+      Workbenches still have operations/safety pairs rather than a single manual, so
+      there is no page to pin yet. Do it as each machine is revamped
       (`sidebar.order: 1`, see `DOCS_FORMAT.md`).
 - [ ] **Rename the remaining "Learning Assignments" to "Activities"** — the Cricut
       revamp renamed the group and `DOCS_FORMAT.md` now makes `Activities/` the
@@ -67,8 +69,8 @@ including the credentials doc. This rewrites history to purge them. It's disrupt
       renamed. **CNC Mill is the last of the revamped machines still on the old
       naming** — hold it until PR #66's content question is settled, then move
       `Learning Assignment/2D Relief Coin/2D Relief Coin.md` to
-      `Activities/2D Relief Coin.md` with a 301. The un-revamped machines (Dual Head
-      FDM, NeoDen solder stencil, both SLA printers, Workbenches) get renamed as each
+      `Activities/2D Relief Coin.md` with a 301. The un-revamped machines (NeoDen
+      solder stencil, both SLA printers, Workbenches) get renamed as each
       one is revamped. `docs/index.md` carries a parenthetical noting the leftover
       "Learning Assignments" sidebar labels — drop it once the last one is renamed.
 - [ ] **Content structure / information architecture** — Diátaxis-style restructure of
