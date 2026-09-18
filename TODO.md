@@ -53,13 +53,13 @@ including the credentials doc. This rewrites history to purge them. It's disrupt
 
 - [ ] **Machine-page revamps** — remaining machines per the list in
       [CLAUDE.md](CLAUDE.md) / [REVAMP_PROMPT.md](REVAMP_PROMPT.md): FDM
-      Printers, PCB Machines (NeoDen solder stencil), SLA Printers, Workbenches.
+      Printers, PCB Machines (NeoDen solder stencil), SLA Printers.
       (The `Templates` group is already retired, and the shared
       [Which Machine?](src/content/docs/docs/Which%20Machine.md) page now exists —
       revisit its entry for each machine as that machine is revamped.)
-- [ ] **Pin the manual first in the un-revamped machine groups** — FDM Printers, SLA
-      Printers and Workbenches still have operations/safety pairs rather than a single
-      manual, so there is no page to pin yet. Do it as each machine is revamped
+- [ ] **Pin the manual first in the un-revamped machine groups** — FDM Printers and
+      SLA Printers still have operations/safety pairs rather than a single manual, so
+      there is no page to pin yet. Do it as each machine is revamped
       (`sidebar.order: 1`, see `DOCS_FORMAT.md`).
 - [ ] **Rename the remaining "Learning Assignments" to "Activities"** — the Cricut
       revamp renamed the group and `DOCS_FORMAT.md` now makes `Activities/` the
@@ -68,12 +68,13 @@ including the credentials doc. This rewrites history to purge them. It's disrupt
       naming** — hold it until PR #66's content question is settled, then move
       `Learning Assignment/2D Relief Coin/2D Relief Coin.md` to
       `Activities/2D Relief Coin.md` with a 301. The un-revamped machines (Dual Head
-      FDM, NeoDen solder stencil, both SLA printers, Workbenches) get renamed as each
+      FDM, NeoDen solder stencil, both SLA printers) get renamed as each
       one is revamped. `docs/index.md` carries a parenthetical noting the leftover
       "Learning Assignments" sidebar labels — drop it once the last one is renamed.
 - [ ] **Content structure / information architecture** — Diátaxis-style restructure of
-      the manuals. Grain decisions still open: 3D-model stub pages (merge vs.
-      standalone), Electric Workbench manual (combined vs. per-instrument).
+      the manuals. Grain decision still open: 3D-model stub pages (merge vs.
+      standalone). The electric workbenches settled the multi-instrument case — a bench
+      page plus one page per instrument under `Instruments/`.
 - [ ] Re-home the student-facing **Networking IOT Learning Assignment** if it should
       return to the public site (its parent tree was staff-facing and now lives only in
       git history / Google Docs).
