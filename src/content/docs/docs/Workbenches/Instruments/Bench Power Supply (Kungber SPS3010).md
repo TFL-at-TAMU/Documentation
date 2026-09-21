@@ -60,4 +60,4 @@ Below the display are **coarse and fine knobs for voltage and for current**, and
 
 **The voltage at my board is lower than the display says.** The supply measures at its own terminals, not at your circuit. Thin or long wires, a loose plug, or a poor breadboard contact all drop voltage along the way — measure at the board itself to see what it's really getting.
 
-**It won't go as high as I need.** 30 V and 10 A are the supply's limits, and 300 W caps the two together — you can't have 30 V and 10 A at the same time. If your project needs more than that, talk to a staff member about the right way to power it.
+**It won't go as high as I need.** 30 V and 10 A are the supply's limits. If your project needs more than that, talk to a staff member about the right way to power it.

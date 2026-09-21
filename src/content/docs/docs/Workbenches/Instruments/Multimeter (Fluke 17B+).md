@@ -28,7 +28,7 @@ It's an auto-ranging meter, which means you pick *what* to measure and it works 
 
 ## The meter at a glance
 
-**The dial** selects what you're measuring, and turning it to **OFF** is how you switch the meter off. Going clockwise from OFF: **Ṽ** (AC volts), **V̅** (DC volts), **mV**, the **Ω** position that also holds continuity, diode test and capacitance, then **A**, **mA**, and **µA** for current, and finally the thermometer symbol for temperature.
+**The dial** selects what you're measuring, and turning it to **OFF** is how you switch the meter off. Going clockwise from OFF: **Ṽ** (AC volts), **V̅** (DC volts), **mV**, the **Ω** position that also holds continuity and diode test, the **⊣⊢** position for capacitance, then **A**, **mA**, and **µA** for current, and finally the thermometer symbol for temperature.
 
 **The terminals** along the bottom are where the leads go. The black lead goes in **COM** and stays there for everything. The red lead moves depending on what you're measuring.
 
