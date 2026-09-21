@@ -122,7 +122,8 @@ damage (`##` on paragraphs, `[[a]]` comment markers, google-redirect URLs, metad
 blocks); add `_redirects` 301s for every retired URL; repoint inbound links. The
 **3D Scanner trio** (manual + "How 3D Scanning Works" + lean activity) is the gold
 standard to imitate; Laser Cutter, CNC Mill, Solder Reflow Oven, NeoDen Pick & Place,
-NeoDen Solder Stencil, Cricut, and the Bambu Lab X1C are also done.
+Cricut, the Bambu Lab X1C, and the Elegoo Saturn 4 Ultra + Mercury 3.0 wash/cure pair
+are also done.
 
 Not every "machine" is one machine. The **Electric Workbenches** are five instruments on
 a shared surface, so they became a bench page (shared hazards, the general workflow,

@@ -80,8 +80,8 @@ public repo (credentials, IT/networking internals, service manuals — those
 live in Google Docs).
 
 **Already done (don't redo):** Laser Cutter · 3D Scanner · CNC Mill · Solder
-Reflow Oven · NeoDen Pick & Place · NeoDen Solder Stencil · Cricut ·
-Bambu Lab X1C · Electric Workbenches.
+Reflow Oven · NeoDen Pick & Place · Cricut · Bambu Lab X1C · Electric
+Workbenches · Elegoo Saturn 4 Ultra + Mercury 3.0 wash/cure.
 
 **If your "machine" is really several instruments on a bench**, follow the
 electric workbenches: one page for the bench (shared hazards, the general

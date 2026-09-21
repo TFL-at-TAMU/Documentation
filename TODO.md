@@ -45,6 +45,16 @@ including the credentials doc. This rewrites history to purge them. It's disrupt
       on an org-owned formatter repo (source currently lives under the `juancajuanca1`
       personal account — transfer/fork it to `TFL-at-TAMU` first), then point the
       buttons at `releases/latest/download/…` URLs.
+- [ ] **STL viewer for model pages** — several pages are nothing but a
+      `<model-viewer>` tag pointing at an `.stl` under `/files/`, but no script is
+      loaded anywhere on the site, so the tag renders as nothing. The six Elegoo chess
+      pieces (`SLA Printers/Elegoo Saturn 4 Ultra 16K Resin 3D Printer/Activities/
+      ornate_chess_*.md`) are parked as `draft: true` until a viewer exists — their URLs
+      301 to the Chess Piece activity meanwhile, and they are the only `<model-viewer>`
+      tags left in the repo now the Raise3D E2 pages are retired. (`SLA Printers/FormLabs
+      Form 3 Resin printer/Learning Assignments/Lattice_Benchy_FCC.md` is a related but
+      separate case: its viewer and download were already removed because the `.stl`
+      exceeded the 25 MiB limit.)
 - [ ] **Page comments with text references** — let readers comment on any page, and
       anchor a comment to a specific passage they select (the Medium/Google-Docs
       model: highlight a sentence, leave a note on it). The point is catching the
@@ -79,16 +89,17 @@ including the credentials doc. This rewrites history to purge them. It's disrupt
 ## Content (owner-led, separate effort)
 
 - [ ] **Machine-page revamps** — remaining machines per the list in
-      [CLAUDE.md](CLAUDE.md) / [REVAMP_PROMPT.md](REVAMP_PROMPT.md): SLA Printers,
-      and that is the last of them. FDM Printers came off this list when the
-      Raise3D E2 left the lab — the Bambu X1C is the only FDM machine now, and it
-      is already revamped. Workbenches came off it when the electric workbenches
-      were revamped, and PCB Machines when the NeoDen solder stencil was.
+      [CLAUDE.md](CLAUDE.md) / [REVAMP_PROMPT.md](REVAMP_PROMPT.md): PCB Machines
+      (NeoDen solder stencil) and the Formlabs Form 3 with its wash/cure machines.
+      FDM Printers came off this list when the Raise3D E2 left the lab — the Bambu
+      X1C is the only FDM machine now, and it is already revamped. Workbenches came
+      off it when the electric workbenches were revamped, and the Elegoo Saturn 4
+      Ultra and its Mercury 3.0 wash/cure station are done.
       (The `Templates` group is already retired, and the shared
       [Which Machine?](src/content/docs/docs/Which%20Machine.md) page now exists —
       revisit its entry for each machine as that machine is revamped.)
-- [ ] **Pin the manual first in the un-revamped machine groups** — only SLA Printers
-      still has operations/safety pairs rather than a single manual, so
+- [ ] **Pin the manual first in the un-revamped machine groups** — only the Formlabs
+      Form 3 still has operations/safety pairs rather than a single manual, so
       there is no page to pin yet. Do it as each machine is revamped
       (`sidebar.order: 1`, see `DOCS_FORMAT.md`).
 - [ ] **Rename the remaining "Learning Assignments" to "Activities"** — the Cricut
@@ -97,9 +108,9 @@ including the credentials doc. This rewrites history to purge them. It's disrupt
       renamed. **CNC Mill is the last of the revamped machines still on the old
       naming** — hold it until PR #66's content question is settled, then move
       `Learning Assignment/2D Relief Coin/2D Relief Coin.md` to
-      `Activities/2D Relief Coin.md` with a 301. Both SLA printers are the only
-      un-revamped machines left, and get renamed as each one is revamped.
-      `docs/index.md` carries a parenthetical noting the leftover
+      `Activities/2D Relief Coin.md` with a 301. The un-revamped machines (NeoDen
+      solder stencil and the Formlabs Form 3) get renamed as each
+      one is revamped. `docs/index.md` carries a parenthetical noting the leftover
       "Learning Assignments" sidebar labels — drop it once the last one is renamed.
 - [ ] **Content structure / information architecture** — Diátaxis-style restructure of
       the manuals. Grain decision still open: 3D-model stub pages (merge vs.
