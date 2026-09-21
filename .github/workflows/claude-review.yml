@@ -33,6 +33,38 @@ name: Claude review
 # If you ever add a build or install step here, stop and move it back to
 # `pull_request` — that is the line that must not be crossed.
 #
+# WHY `github_token` IS PASSED EXPLICITLY:
+# By default this action authenticates to GitHub by requesting a GitHub OIDC
+# token and exchanging it at api.anthropic.com for a Claude GitHub App token.
+# After the switch above, that exchange returned `401 Invalid OIDC token` on
+# every `pull_request_target` run — PRs #93, #94 and #95, three different
+# authors — while the same workflow had succeeded on `pull_request` and
+# `workflow_dispatch`. The review check was red on every docs PR for days.
+# Passing `github_token` skips the exchange: the action returns the supplied
+# token immediately (`OVERRIDE_GITHUB_TOKEN`, in its `setupGitHubToken()`) and
+# never calls the endpoint that fails. `secrets.GITHUB_TOKEN` is what
+# Anthropic's own security docs recommend here — it is scoped to the
+# `permissions:` block below and dies with the job, unlike a PAT.
+# Two consequences: comments now post as `github-actions[bot]` rather than as
+# Claude (restoring that byline would mean running our own GitHub App), and
+# `id-token: write` is gone from `permissions:` because nothing requests an
+# OIDC token any more. Put it back if you ever drop `github_token`.
+#
+# WHY `allowed_non_write_users` IS SET:
+# The action normalises `pull_request_target` to `pull_request` internally,
+# which subjects it to a write-permission check on `github.actor` — under this
+# trigger, the PR author. Student contributors work from forks and have no
+# write access, so without this input the action refuses them with "Actor does
+# not have write permissions": fork review broken again, one step later than
+# the token failure broke it, and the switch above defeated a second time.
+# `'*'` admits any author, and only takes effect because `github_token` is set.
+# Containment is the three rules listed above — fork content is never checked
+# out and never executed — plus `--allowedTools` at the bottom, which limits
+# Claude to reading the diff and posting comments. The residual risk is a PR
+# that talks the reviewer into posting a comment its author chose; posting
+# comments is the whole of what it could achieve. Narrow `'*'` to a list of
+# usernames if that stops being an acceptable trade.
+#
 # Scope: this runs only on PRs that touch documentation content — the pages
 # and assets students edit — not on site-code or CI changes. The `paths`
 # filter keys off which files the PR changes, so nobody has to label a PR by
@@ -62,7 +94,6 @@ jobs:
       contents: read
       pull-requests: write
       issues: write
-      id-token: write
     steps:
       - name: Check for credentials
         id: creds
@@ -82,6 +113,9 @@ jobs:
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          # Both are load-bearing — see the two "WHY" sections in the header above.
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          allowed_non_write_users: '*'
           prompt: |
             REPO: ${{ github.repository }}
             PR NUMBER: ${{ github.event.pull_request.number || inputs.pr_number }}

@@ -11,7 +11,7 @@ Nothing here is a substitute for the machine's own page — this tells you *whic
 | If you want to… | Go to |
 |---|---|
 | Make a 3D part out of plastic, fast | [Bambu Lab X1 Carbon](#bambu-lab-x1-carbon) |
-| Make a 3D part in two materials, or with dissolvable supports | [Raise3D E2](#raise3d-e2) |
+| Make a 3D part in more than one color or material | [Bambu Lab X1 Carbon](#bambu-lab-x1-carbon) |
 | Make a small 3D part with fine detail and a smooth finish | [Resin printers](#sla-resin-printers) |
 | Cut or engrave a flat sheet of wood, acrylic or cardboard | [Glowforge Pro](#glowforge-pro) |
 | Cut or engrave metal, or mill a precise part | [Makera Carvera](#makera-carvera) |
@@ -22,7 +22,7 @@ Nothing here is a substitute for the machine's own page — this tells you *whic
 
 ## 3D printing
 
-Three different processes live here, and they are not interchangeable. **FDM** melts plastic filament and draws your part layer by layer — fast, cheap, tough, and visibly layered. **SLA** cures liquid resin with light — much finer detail and a smoother surface, but smaller parts, more cleanup, and more care around the material.
+Two different processes live here, and they are not interchangeable. **FDM** melts plastic filament and draws your part layer by layer — fast, cheap, tough, and visibly layered. **SLA** cures liquid resin with light — much finer detail and a smoother surface, but smaller parts, more cleanup, and more care around the material.
 
 ### Bambu Lab X1 Carbon
 
@@ -35,15 +35,6 @@ FDM. The lab's workhorse, and where most projects should start.
 - **There are four of them** — George, John, Paul and Ringo.
 
 [FDM 3D Printer (Bambu Lab X1 Carbon) →](/docs/fdm-printers/bambu-labs-x1c-3d-printer/fdm-3d-printer-bambu-lab-x1-carbon/)
-
-### Raise3D E2
-
-FDM, with two independent extruders. Reach for this one when the Bambu can't do what you need.
-
-- **Good for:** independent dual extrusion, dual-material and dual-color prints, and parts whose supports need to be water-soluble — geometry you couldn't clean up by hand.
-- **Slicing:** uses IdeaMaker, not the Bambu workflow.
-
-[Raise3D E2 Operations Manual →](/docs/fdm-printers/dual-head-fdm-printer/operations--safety-manual/raise3d-e2-printer-machine-operation-manual/) · [Slicing in IdeaMaker →](/docs/fdm-printers/dual-head-fdm-printer/slicing-in-ideamaker/)
 
 ### SLA resin printers
 
@@ -138,10 +129,10 @@ A trained staff member must be present for the pick & place and the reflow oven,
 Benches rather than a single machine, for hand work on electronics.
 
 - **Good for:** assembling, soldering and testing circuits and prototypes; measuring voltage, current, resistance and signal waveforms; reworking, repairing or modifying PCBs.
-- **Not for:** mechanical or plumbing repairs, circuits beyond the bench equipment's rated voltage or current, or anything involving hazardous or flammable materials.
-- **Instruments:** Fluke 17B multimeter, Weller WE1010NA soldering station, oscilloscope, SWM hot air rework station, and a bench power supply.
+- **Not for:** mechanical or plumbing repairs, or anything that plugs into a wall outlet — the benches are for low-voltage work only.
+- **Instruments:** each has its own page — [multimeter](/docs/workbenches/instruments/multimeter-fluke-17b/), [soldering station](/docs/workbenches/instruments/soldering-station-weller-we1010na/), [oscilloscope](/docs/workbenches/instruments/oscilloscope-hameg-hmo1524/), [bench power supply](/docs/workbenches/instruments/bench-power-supply-kungber-sps3010/), and [hot air rework station](/docs/workbenches/instruments/hot-air-rework-station-sparkfun-8508d/).
 
-[Electrical Workbench Operation Manual →](/docs/workbenches/electric-workbenches/operations-and-safety-manuals/electrical-workbench-operation-manual/)
+[Electric Workbenches →](/docs/workbenches/electric-workbenches/)
 
 ## Still not sure?
 
