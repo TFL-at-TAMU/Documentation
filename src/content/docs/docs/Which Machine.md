@@ -114,15 +114,15 @@ A handheld 3D scanner that captures the geometry — and optionally the color �
 
 Three machines that run in order, and assembling a surface-mount board means using all three in this sequence.
 
-1. **NeoDen FP2636 solder stencil** — applies solder paste to the board.
+1. **NeoDen FP2636 solder stencil** — prints solder paste onto every pad of the board at once, through a thin metal stencil you supply with your board order. Boards up to 280 × 380 mm, stencils up to 260 × 360 mm. Entirely hand-operated.
 2. **NeoDen YY1 pick & place** — sets each surface-mount component at the exact coordinates from your design file, far faster and steadier than tweezers. Boards up to 315 × 350 mm. Not for production runs, and not for advanced packages like BGA, CSP or flip-chip.
 3. **DDM Novastar GF-C2 reflow oven** — melts the paste to lock everything in place. A 12″ × 12″ hotplate with about 3″ of clearance under the hood; a typical board reflows in under a minute. It also runs as a plain hotplate for preheating and rework.
 
 :::caution
-A trained staff member must be present for the pick & place and the reflow oven, and the oven can never be left running unattended.
+A trained staff member must be present for all three machines, and the oven can never be left running unattended.
 :::
 
-[Solder stencil →](/docs/pcb-machines/neoden-solder-stencil/operations--safety-manuals/neoden-fp2636-machine-operation-manual/) · [Pick & place →](/docs/pcb-machines/neoden-pick--place/pick-and-place-machine-neoden-yy1/) · [Reflow oven →](/docs/pcb-machines/novastar-solder-reflow-oven/solder-reflow-oven-ddm-novastar-gf-c2/)
+[Solder stencil →](/docs/pcb-machines/neoden-solder-stencil/solder-paste-stencil-neoden-fp2636/) · [Pick & place →](/docs/pcb-machines/neoden-pick--place/pick-and-place-machine-neoden-yy1/) · [Reflow oven →](/docs/pcb-machines/novastar-solder-reflow-oven/solder-reflow-oven-ddm-novastar-gf-c2/)
 
 ### Electric workbenches
 

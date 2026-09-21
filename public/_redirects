@@ -80,6 +80,11 @@
 /docs/templates/fab-lab-machine-safety-manual-master-template/ /docs/ 301
 /docs/templates/ /docs/ 301
 
+# NeoDen solder stencil: operations + safety manuals merged into one machine page;
+# the empty "Nothing Here" learning-assignment placeholder was removed.
+/docs/pcb-machines/neoden-solder-stencil/operations--safety-manuals/neoden-fp2636-machine-operation-manual/ /docs/pcb-machines/neoden-solder-stencil/solder-paste-stencil-neoden-fp2636/ 301
+/docs/pcb-machines/neoden-solder-stencil/operations--safety-manuals/neoden-fp2636-machine-safety-manual/ /docs/pcb-machines/neoden-solder-stencil/solder-paste-stencil-neoden-fp2636/ 301
+/docs/pcb-machines/neoden-solder-stencil/learning-assignments/nothing-here/ /docs/pcb-machines/neoden-solder-stencil/solder-paste-stencil-neoden-fp2636/ 301
 # Elegoo Saturn 4 Ultra: operations + safety + cleaning manuals merged into one machine
 # page, and the "Learning Assignments" group renamed to "Activities" (see DOCS_FORMAT.md).
 # The six <model-viewer> stub pages are unpublished (draft) until the STL viewer exists —
