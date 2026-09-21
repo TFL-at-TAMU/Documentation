@@ -45,6 +45,33 @@ including the credentials doc. This rewrites history to purge them. It's disrupt
       on an org-owned formatter repo (source currently lives under the `juancajuanca1`
       personal account — transfer/fork it to `TFL-at-TAMU` first), then point the
       buttons at `releases/latest/download/…` URLs.
+- [ ] **Page comments with text references** — let readers comment on any page, and
+      anchor a comment to a specific passage they select (the Medium/Google-Docs
+      model: highlight a sentence, leave a note on it). The point is catching the
+      step that's wrong or unclear at the exact place it's wrong, from someone
+      standing at the machine — which is where most of this site's errors get found.
+
+      Nothing is decided yet. What has to be worked out first:
+
+      - **Where comments live.** The site is static on Cloudflare Pages, so there is
+        no backend today. Options: Cloudflare D1/KV behind a Worker (we already use
+        Cloudflare, and it keeps the data ours), or a hosted layer like Giscus
+        backed by GitHub Discussions (no infrastructure, but commenting needs a
+        GitHub account — probably a non-starter for students).
+      - **Who can post, and moderation.** A public makerspace site with anonymous
+        comments needs a spam answer and a staff deletion path before it ships.
+        This is the part most likely to sink the feature, so decide it early.
+      - **How an anchor survives an edit.** The hard part. A comment pinned to
+        "step 4" breaks the moment a page is revamped — and these pages are being
+        revamped machine by machine right now. Character offsets break on any edit;
+        quoting the selected text and re-finding it is more durable and can degrade
+        to "this comment's passage no longer exists" instead of pointing at the
+        wrong sentence. Worth deciding what happens to orphaned comments.
+      - **Whether it's the right tool.** The [Contributing to These Docs](/docs/contributing-to-these-docs/)
+        page already routes fixes to PRs, and there's a Discord. A comment that
+        nobody reads is worse than no comment box, so it needs an owner who
+        triages them.
+
 - [ ] **Dead-link cleanup** — a set of links was already dead pre-migration and left
       as-is; the build's link validator now reports them (see the `exclude` list in
       `astro.config.mjs` if any are grandfathered). Fix or remove as content gets touched.
@@ -52,14 +79,20 @@ including the credentials doc. This rewrites history to purge them. It's disrupt
 ## Content (owner-led, separate effort)
 
 - [ ] **Machine-page revamps** — remaining machines per the list in
-      [CLAUDE.md](CLAUDE.md) / [REVAMP_PROMPT.md](REVAMP_PROMPT.md): FDM
-      Printers, PCB Machines (NeoDen solder stencil), SLA Printers, Workbenches.
+      [CLAUDE.md](CLAUDE.md) / [REVAMP_PROMPT.md](REVAMP_PROMPT.md): PCB Machines
+      (NeoDen solder stencil) and SLA Printers — of which the Formlabs Form 3 and
+      its Form Wash / Form Cure are done, leaving the Elegoo Saturn 4 Ultra and the
+      Elegoo Mercury wash & cure. FDM Printers came off this list
+      when the Raise3D E2 left the lab — the Bambu X1C is the only FDM machine
+      now, and it is already revamped. Workbenches came off it when the electric
+      workbenches were revamped.
       (The `Templates` group is already retired, and the shared
       [Which Machine?](src/content/docs/docs/Which%20Machine.md) page now exists —
       revisit its entry for each machine as that machine is revamped.)
-- [ ] **Pin the manual first in the un-revamped machine groups** — FDM Printers, SLA
-      Printers and Workbenches still have operations/safety pairs rather than a single
-      manual, so there is no page to pin yet. Do it as each machine is revamped
+- [ ] **Pin the manual first in the un-revamped machine groups** — only the two
+      Elegoo machines under SLA Printers still have operations/safety pairs rather
+      than a single manual, so there is no page to pin yet. (The Formlabs Form 3's
+      manual is pinned.) Do it as each machine is revamped
       (`sidebar.order: 1`, see `DOCS_FORMAT.md`).
 - [ ] **Rename the remaining "Learning Assignments" to "Activities"** — the Cricut
       revamp renamed the group and `DOCS_FORMAT.md` now makes `Activities/` the
@@ -67,13 +100,14 @@ including the credentials doc. This rewrites history to purge them. It's disrupt
       renamed. **CNC Mill is the last of the revamped machines still on the old
       naming** — hold it until PR #66's content question is settled, then move
       `Learning Assignment/2D Relief Coin/2D Relief Coin.md` to
-      `Activities/2D Relief Coin.md` with a 301. The un-revamped machines (Dual Head
-      FDM, NeoDen solder stencil, both SLA printers, Workbenches) get renamed as each
+      `Activities/2D Relief Coin.md` with a 301. The un-revamped machines (NeoDen
+      solder stencil and the Elegoo Saturn 4 Ultra) get renamed as each
       one is revamped. `docs/index.md` carries a parenthetical noting the leftover
       "Learning Assignments" sidebar labels — drop it once the last one is renamed.
 - [ ] **Content structure / information architecture** — Diátaxis-style restructure of
-      the manuals. Grain decisions still open: 3D-model stub pages (merge vs.
-      standalone), Electric Workbench manual (combined vs. per-instrument).
+      the manuals. Grain decision still open: 3D-model stub pages (merge vs.
+      standalone). The electric workbenches settled the multi-instrument case — a bench
+      page plus one page per instrument under `Instruments/`.
 - [ ] Re-home the student-facing **Networking IOT Learning Assignment** if it should
       return to the public site (its parent tree was staff-facing and now lives only in
       git history / Google Docs).

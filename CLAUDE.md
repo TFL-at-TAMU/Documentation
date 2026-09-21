@@ -125,6 +125,12 @@ standard to imitate; Laser Cutter, CNC Mill, Solder Reflow Oven, NeoDen Pick & P
 Cricut, the Bambu Lab X1C, and the Formlabs Form 3 (with its Form Wash / Form Cure
 as a sibling page) are also done.
 
+Not every "machine" is one machine. The **Electric Workbenches** are five instruments on
+a shared surface, so they became a bench page (shared hazards, the general workflow,
+cleanup, an index of the instruments) plus one page per instrument under `Instruments/`.
+Follow that shape for any other multi-instrument station rather than forcing it into a
+single machine page.
+
 Guided exercises are called **activities**, not "learning assignments" — see the
 "Activities" section of `DOCS_FORMAT.md`. Machines revamped before that rename
 (3D Scanner, Laser Cutter, CNC Mill) still use the old naming; rename them when you
