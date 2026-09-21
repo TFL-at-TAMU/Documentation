@@ -20,7 +20,7 @@ What you're aiming for:
 
 - **Supports and a full raft, auto-generated.** Open the **Support** tool. Under **Touchpoint Placement**, leave everything ticked on **Auto Placement**. Under **Support Structure**, set **Raft** to **Full Raft** and **Pillars** to **Classic**, and turn **Allow Internal Supports on Model** **off** — internal supports inside a lattice are close to impossible to remove without snapping struts. Then click **Auto-Generate All**.
 
-- **Print Validation read and understood.** A lattice throws warnings; that's expected on this model, and you can print it with them showing. Before you do, click through each one and work out *why* PreForm is complaining and what it would take to fix. That's the exercise.
+- **Print Validation read and understood.** Open every flag PreForm raises and work out *why* it's complaining — that's the exercise. Then treat them differently, because they are not equally serious. **Minima are the ones to clear**: an unsupported minimum starts a blob of resin in mid-air, and what falls off ends up in the tank, which is the one failure that can cost the tank rather than just your part. Flags on individual struts of a lattice this dense are another matter — the example pictured above was printed from exactly these settings with flags still showing. If you can't tell which kind you're looking at, ask a staff member before you print rather than after.
 
 ![The scaled lattice Benchy on the PreForm build plate with a full raft and support pillars underneath, tilted off vertical](../../../assets/images/formlabs_3_printer_a_320309e78a.png)
 

@@ -157,7 +157,7 @@ Gloves on for all of this.
    ![A gloved hand wiping resin off a build platform with a blue shop towel](../../assets/images/formlabs_cleaning_ma_614de94713.jpeg)
 
 > [!WARNING]
-> **Nothing with resin or alcohol on it goes down the drain.** Resin-soaked paper towels go in the resin waste bin at the finishing station, not the regular trash — uncured resin is hazardous waste and the lab disposes of it as such.
+> **Nothing with resin or alcohol on it goes down the drain — not the sink, not the floor drain.** Resin-soaked paper towels and used gloves go in [resin waste container — ask a staff member where].
 
 5. **Put the platform back in the printer**, return every tool to its spot on the station, and set the printer to sleep: **Settings → Sleep**.
 

@@ -11,7 +11,7 @@ A part that comes out of the [Form 3](/docs/sla-printers/formlabs-form-3-resin-p
 > **The wash bucket holds over eight litres of isopropyl alcohol, and IPA is flammable.** No flames, no soldering irons, no heat guns near this bench. Keep the outer lid shut when the washer isn't in use — that's what stops the whole bucket evaporating into the room.
 
 > [!WARNING]
-> **Nothing with resin or alcohol in it goes down the drain.** Used solvent and resin-soaked towels are hazardous waste and staff dispose of them as such. If the washer needs emptying, that's a staff job.
+> **Nothing with resin or alcohol in it goes down the drain — not the sink, not the floor drain.** That covers used solvent as much as resin. If the washer needs emptying, that's a staff job — don't tip the bucket out yourself.
 
 ## Form Wash
 
@@ -37,15 +37,15 @@ You can wash a part two ways. Dropping it in the **basket (2)** is the normal on
 
 ### How long to wash
 
-Use this table if you just want a part that's clean. It covers the resins the lab runs and is deliberately simple:
+Use this table if you just want a part that's clean. It covers the resins the lab runs and is deliberately simple. **The version matters** — it's the **V4** or **V1** printed on the cartridge label, and it's the same thing the cure section below asks you to look for:
 
 | Resin | Wash time |
 |---|---|
-| Clear | 10 minutes |
-| Tough 2000 | 10 minutes, then 10 more in fresh alcohol |
-| Elastic 50A | 10 minutes on the build platform, then 10 more off it in fresh alcohol |
-| Durable | 20 minutes — and no longer |
-| Anything else | Start at 10 minutes. If it's still tacky, give it up to 10 more. |
+| Clear V4 / V4.1 | 10 minutes |
+| Tough 2000 V1 | 10 minutes, then 10 more in fresh alcohol |
+| Elastic 50A V1 | 10 minutes on the build platform, then 10 more off it in fresh alcohol |
+| Durable V2 | 20 minutes — and no longer |
+| Anything else, or a version not listed here | Start at 10 minutes. If it's still tacky, give it up to 10 more. |
 
 Two things that are true for every resin on that list:
 
@@ -90,7 +90,7 @@ Find the resin **and the version number** on the cartridge label — **Clear V4*
 
 - Put the **basket** back in the washer with the lid closed, and leave the curer's cover shut.
 - Return the **tweezers, flush cutters, and scrapers** to their slots in the washer's tool storage.
-- **Bin resin-contaminated towels and gloves in the resin waste bin** at the finishing station, not the regular trash.
+- **Put resin-contaminated towels and gloves in [resin waste container — ask a staff member where].**
 - Wipe the bench down — alcohol and resin drips both leave residue.
 - Tell a staff member if the alcohol looked cloudy, the parts came out tacky, or either machine threw an error.
 - **Take your part with you** — the lab has no storage.
