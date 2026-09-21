@@ -17,7 +17,7 @@ A part that comes out of the [Form 3](/docs/sla-printers/formlabs-form-3-resin-p
 
 ![Labelled line drawing of the Form Wash with ten callouts: platform mount, basket, basket mount, outer lid, inner lid, wash bucket, display, knob, tool storage and power supply](../../assets/images/formlabs_washing_mac_05cf4e56f7.png)
 
-You operate the whole machine with **one knob**: turn it to move through the options, push it to choose one. The display shows three lines when it's idle — **Start**, the **time**, and **Open**.
+You operate the whole machine with **one knob**: turn it to move through the options, push it to choose one. The display shows three lines when it's idle — **Start**, the **time**, and a third line that toggles: it reads **Open** while the basket is down, and **Sleep** once the basket is up.
 
 ![A hand pushing the Form Wash's knob, with the display showing Start, 10 min and Open](../../assets/images/formlabs_washing_mac_3c4bf2ab8b.png)
 
@@ -33,7 +33,7 @@ You can wash a part two ways. Dropping it in the **basket (2)** is the normal on
 
 6. When the timer ends the basket lifts itself clear. **Leave the part to drip for a minute or two** so the alcohol runs off, then take it out.
 7. **Check the basket for anything left behind** before you close up — a snapped-off support sitting in the basket ends up in someone else's print. Fish it out with the tweezers.
-8. Select **Open** again, push, and let the basket go back down so the lid closes over the bucket.
+8. Select **Sleep** and push, to send the basket back down so the lid closes over the bucket. (That third menu line reads **Sleep** now rather than **Open** — the basket is up.)
 
 ### How long to wash
 
