@@ -1,103 +1,166 @@
 ---
 title: Pick and Place Machine (NeoDen YY1)
+sidebar:
+  order: 1
 ---
 
-The NeoDen YY1 places surface-mount components onto a circuit board for you. Give it a placement file from your PCB design software and load your parts into its tape feeders, and its vacuum nozzle picks up each component and sets it at the exact coordinates from your design — far faster and steadier than tweezers. It's the middle step of PCB assembly: after [solder paste is stenciled onto the board](/docs/pcb-machines/neoden-solder-stencil/operations--safety-manuals/neoden-fp2636-machine-operation-manual/) and before [the reflow oven](/docs/pcb-machines/novastar-solder-reflow-oven/solder-reflow-oven-ddm-novastar-gf-c2/) melts the paste to lock everything in place. It's built for prototypes, class projects, and small research batches on boards up to **315 mm × 350 mm** — not for production runs, and not for advanced packages (BGA, CSP, flip-chip) that need finer placement than its vision system can deliver. If you're not sure this is the right machine for your project, see [Which Machine?](/docs/which-machine/) or ask a staff member.
+The NeoDen YY1 places surface-mount components onto a solder-pasted PCB using feeder-loaded parts and coordinate data from a YY1-compatible CSV file. It is the middle step of PCB assembly: after [solder paste is stenciled onto the board](/docs/pcb-machines/neoden-solder-stencil/operations--safety-manuals/neoden-fp2636-machine-operation-manual/) and before [the reflow oven](/docs/pcb-machines/novastar-solder-reflow-oven/solder-reflow-oven-ddm-novastar-gf-c2/) permanently solders the parts. It is intended for prototype and low-volume assembly on boards up to **315 mm x 350 mm**. If you are not sure this is the right machine for your project, see [Which Machine?](/docs/which-machine/).
+
+## Safety considerations (read first)
 
 > [!WARNING]
-> **A trained staff member must be present** whenever the machine is in use.
+> **A trained staff member must be present** whenever this machine is in use.
 
 > [!WARNING]
-> **Keep your hands out of the machine while it's running.** The placement head sweeps quickly across the whole bed without warning. Load boards, reels, and the SD card only while the machine is idle, and never reach past the safety cover during a job.
+> **Keep hands clear whenever the machine is moving.** The placement head moves quickly across the bed and can change direction without warning.
+
+> [!WARNING]
+> **Do not bypass covers or reach into the machine during an active job.** Load boards, reels, and the SD card only while the machine is idle.
 
 :::caution[EMERGENCY STOP]
-This machine has no emergency-stop button. To stop a running job, tap **Stop** on the touchscreen. To kill all power, flip the **ON/OFF switch** at the rear of the machine's right side. Then notify staff.
+To stop motion, tap **Stop** on the touchscreen. To remove machine power immediately, flip the **ON/OFF switch** at the right-rear side of the machine. Notify staff after any emergency stop.
+:::
+
+:::caution[STOP IMMEDIATELY IF]
+Stop the job and get staff if you observe unexpected noise or vibration, feeder jams, out-of-bounds head movement, smoke, sparks, burning odor, software freeze, or a damaged power cable.
 :::
 
 ## Before you start
 
-- Your board must already have **lead-free solder paste** applied — that's the [solder paste stencil machine](/docs/pcb-machines/neoden-solder-stencil/operations--safety-manuals/neoden-fp2636-machine-operation-manual/)'s job, done just before this one.
-- Your board must fit within **315 mm × 350 mm**.
-- Bring your placement file as a **NeoDen YY1–format CSV** — see [Preparing your placement file](#preparing-your-placement-file) below. You'll load it into the machine on an SD card.
-- Every component in your file must be loaded in the machine, in the feeder slot the file says it's in. The [feeder slot chart](https://docs.google.com/spreadsheets/d/18dMiUAIPoFiYq0AChLLP8tyWiuEx4bR4EatctU6wq48/edit?usp=sharing) lists which parts are preloaded where and which slots are free for your own reels.
-- No special PPE is needed — regular clothes are fine.
+- Your board must already have **lead-free solder paste** applied.
+- Board size must be within **315 mm x 350 mm**.
+- Use a **YY1-compatible CSV** and copy it to an SD card.
+- Confirm every part in the CSV is loaded in the feeder slot specified in that file.
+- Verify feeder availability and preloaded parts in the [feeder slot chart](https://docs.google.com/spreadsheets/d/18dMiUAIPoFiYq0AChLLP8tyWiuEx4bR4EatctU6wq48/edit?usp=sharing).
+- No special PPE is required beyond standard Fab Lab attire.
 
 ## Machine overview
 
-![Numbered diagram of the NeoDen YY1 identifying the parts listed below](../../assets/images/neoden_yy1_machine_overview.png)
+![Numbered NeoDen YY1 overview diagram with major machine components](../../assets/images/neoden_yy1_machine_overview.png)
 
-1. **Placement head** — moves across the bed to pick up and place components.
-2. **Peeler (left)** — strips the plastic cover tape off the component tape to expose the parts.
-3. **Nozzle** — the vacuum tip that holds each component in transit.
-4. **Tape feeders (left)** — the slots where reels of components load.
-5. **Nozzle station (ANC)** — a rack of nozzle sizes the machine swaps between automatically to match each component.
-6. **Camera displays** — live views from the machine's upward- and downward-looking cameras, used for component alignment and finding the board's fiducial marks.
-7. **Peeler holder** — guides the waste cover tape away from the picking area.
-8. **Safety cover** — the clear shield over the moving parts.
-9. **Peeler (right)** — same as (2), for the right-side feeders.
-10. **Sticker feeder** — holds short cut strips of tape instead of full reels.
-11. **Touchscreen** — where you load files, run jobs, and watch progress.
-12. **SD card slot** — how placement files get into the machine.
-13. **ON/OFF switch** — main power, at the rear of the machine's right side.
-14. **Power cord (DC 24 V)** — connects the machine to its external power brick.
+1. **Placement head**: Moves in X/Y to pick and place components.
+2. **Left peeler**: Removes cover tape from feeder strips.
+3. **Nozzle**: Vacuum pickup tip for component handling.
+4. **Left feeder bank**: Reel slots for component tapes.
+5. **ANC nozzle station**: Automatic nozzle storage and exchange area.
+6. **Camera displays**: Upward/downward vision feedback for alignment.
+7. **Peeler holder**: Supports and guides peeled tape path.
+8. **Safety cover**: Shields operator from moving mechanism.
+9. **Right peeler**: Cover tape removal on the right feeder side.
+10. **Sticker feeder**: Supports short cut strips instead of full reels.
+11. **Touchscreen**: Main machine UI for file loading and job control.
+12. **SD card slot**: File transfer input for YY1 CSV jobs.
+13. **ON/OFF switch**: Main power switch.
+14. **DC power input**: 24 V power input connector.
 
-## Preparing your placement file
+## Software download
 
-The machine reads exactly one thing: a CSV file in **NeoDen YY1 format**, with these columns for every component:
+Use the lab YY1 formatter package set (Windows, macOS, and Linux installers are in this folder):
 
-| Designator | Footprint | Mid X (mm) | Mid Y (mm) | Layer | Rotation (°) | Feeder |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| R1 | 0603 | 10.5 | 20.3 | Top | 90 | 1 |
+<a class="tfl-download-button" href="https://drive.google.com/drive/folders/1sAP2mopvaOA5MnSG3K4IRKvyih8gP3C5?usp=drive_link">Dowload Software</a>
 
-PCB design programs don't export this format directly — their placement exports all name and order the columns differently. The lab's **NeoDen YY1 Formatter**, a free app for Windows and macOS, converts them for you:
+## YY1 CSV format (required)
+
+The YY1 does not accept a generic CAD pick-and-place CSV. The CSV must match YY1 structure, including the file header rows, panel/fiducial rows, nozzle-change rows, and full component columns.
 
 > [!NOTE]
-> **Export your placement file as a CSV, with units set to mm.** The formatter accepts no other file type, and the machine needs all coordinates in millimeters — set both in your design software *before* exporting.
+> Export from your EDA tool as **CSV with mm units**, then run it through the YY1 formatter so the output matches this structure.
 
-1. In your PCB design software (Fusion 360, KiCad, Altium, EasyEDA, and others all work), set the units to **mm** and export your board's placement file — also called a **pick-and-place** or **centroid** export — as a **CSV**.
-2. Download the formatter and run it on your own computer (or a lab PC):
+Required component columns in the YY1 section are:
 
-   <a class="tfl-download-button" href="https://drive.google.com/file/d/1W5b28qzZU0AuM1y9Uwsw85C3ulrWqh_V/view?usp=sharing">⬇ Download for Windows</a> <a class="tfl-download-button" href="https://drive.google.com/file/d/1CaqqreY8S0gjq014CbNd2aT7VBqq2Z_T/view?usp=sharing">⬇ Download for macOS</a>
+- **Designator**
+- **Comment**
+- **Footprint**
+- **Mid X(mm)**
+- **Mid Y(mm)**
+- **Rotation**
+- **Head**
+- **FeederNo**
+- **Mount Speed(%)**
+- **Pick Height(mm)**
+- **Place Height(mm)**
+- **Mode**
+- **Skip**
 
-   The links open Google Drive — click the **Download** icon on the page that appears.
+Reference structure (from a known working YY1 file):
 
-3. Drag your CSV into the formatter, then assign each component the **feeder slot** its parts are loaded in — the [feeder slot chart](https://docs.google.com/spreadsheets/d/18dMiUAIPoFiYq0AChLLP8tyWiuEx4bR4EatctU6wq48/edit?usp=sharing) says what's where.
-4. Export. The formatter saves a `…_yy1.csv` file ready for the machine — copy it onto the SD card.
+```csv
+NEODEN,YY1,P&P FILE,,,,,,,,,,,
+,,,,,,,,,,,,,
+PanelizedPCB,UnitLength,0,UnitWidth,0,Rows,1,Columns,1,
+,,,,,,,,,,,,,
+Fiducial,1-X,0,1-Y,0,OverallOffsetX,0,OverallOffsetY,0,
+,,,,,,,,,,,,,
+NozzleChange,OFF,BeforeComponent,2,Head1,Drop,Station1,PickUp,Station3,
+NozzleChange,OFF,BeforeComponent,1,Head1,Drop,Station3,PickUp,Station1,
+NozzleChange,OFF,BeforeComponent,1,Head1,Drop,Station1,PickUp,Station1,
+NozzleChange,OFF,BeforeComponent,1,Head1,Drop,Station1,PickUp,Station1,
+,,,,,,,,,,,,,
+Designator,Comment,Footprint,Mid X(mm),Mid Y(mm) ,Rotation,Head ,FeederNo,Mount Speed(%),Pick Height(mm),Place Height(mm),Mode,Skip
+C1,0.1uF,CAPC3216X135,81.25,68.99,0.00,0,1,100,0.0,0.0,1,0
+```
+
+If this structure is not matched, the YY1 can show **File Error** and refuse to run.
+
+![YY1 screen showing a file loaded with a File Error message for incompatible format](../../assets/images/neoden_yy1_file_error_screen.jpg)
 
 ## Operating
 
-1. Check that the bed is clear — no boards or stray components left from the last job.
-2. Turn on the **ON/OFF switch (13)** at the rear of the machine's right side. The machine initializes: the **touchscreen (11)** and **camera displays (6)** come on, and the head homes itself.
+1. Confirm the machine bed is clear and no leftover components are in the work area.
+2. Turn on machine power using the right-side panel switch.
 
-   ![The NeoDen YY1 starting up, with the camera displays live and the touchscreen showing "Initializing…"](../../assets/images/neoden_yy1_initializing.jpeg)
+   ![Right-side NeoDen YY1 power panel showing SD card slot above the power switch](../../assets/images/neoden_yy1_sd_power_panel.jpg)
 
-3. Load any of your own components that aren't already in the machine: feed the reel into a **free feeder slot (4)**, line the tape up with the internal rail, and use tweezers to gently advance it until it reaches the marked line.
-4. Insert your **SD card** into the slot **(12)** on the right side of the machine, just above the power switch, until it clicks. Your files appear on the touchscreen.
-5. Select your file. If it's compatible, the screen shows **"Neoden YY1 Type File"** at the bottom center. If it shows **"File Error"** instead, the file isn't in YY1 format — see [Common problems](#common-problems).
-6. Tap **Mount**.
-7. Place your board against the **origin** — the screw at the bottom-left of the bed — oriented the same way as in your PCB design. Slide the **black magnetic holder** up against the board to hold it in place.
-8. Press **Start**. The job runs automatically.
+3. Wait for startup to complete.
+
+   ![NeoDen YY1 during initialization with camera displays and touchscreen active](../../assets/images/neoden_yy1_initializing.jpeg)
+
+4. Load any missing reels into free feeder slots and align tape with the feeder rail.
+
+   ![Close-up of installed feeder lanes on the NeoDen YY1](../../assets/images/neoden_yy1_feeder_closeup.jpg)
+
+5. Advance each tape to pickup position using tweezers, aligned with the marked line.
+
+   ![Close-up showing tape path alignment into feeder pickup position](../../assets/images/neoden_yy1_tape_path_closeup.jpg)
+
+6. Insert the SD card until it clicks. Verify your file appears in the UI.
+7. Select the file. A valid file should load as **Neoden YY1 Type File** and expose editing/mount options.
+
+   ![YY1 main file screen showing Edit Component, Edit Fiducial, and Mount options](../../assets/images/neoden_yy1_mount_screen.jpg)
+
+8. If needed, use **Edit Component** to confirm feeder mapping and key values before running.
+
+   ![YY1 Edit Component screen showing feeder assignment and component fields](../../assets/images/neoden_yy1_edit_component_screen.jpg)
+
+9. Tap **Mount**, then place your PCB at the board origin (bottom-left reference screw) with the same orientation used in your design.
+10. Position the magnetic board holder to secure the PCB.
+
+   ![Example board placement on the YY1 workbed with rails and magnetic holder in place](../../assets/images/neoden_yy1_workbed_example.jpg)
+
+11. Press **Start** to begin placement.
 
 > [!WARNING]
-> Stay at the machine while the job runs. If anything goes wrong — unexpected noise or vibration, the head moving somewhere it shouldn't, a jammed feeder, smoke or a burning smell — tap **Stop**, don't reach in, and get a staff member. Never troubleshoot a running machine yourself.
+> Stay at the machine for the full run. If anything abnormal happens, tap **Stop**, keep hands clear, and notify staff.
 
-9. When the screen shows **"Placement Complete"**, wait for the head to return to its home position before reaching in.
+12. At **Placement Complete**, wait for the head to return to home before reaching inside.
 
 ## Finishing up
 
-- Slide your board out of the rails carefully, holding it by the edges — the components are only sitting in wet solder paste and smear easily. Look it over for misplaced or missing parts, then take it to [the reflow oven](/docs/pcb-machines/novastar-solder-reflow-oven/solder-reflow-oven-ddm-novastar-gf-c2/) to make the placements permanent.
-- Brush any dropped components off the bed with a brush — never compressed air or your breath, which blows parts into the machine's lead screws.
-- Return component reels to their moisture-barrier bags or storage bins.
-- Tap the **Exit** icon on the touchscreen, then flip the power switch off.
-- Report anything that broke or misbehaved — bent nozzles, feeder jams, software freezes — to staff.
-- Take your board and materials with you — the lab has no storage.
+- Remove the PCB by the edges so wet solder paste placements are not disturbed.
+- Inspect for missing, mis-rotated, or shifted components before reflow.
+- Send the board to [the reflow oven](/docs/pcb-machines/novastar-solder-reflow-oven/solder-reflow-oven-ddm-novastar-gf-c2/).
+- Clean loose components from the bed using a brush only.
+- Return reels to their designated storage locations.
+- Exit on the touchscreen, then power the machine off.
+- Report broken nozzles, feeder jams, crashes, or repeat placement errors to staff.
+- Take your project and materials with you; the lab has no storage.
 
 ## Common problems
 
-**The screen shows "File Error" when you select your file.** The CSV isn't in NeoDen YY1 format. Re-export the placement file from your design software as a CSV with units in mm, run it through the [formatter](#preparing-your-placement-file) again, and copy the new `…_yy1.csv` to the SD card.
+**The screen shows File Error when selecting a CSV.** The file format does not match YY1 requirements. Re-export as CSV in mm, run it through the YY1 formatter, and verify header and column structure in [YY1 CSV format (required)](#yy1-csv-format-required).
 
-**A component isn't being picked up.** The feeder tape may not be advanced to the pickup point, or the nozzle may be too small for the part. Check the tape indexing first; if it keeps failing, tell staff.
+**A component is not being picked correctly.** Check tape indexing first. Then confirm feeder mapping and nozzle suitability for that package. If pick failures persist, stop and notify staff.
 
-**The screen warns about vision alignment failure.** The upward-looking camera lens is probably dusty — wipe it gently with a microfiber cloth.
+**Vision alignment warning appears during setup or run.** Gently clean the vision area with a microfiber cloth and verify the board is flat and well lit. Re-run setup, then call staff if the warning remains.
 
-**The machine can't find the board's fiducials.** Check that the board is sitting flat against the bed and the room lighting is adequate, and tell staff if it still fails.
+**Placed parts look offset on the board.** Confirm board orientation at origin, re-check fiducial/edit screen values, and verify feeder assignments match the intended designators before starting the next run.
