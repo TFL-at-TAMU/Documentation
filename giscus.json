@@ -1,0 +1,5 @@
+{
+	"origins": ["https://tfl.aidanstew.art"],
+	"originsRegex": ["http://localhost:[0-9]+"],
+	"defaultCommentOrder": "oldest"
+}

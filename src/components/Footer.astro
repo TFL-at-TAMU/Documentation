@@ -1,0 +1,24 @@
+---
+// Starlight component override for `Footer` (see astro.config.mjs ->
+// starlight({ components: { Footer: ... } })). Starlight's default footer is the
+// edit link, last-updated line and prev/next pagination; this wraps it and adds
+// the page comment box underneath.
+//
+// Everything about the comment system itself lives in src/components/Comments.astro
+// and src/giscusConfig.ts. The rules for *whether* a page gets comments are here:
+//
+//   - not until giscus is configured (GISCUS_CONFIGURED — see src/giscusConfig.ts)
+//   - not on splash/landing-style pages, which have no body to comment on
+//   - not on any page whose frontmatter sets `comments: false`
+import Default from '@astrojs/starlight/components/Footer.astro';
+import Comments from './Comments.astro';
+import { GISCUS_CONFIGURED } from '../giscusConfig';
+
+const { entry } = Astro.locals.starlightRoute;
+
+const showComments =
+	GISCUS_CONFIGURED && entry.data.template !== 'splash' && entry.data.comments !== false;
+---
+
+<Default><slot /></Default>
+{showComments && <Comments />}

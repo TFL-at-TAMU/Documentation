@@ -55,32 +55,39 @@ including the credentials doc. This rewrites history to purge them. It's disrupt
       Form 3 Resin printer/Learning Assignments/Lattice_Benchy_FCC.md` is a related but
       separate case: its viewer and download were already removed because the `.stl`
       exceeded the 25 MiB limit.)
-- [ ] **Page comments with text references** — let readers comment on any page, and
-      anchor a comment to a specific passage they select (the Medium/Google-Docs
-      model: highlight a sentence, leave a note on it). The point is catching the
-      step that's wrong or unclear at the exact place it's wrong, from someone
-      standing at the machine — which is where most of this site's errors get found.
+- [x] **Page comments (giscus)** — every docs page carries a comment box at the
+      bottom, backed by GitHub Discussions on this repo. Readers sign in with a
+      free GitHub account (the same one the Edit page flow already needs),
+      comments post immediately, and moderation is after the fact from the
+      Discussions tab. Code: `src/components/Comments.astro` +
+      `src/components/Footer.astro`; settings in `src/giscusConfig.ts`; origin
+      lock in `giscus.json`. A page opts out with `comments: false`.
 
-      Nothing is decided yet. What has to be worked out first:
+      **Still needs the owner's one-time GitHub setup before anything renders**
+      — the four steps are written out at the top of `src/giscusConfig.ts`
+      (enable Discussions, make an Announcement-format category, install the
+      giscus app, paste the category ID). Until that last ID is filled in, the
+      build prints a notice and ships without comments.
 
-      - **Where comments live.** The site is static on Cloudflare Pages, so there is
-        no backend today. Options: Cloudflare D1/KV behind a Worker (we already use
-        Cloudflare, and it keeps the data ours), or a hosted layer like Giscus
-        backed by GitHub Discussions (no infrastructure, but commenting needs a
-        GitHub account — probably a non-starter for students).
-      - **Who can post, and moderation.** A public makerspace site with anonymous
-        comments needs a spam answer and a staff deletion path before it ships.
-        This is the part most likely to sink the feature, so decide it early.
-      - **How an anchor survives an edit.** The hard part. A comment pinned to
-        "step 4" breaks the moment a page is revamped — and these pages are being
-        revamped machine by machine right now. Character offsets break on any edit;
-        quoting the selected text and re-finding it is more durable and can degrade
-        to "this comment's passage no longer exists" instead of pointing at the
-        wrong sentence. Worth deciding what happens to orphaned comments.
-      - **Whether it's the right tool.** The [Contributing to These Docs](/docs/contributing-to-these-docs/)
-        page already routes fixes to PRs, and there's a Discord. A comment that
-        nobody reads is worse than no comment box, so it needs an owner who
-        triages them.
+      Deferred from this MVP, worth revisiting once there's real usage:
+
+      - **Comments anchored to a passage** — the original ask here was the
+        Medium/Google-Docs model: highlight the step that's wrong and comment on
+        *that*, which is where most of this site's errors get found. giscus is
+        per-page only. The options that do anchor are Hypothesis (hosted, needs
+        a hypothes.is account, data isn't ours) or building it on Cloudflare
+        (Pages Functions + D1 + Turnstile, no login needed). If it gets built,
+        the hard part is still anchor survival across the machine-page revamps:
+        quote the selected text and re-find it, degrading to "this passage no
+        longer exists" rather than pointing at the wrong sentence.
+      - **Anonymous commenting.** A GitHub account is a real wall for a
+        first-year who just wants to say "the bed is 256mm not 250". If the
+        comment box sits unused, that's the first thing to suspect.
+      - **Whether anyone triages them.** A comment nobody reads is worse than no
+        comment box. Watch the Discussions tab for a semester and decide.
+      - **Moderation posture.** Comments currently go live instantly. Pre-moderation
+        is worth reconsidering for the machine pages and `/safety/` specifically,
+        where a wrong comment sits under a correct procedure.
 
 - [ ] **Dead-link cleanup** — a set of links was already dead pre-migration and left
       as-is; the build's link validator now reports them (see the `exclude` list in
