@@ -49,7 +49,7 @@ The lab has two: the **Elegoo Saturn 4 Ultra 16K** and the **Formlabs Form 3**.
 Resin is the messiest material in the lab and the one with the most rules. Liquid resin irritates skin and eyes, so gloves are required from the moment a print leaves the printer until it comes out of the curing cycle, and uncured resin never gets left in the work area. Read the machine's page before you print, not after.
 :::
 
-[Resin 3D Printer (Elegoo Saturn 4 Ultra 16K) →](/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/resin-3d-printer-elegoo-saturn-4-ultra-16k/) · [Elegoo wash and cure →](/docs/sla-printers/elegoo-mercury-30-plus-washing-and-curing-machine/wash-and-cure-station-elegoo-mercury-30-plus/) · [Formlabs Form 3 →](/docs/sla-printers/formlabs-form-3-resin-printer/operations--safety-manuals/formlabs-3-resin-printer-operations-manual/) · [Formlabs wash & cure →](/docs/sla-printers/formlabs-form-3-resin-printer/wasing-and-curing-machines/formlabs-washing-machines-operations-manual/)
+[Resin 3D Printer (Elegoo Saturn 4 Ultra 16K) →](/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/resin-3d-printer-elegoo-saturn-4-ultra-16k/) · [Elegoo wash and cure →](/docs/sla-printers/elegoo-mercury-30-plus-washing-and-curing-machine/wash-and-cure-station-elegoo-mercury-30-plus/) · [Formlabs Form 3 →](/docs/sla-printers/formlabs-form-3-resin-printer/resin-3d-printer-formlabs-form-3/) · [Formlabs wash & cure →](/docs/sla-printers/formlabs-form-3-resin-printer/form-wash-and-form-cure/)
 
 ## Cutting and milling
 
