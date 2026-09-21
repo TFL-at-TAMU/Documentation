@@ -1,0 +1,130 @@
+---
+// The page comment box (giscus, backed by GitHub Discussions). Rendered at the
+// bottom of every docs page by the Footer override in src/components/Footer.astro,
+// which is also where the "is giscus configured / does this page want comments"
+// decision is made — by the time this component renders, the answer is yes.
+//
+// All configuration, including the one-time GitHub setup that has to happen
+// before any of this works, lives in src/giscusConfig.ts.
+//
+// The widget is built from JavaScript rather than written as a plain
+// <script src="https://giscus.app/client.js" …> tag so the theme is correct on
+// the first frame: Starlight resolves light/dark into `data-theme` on <html> at
+// runtime, which a static attribute in the HTML can't read.
+import {
+	GISCUS_REPO,
+	GISCUS_REPO_ID,
+	GISCUS_CATEGORY,
+	GISCUS_CATEGORY_ID,
+	GISCUS_THEME_DARK,
+	GISCUS_THEME_LIGHT,
+} from '../giscusConfig';
+---
+
+<section class="tfl-comments" aria-labelledby="tfl-comments-heading">
+	<h2 id="tfl-comments-heading">Comments</h2>
+	<p class="tfl-comments-intro">
+		Something on this page wrong, missing, or not matching the machine in front of you? Say so
+		here — comments are public and staff read them. Posting needs a free <a
+			href="https://github.com/signup">GitHub account</a
+		>, the same one the <a href="/docs/contributing-to-these-docs/">Edit page</a> flow uses; if you
+		already know the fix, editing the page is the faster route. Comments are readers talking to each
+		other, not checked instructions — for anything urgent or safety-related, ask staff in the lab or
+		on <a href="https://discord.gg/Tvn9rsBUWH">Discord</a>.
+	</p>
+	<div id="tfl-giscus"></div>
+</section>
+
+<script
+	define:vars={{
+		repo: GISCUS_REPO,
+		repoId: GISCUS_REPO_ID,
+		category: GISCUS_CATEGORY,
+		categoryId: GISCUS_CATEGORY_ID,
+		themeDark: GISCUS_THEME_DARK,
+		themeLight: GISCUS_THEME_LIGHT,
+	}}
+>
+	const mount = document.getElementById('tfl-giscus');
+
+	const currentTheme = () =>
+		document.documentElement.dataset.theme === 'light' ? themeLight : themeDark;
+
+	const giscus = document.createElement('script');
+	giscus.src = 'https://giscus.app/client.js';
+	giscus.async = true;
+	giscus.crossOrigin = 'anonymous';
+
+	const attrs = {
+		repo,
+		'repo-id': repoId,
+		category,
+		'category-id': categoryId,
+		// One discussion per URL path, so a comment stays with its page.
+		mapping: 'pathname',
+		// Match the discussion by a hash of the path instead of GitHub's fuzzy title
+		// search — without this, similarly named pages can land on each other's thread.
+		strict: '1',
+		'reactions-enabled': '1',
+		'emit-metadata': '0',
+		'input-position': 'top',
+		theme: currentTheme(),
+		lang: 'en',
+		// Hold the iframe until the reader scrolls down to it.
+		loading: 'lazy',
+	};
+	for (const [key, value] of Object.entries(attrs)) {
+		giscus.setAttribute('data-' + key, value);
+	}
+	mount.appendChild(giscus);
+
+	// Follow Starlight's theme toggle. The iframe is already loaded by then, so it
+	// gets re-themed in place through giscus' setConfig message rather than reloaded.
+	new MutationObserver(() => {
+		const frame = document.querySelector('iframe.giscus-frame');
+		if (!frame || !frame.contentWindow) return;
+		frame.contentWindow.postMessage(
+			{ giscus: { setConfig: { theme: currentTheme() } } },
+			'https://giscus.app'
+		);
+	}).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+</script>
+
+<style>
+	.tfl-comments {
+		margin-top: 3rem;
+		padding-top: 2rem;
+		border-top: 1px solid var(--sl-color-hairline);
+	}
+
+	.tfl-comments h2 {
+		font-size: var(--sl-text-h4);
+		line-height: var(--sl-line-height-headings);
+		margin-bottom: 0.5rem;
+	}
+
+	.tfl-comments-intro {
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-gray-3);
+		max-width: 60ch;
+		margin-bottom: 1.5rem;
+	}
+
+	/* This section sits outside `.sl-markdown-content`, so Starlight's link
+	   styling doesn't reach it — without this the links render browser-default
+	   blue/purple instead of the theme's orange. */
+	.tfl-comments-intro a {
+		color: var(--sl-color-text-accent);
+		text-decoration: underline;
+	}
+
+	.tfl-comments-intro a:hover {
+		color: var(--sl-color-white);
+	}
+
+	/* The giscus iframe sets its own height once loaded; this only keeps the
+	   layout from jumping while it does. */
+	#tfl-giscus {
+		min-height: 8rem;
+	}
+</style>

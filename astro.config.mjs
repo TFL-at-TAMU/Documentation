@@ -163,6 +163,8 @@ export default defineConfig({
 			components: {
 				Header: './src/components/Header.astro',
 				MobileMenuFooter: './src/components/MobileMenuFooter.astro',
+				// Wraps the default footer and adds the giscus comment box below it.
+				Footer: './src/components/Footer.astro',
 			},
 		}),
 	],
