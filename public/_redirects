@@ -80,6 +80,25 @@
 /docs/templates/fab-lab-machine-safety-manual-master-template/ /docs/ 301
 /docs/templates/ /docs/ 301
 
+# Elegoo Saturn 4 Ultra: operations + safety + cleaning manuals merged into one machine
+# page, and the "Learning Assignments" group renamed to "Activities" (see DOCS_FORMAT.md).
+# The six <model-viewer> stub pages are unpublished (draft) until the STL viewer exists —
+# point their URLs at the activity meanwhile.
+/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/elegoo-resin-3d-printer-operations-manual/ /docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/resin-3d-printer-elegoo-saturn-4-ultra-16k/ 301
+/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/elegoo-resin-3d-printer-safety-manual/ /docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/resin-3d-printer-elegoo-saturn-4-ultra-16k/ 301
+/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/elegoo-resin-3d-printer-cleaning-manual/ /docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/resin-3d-printer-elegoo-saturn-4-ultra-16k/ 301
+/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/learning-assignments/activity-1/elegoo-resin-3d-printer-activity/ /docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/activities/chess-piece/ 301
+/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/learning-assignments/activity-1/ornate-chess-pawn2/ /docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/activities/chess-piece/ 301
+/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/learning-assignments/activity-1/ornate-chess-rook2/ /docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/activities/chess-piece/ 301
+/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/learning-assignments/activity-1/ornate-chess-knight2/ /docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/activities/chess-piece/ 301
+/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/learning-assignments/activity-1/ornate-chess-bishop2/ /docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/activities/chess-piece/ 301
+/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/learning-assignments/activity-1/ornate-chess-queen2/ /docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/activities/chess-piece/ 301
+/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/learning-assignments/activity-1/ornate-chess-king3/ /docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/activities/chess-piece/ 301
+
+# Elegoo Mercury 3.0 Plus: the combined safety + operations manual rewritten as one
+# machine page named for what it is rather than for the document it came from.
+/docs/sla-printers/elegoo-mercury-30-plus-washing-and-curing-machine/elegoo-washing-and-curing-machine-manual/ /docs/sla-printers/elegoo-mercury-30-plus-washing-and-curing-machine/wash-and-cure-station-elegoo-mercury-30-plus/ 301
+
 # Electric Workbenches: the benches are five instruments on a surface rather than one
 # machine, so the operations + safety manual pair becomes a bench page plus one page
 # per instrument under Instruments/. The empty "Nothing Here" learning-assignment
