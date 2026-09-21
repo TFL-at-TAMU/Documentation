@@ -1,5 +1,8 @@
 {
-	"origins": ["https://tfl.aidanstew.art"],
-	"originsRegex": ["http://localhost:[0-9]+"],
+	"origins": ["https://tfl.aidanstew.art", "https://documentation-63v.pages.dev"],
+	"originsRegex": [
+		"^https://[a-z0-9-]+\\.documentation-63v\\.pages\\.dev$",
+		"^http://localhost:[0-9]+$"
+	],
 	"defaultCommentOrder": "oldest"
 }

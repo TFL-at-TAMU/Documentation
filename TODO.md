@@ -63,11 +63,10 @@ including the credentials doc. This rewrites history to purge them. It's disrupt
       `src/components/Footer.astro`; settings in `src/giscusConfig.ts`; origin
       lock in `giscus.json`. A page opts out with `comments: false`.
 
-      **Still needs the owner's one-time GitHub setup before anything renders**
-      — the four steps are written out at the top of `src/giscusConfig.ts`
-      (enable Discussions, make an Announcement-format category, install the
-      giscus app, paste the category ID). Until that last ID is filled in, the
-      build prints a notice and ships without comments.
+      The GitHub side is set up: Discussions on, the giscus app installed, and
+      an Announcement-format **Page Comments** category holding the threads. The
+      steps are recorded at the top of `src/giscusConfig.ts` in case they're ever
+      redone.
 
       Deferred from this MVP, worth revisiting once there's real usage:
 

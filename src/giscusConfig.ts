@@ -7,13 +7,13 @@
 // comments appear immediately — moderation is after the fact, from the
 // Discussions tab on GitHub.
 //
-// ── One-time setup, needed before any of this renders (repo admin) ───────────
-// Until GISCUS_CATEGORY_ID below is filled in, the comment box is omitted from
-// every page and the site builds and ships exactly as it does today.
+// ── The GitHub side (done — kept here in case it's ever redone) ─────────────
+// These four steps are what make the IDs below valid. If GISCUS_CATEGORY_ID is
+// ever emptied, the comment box is omitted from every page and the build says
+// so, rather than shipping a broken widget.
 //
 //   1. Enable Discussions: repo Settings → General → Features → check
-//      "Discussions". (A proxy blocks this write from an agent session, so it
-//      has to be a human click.)
+//      "Discussions".
 //   2. Create the category: Discussions → the pencil icon beside "Categories"
 //      → New category. Name it to match GISCUS_CATEGORY below, and set its
 //      format to **Announcement**. Announcement format means only maintainers
@@ -40,7 +40,7 @@ export const GISCUS_REPO_ID = 'R_kgDOSeyiyA';
 export const GISCUS_CATEGORY = 'Page Comments';
 
 /** Category node ID from step 4. Empty = comments off site-wide. */
-export const GISCUS_CATEGORY_ID = '';
+export const GISCUS_CATEGORY_ID = 'DIC_kwDOSeyiyM4DGHfq';
 
 /**
  * giscus themes for the site's dark and light modes. `transparent_dark` lets
