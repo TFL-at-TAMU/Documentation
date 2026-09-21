@@ -128,10 +128,10 @@ A trained staff member must be present for the pick & place and the reflow oven,
 Benches rather than a single machine, for hand work on electronics.
 
 - **Good for:** assembling, soldering and testing circuits and prototypes; measuring voltage, current, resistance and signal waveforms; reworking, repairing or modifying PCBs.
-- **Not for:** mechanical or plumbing repairs, circuits beyond the bench equipment's rated voltage or current, or anything involving hazardous or flammable materials.
-- **Instruments:** Fluke 17B multimeter, Weller WE1010NA soldering station, oscilloscope, SWM hot air rework station, and a bench power supply.
+- **Not for:** mechanical or plumbing repairs, or anything that plugs into a wall outlet — the benches are for low-voltage work only.
+- **Instruments:** each has its own page — [multimeter](/docs/workbenches/instruments/multimeter-fluke-17b/), [soldering station](/docs/workbenches/instruments/soldering-station-weller-we1010na/), [oscilloscope](/docs/workbenches/instruments/oscilloscope-hameg-hmo1524/), [bench power supply](/docs/workbenches/instruments/bench-power-supply-kungber-sps3010/), and [hot air rework station](/docs/workbenches/instruments/hot-air-rework-station-sparkfun-8508d/).
 
-[Electrical Workbench Operation Manual →](/docs/workbenches/electric-workbenches/operations-and-safety-manuals/electrical-workbench-operation-manual/)
+[Electric Workbenches →](/docs/workbenches/electric-workbenches/)
 
 ## Still not sure?
 

@@ -79,3 +79,11 @@
 /docs/templates/fab-lab-machine-operation-manual-master-template/ /docs/ 301
 /docs/templates/fab-lab-machine-safety-manual-master-template/ /docs/ 301
 /docs/templates/ /docs/ 301
+
+# Electric Workbenches: the benches are five instruments on a surface rather than one
+# machine, so the operations + safety manual pair becomes a bench page plus one page
+# per instrument under Instruments/. The empty "Nothing Here" learning-assignment
+# placeholder was removed.
+/docs/workbenches/electric-workbenches/operations-and-safety-manuals/electrical-workbench-operation-manual/ /docs/workbenches/electric-workbenches/ 301
+/docs/workbenches/electric-workbenches/operations-and-safety-manuals/electrical-workbench-pps-machine-safety-manual/ /docs/workbenches/electric-workbenches/ 301
+/docs/workbenches/electric-workbenches/learning-assignments/nothing-here/ /docs/workbenches/electric-workbenches/ 301
