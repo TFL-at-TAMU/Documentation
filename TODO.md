@@ -90,6 +90,7 @@ including the credentials doc. This rewrites history to purge them. It's disrupt
 
 - [ ] **Machine-page revamps** — remaining machines per the list in
       [CLAUDE.md](CLAUDE.md) / [REVAMP_PROMPT.md](REVAMP_PROMPT.md): PCB Machines
+
       (NeoDen solder stencil) and the Formlabs Form 3 with its wash/cure machines.
       FDM Printers came off this list when the Raise3D E2 left the lab — the Bambu
       X1C is the only FDM machine now, and it is already revamped. Workbenches came

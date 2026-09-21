@@ -81,13 +81,19 @@ live in Google Docs).
 
 **Already done (don't redo):** Laser Cutter · 3D Scanner · CNC Mill · Solder
 Reflow Oven · NeoDen Pick & Place · Cricut · Bambu Lab X1C · Electric
+
 Workbenches · Elegoo Saturn 4 Ultra + Mercury 3.0 wash/cure.
 
 **If your "machine" is really several instruments on a bench**, follow the
 electric workbenches: one page for the bench (shared hazards, the general
 workflow, cleanup, and an index of the instruments) plus one page per
 instrument under an `Instruments/` subfolder. Don't force a five-instrument
-bench into a single machine page. **Everything else** is fair game per the
+bench into a single machine page.
+
+**If your machine has a required post-processing machine**, follow the
+Formlabs Form 3: the printer gets its machine page and the wash/cure pair
+gets a sibling page next to it, each linking the other at the point where
+the student moves between them. **Everything else** is fair game per the
 remaining list in `CLAUDE.md`.
 
 **Machine-specific notes for this session (may be empty):**

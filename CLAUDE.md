@@ -122,6 +122,7 @@ damage (`##` on paragraphs, `[[a]]` comment markers, google-redirect URLs, metad
 blocks); add `_redirects` 301s for every retired URL; repoint inbound links. The
 **3D Scanner trio** (manual + "How 3D Scanning Works" + lean activity) is the gold
 standard to imitate; Laser Cutter, CNC Mill, Solder Reflow Oven, NeoDen Pick & Place,
+
 Cricut, the Bambu Lab X1C, and the Elegoo Saturn 4 Ultra + Mercury 3.0 wash/cure pair
 are also done.
 
