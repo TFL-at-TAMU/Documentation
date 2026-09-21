@@ -20,7 +20,7 @@ Stop what you're doing and rinse the area thoroughly with soap and water — eye
 ## Before you start
 
 - Bring **your own stencil**, cut to match your board. Add it to your order when you have the PCB fabricated — most board houses will make one alongside it. The lab is currently experimenting with cutting stencils in-house on the laser cutter and the Cricut, so ask staff whether that's an option for your board before you pay for one.
-- Your board must fit within **280 mm × 380 mm**, and your stencil within **260 mm × 360 mm**.
+- Your board must fit within **280 mm × 380 mm**, and your stencil within **260 mm × 360 mm**. The machine takes a board bigger than the largest stencil it can clamp, so if your board is near the top of that range, keep the pads you need to paste inside the area a 260 mm × 360 mm stencil can cover.
 - **Solder paste, a squeegee, isopropyl alcohol and lint-free wipes are all lab-supplied** — ask staff and they'll get them out for you. Don't bring your own paste.
 - Check your paste before you start: within its expiration date, warmed to room temperature, and stirred according to the instructions on the jar. Cold or unmixed paste prints badly.
 - Your board should be clean, dry, and free of oxidation on the pads, with as little warp as you can manage. Handle it by the edges from here on — fingerprints on pads cause solder defects.
@@ -50,7 +50,7 @@ Stop what you're doing and rinse the area thoroughly with soap and water — eye
 1. Wipe the **porous positioning plate (1)** with a lint-free wipe dampened with isopropyl alcohol. Clear off dust, debris and any dried paste from the last job, and check that the perforations are open. Anything left on the bed presses into the underside of your board and tilts it, which shows up as uneven paste. Let the bed dry completely before going on.
 2. Screw the **L-shaped seats** into the **L-shaped fixing base screw holes (8)** and fit the **positioning pins** so your board will sit roughly where the stencil's openings will land. Get this close — the X and Y handles only have a small range of adjustment to make up the difference.
 3. Place your board on the bed, pads facing up, holding it by the edges. If the board flexes when you press gently at its center, screw a **PCB top post** into one of the **top post placement holes (7)**, or ask staff for a support to go underneath — a board that bows will print thin in the middle.
-4. Slide the side rails in against the board's edges until they make solid contact, and lock them. Even pressure on both sides: enough to stop the board moving, not enough to bend it.
+4. Slide the **side rails** — the two rails running along the left and right of the bed, which the diagram above doesn't number — in against the board's edges until they make solid contact, and lock them. Even pressure on both sides: enough to stop the board moving, not enough to bend it.
 5. Pick up your stencil by the frame edges only — don't touch the middle — and set it into the **front (3)** and **rear (2)** pressure plates with the paste side facing up. Center the pattern of openings over your board's pads by eye before you tighten anything.
 6. Tighten the clamps a little at a time, alternating left and right so the tension stays balanced. Stop when the stencil is held firmly; over-tightening warps the frame.
 7. Look across the stencil. It should be flat and evenly tensioned over the whole print area — no sagging, ripples or distortion. If it isn't, loosen the clamps and reseat it.
@@ -67,8 +67,7 @@ Stop what you're doing and rinse the area thoroughly with soap and water — eye
 14. Hold the squeegee at **30–60°** to the stencil — 45° works for most jobs — and make **one smooth, continuous pass** across the whole stencil at roughly **25–50 mm per second**. Press down firmly and evenly, just hard enough to shear the paste into the openings. Don't stop partway, don't change speed, and don't go back over an area you've already passed.
 15. Lift the stencil **straight up** in one smooth motion — quick but controlled, with no sideways movement. This is called snap-off, and it's what gives you clean, sharp deposits instead of smears.
 
-> [!NOTE]
-> If you've never done this before, [this stencil printing video](https://www.youtube.com/watch?v=1tkFluE98RU) shows what the squeegee stroke and snap-off should look like. It's a different machine, and it aligns the stencil far more casually than you should — but the paste technique is the same.
+If you've never done this before, [this stencil printing video](https://www.youtube.com/watch?v=1tkFluE98RU) shows what the squeegee stroke and snap-off should look like. It's a different machine, and it aligns the stencil far more casually than you should — but the paste technique is the same.
 
 ## Checking your print
 
@@ -77,7 +76,7 @@ Before you move the board, look it over carefully — ideally under magnificatio
 - **Every pad has paste on it.** Go over the board systematically, especially fine-pitch parts and small passives. One bare pad is one component that won't solder.
 - **The edges are sharp.** Each deposit should be a crisp copy of the opening that made it. Rounded or fuzzy edges mean the snap-off dragged or there was too much paste.
 - **No bridges between pads.** Any paste connecting two adjacent pads is a reject — it'll short in the oven. Bridging usually means misalignment, too much paste, or too much squeegee pressure, and it shows up on fine-pitch parts first.
-- **The thickness is even across the board.** Deposits should stand about 50–75% of the stencil's thickness, and look the same at the corners as in the middle. Variation means uneven stencil contact, a warped board, or pressure that changed during your stroke.
+- **The thickness is even across the board.** Deposits should look the same at the corners as in the middle, and roughly as tall as your stencil is thick. Variation means uneven stencil contact, a warped board, or pressure that changed during your stroke.
 
 If anything fails, don't try to patch it by hand — clean the board and print again. See [Starting a failed print over](#starting-a-failed-print-over) below.
 
