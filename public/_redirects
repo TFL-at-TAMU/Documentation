@@ -64,6 +64,16 @@
 # scans, and choose tracking mode per scan) now lives in the manual's Operating section.
 /docs/3d-scanner/learning-assignment/ /docs/3d-scanner/3d-scanner-creality-raptor-pro/ 301
 
+# Raise3D E2 dual-head printer retired — the machine has left the lab, so its pages
+# are gone rather than renamed. These point at the machine directory rather than at
+# the Bambu, so nobody reads them as "the same printer moved".
+/docs/fdm-printers/dual-head-fdm-printer/operations--safety-manual/raise3d-e2-printer-machine-operation-manual/ /docs/which-machine/ 301
+/docs/fdm-printers/dual-head-fdm-printer/operations--safety-manual/raise3d-e2-printer-machine-safety-manual/ /docs/which-machine/ 301
+/docs/fdm-printers/dual-head-fdm-printer/operations--safety-manual/raisetouch-e2-user-manual/ /docs/which-machine/ 301
+/docs/fdm-printers/dual-head-fdm-printer/slicing-in-ideamaker/ /docs/which-machine/ 301
+/docs/fdm-printers/dual-head-fdm-printer/learning-assignment/dual-head-printer-assignment/ /docs/which-machine/ 301
+/docs/fdm-printers/dual-head-fdm-printer/learning-assignment/beware_of_the_cat_body/ /docs/which-machine/ 301
+
 # Master manual templates retired — DOCS_FORMAT.md is the format standard now,
 # and it lives in the repo rather than on the public site.
 /docs/templates/fab-lab-machine-operation-manual-master-template/ /docs/ 301
@@ -75,3 +85,11 @@
 /docs/pcb-machines/neoden-solder-stencil/operations--safety-manuals/neoden-fp2636-machine-operation-manual/ /docs/pcb-machines/neoden-solder-stencil/solder-paste-stencil-neoden-fp2636/ 301
 /docs/pcb-machines/neoden-solder-stencil/operations--safety-manuals/neoden-fp2636-machine-safety-manual/ /docs/pcb-machines/neoden-solder-stencil/solder-paste-stencil-neoden-fp2636/ 301
 /docs/pcb-machines/neoden-solder-stencil/learning-assignments/nothing-here/ /docs/pcb-machines/neoden-solder-stencil/solder-paste-stencil-neoden-fp2636/ 301
+
+# Electric Workbenches: the benches are five instruments on a surface rather than one
+# machine, so the operations + safety manual pair becomes a bench page plus one page
+# per instrument under Instruments/. The empty "Nothing Here" learning-assignment
+# placeholder was removed.
+/docs/workbenches/electric-workbenches/operations-and-safety-manuals/electrical-workbench-operation-manual/ /docs/workbenches/electric-workbenches/ 301
+/docs/workbenches/electric-workbenches/operations-and-safety-manuals/electrical-workbench-pps-machine-safety-manual/ /docs/workbenches/electric-workbenches/ 301
+/docs/workbenches/electric-workbenches/learning-assignments/nothing-here/ /docs/workbenches/electric-workbenches/ 301
