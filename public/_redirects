@@ -9,6 +9,46 @@
 # single file until 45,000 URLs (we have ~50), so no other shard is missed.
 /sitemap.xml /sitemap-0.xml 200
 
+# ---------------------------------------------------------------------------
+# MACHINE PERMALINKS — the QR code on each machine points at one of these.
+#
+# /m/<machine>/ is a stable alias that never changes; only its target does. When a
+# machine page moves or is renamed, re-point the line here in the same change (the
+# 301 chain from the old URL would also get people there, but browsers cache 301s,
+# so keep the permalink pointing straight at the live page). The QR sticker on the
+# machine never needs reprinting.
+#
+# These are 302 (temporary) on purpose: a browser does not cache a 302, so a
+# re-pointed permalink takes effect for everyone on the next scan. The 301s further
+# down are for retired URLs and are meant to be cached.
+#
+# `npm run build` fails if any target here does not exist in the built site
+# (scripts/check-redirects.mjs), so a stale permalink cannot ship.
+#
+# Naming: the machine as the lab refers to it, short enough to type from a sticker.
+# Two physical units that share one page (Form Wash / Form Cure) get one permalink
+# each, so the page can split later without reprinting either sticker.
+/m/3d-scanner/ /docs/3d-scanner/3d-scanner-creality-raptor-pro/ 302
+/m/cnc-mill/ /docs/cnc-mill/cnc-mill-makera-carvera/ 302
+/m/cricut/ /docs/cricut/cricut-explore-4/ 302
+/m/bambu-x1c/ /docs/fdm-printers/bambu-labs-x1c-3d-printer/fdm-3d-printer-bambu-lab-x1-carbon/ 302
+/m/laser-cutter/ /docs/laser-cutter/laser-cutter-glowforge-pro/ 302
+/m/pick-and-place/ /docs/pcb-machines/neoden-pick--place/pick-and-place-machine-neoden-yy1/ 302
+/m/solder-stencil/ /docs/pcb-machines/neoden-solder-stencil/solder-paste-stencil-neoden-fp2636/ 302
+/m/reflow-oven/ /docs/pcb-machines/novastar-solder-reflow-oven/solder-reflow-oven-ddm-novastar-gf-c2/ 302
+/m/elegoo-saturn/ /docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/resin-3d-printer-elegoo-saturn-4-ultra-16k/ 302
+/m/elegoo-mercury/ /docs/sla-printers/elegoo-mercury-30-plus-washing-and-curing-machine/wash-and-cure-station-elegoo-mercury-30-plus/ 302
+/m/formlabs-form-3/ /docs/sla-printers/formlabs-form-3-resin-printer/resin-3d-printer-formlabs-form-3/ 302
+/m/form-wash/ /docs/sla-printers/formlabs-form-3-resin-printer/form-wash-and-form-cure/ 302
+/m/form-cure/ /docs/sla-printers/formlabs-form-3-resin-printer/form-wash-and-form-cure/ 302
+/m/workbench/ /docs/workbenches/electric-workbenches/ 302
+/m/power-supply/ /docs/workbenches/instruments/bench-power-supply-kungber-sps3010/ 302
+/m/hot-air-rework/ /docs/workbenches/instruments/hot-air-rework-station-sparkfun-8508d/ 302
+/m/multimeter/ /docs/workbenches/instruments/multimeter-fluke-17b/ 302
+/m/oscilloscope/ /docs/workbenches/instruments/oscilloscope-hameg-hmo1524/ 302
+/m/soldering-station/ /docs/workbenches/instruments/soldering-station-weller-we1010na/ 302
+# ---------------------------------------------------------------------------
+
 # Glowforge operations + safety manuals merged into one machine page (format-standard pilot).
 /docs/laser-cutter/operations--safety-manuals/glowforge-operation-manual/ /docs/laser-cutter/laser-cutter-glowforge-pro/ 301
 /docs/laser-cutter/operations--safety-manuals/glowforge-safety-manual/ /docs/laser-cutter/laser-cutter-glowforge-pro/ 301
@@ -125,3 +165,12 @@
 # The Lattice_Benchy_FCC page existed only to host the STL viewer; the model is
 # now linked from the activity instead.
 /docs/sla-printers/formlabs-form-3-resin-printer/learning-assignments/lattice_benchy_fcc/ /docs/sla-printers/formlabs-form-3-resin-printer/activities/lattice-benchy/ 301
+
+# ---------------------------------------------------------------------------
+# Dynamic rules — Cloudflare requires these AFTER every static rule above.
+#
+# A permalink typed by hand without its trailing slash (tfl.aidanstew.art/m/cnc-mill)
+# is sent to the slashed form, which the permalink table then handles. Cloudflare
+# matches paths exactly, so without this the unslashed form would 404. `:machine`
+# cannot contain a slash, so an already-slashed /m/x/ never matches this rule.
+/m/:machine /m/:machine/ 301

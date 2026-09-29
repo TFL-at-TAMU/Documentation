@@ -45,7 +45,7 @@ The existing docs were written in Google Docs by multiple employees and exported
 
   Common name first, specific model in parentheses. When rewriting an old page, drop stale Google-Docs keys (`source_id`, `modified`) from the frontmatter.
 
-- **The filename becomes the URL** (lowercased, spaces → `-`, `&` dropped). Renaming or merging a page breaks its old URL — when you do either, add a 301 line to `public/_redirects` (`/docs/old-page/ /docs/new-page/ 301`). The per-machine merges in this restructure each get one.
+- **The filename becomes the URL** (lowercased, spaces → `-`, `&` dropped). Renaming or merging a page breaks its old URL — when you do either, add a 301 line to `public/_redirects` (`/docs/old-page/ /docs/new-page/ 301`). The per-machine merges in this restructure each get one. Machine pages also have a **permalink** in that file (`/m/<machine>/`, the URL in the QR sticker on the machine) — re-point it at the new page in the same change. The build fails if any redirect target no longer exists.
 - Link to other pages by their **site URL**, not the file path: `[Which machine should I use?](/docs/which-machine/)`. Relative `.md`-file links do not resolve on the built site.
 - Images live next to the page (or in the machine's folder) and are referenced relatively; give every image meaningful alt text. The build fails on broken image paths — that's working as intended.
 - **Side-by-side images:** write two (or more) images adjacent — same line, no blank line between them — and they render as an even row (stacking on narrow screens). Put a blank line between them to keep them stacked. No special syntax; it's just where the line breaks go.
