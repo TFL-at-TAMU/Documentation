@@ -39,6 +39,9 @@ including the credentials doc. This rewrites history to purge them. It's disrupt
       (e.g. printers first) is worth it.
 - [ ] **"Fancy" safety page** — richer layout for `/safety/`.
 - [ ] **Landing page refresh.**
+- [ ] **Photo slideshow on the landing page** — a rotating set of good lab photos on
+      `src/pages/index.astro`. The photos still need to be chosen; keep the page weight
+      reasonable (compressed images, and each file well under the 25 MiB limit).
 - [ ] **Re-home the NeoDen YY1 Formatter downloads** — the two download buttons on the
       pick-and-place page point at Google Drive links (owner's interim choice; the Mac
       build is >25 MiB so Cloudflare Pages can't host it). Proper home: GitHub Releases
