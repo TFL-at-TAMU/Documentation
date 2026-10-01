@@ -410,6 +410,39 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* ---------------------------------------------------------------------------
+   Left sidebar: split the top-level list into two captioned sections —
+   "Start Here" (the plain page links at the top) and "Machines" (the machine
+   folders). Starlight has no sidebar separators, and nesting the items in
+   real config groups pushes every machine a level deeper, so this is CSS
+   only: the caption above the list, and a rule + caption on the first
+   folder that follows a plain link. Adding a page or folder in
+   astro.config.mjs needs no change here, as long as plain links stay above
+   the folders.
+--------------------------------------------------------------------------- */
+:root #starlight__sidebar .top-level::before,
+:root #starlight__sidebar .top-level > li:has(> a) + li:has(> details)::before {
+	display: block;
+	font-family: var(--tfl-display);
+	font-size: 0.8rem;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--sl-color-gray-3);
+	padding-block: 0.15rem 0.35rem;
+}
+:root #starlight__sidebar .top-level::before {
+	content: 'Start Here';
+}
+:root #starlight__sidebar .top-level > li:has(> a) + li:has(> details) {
+	margin-top: 0.75rem;
+	padding-top: 0.6rem;
+	border-top: 2px solid var(--sl-color-hairline);
+}
+:root #starlight__sidebar .top-level > li:has(> a) + li:has(> details)::before {
+	content: 'Machines';
+}
+
+/* ---------------------------------------------------------------------------
    Side-by-side images. Markdown images written adjacent (same line, no blank
    line between them) land in one paragraph and render as an even row; put a
    blank line between them to keep the default stacked layout. No special
