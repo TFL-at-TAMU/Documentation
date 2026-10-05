@@ -82,9 +82,6 @@
 # Studio Standards page removed; send its old URL to the docs index.
 /docs/studio-standards/ /docs/ 301
 
-# Network documentation renamed to match the site's folder and page conventions.
-/docs/it_network/network_documentation/ /docs/it--network/network-documentation/ 301
-
 # Cricut: operations + safety manuals merged into one machine page, and the
 # "Learning Assignments" group renamed to "Activities" (see DOCS_FORMAT.md).
 /docs/cricut/operations--safety-manuals/the-fab-lab-cricut-operations-manual/ /docs/cricut/cricut-explore-4/ 301
