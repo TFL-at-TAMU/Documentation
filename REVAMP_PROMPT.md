@@ -29,15 +29,15 @@ of this project):**
    content is genuinely better served another way (it says when).
 3. The finished pages under `src/content/docs/docs/`, and imitate them rather
    than reinventing: **the 3D Scanner trio** (manual + "How 3D Scanning Works"
-   background page + lean activity) is the gold standard for the end state;
+   background page + lean learning activity) is the gold standard for the end state;
    the **Laser Cutter (Glowforge)**, **CNC Mill (Carvera)**, **Solder Reflow
    Oven**, and **Cricut (Explore 4)** pages are also done and worth studying —
-   the Cricut is the first to use the `Activities/` naming.
+   the Cricut is the first to use the `Learning Activities/` naming.
 
 **What to produce for this machine:** merge its operations + safety manuals
-into one machine page per the standard; move its guided exercises into an
-`Activities/` subfolder, each page named for what the student makes (they're
-called **activities** now, not "learning assignments") and trimmed so the
+into one machine page per the standard; move its guided exercises into a
+`Learning Activities/` subfolder, each page named for what the student makes
+(they're called **learning activities** now, not "learning assignments") and trimmed so the
 reusable teaching content lives in the manual or a shared background page;
 clean up the Google-Docs export damage (paragraphs turned into `##` headings,
 `[[a]]` comment markers, google-redirect URLs, metadata blocks); add

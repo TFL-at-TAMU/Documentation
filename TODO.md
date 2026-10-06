@@ -51,9 +51,9 @@ including the credentials doc. This rewrites history to purge them. It's disrupt
 - [ ] **STL viewer for model pages** — several pages are nothing but a
       `<model-viewer>` tag pointing at an `.stl` under `/files/`, but no script is
       loaded anywhere on the site, so the tag renders as nothing. The six Elegoo chess
-      pieces (`SLA Printers/Elegoo Saturn 4 Ultra 16K Resin 3D Printer/Activities/
-      ornate_chess_*.md`) are parked as `draft: true` until a viewer exists — their URLs
-      301 to the Chess Piece activity meanwhile, and they are the only `<model-viewer>`
+      pieces (`SLA Printers/Elegoo Saturn 4 Ultra 16K Resin 3D Printer/Learning
+      Activities/ornate_chess_*.md`) are parked as `draft: true` until a viewer exists — their URLs
+      301 to the Chess Piece learning activity meanwhile, and they are the only `<model-viewer>`
       tags left in the repo now the Raise3D E2 pages are retired. (`SLA Printers/FormLabs
       Form 3 Resin printer/Learning Assignments/Lattice_Benchy_FCC.md` is a related but
       separate case: its viewer and download were already removed because the `.stl`
@@ -112,13 +112,13 @@ including the credentials doc. This rewrites history to purge them. It's disrupt
       Form 3 still has operations/safety pairs rather than a single manual, so
       there is no page to pin yet. Do it as each machine is revamped
       (`sidebar.order: 1`, see `DOCS_FORMAT.md`).
-- [ ] **Rename the remaining "Learning Assignments" to "Activities"** — the Cricut
-      revamp renamed the group and `DOCS_FORMAT.md` now makes `Activities/` the
+- [ ] **Rename the remaining "Learning Assignments" to "Learning Activities"** — the Cricut
+      revamp renamed the group and `DOCS_FORMAT.md` now makes `Learning Activities/` the
       standard. Laser Cutter is done, and the 3D Scanner's was retired rather than
       renamed. **CNC Mill is the last of the revamped machines still on the old
       naming** — hold it until PR #66's content question is settled, then move
       `Learning Assignment/2D Relief Coin/2D Relief Coin.md` to
-      `Activities/2D Relief Coin.md` with a 301. The un-revamped machines (NeoDen
+      `Learning Activities/2D Relief Coin.md` with a 301. The un-revamped machines (NeoDen
       solder stencil and the Formlabs Form 3) get renamed as each
       one is revamped. `docs/index.md` carries a parenthetical noting the leftover
       "Learning Assignments" sidebar labels — drop it once the last one is renamed.

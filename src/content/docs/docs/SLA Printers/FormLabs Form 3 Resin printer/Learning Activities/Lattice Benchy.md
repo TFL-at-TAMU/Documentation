@@ -6,9 +6,9 @@ Print a lattice Benchy — the little tugboat that 3D printers are traditionally
 
 ![A finished clear resin lattice Benchy on a workbench, supports and raft still attached](../../../assets/images/formlabs_3_printer_a_d9184512fc.jpeg)
 
-**Read this first:** the [Resin 3D Printer (Formlabs Form 3) manual](/docs/sla-printers/formlabs-form-3-resin-printer/resin-3d-printer-formlabs-form-3/), especially [Preparing your file in PreForm](/docs/sla-printers/formlabs-form-3-resin-printer/resin-3d-printer-formlabs-form-3/#preparing-your-file-in-preform). You'll also need [Form Wash and Form Cure](/docs/sla-printers/formlabs-form-3-resin-printer/form-wash-and-form-cure/) afterwards. This activity assumes both.
+**Read this first:** the [Resin 3D Printer (Formlabs Form 3) manual](/docs/sla-printers/formlabs-form-3-resin-printer/resin-3d-printer-formlabs-form-3/), especially [Preparing your file in PreForm](/docs/sla-printers/formlabs-form-3-resin-printer/resin-3d-printer-formlabs-form-3/#preparing-your-file-in-preform). You'll also need [Form Wash and Form Cure](/docs/sla-printers/formlabs-form-3-resin-printer/form-wash-and-form-cure/) afterwards. This learning activity assumes both.
 
-## The activity
+## The learning activity
 
 Download **`Lattice_Benchy_FCC.stl`** from **[model download link — ask a staff member]** and open it in [PreForm](https://formlabs.com/software/preform/).
 

@@ -7,7 +7,7 @@ decisions. Deeper detail lives in the files it links to.
 ## What this is
 
 The public documentation site for **The Fab Lab**, Texas A&M University's student-run
-makerspace: machine manuals, activities, shop standards, and the lab-wide
+makerspace: machine manuals, learning activities, shop standards, and the lab-wide
 Safety & Emergency Manual. Repo `TFL-at-TAMU/Documentation` — **public**. Built with
 **Astro + Starlight** (versions pinned exact in `package.json`), hosted on
 **Cloudflare Pages**, which auto-deploys `main` (~2 minutes).
@@ -23,7 +23,7 @@ no deadline; a page shipped 90% right is worse than one done right.
 
 | Path | What it is |
 |---|---|
-| `src/content/docs/docs/**` | The manuals and activities (Starlight content collection). Folders become sidebar groups; original names with spaces/`&` are kept and Astro slugifies the routes. `index.md` is the docs home. |
+| `src/content/docs/docs/**` | The manuals and learning activities (Starlight content collection). Folders become sidebar groups; original names with spaces/`&` are kept and Astro slugifies the routes. `index.md` is the docs home. |
 | `src/content/docs/safety.md` | The Safety & Emergency Manual (`/safety/`). |
 | `src/pages/` | Custom non-Starlight pages: `index.astro` (landing), `contact.astro`, `ask.astro` ("Ask your own AI" — hands visitors a prompt pointing their AI at `/llms-full.txt`). |
 | `src/components/Header.astro` | Starlight header override adding the shared Home / Documentation / Safety / Contact nav (+ `MobileMenuFooter.astro`). |
@@ -120,10 +120,10 @@ The machine docs are being rebuilt one machine per session against `DOCS_FORMAT.
 Kick off such a session with the prompt in `REVAMP_PROMPT.md` (keep that file's
 "already done" list current as machines ship). Per machine: merge the operations +
 safety manual pair into one machine page; move the machine's guided exercises into
-an `Activities/` subfolder named for what the student makes; clean Google-Docs export
+a `Learning Activities/` subfolder named for what the student makes; clean Google-Docs export
 damage (`##` on paragraphs, `[[a]]` comment markers, google-redirect URLs, metadata
 blocks); add `_redirects` 301s for every retired URL; repoint inbound links. The
-**3D Scanner trio** (manual + "How 3D Scanning Works" + lean activity) is the gold
+**3D Scanner trio** (manual + "How 3D Scanning Works" + lean learning activity) is the gold
 standard to imitate; Laser Cutter, CNC Mill, Solder Reflow Oven, NeoDen Pick & Place,
 
 Cricut, the Bambu Lab X1C, and the Elegoo Saturn 4 Ultra + Mercury 3.0 wash/cure pair
@@ -135,10 +135,10 @@ cleanup, an index of the instruments) plus one page per instrument under `Instru
 Follow that shape for any other multi-instrument station rather than forcing it into a
 single machine page.
 
-Guided exercises are called **activities**, not "learning assignments" — see the
-"Activities" section of `DOCS_FORMAT.md`. Machines revamped before that rename
-(3D Scanner, Laser Cutter, CNC Mill) still use the old naming; rename them when you
-next touch them, with a 301 for each retired URL.
+Guided exercises are called **learning activities** (folder `Learning Activities/`),
+not "learning assignments" or plain "activities" — see the "Learning activities" section
+of `DOCS_FORMAT.md`. CNC Mill still uses the old "Learning Assignment" naming; rename it
+when you next touch it, with a 301 for each retired URL.
 
 ## Talking to the owner
 

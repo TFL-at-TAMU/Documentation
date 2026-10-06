@@ -6,9 +6,9 @@ Print a Lego-compatible flower in three colors, and pick up the AMS, multi-mater
 
 ![A cluster of 3D-printed Lego-style flowers in yellow, blue, red and white with green stems](../../../assets/images/bambu_x1c_3d_printer_45c661338e.png)
 
-**Read this first:** the [FDM 3D Printer (Bambu Lab X1 Carbon) manual](/docs/fdm-printers/bambu-labs-x1c-3d-printer/fdm-3d-printer-bambu-lab-x1-carbon/), especially [Loading filament into the AMS](/docs/fdm-printers/bambu-labs-x1c-3d-printer/fdm-3d-printer-bambu-lab-x1-carbon/#loading-filament-into-the-ams) and [Slicer settings](/docs/fdm-printers/bambu-labs-x1c-3d-printer/fdm-3d-printer-bambu-lab-x1-carbon/#slicer-settings). This activity assumes both.
+**Read this first:** the [FDM 3D Printer (Bambu Lab X1 Carbon) manual](/docs/fdm-printers/bambu-labs-x1c-3d-printer/fdm-3d-printer-bambu-lab-x1-carbon/), especially [Loading filament into the AMS](/docs/fdm-printers/bambu-labs-x1c-3d-printer/fdm-3d-printer-bambu-lab-x1-carbon/#loading-filament-into-the-ams) and [Slicer settings](/docs/fdm-printers/bambu-labs-x1c-3d-printer/fdm-3d-printer-bambu-lab-x1-carbon/#slicer-settings). This learning activity assumes both.
 
-## The activity
+## The learning activity
 
 Download three files from [this Thingiverse model](https://www.thingiverse.com/thing:4283065/files):
 

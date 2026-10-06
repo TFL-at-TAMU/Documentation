@@ -38,7 +38,7 @@ You are not expected to already know how any of this works. Nobody did the first
 - **Machine manuals** — one page per machine, covering what it's for, its hazards, how to
   set up a job, and how to run it. Safety lives in the manual itself, at the step where
   it matters, rather than in a separate document you'd have to remember to open.
-- **Activities** — short guided projects that walk you through a machine end to end and
+- **Learning activities** — short guided projects that walk you through a machine end to end and
   leave you holding something you made. They're practice, not exams: you don't have to
   finish one to be allowed to use a machine. (Some are still filed under "Learning
   Assignments" in the sidebar — same thing, being renamed as each machine gets updated.)

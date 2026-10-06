@@ -8,9 +8,9 @@ Print one ornate chess piece in resin, and go through the whole SLA loop once â€
 
 That scrollwork is the point. Print the same model on a filament printer and most of it disappears into the layer lines.
 
-**Read this first:** the [Resin 3D Printer (Elegoo Saturn 4 Ultra 16K) manual](/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/resin-3d-printer-elegoo-saturn-4-ultra-16k/), especially [Slicing in SatelLite](/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/resin-3d-printer-elegoo-saturn-4-ultra-16k/#slicing-in-satellite), and then the [Wash and Cure Station manual](/docs/sla-printers/elegoo-mercury-30-plus-washing-and-curing-machine/wash-and-cure-station-elegoo-mercury-30-plus/). This activity assumes both, and the second one is where half the work is.
+**Read this first:** the [Resin 3D Printer (Elegoo Saturn 4 Ultra 16K) manual](/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/resin-3d-printer-elegoo-saturn-4-ultra-16k/), especially [Slicing in SatelLite](/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/resin-3d-printer-elegoo-saturn-4-ultra-16k/#slicing-in-satellite), and then the [Wash and Cure Station manual](/docs/sla-printers/elegoo-mercury-30-plus-washing-and-curing-machine/wash-and-cure-station-elegoo-mercury-30-plus/). This learning activity assumes both, and the second one is where half the work is.
 
-## The activity
+## The learning activity
 
 Pick a piece and download it:
 
@@ -43,4 +43,4 @@ Then print it, and finish it properly: wash, dry, **pull the supports off while 
 - **Change the baseboard settings** described in the [note in the manual](/docs/sla-printers/elegoo-saturn-4-ultra-16k-resin-3d-printer/resin-3d-printer-elegoo-saturn-4-ultra-16k/#support-it) before you slice. The stock raft is thick enough that getting the piece off the plate becomes a fight, and fighting a chess piece with a scraper usually ends with a broken chess piece.
 - **Slice it once without hollowing, just to look at the resin volume**, then hollow it and slice again. Seeing the two numbers next to each other explains why anyone bothers.
 - **Height is the whole cost.** If you want a second piece later, printing both together takes barely longer than printing the taller one alone â€” the screen cures a whole layer at once.
-- **Don't cure it wet.** The most common way this activity ends in a disappointing-looking pawn is curing before the alcohol has fully evaporated.
+- **Don't cure it wet.** The most common way this learning activity ends in a disappointing-looking pawn is curing before the alcohol has fully evaporated.

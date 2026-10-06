@@ -2,7 +2,7 @@
 title: Gable Box
 ---
 
-Build a gable box out of cardstock — the handled, ridge-topped box you get party favors in. It's a step up from the [Vinyl Sticker](/docs/cricut/activities/vinyl-sticker/) activity: you'll import someone else's design file, edit it in Design Space, and cut score lines and outlines in the same job.
+Build a gable box out of cardstock — the handled, ridge-topped box you get party favors in. It's a step up from the [Vinyl Sticker](/docs/cricut/learning-activities/vinyl-sticker/) learning activity: you'll import someone else's design file, edit it in Design Space, and cut score lines and outlines in the same job.
 
 **Read this first:** the [Cricut (Explore 4) manual](/docs/cricut/cricut-explore-4/).
 

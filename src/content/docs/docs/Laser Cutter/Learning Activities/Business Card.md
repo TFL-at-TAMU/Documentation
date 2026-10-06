@@ -7,14 +7,14 @@ Engrave your own aluminum business card on the Glowforge. As an engineering stud
 **Read this first:** the [Laser Cutter (Glowforge Pro) manual](/docs/laser-cutter/laser-cutter-glowforge-pro/). It covers the machine's controls, the pre-flight and post-flight checklists, and what to do if something goes wrong.
 
 :::caution
-Finishing this activity **does not** qualify you to operate the laser without staff supervision. Only people who have completed the TAMU training may operate it, and only a trained staff member may start a job. To get certified, follow the safety manual's [Laser Safety Certification](/safety/#laser-safety-certification) section.
+Finishing this learning activity **does not** qualify you to operate the laser without staff supervision. Only people who have completed the TAMU training may operate it, and only a trained staff member may start a job. To get certified, follow the safety manual's [Laser Safety Certification](/safety/#laser-safety-certification) section.
 :::
 
 You aren't really engraving the aluminum. You're removing the coloured coating on top of it.
 
 ## 1. Prepare your design
 
-Download the [business card template](https://drive.google.com/file/d/1oqVoxlXpzHqtsd8s3paPAKwE7P8uhTPX/view?usp=sharing), and install **Inkscape** to edit it. This activity won't teach you Inkscape, but the basics you need are below.
+Download the [business card template](https://drive.google.com/file/d/1oqVoxlXpzHqtsd8s3paPAKwE7P8uhTPX/view?usp=sharing), and install **Inkscape** to edit it. This learning activity won't teach you Inkscape, but the basics you need are below.
 
 1. Double-click the text box and change the text to describe yourself, however you see fit. If you're on a design team (SAE, DBF, and so on), consider adding a QR code or logo.
 2. Select the text, then choose **Path → Object to Path**. This converts the text into shapes — the Glowforge software handles text badly, so it needs to be shapes.
