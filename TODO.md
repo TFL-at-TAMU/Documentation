@@ -118,10 +118,9 @@ including the credentials doc. This rewrites history to purge them. It's disrupt
       renamed. **CNC Mill is the last of the revamped machines still on the old
       naming** — hold it until PR #66's content question is settled, then move
       `Learning Assignment/2D Relief Coin/2D Relief Coin.md` to
-      `Learning Activities/2D Relief Coin.md` with a 301. The un-revamped machines (NeoDen
-      solder stencil and the Formlabs Form 3) get renamed as each
-      one is revamped. `docs/index.md` carries a parenthetical noting the leftover
-      "Learning Assignments" sidebar labels — drop it once the last one is renamed.
+      `Learning Activities/2D Relief Coin.md` with a 301. `docs/index.md` carries a
+      parenthetical noting the leftover "Learning Assignments" sidebar labels — drop
+      it once the last one is renamed.
 - [ ] **Content structure / information architecture** — Diátaxis-style restructure of
       the manuals. Grain decision still open: 3D-model stub pages (merge vs.
       standalone). The electric workbenches settled the multi-instrument case — a bench
