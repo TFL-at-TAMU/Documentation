@@ -140,13 +140,19 @@ Click **Slice**. You land on the **Preview** tab, where the layer slider on the 
 
 ## Finishing up
 
-- **Wipe the build plate clean** with shop towels until no resin is left on it, then dry it completely and lock it back onto the printer.
+- **Wipe the build plate clean** with shop towels until no resin is left on it.
 
   > [!WARNING]
   > **Don't put alcohol on the printing face of the build plate.** IPA is fine on the sides and the back, but on the textured top surface it ruins adhesion for the next print. Towels only, and don't scratch it.
 
-  ![The build plate wiped clean and lying face-up on a bench beside a plastic scraper and used cleaning pieces](../../assets/images/elegoo_resin_3d_prin_5b60d3b706.jpeg)
+  ![The build plate separated and laying down with magneti plate not attached](../../assets/images/Elegoo_Removalplate_example.jpg)
 
+- **Wipe the build plate base and magnetic plate clean** with shop towels until no resin is left on it and all sides are dry.
+- **Re-attach the magnetic plate** by aligning one of the sides with the edge as shown, and set it back in the stand.
+  
+  ![The build plate algined by edge](../../assets/images/elegoo_magneticplate_alignment2.jpg)
+
+ 
 - **Take the drip tray off**, wipe it down, and put it back where you found it.
 - **Wipe up every drip** on the machine, the bench, and the floor with shop towels dampened with IPA, and bin the towels. **Uncured resin never gets left in the work area** — that's the one rule in the resin corner that has no exceptions.
 - **Never pour resin or IPA down a drain**, and never rinse anything resin-covered in a sink. Resin waste goes in the trash, and used IPA goes to staff.
