@@ -121,6 +121,13 @@ including the credentials doc. This rewrites history to purge them. It's disrupt
       `Learning Activities/2D Relief Coin.md` with a 301. `docs/index.md` carries a
       parenthetical noting the leftover "Learning Assignments" sidebar labels — drop
       it once the last one is renamed.
+- [ ] **Move operating instructions up the machine manuals (quick-start)** — someone who
+      scans a machine's QR sticker (`/m/<machine>/`) should reach the "how do I run this"
+      steps without scrolling past the intro, hazards, and Before you start first. Move
+      `## Operating` higher on the page, and maybe rename it `## Quick start`. The hazard
+      callouts still have to come before the steps they cover, so decide how that works
+      first. This is a change to the section order in `DOCS_FORMAT.md` (Page structure),
+      so update that file first, then apply it to every revamped manual.
 - [ ] **Content structure / information architecture** — Diátaxis-style restructure of
       the manuals. Grain decision still open: 3D-model stub pages (merge vs.
       standalone). The electric workbenches settled the multi-instrument case — a bench
