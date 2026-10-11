@@ -29,7 +29,7 @@ Press the **Pause button (9)** on the right side of the machine — it stops the
 
 ![Diagram of the Cricut Explore 4's controls and indicator lights](../assets/images/the_fab_lab_cricut_o_b7d5067722.png)
 
-![Photo of the lab's Cricut Explore 4 with Power (6), Load (7), Go (8), Pause (9), and Open Machine (12) labeled](../assets/images/circut-diagram.png)
+![Photo of the lab's Cricut Explore 4 with Power (6), Load (7), Go (8), Pause (9), and Open Machine (12) labeled](../assets/images/cricut-explore-4-labeled.png)
 
 The **Open Machine button (12)**, at the top left of the machine, opens the cover. Cricut's own diagram above doesn't number it.
 

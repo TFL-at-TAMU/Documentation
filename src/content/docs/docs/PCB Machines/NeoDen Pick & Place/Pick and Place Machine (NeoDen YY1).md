@@ -4,9 +4,7 @@ sidebar:
   order: 1
 ---
 
-The NeoDen YY1 places surface-mount components onto a solder-pasted PCB using feeder-loaded parts and coordinate data from a YY1-compatible CSV file. It is the middle step of PCB assembly: after [solder paste is stenciled onto the board](/docs/pcb-machines/neoden-solder-stencil/solder-paste-stencil-neoden-fp2636/) and before [the reflow oven](/docs/pcb-machines/novastar-solder-reflow-oven/solder-reflow-oven-ddm-novastar-gf-c2/) permanently solders the parts. It is intended for prototype and low-volume assembly on boards up to **315 mm x 350 mm**. If you are not sure this is the right machine for your project, see [Which Machine?](/docs/which-machine/).
-
-## Safety considerations (read first)
+The NeoDen YY1 places surface-mount components onto a solder-pasted PCB using feeder-loaded parts and coordinate data from a YY1-compatible CSV file. It is the middle step of PCB assembly: after [solder paste is stenciled onto the board](/docs/pcb-machines/neoden-solder-stencil/solder-paste-stencil-neoden-fp2636/) and before [the reflow oven](/docs/pcb-machines/novastar-solder-reflow-oven/solder-reflow-oven-ddm-novastar-gf-c2/) permanently solders the parts. It is intended for prototype and low-volume assembly on boards up to **315 mm × 350 mm**. If you are not sure this is the right machine for your project, see [Which Machine?](/docs/which-machine/).
 
 > [!WARNING]
 > **A trained staff member must be present** whenever this machine is in use.
@@ -18,21 +16,16 @@ The NeoDen YY1 places surface-mount components onto a solder-pasted PCB using fe
 > **Do not bypass covers or reach into the machine during an active job.** Load boards, reels, and the SD card only while the machine is idle.
 
 :::caution[EMERGENCY STOP]
-To stop motion, tap **Stop** on the touchscreen. To remove machine power immediately, flip the **ON/OFF switch** at the right-rear side of the machine. Notify staff after any emergency stop.
-:::
-
-:::caution[STOP IMMEDIATELY IF]
-Stop the job and get staff if you observe unexpected noise or vibration, feeder jams, out-of-bounds head movement, smoke, sparks, burning odor, software freeze, or a damaged power cable.
+**This machine has no emergency-stop button.** To stop motion, tap **Stop** on the touchscreen. To remove machine power immediately, flip the **ON/OFF switch** at the right-rear side of the machine. Notify staff after any emergency stop.
 :::
 
 ## Before you start
 
 - Your board must already have **lead-free solder paste** applied.
-- Board size must be within **315 mm x 350 mm**.
-- Use a **YY1-compatible CSV** and copy it to an SD card.
-- Confirm every part in the CSV is loaded in the feeder slot specified in that file.
-- Verify feeder availability and preloaded parts in the [feeder slot chart](https://docs.google.com/spreadsheets/d/18dMiUAIPoFiYq0AChLLP8tyWiuEx4bR4EatctU6wq48/edit?usp=sharing).
-- No special PPE is required beyond standard Fab Lab attire.
+- Your board must fit within **315 mm × 350 mm**.
+- Bring your placement file as a **YY1-compatible CSV** (see [YY1 CSV format](#yy1-csv-format-required)) and copy it to an SD card.
+- Every component in your file must be loaded in the feeder slot the file says it's in. The [feeder slot chart](https://docs.google.com/spreadsheets/d/18dMiUAIPoFiYq0AChLLP8tyWiuEx4bR4EatctU6wq48/edit?usp=sharing) lists which parts are preloaded where and which slots are free for your own reels.
+- No special PPE is needed — regular clothes are fine.
 
 ## Machine overview
 
@@ -55,9 +48,16 @@ Stop the job and get staff if you observe unexpected noise or vibration, feeder 
 
 ## Software download
 
-Use the lab YY1 formatter package set (Windows, macOS, and Linux installers are in this folder):
+Use the lab YY1 formatter package (the installers are in this folder):
 
 <a class="tfl-download-button" href="https://drive.google.com/drive/folders/1sAP2mopvaOA5MnSG3K4IRKvyih8gP3C5?usp=drive_link">Download Software</a>
+
+To make your YY1 file:
+
+1. In your PCB design software (Fusion 360, KiCad, Altium, EasyEDA and others all work), set the units to **mm** and export your board's placement file — also called a **pick-and-place** or **centroid** export — as a **CSV**.
+2. Download the formatter and run it on your own computer or a lab PC. The link opens Google Drive — click the **Download** icon on the page that appears.
+3. Drag your CSV into the formatter, then assign each component the **feeder slot** its parts are loaded in — the [feeder slot chart](https://docs.google.com/spreadsheets/d/18dMiUAIPoFiYq0AChLLP8tyWiuEx4bR4EatctU6wq48/edit?usp=sharing) says what is where.
+4. Export. The formatter saves a `…_yy1.csv` file ready for the machine — copy it onto the SD card.
 
 ## YY1 CSV format (required)
 
@@ -140,7 +140,7 @@ If this structure is not matched, the YY1 can show **File Error** and refuse to 
 11. Press **Start** to begin placement.
 
 > [!WARNING]
-> Stay at the machine for the full run. If anything abnormal happens, tap **Stop**, keep hands clear, and notify staff.
+> Stay at the machine for the full run. If you notice unexpected noise or vibration, a jammed feeder, the head moving somewhere it should not, smoke, sparks, a burning smell, a frozen screen or a damaged power cable — tap **Stop**, keep your hands clear, and get a staff member. Never troubleshoot a running machine yourself.
 
 12. At **Placement Complete**, wait for the head to return to home before reaching inside.
 
@@ -149,8 +149,8 @@ If this structure is not matched, the YY1 can show **File Error** and refuse to 
 - Remove the PCB by the edges so wet solder paste placements are not disturbed.
 - Inspect for missing, mis-rotated, or shifted components before reflow.
 - Send the board to [the reflow oven](/docs/pcb-machines/novastar-solder-reflow-oven/solder-reflow-oven-ddm-novastar-gf-c2/).
-- Clean loose components from the bed using a brush only.
-- Return reels to their designated storage locations.
+- Brush loose components off the bed — **never compressed air or your breath**, which blows parts into the machine's lead screws.
+- Return component reels to their moisture-barrier bags or storage bins.
 - Exit on the touchscreen, then power the machine off.
 - Report broken nozzles, feeder jams, crashes, or repeat placement errors to staff.
 - Take your project and materials with you; the lab has no storage.
