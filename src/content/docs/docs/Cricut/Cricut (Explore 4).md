@@ -29,16 +29,16 @@ Press the **Pause button (9)** on the right side of the machine — it stops the
 
 ![Diagram of the Cricut Explore 4's controls and indicator lights](../assets/images/the_fab_lab_cricut_o_b7d5067722.png)
 
+![Photo of the lab's Cricut Explore 4 with Power (6), Load (7), Go (8), Pause (9), and Open Machine (12) labeled](../assets/images/circut-diagram.png)
+
+The **Open Machine button (12)**, at the top left of the machine, opens the cover. Cricut's own diagram above doesn't number it.
+
 The controls you'll actually use are the four buttons on the right-hand side — **Power (6)**, **Load/Unload (7)**, **Go (8)**, and **Pause (9)** — plus the two tool clamps behind the cover:
 
 - **Clamp A** holds accessories that draw or score, like the fine-point pen. It's empty for a plain cut.
 - **Clamp B** holds the blade housing. The **Premium Fine-Point Blade** lives here and handles almost everything: vinyl, iron-on, paper, cardstock, and light fabric.
 
 The button lights tell you what the machine is waiting for. The **Power** button glows white when it's on, **blue** once it's connected over Bluetooth, purple while it updates, and red on an error. The **Load** and **Go** buttons flash white when it's your turn to press them.
-
-:::note[Staff note — Cricut lead]
-The machine has a cover-release button on its left side that Cricut's own diagram above doesn't label or number. Replace this diagram with a lab photo that shows it, and correct step 2 of Operating below if the release works differently than described.
-:::
 
 ## Setting up Design Space
 
@@ -54,7 +54,7 @@ Either way, the machine connects over **Bluetooth**, so turn Bluetooth on and ke
 
 1. Press the **Power button (6)** on the right side of the machine. It glows white when the machine is on, and turns blue once your computer connects.
 
-2. Open the machine's cover — press the **release button on the left side** of the machine (the one with the raised ridges) and lift. The cover has to be open to reach the tool clamps and to load a mat.
+2. Open the machine's cover — press the **Open Machine button (12)** at the top left of the machine and lift. The cover has to be open to reach the tool clamps and to load a mat.
 
 3. Open your project in Design Space, or start a new one. When it's ready to cut, click **Make** in the top right.
 
