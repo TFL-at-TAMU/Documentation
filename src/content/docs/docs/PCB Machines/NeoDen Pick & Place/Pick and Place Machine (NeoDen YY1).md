@@ -4,7 +4,7 @@ sidebar:
   order: 1
 ---
 
-The NeoDen YY1 places surface-mount components onto a solder-pasted PCB using feeder-loaded parts and coordinate data from a YY1-compatible CSV file. It is the middle step of PCB assembly: after [solder paste is stenciled onto the board](/docs/pcb-machines/neoden-solder-stencil/solder-paste-stencil-neoden-fp2636/) and before [the reflow oven](/docs/pcb-machines/novastar-solder-reflow-oven/solder-reflow-oven-ddm-novastar-gf-c2/) permanently solders the parts. It is intended for prototype and low-volume assembly on boards up to **315 mm × 350 mm**. If you are not sure this is the right machine for your project, see [Which Machine?](/docs/which-machine/).
+The NeoDen YY1 places surface-mount components onto a circuit board for you. Give it a placement file from your PCB design software and load your parts into its tape feeders, and its vacuum nozzle picks up each component and sets it at the exact coordinates from your design — far faster and steadier than tweezers. It's the middle step of PCB assembly: after [solder paste is stenciled onto the board](/docs/pcb-machines/neoden-solder-stencil/solder-paste-stencil-neoden-fp2636/) and before [the reflow oven](/docs/pcb-machines/novastar-solder-reflow-oven/solder-reflow-oven-ddm-novastar-gf-c2/) melts the paste to lock everything in place. It's built for prototypes, class projects, and small research batches on boards up to **315 mm × 350 mm**. If you're not sure this is the right machine for your project, see [Which Machine?](/docs/which-machine/).
 
 > [!WARNING]
 > **A trained staff member must be present** whenever this machine is in use.
@@ -55,7 +55,7 @@ Use the lab YY1 formatter package (the installers are in this folder):
 To make your YY1 file:
 
 1. In your PCB design software (Fusion 360, KiCad, Altium, EasyEDA and others all work), set the units to **mm** and export your board's placement file — also called a **pick-and-place** or **centroid** export — as a **CSV**.
-2. Download the formatter and run it on your own computer or a lab PC. The link opens Google Drive — click the **Download** icon on the page that appears.
+2. Download the formatter and run it on your own computer or a lab PC. The link opens a Google Drive folder — open the installer for your operating system, then click the **Download** icon.
 3. Drag your CSV into the formatter, then assign each component the **feeder slot** its parts are loaded in — the [feeder slot chart](https://docs.google.com/spreadsheets/d/18dMiUAIPoFiYq0AChLLP8tyWiuEx4bR4EatctU6wq48/edit?usp=sharing) says what is where.
 4. Export. The formatter saves a `…_yy1.csv` file ready for the machine — copy it onto the SD card.
 
