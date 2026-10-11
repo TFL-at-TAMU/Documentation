@@ -135,7 +135,7 @@ If this structure is not matched, the YY1 can show **File Error** and refuse to 
 9. Tap **Mount**, then place your PCB at the board origin (bottom-left reference screw) with the same orientation used in your design.
 10. Position the magnetic board holder to secure the PCB.
 
-   ![Example board placement on the YY1 workbed with rails and magnetic holder in place](../../assets/images/neoden_yy1_workbed_example.jpg)
+    ![Example board placement on the YY1 workbed with rails and magnetic holder in place](../../assets/images/neoden_yy1_workbed_example.jpg)
 
 11. Press **Start** to begin placement.
 
