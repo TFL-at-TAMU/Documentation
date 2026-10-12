@@ -30,7 +30,7 @@ This printer has **no emergency stop button**. To stop a print, use the **touchs
 - **No training or checkout is required.** Read this page, then go print. If it's your first time, staff are happy to stand with you — just ask.
 - **Wear nitrile gloves.** They're the one piece of PPE this machine actually requires. Safety glasses are recommended on top of that, and a mask is optional.
 - Bring a **3D model file** — an `.stl` is what the slicer expects.
-- **To get your file onto a lab computer**, email it to **meloy.FabLab@gmail.com**, then open Gmail on a lab computer and download it there. A USB drive works too.
+- **To get your file onto a lab computer**, email it to **usertamufablab@gmail.com**, then open Gmail on a lab computer and download it there. A USB drive works too.
 - Your part must fit within **211 × 118 × 220 mm**. That's the build plate's X and Y and the Z travel — tall is easy on this machine, wide is not.
 - **The lab's Grey Standard 2.0 resin is the only resin allowed in this printer, and it's free.** Don't bring your own. Mixing resins means draining and cleaning the vat, which is a staff job, and the slicer's settings are tuned for the grey.
 - **Resin prints take hours, and height is what costs you.** The screen cures an entire layer at once, so five small parts on the plate take almost exactly as long as one — but a part twice as tall takes twice as long. If a print is going to be too slow, the thing to reduce is its height, not the number of parts.

@@ -27,7 +27,7 @@ Stop the print, cut power at the rear switch, and get a staff member immediately
 
 - **No training or checkout is required.** Read this page, then go print. If it's your first time, staff are happy to stand with you — just ask.
 - Bring a **3D model file**: `.stl`, `.obj`, `.3mf`, or `.step`. Bambu Studio opens all of them.
-- **To get your file onto a lab computer**, email it to **meloy.FabLab@gmail.com**, then open Gmail on a lab computer and download it there. A USB drive works too.
+- **To get your file onto a lab computer**, email it to **usertamufablab@gmail.com**, then open Gmail on a lab computer and download it there. A USB drive works too.
 - Your part must fit inside **256 × 256 × 256 mm**. Bigger than that and you either split it into pieces or use a different machine.
 - **Approved filaments:**
   - **PLA** and **PETG** — go ahead, no questions asked.

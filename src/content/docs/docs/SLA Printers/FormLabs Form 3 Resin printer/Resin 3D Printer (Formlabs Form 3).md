@@ -24,7 +24,7 @@ This machine has **no emergency stop button**. On the **touchscreen**, **Pause**
 - **No training or checkout is required.** Read this page and go print. Staff are in the lab and will happily stand with you for your first one — just ask.
 - **Wear nitrile gloves.** They're on the finishing bench. They're the only PPE this machine needs; a mask is available if you'd rather use one, but nothing about normal operation requires it.
 - Bring a **3D model file**: `.stl`, `.obj`, `.3mf`, or `.form`. PreForm, the Formlabs slicer, opens all of them.
-- **To get your file onto a lab computer**, email it to **meloy.FabLab@gmail.com**, then open Gmail on a lab computer and download it there. A USB drive works too.
+- **To get your file onto a lab computer**, email it to **usertamufablab@gmail.com**, then open Gmail on a lab computer and download it there. A USB drive works too.
 - Your part must fit inside **145 × 145 × 185 mm**, and it needs supports and a raft — read [Preparing your file in PreForm](#preparing-your-file-in-preform) before you slice.
 - **Resin is free**, but it's far more expensive per part than filament. Check with a staff member before committing to a print that will drink most of a cartridge.
 - **Whatever resin is loaded is what you print in.** Swapping the tank and cartridge is a staff job — if you need a different material, ask rather than doing it yourself.
