@@ -32,7 +32,9 @@ This printer has **no emergency stop button**. To stop a print, use the **touchs
 - Bring a **3D model file** — an `.stl` is what the slicer expects.
 - **To get your file onto a lab computer**, email it to **usertamufablab@gmail.com**, then open Gmail on a lab computer and download it there. A USB drive works too.
 - Your part must fit within **211 × 118 × 220 mm**. That's the build plate's X and Y and the Z travel — tall is easy on this machine, wide is not.
-- **The lab's Grey Standard 2.0 resin is the only resin allowed in this printer, and it's free.** Don't bring your own. Mixing resins means draining and cleaning the vat, which is a staff job, and the slicer's settings are tuned for the grey.
+  
+- **Any Resin made for 3d printing is allowed** as long as after any print the machine is clean and ready for someone else. Mixing resins means draining, cleaning the vat and all tools and parts. Make sure that any setting and thing is left as it was after print is done. For any question regarding resin use contact the staff.
+  
 - **Resin prints take hours, and height is what costs you.** The screen cures an entire layer at once, so five small parts on the plate take almost exactly as long as one — but a part twice as tall takes twice as long. If a print is going to be too slow, the thing to reduce is its height, not the number of parts.
 - **You are not finished when the print is.** Budget another 20–30 minutes at the [wash and cure station](/docs/sla-printers/elegoo-mercury-30-plus-washing-and-curing-machine/wash-and-cure-station-elegoo-mercury-30-plus/) for washing, drying, removing supports, and curing. Don't start a print at closing time.
 
@@ -160,6 +162,51 @@ Click **Slice**. You land on the **Preview** tab, where the layer slider on the 
 - **Bin your gloves** before you touch anything else, and wash your hands.
 - Tell a staff member about anything that went wrong or looked off, even if you worked around it.
 - **Take your project with you** — the lab has no storage.
+---------------------------------
+## Refill Resin
+
+The printer cures a single sheet of resin across the whole bottom of the tank, sweeping up anything solid floating in it, using two printed **stems** as handles to lift that sheet out[cite: 1].
+
+1. On the touchscreen, go to **Tools → Manual → Return Home** to raise the build plate clear.
+2. Fit the plastic drip tray around the vat, and line a baking sheet with shop towels.
+3. Snap a **circle** onto the base of each **stem**.
+4. Stand the two stems in the resin tank at the front corners of the screen.
+5. Run **Tools → Tank Cleaning** with the exposure set to **15 seconds**.
+6. When it finishes, wiggle both stems gently while pulling up until the corners of the cured sheet release from the film, then raise it slowly.
+7. Hook the knobs at the top of the stems over the build plate so the sheet hangs above the vat and drips.
+8. Hold the lined baking sheet underneath, resting it on the vat's screw knobs, unhook one stem, and lower the sheet onto the towel.
+9. Hold the circle down with the plastic scraper and pull the stem away to separate them. **Bin the sheet and the circles.** Leave the stems on towels for 10 minutes, then wash them in the IPA station for 2 minutes — they're reusable.
+10. Wipe the build plate clean and dry — towels only, no alcohol on the printing face — and lock it back on.
+
+## Change Resin / Full Resin Change
+
+If the resin needs to be replaced, filtered, or fully drained:
+
+1. Perform the **Routine Tank Cleaning** steps above to remove any cured film or debris first.
+2. Grab the **threaded funnel** and screw it onto the opening of an empty resin bottle.
+3. Place the bottle into the **custom base holder** to prevent it from tipping over.
+
+   ![Threaded funnel screwed onto an empty resin bottle resting in the black base holder](../../assets/images/elegoo_manual_image_funnel_base.png)
+
+4. Insert a **paper filter funnel** inside the large threaded funnel.
+
+   ![Top-down view of a paper funnel placed inside the large black funnel](../../assets/images/elegoo_manual_image_paper_funnel.png)
+
+5. Unbolt the screw knobs holding the resin vat to the printer.
+6. Carefully lift the vat and slowly pour the resin through the **VAT pour spout** into the paper funnel.
+7. Dip a shop towel in IPA and gently wipe the vat clean.
+
+> [!WARNING]
+> **Do NOT scrub aggressively.** Heavy pressure or rough wiping damages and scratches the clear film at the bottom of the vat.
+
+> [!WARNING]
+> **Liquid resin irritates skin and eyes, and you don't get to find out whether yours is sensitive.** Wear **nitrile gloves** any time you're near the open machine, the vat, the build plate, or an unwashed print. Never touch uncured resin with bare hands, and never touch your face, your phone, a door handle, or anyone else's things with gloves that have resin on them.
+
+8. Absorb any excess IPA with a clean shop towel and discard it in the waste bin.
+9. Wipe the vat completely dry with a fresh shop towel.
+10. Re-attach the vat to the printer and tighten the screw knobs.
+11. Leave the printer empty of resin for the next user or staff member to refill.
+--------------------
 
 ## Vat cleaning (a staff job)
 
