@@ -82,3 +82,13 @@ The Prusa Core One+ and Core One L build parts one thin layer at a time, melting
 - Remove all of your parts, supports, and scrap from the printer.
 - Confirm the steel sheet is seated on the bed against both locating pins for the next user.
 - Take your project and any leftover material with you — the lab has no storage.
+
+## Common problems
+
+**The first layer won't stick, or corners lift off the plate.** Nearly always skin oil on the plate: wash it with dish soap and hot water, dry it, and handle it by the edges from then on. For a tall or narrow part, turn on a **brim** to widen its grip. Check as well that **Sync info** picked up the right plate type, since the slicer sets bed temperature from that.
+
+**Nothing is coming out of the nozzle.** Stop the print from the touchscreen and get a staff member. A blocked nozzle needs a cold pull, which is a staff job — don't poke anything into the nozzle and don't try to force filament through by hand.
+
+**The print came loose and it's now printing into thin air.** Stop it from the touchscreen straight away and get a staff member. Letting it run buries the toolhead in plastic and turns a five-minute fix into a long one.
+
+**Layers are visibly shifted partway up the part.** Something knocked the toolhead off course, usually the print curling up into its path. The part is not recoverable; cancel it, and tell staff before you start another job on that machine.
