@@ -18,7 +18,6 @@ The Prusa Core One+ and Core One L build parts one thin layer at a time, melting
 - **No training or checkout is required.** Read this page, then go print. If it's your first time, staff are happy to stand with you — just ask.
 - Bring a **3D model file**: `.stl`, `.obj`, `.3mf`, or `.step`. Bambu Studio opens all of them.
 - **To get your file onto a lab computer**, email it to **usertamufablab@gmail.com**, then open Gmail on a lab computer and download it there. A USB drive works too.
-- Your part must fit inside **256 × 256 × 256 mm**. Bigger than that and you either split it into pieces or use a different machine.
 - **Approved filaments:**
   - **PLA** and **PETG** — go ahead, no questions asked.
   - **TPU** (the flexible one) — allowed, but ask a staff member to set it up. TPU is too soft to feed reliably through the AMS, so it runs off the external spool holder instead.
@@ -28,6 +27,17 @@ The Prusa Core One+ and Core One L build parts one thin layer at a time, melting
 - **Keep the door closed while printing.** With it shut, the chamber's activated-carbon filter handles what little the plastic gives off, and drafts in the room that may harm print quality are mitigated. (It's also why ABS and ASA need a staff OK — those are the ones that actually smell.)
 - **Don't touch the top surface of the build plate.** Skin oil is the single most common reason a print won't stick. Pick the plate up by its edges or the tab at the front.
 - **Removing Others' Prints** If all printers are occupied and some prints are complete, you (or a staff member) can carefully remove the prints of others.
+
+## Loading Filament
+
+1. Locate the **Material** and **Color** of filament you would like to use. Ensure the spool is not tangled and clip the end of the filament to a perpendicular or slightly angled end.
+2. Determine whether filament is already loaded into the machine:
+- If **YES**, go to **Filament**, **Unload**, and select **Type of Filament**. The filament will be heated and cut from the end of the nozzle. Fully remove the filament by gently pulling back and rewinding the spool until you see the free end. Secure the free end in the holes of the roll.
+- If **NO**, proceed to the next step.
+  
+4. Remove the filament from the securing holes of the to-be-used roll. Feed the **free end of the filament into then PTFE (white) tube** on the right side of the machine. It may take a slight force to push past the sensor, but should be easy to push after. Continue pushing until you see the **Loading Filament** screen.
+5. Apply **gentle pressure to the filament directly outside of the PTFE tube**. You should feel the filament slowly pulling in to the machine. Once it reaches 100% on the screen, select the material type. It will push out some material, then prompt to ensure the color is right.
+6. Follow the on-screen instructions until it is **fully loaded**.
 
 ## Operating
 
