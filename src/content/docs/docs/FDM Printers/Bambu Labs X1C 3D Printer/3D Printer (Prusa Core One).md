@@ -27,6 +27,7 @@ The Prusa Core One+ and Core One L build parts one thin layer at a time, melting
 - **Lab filament is free** — the lab is stocked with PLA filament already, and you are welcome to move rolls around on machines. Follow the guide below on how to unload and load filament.
 - **Keep the door closed while printing.** With it shut, the chamber's activated-carbon filter handles what little the plastic gives off, and drafts in the room that may harm print quality are mitigated. (It's also why ABS and ASA need a staff OK — those are the ones that actually smell.)
 - **Don't touch the top surface of the build plate.** Skin oil is the single most common reason a print won't stick. Pick the plate up by its edges or the tab at the front.
+- **Removing Others' Prints** If all printers are occupied and some prints are complete, you (or a staff member) can carefully remove the prints of others.
 
 ## Operating
 
@@ -65,17 +66,19 @@ The Prusa Core One+ and Core One L build parts one thin layer at a time, melting
 
    ![The Send to Connect window listing Clarkson with Add to print queue selected and the Confirm button highlighted](./prusa-send-to-connect.png)
 
-10. If the printer is set to ready, the print will begin automatically. If not, a staff member will start the print. 
+10. If the printer is set to ready, the print will begin automatically. If not, a staff member will start the print.
+
+11. Please remain in the lab to ensure the first layer of the print is successful. 3D printing failures most commonly occur on the first layer. If your print survives the first layer, you are free to leave (Note how much time the print will take for later reference). 
 
 ### Remove your part
 
-11. Wait for the heated bed to cool to **room temperature** so the part releases safely.
+12. Wait for the heated bed to cool to **room temperature** so the part releases safely.
 
 > [!WARNING]
 > Don't try to pry a part off a hot bed. The bed stays hot for several minutes after a print finishes — touch it only after it has cooled.
 
-12. Lift the flexible **PEI spring steel sheet** off the magnetic bed, bend it gently, and your print will pop right off.
-13. Put the sheet back on the magnetic bed, lining it up with the **two locating pins at the back** of the printer.
+13. Lift the flexible **PEI spring steel sheet** off the magnetic bed, bend it gently, and your print will pop right off.
+14. Put the sheet back on the magnetic bed, lining it up with the **two locating pins at the back** of the printer.
 
 ## Finishing up
 
