@@ -57,7 +57,7 @@ The Prusa Core One+ and Core One L build parts one thin layer at a time, melting
 
    ![The Send to Connect window listing Clarkson with Add to print queue selected and the Confirm button highlighted](./prusa-send-to-connect.png)
 
-10. **[Describe what happens at the printer next: whether the queued job starts on its own or has to be started from the printer's screen, and anything to check before it starts, like a clear bed or the right filament loaded.]**
+10. If the printer is set to ready, the print will begin automatically. If not, a staff member will start the print. 
 
 ### Remove your part
 
