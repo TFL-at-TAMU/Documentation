@@ -15,10 +15,18 @@ The Prusa Core One+ and Core One L build parts one thin layer at a time, melting
 
 ## Before you start
 
-- Print only **staff-approved filaments**: **PLA** and **PETG**, plus **TPU** **[confirm the full approved list — ASA and PC Blend also appear in the slicer's filament menu]**. If you're not sure what a filament is or whether it's allowed, ask a staff member — don't guess.
-- Your part must be a **STL or 3MF** file.
-- You slice your model on the lab computer in **PrusaSlicer** before the printer can run it. The steps are below.
-- Decide which printer you'll use: a standard printer if your part fits within 250 × 220 × 270 mm, or **Clarkson** if it needs up to 300 × 300 × 330 mm.
+- **No training or checkout is required.** Read this page, then go print. If it's your first time, staff are happy to stand with you — just ask.
+- Bring a **3D model file**: `.stl`, `.obj`, `.3mf`, or `.step`. Bambu Studio opens all of them.
+- **To get your file onto a lab computer**, email it to **usertamufablab@gmail.com**, then open Gmail on a lab computer and download it there. A USB drive works too.
+- Your part must fit inside **256 × 256 × 256 mm**. Bigger than that and you either split it into pieces or use a different machine.
+- **Approved filaments:**
+  - **PLA** and **PETG** — go ahead, no questions asked.
+  - **TPU** (the flexible one) — allowed, but ask a staff member to set it up. TPU is too soft to feed reliably through the AMS, so it runs off the external spool holder instead.
+  - **ABS** and **ASA** — check with a staff member first.
+  - **Nylon**, and any **carbon-fiber- or glass-filled** filament — not approved on these machines.
+- **Lab filament is free** — the lab is stocked with PLA filament already, and you are welcome to move rolls around on machines. Follow the guide below on how to unload and load filament.
+- **Keep the door closed while printing.** With it shut, the chamber's activated-carbon filter handles what little the plastic gives off, and drafts in the room that may harm print quality are mitigated. (It's also why ABS and ASA need a staff OK — those are the ones that actually smell.)
+- **Don't touch the top surface of the build plate.** Skin oil is the single most common reason a print won't stick. Pick the plate up by its edges or the tab at the front.
 
 ## Operating
 
