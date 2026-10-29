@@ -27,7 +27,8 @@ This machine has **no emergency stop button**. On the **touchscreen**, **Pause**
 - **To get your file onto a lab computer**, email it to **usertamufablab@gmail.com**, then open Gmail on a lab computer and download it there. A USB drive works too.
 - Your part must fit inside **145 × 145 × 185 mm**, and it needs supports and a raft — read [Preparing your file in PreForm](#preparing-your-file-in-preform) before you slice.
 - **Resin is free**, but it's far more expensive per part than filament. Check with a staff member before committing to a print that will drink most of a cartridge.
-- **Whatever resin is loaded is what you print in.** Swapping the tank and cartridge is a staff job — if you need a different material, ask rather than doing it yourself.
+- **Whatever resin is loaded is what you print in.** To swap the tank and cartridge ask staff for both the current and new resin and tank and swap it.
+- **The resins We offer are:** Flexible, Tough 2000, Durable and Clear Formlabs resins.
 - **Budget time for washing and curing.** A resin part comes out of the printer wet, soft, and still chemically active. It is not finished, and it is not safe to handle bare-handed, until it has been through the [Form Wash and Form Cure](/docs/sla-printers/formlabs-form-3-resin-printer/form-wash-and-form-cure/). Plan on 20–60 minutes for that after the print ends.
 
 ## Machine overview
