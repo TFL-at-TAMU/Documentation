@@ -16,7 +16,7 @@ The Creality Raptor Pro is a handheld 3D scanner that captures the geometry — 
 
 - No training or checkout is required to use the scanner in the lab. **To use it outside the lab, coordinate with staff first.**
 - You need a **clear space** to maneuver the scanner all the way around the object.
-- The object — and the surface it rests on — should **not be black, reflective, or transparent**. If it is, scanning spray can fix it (see Common problems below).
+- The object — and the surface it rests on — should **not be black, reflective, or transparent**. If it is, a **very light** coat of scanning spray can fix it (see Common problems below).
 - Bring an [adequately powered](https://wiki.creality.com/en/3d-scanner/tutorials/general/performance) laptop with a **USB 3.0 port**, set up next to the scanning area. Keep an eye on free disk space — scan files get decently large.
 - If you'll scan in a laser mode, you'll need the **reference markers** from the kit (laser modes require markers; infrared mode doesn't).
 
@@ -117,4 +117,7 @@ Don't attempt to troubleshoot major issues yourself — get a staff member.
 
 **The scanner keeps losing track.** Switch to a more effective tracking mode — [Choosing scan and tracking modes](#choosing-scan-and-tracking-modes) explains which fits which object. If issues persist, add more markers or switch to marker-based tracking. Also check that the object isn't black, reflective, or transparent; if it is, scanning spray may be needed.
 
-**The object has black, reflective, or transparent surfaces.** Bring the object to the sink, shake the scanning spray well, and apply a light coat. Don't over-apply — the effect only becomes visible once it fully evaporates. The spray is simply a mixture of isopropanol and talcum powder.
+**The object has black, reflective, or transparent surfaces.** Bring the object to the sink, shake the scanning spray well, and apply a **very light coat — far less than you'd expect**. Then **wait until the alcohol has completely evaporated** before judging the result. The spray is simply a mixture of isopropanol and talcum powder: while it's still wet, the coat looks clear and seems to have done nothing; the matte white finish only appears once every trace of alcohol is gone.
+
+> [!NOTE]
+> **Don't spray more just because you can't see it working yet.** Let the first light coat dry completely, then check it. Only if bare spots remain once it's fully dry, add another light coat to just those spots. Over-applying wastes the shared bottle and leaves a thick, uneven layer that blurs fine detail in your scan.
